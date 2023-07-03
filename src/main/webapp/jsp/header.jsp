@@ -57,18 +57,12 @@
                     
                     <div class="ms-auto d-none d-lg-block">
                       <div class="ms-3 d-flex">
-<<<<<<< HEAD
-=======
                         <c:if test="${sessionScope.id==null }">
->>>>>>> branch 'master' of https://github.com/sist-2023-fullstack-course/JspProject.git
                         <a href="" class="btn btn-primary rounded-pill py-2 px-3">로그인</a>
-<<<<<<< HEAD
-=======
                         </c:if>
                         <c:if test="${sessionScope.id!=null }">
                         <a href="" class="btn btn-primary rounded-pill py-2 px-3">로그아웃</a>
                         </c:if>
->>>>>>> branch 'master' of https://github.com/sist-2023-fullstack-course/JspProject.git
                       </div>
                     </div>
                 </div>
