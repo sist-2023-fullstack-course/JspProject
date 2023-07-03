@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- Topbar Start -->
     <div class="container-fluid bg-primary text-white d-none d-lg-flex">
         <div class="container py-3">
