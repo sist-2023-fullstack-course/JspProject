@@ -39,6 +39,10 @@
                         <a href="#" class="nav-item nav-link">공지사항</a>
                         <a href="#" class="nav-item nav-link">문의하기</a>
                         <div class="nav-item dropdown">
+                            <a href="loginPage.jsp" class="nav-item nav-link">마이페이지</a>
+                            <c:if test="${sessionScope.id==null }">
+                            </c:if>
+                            <c:if test="${sessionScope.id!=null }">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
                                 <a href="#" class="dropdown-item">내정보</a>
@@ -48,18 +52,17 @@
                                 <a href="#" class="dropdown-item">리뷰</a>
                                 <a href="#" class="dropdown-item">위시리스트</a>
                             </div>
+                            </c:if>
                         </div>
                     </div>
                     
                     <div class="ms-auto d-none d-lg-block">
                       <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle ms-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        &nbsp;&nbsp;
                         <c:if test="${sessionScope.id==null }">
                         <a href="" class="btn btn-primary rounded-pill py-2 px-3">로그인</a>
+                        </c:if>
+                        <c:if test="${sessionScope.id!=null }">
+                        <a href="" class="btn btn-primary rounded-pill py-2 px-3">로그아웃</a>
                         </c:if>
                       </div>
                     </div>
