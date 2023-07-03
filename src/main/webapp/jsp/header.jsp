@@ -59,10 +59,10 @@
                     <div class="ms-auto d-none d-lg-block">
                       <div class="ms-3 d-flex">
                         <c:if test="${sessionScope.id==null }">
-                        <a href="" class="btn btn-primary rounded-pill py-2 px-3">로그인</a>
+                        <a href="LoginPage.jsp" class="btn btn-primary rounded-pill py-2 px-3">로그인</a>
                         </c:if>
                         <c:if test="${sessionScope.id!=null }">
-                        <a href="" class="btn btn-primary rounded-pill py-2 px-3">로그아웃</a>
+                        <a href="#" class="btn btn-primary rounded-pill py-2 px-3">로그아웃</a>
                         </c:if>
                       </div>
                     </div>
