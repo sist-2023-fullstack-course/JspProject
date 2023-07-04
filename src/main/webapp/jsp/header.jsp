@@ -39,7 +39,7 @@
                         <a href="#" class="nav-item nav-link">공지사항</a>
                         <a href="#" class="nav-item nav-link">문의하기</a>
                         <div class="nav-item dropdown">
-                            <a href="loginPage.jsp" class="nav-item nav-link">마이페이지</a>
+                            <a href="jsp/LoginPage.jsp" class="nav-item nav-link">마이페이지</a>
                             <c:if test="${sessionScope.id==null }">
                             </c:if>
                             <c:if test="${sessionScope.id!=null }">
@@ -59,7 +59,7 @@
                     <div class="ms-auto d-none d-lg-block">
                       <div class="ms-3 d-flex">
                         <c:if test="${sessionScope.id==null }">
-                        <a href="LoginPage.jsp" class="btn btn-primary rounded-pill py-2 px-3">로그인</a>
+                        <a href="jsp/LoginPage.jsp" class="btn btn-primary rounded-pill py-2 px-3">로그인</a>
                         </c:if>
                         <c:if test="${sessionScope.id!=null }">
                         <a href="#" class="btn btn-primary rounded-pill py-2 px-3">로그아웃</a>
