@@ -31,7 +31,6 @@ public class DispatcherServlet extends HttpServlet {
 		
 		String curpath = config.getServletContext().getRealPath(".");
 		Path path = Paths.get(curpath, "WEB-INF", "application.xml");
-		
 		// XML 파싱
 		try
 		{
