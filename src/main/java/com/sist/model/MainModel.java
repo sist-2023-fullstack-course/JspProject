@@ -9,10 +9,10 @@ import com.sist.controller.RequestMapping;
 public class MainModel {
 	
 	
-	@RequestMapping("jsp/main.do")
+	@RequestMapping("main.do")
 	public String main_page(HttpServletRequest request,HttpServletResponse response)
 	{
-		request.setAttribute("main_jsp", "home.jsp");
+		request.setAttribute("main_jsp", "jsp/home.jsp");
 		return "index.jsp";
 	}
 }
