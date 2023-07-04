@@ -2,32 +2,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="java.util.*,com.sist.dao.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<jsp:useBean id="dao" class="com.sist.dao.ReplyBoardDAO"/>
+<jsp:useBean id="dao" class="com.sist.dao.BoardDAO"/>
 <%
     // 사용자로부터 페이지 받기
     String strPage=request.getParameter("page");
     // 첫페이지 처리
-    if(strPage==null)
-    	strPage="1";
-    // 현재 페이지 지정 
-    int curpage=Integer.parseInt(strPage);
-    List<ReplyBoardVO> list=dao.boardListData(curpage);
-    // 총페이지 
-    int count=dao.boardRowCount();
-    int totalpage=(int)(Math.ceil(count/10.0));
-    count=count-((curpage*10)-(10));
-    // 1page => count (30)
-    // 1 => 30~21 2=> 20~11 3=> 10~1
-    // 2page => count-10
     
-    
-    request.setAttribute("curpage", curpage);
-    request.setAttribute("totalpage", totalpage);
-    request.setAttribute("list", list);
-    request.setAttribute("count", count);
-    
-    request.setAttribute("today", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
-    request.setAttribute("msg", "관리자가 삭제한 게시물입니다.");
     
 %>
 <!DOCTYPE html>
