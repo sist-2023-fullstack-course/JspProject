@@ -13,27 +13,27 @@
 	<!-- Google Font Dancing Script -->
 	<link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
 	<!-- Font Awesome CSS -->
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css" />
 	<!-- Owl Carousel CSS -->
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/owl.carousel.min.css" />
 	<!-- Animate CSS -->
-	<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/animate.min.css" />
 	<!-- simpleLens CSS -->
-	<link rel="stylesheet" type="text/css" href="css/jquery.simpleLens.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.simpleLens.css" />
 	<!-- Price Slider CSS -->
-	<link rel="stylesheet" type="text/css" href="css/jquery-price-slider.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-price-slider.css" />
 	<!-- MeanMenu CSS -->
-	<link rel="stylesheet" type="text/css" href="css/meanmenu.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/meanmenu.min.css" />
 	<!-- Magnific Popup CSS -->
-	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/magnific-popup.css" />
 	<!-- Nivo Slider CSS -->
-	<link rel="stylesheet" type="text/css" href="css/nivo-slider.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/nivo-slider.css" />
 	<!-- Stylesheet CSS -->
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<!-- Responsive Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/responsive.css" />
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
@@ -41,7 +41,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="come-logo">
-					<img src="img/header/logo.png" alt="" />
+					<img src="../../img/header/logo.png" alt="" />
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-7">
@@ -69,7 +69,7 @@
 			</div>
 			<div class="col-sm-12 col-md-5">
 				<div class="come-soon-img">
-					<img src="img/comming-soon.png" alt="" />
+					<img src="../../img/comming-soon.png" alt="" />
 				</div>
 			</div>
 		</div>
