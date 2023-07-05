@@ -377,7 +377,7 @@
 		</div>
 	</div>
 </div>
-<jsp:include page="..footer.jsp"></jsp:include>
+<jsp:include page="../footer.jsp"></jsp:include>
 	
 <!-- jQuery 2.1.4 -->
 <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
