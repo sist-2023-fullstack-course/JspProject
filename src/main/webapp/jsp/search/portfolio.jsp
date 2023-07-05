@@ -7,33 +7,33 @@
 	<title>Olongkar | Portfolio 3 Column</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Fav Icon -->
-	<link id="favicon" rel="icon" type="image/png" href="img/favicon.ico" />
+	<link id="favicon" rel="icon" type="image/png" href="../../img/favicon.ico" />
 	<!-- Google Font Raleway -->
 	<link href='https://fonts.googleapis.com/css?family=Raleway:200,300,500,400,600,700,800' rel='stylesheet' type='text/css'>
 	<!-- Google Font Dancing Script -->
 	<link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
 	<!-- Font Awesome CSS -->
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css" />
 	<!-- Owl Carousel CSS -->
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/owl.carousel.min.css" />
 	<!-- Animate CSS -->
-	<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/animate.min.css" />
 	<!-- simpleLens CSS -->
-	<link rel="stylesheet" type="text/css" href="css/jquery.simpleLens.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.simpleLens.css" />
 	<!-- Price Slider CSS -->
-	<link rel="stylesheet" type="text/css" href="css/jquery-price-slider.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-price-slider.css" />
 	<!-- MeanMenu CSS -->
-	<link rel="stylesheet" type="text/css" href="css/meanmenu.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/meanmenu.min.css" />
 	<!-- Magnific Popup CSS -->
-	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/magnific-popup.css" />
 	<!-- Nivo Slider CSS -->
-	<link rel="stylesheet" type="text/css" href="css/nivo-slider.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/nivo-slider.css" />
 	<!-- Stylesheet CSS -->
-	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="../../style.css" />
 	<!-- Responsive Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/responsive.css" />
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
@@ -94,7 +94,7 @@
 			<div class="col-sm-4 col-lg-6">
 				<div class="logo text-center">
 					<a href="index.html">
-						<img src="img/header/logo.png" alt="" />
+						<img src="../../img/header/logo.png" alt="" />
 						<h4>online jewelry store</h4>
 					</a>
 				</div>
@@ -108,12 +108,12 @@
 					<div class="cart-hover">
 						<ul class="header-cart-pro">
 							<li>
-								<div class="image"><a href="#"><img alt="cart item" src="img/cart-1.jpg"></a></div>
+								<div class="image"><a href="#"><img alt="cart item" src="../../img/cart-1.jpg"></a></div>
 								<div class="content fix"><a href="#">Product Name</a><span class="price">Price: $130</span><span class="quantity">Quantity: 1</span></div>
 								<i class="fa fa-trash delete"></i>
 							</li>
 							<li>
-								<div class="image"><a href="#"><img alt="cart item" src="img/cart-2.jpg"></a></div>
+								<div class="image"><a href="#"><img alt="cart item" src="../../img/cart-2.jpg"></a></div>
 								<div class="content fix"><a href="#">Product Name</a><span class="price">Price: $130</span><span class="quantity">Quantity: 2</span></div>
 								<i class="fa fa-trash delete"></i>
 							</li>
@@ -216,7 +216,7 @@
 										</ul>
 									</div>
 									<div class="column-4 column">
-										<a href="#"><img src="img/product/10.jpg" alt="" /></a>
+										<a href="#"><img src="../../img/product/10.jpg" alt="" /></a>
 									</div>
 								</div>
 							</li>
@@ -426,74 +426,74 @@
 			<div id="portfolio">
 				<div class="mix business webdesign col-sm-4">
 					<div class="port-wrap">
-						<img src="img/portfolio/portfolio-1.jpg" alt="" />
-						<a href="img/portfolio/portfolio-1.jpg" class="hover"><i class="fa fa-search"></i></a>
+						<img src="../../img/portfolio/portfolio-1.jpg" alt="" />
+						<a href="../../img/portfolio/portfolio-1.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 				<div class="mix photography print col-sm-4">
 					<div class="port-wrap">
-						<img src="img/portfolio/portfolio-2.jpg" alt="" />
-						<a href="img/portfolio/portfolio-2.jpg" class="hover"><i class="fa fa-search"></i></a>
+						<img src="../../img/portfolio/portfolio-2.jpg" alt="" />
+						<a href="../../img/portfolio/portfolio-2.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 				<div class="mix print business col-sm-4">
 					<div class="port-wrap">
-						<img src="img/portfolio/portfolio-3.jpg" alt="" />
-						<a href="img/portfolio/portfolio-3.jpg" class="hover"><i class="fa fa-search"></i></a>
+						<img src="../../img/portfolio/portfolio-3.jpg" alt="" />
+						<a href="../../img/portfolio/portfolio-3.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 				<div class="mix webdesign photography col-sm-4">
 					<div class="port-wrap">
-						<img src="img/portfolio/portfolio-4.jpg" alt="" />
-						<a href="img/portfolio/portfolio-4.jpg" class="hover"><i class="fa fa-search"></i></a>
+						<img src="../../img/portfolio/portfolio-4.jpg" alt="" />
+						<a href="../../img/portfolio/portfolio-4.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 				<div class="mix business webdesign col-sm-4">
 					<div class="port-wrap">
-						<img src="img/portfolio/portfolio-5.jpg" alt="" />
-						<a href="img/portfolio/portfolio-5.jpg" class="hover"><i class="fa fa-search"></i></a>
+						<img src="../../img/portfolio/portfolio-5.jpg" alt="" />
+						<a href="../../img/portfolio/portfolio-5.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 				<div class="mix photography print col-sm-4">
 					<div class="port-wrap">
-						<img src="img/portfolio/portfolio-6.jpg" alt="" />
-						<a href="img/portfolio/portfolio-6.jpg" class="hover"><i class="fa fa-search"></i></a>
+						<img src="../../img/portfolio/portfolio-6.jpg" alt="" />
+						<a href="../../img/portfolio/portfolio-6.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 				<div class="mix print business col-sm-4">
 					<div class="port-wrap">
-						<img src="img/portfolio/portfolio-7.jpg" alt="" />
-						<a href="img/portfolio/portfolio-7.jpg" class="hover"><i class="fa fa-search"></i></a>
+						<img src="../../img/portfolio/portfolio-7.jpg" alt="" />
+						<a href="../../img/portfolio/portfolio-7.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 				<div class="mix webdesign photography col-sm-4">
 					<div class="port-wrap">
-						<img src="img/portfolio/portfolio-8.jpg" alt="" />
-						<a href="img/portfolio/portfolio-8.jpg" class="hover"><i class="fa fa-search"></i></a>
+						<img src="../../img/portfolio/portfolio-8.jpg" alt="" />
+						<a href="../../img/portfolio/portfolio-8.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 				<div class="mix business webdesign col-sm-4">
 					<div class="port-wrap">
-						<img src="img/portfolio/portfolio-9.jpg" alt="" />
-						<a href="img/portfolio/portfolio-9.jpg" class="hover"><i class="fa fa-search"></i></a>
+						<img src="../../img/portfolio/portfolio-9.jpg" alt="" />
+						<a href="../../img/portfolio/portfolio-9.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 				<div class="mix photography print col-sm-4">
 					<div class="port-wrap">
-						<img src="img/portfolio/portfolio-10.jpg" alt="" />
-						<a href="img/portfolio/portfolio-10.jpg" class="hover"><i class="fa fa-search"></i></a>
+						<img src="../../img/portfolio/portfolio-10.jpg" alt="" />
+						<a href="../../img/portfolio/portfolio-10.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 				<div class="mix print business col-sm-4">
 					<div class="port-wrap">
-						<img src="img/portfolio/portfolio-11.jpg" alt="" />
-						<a href="img/portfolio/portfolio-11.jpg" class="hover"><i class="fa fa-search"></i></a>
+						<img src="../../img/portfolio/portfolio-11.jpg" alt="" />
+						<a href="../../img/portfolio/portfolio-11.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 				<div class="mix webdesign photography col-sm-4">
 					<div class="port-wrap">
-						<img src="img/portfolio/portfolio-12.jpg" alt="" />
-						<a href="img/portfolio/portfolio-12.jpg" class="hover"><i class="fa fa-search"></i></a>
+						<img src="../../img/portfolio/portfolio-12.jpg" alt="" />
+						<a href="../../img/portfolio/portfolio-12.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
 			</div>
@@ -508,16 +508,16 @@
 				<div class="underline"></div>
 			</div>
 			<div class="brand-slider owl-carousel">
-				<div class="brand-item"><img src="img/brand/brand-1.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-2.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-3.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-4.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-5.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-1.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-2.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-3.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-4.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-5.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-1.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-2.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-3.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-4.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-5.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-1.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-2.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-3.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-4.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-5.png" alt="" /></div>
 			</div>
 		</div>
 	</div>
@@ -554,7 +554,7 @@
 			<div class="col-sm-6 col-md-3">
 				<div class="footer-about">
 					<div class="image">
-						<img src="img/header/logo.png" alt="" />
+						<img src="../../img/header/logo.png" alt="" />
 						<h3>online jewelry store</h3>
 					</div>
 					<p>perspiciatis unde omnis iste natus error sit voluptatem accm doloremque antium, totam rem aperiam, eaque ipsa perspiciatis unde omnis iste</p>
@@ -653,11 +653,11 @@
 			<div class="col-sm-6">
 				<div class="payment">
 					<ul>
-						<li><a href="#"><img src="img/footer/paypal.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="img/footer/visa.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="img/footer/master.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="img/footer/cards.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="img/footer/discover.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/paypal.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/visa.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/master.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/cards.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/discover.jpg" alt="" /></a></li>
 					</ul>
 				</div>
 			</div>
@@ -666,36 +666,36 @@
 </div><!--End Footer Area-->
 	
 <!-- jQuery 2.1.4 -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
 <!-- Bootstrap JS -->
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
 <!-- Owl Carousel JS -->
-<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="../../js/owl.carousel.min.js"></script>
 <!-- countTo JS -->
-<script type="text/javascript" src="js/jquery.countTo.js"></script>
+<script type="text/javascript" src="../../js/jquery.countTo.js"></script>
 <!-- mixitup JS -->
-<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.mixitup.min.js"></script>
 <!-- magnific popup JS -->
-<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.magnific-popup.min.js"></script>
 <!-- Appear JS -->
-<script type="text/javascript" src="js/jquery.appear.js"></script>
+<script type="text/javascript" src="../../js/jquery.appear.js"></script>
 <!-- MeanMenu JS -->
-<script type="text/javascript" src="js/jquery.meanmenu.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.meanmenu.min.js"></script>
 <!-- Nivo Slider JS -->
-<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="../../js/jquery.nivo.slider.pack.js"></script>
 <!-- Scrollup JS -->
-<script type="text/javascript" src="js/jquery.scrollup.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.scrollup.min.js"></script>
 <!-- simpleLens JS -->
-<script type="text/javascript" src="js/jquery.simpleLens.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.simpleLens.min.js"></script>
 <!-- Price Slider JS -->
-<script type="text/javascript" src="js/jquery-price-slider.js"></script>
+<script type="text/javascript" src="../../js/jquery-price-slider.js"></script>
 <!-- WOW JS -->
-<script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript" src="../../js/wow.min.js"></script>
 <script>
 	new WOW().init();
 </script>	
 <!-- Main JS -->
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="../../js/main.js"></script>
 
 </body>
 
