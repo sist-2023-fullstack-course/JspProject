@@ -139,9 +139,9 @@
 				<div class="main-menu hidden-sm hidden-xs">
 					<nav>
 						<ul>
-							<li><a href="index.html" class="active">Home</a>
+							<li><a href="../../index.html" class="active">Home</a>
 								<ul class="sub-menu">
-									<li><a href="index.html">Home 1</a></li>
+									<li><a href="../../index.html">Home 1</a></li>
 									<li><a href="index-2.html">Home 2</a></li>
 									<li><a href="index-3.html">Home 3</a></li>
 								</ul>
@@ -286,9 +286,9 @@
 				<div class="mobile-menu hidden-md hidden-lg">
 					<nav>
 						<ul>
-							<li><a href="index.html" class="active">Home</a>
+							<li><a href="../../index.html" class="active">Home</a>
 								<ul>
-									<li><a href="index.html">Home 1</a></li>
+									<li><a href="../../index.html">Home 1</a></li>
 									<li><a href="index-2.html">Home 2</a></li>
 									<li><a href="index-3.html">Home 3</a></li>
 								</ul>
@@ -596,7 +596,7 @@
 				<div class="footer-quick-link footer-links">
 					<h2>QUICK LINK</h2>
 					<ul>
-						<li><a href="index.html">Home</a></li>
+						<li><a href="../../index.html">Home</a></li>
 						<li><a href="shop.html">Shop</a></li>
 						<li><a href="shop-left-sidebar.html">New Arrivals</a></li>
 						<li><a href="services.html">Services</a></li>	
