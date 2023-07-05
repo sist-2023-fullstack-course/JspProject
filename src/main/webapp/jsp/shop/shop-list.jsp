@@ -4,36 +4,36 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Olongkar | Shop List</title>
+	<title>Olongkar | Cart</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Fav Icon -->
-	<link id="favicon" rel="icon" type="image/png" href="img/favicon.ico" />
+	<link id="favicon" rel="icon" type="image/png" href="../img/favicon.ico" />
 	<!-- Google Font Raleway -->
 	<link href='https://fonts.googleapis.com/css?family=Raleway:200,300,500,400,600,700,800' rel='stylesheet' type='text/css'>
 	<!-- Google Font Dancing Script -->
 	<link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
 	<!-- Font Awesome CSS -->
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css" />
 	<!-- Owl Carousel CSS -->
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/owl.carousel.min.css" />
 	<!-- Animate CSS -->
-	<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/animate.min.css" />
 	<!-- simpleLens CSS -->
-	<link rel="stylesheet" type="text/css" href="css/jquery.simpleLens.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/jquery.simpleLens.css" />
 	<!-- Price Slider CSS -->
-	<link rel="stylesheet" type="text/css" href="css/jquery-price-slider.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-price-slider.css" />
 	<!-- MeanMenu CSS -->
-	<link rel="stylesheet" type="text/css" href="css/meanmenu.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/meanmenu.min.css" />
 	<!-- Magnific Popup CSS -->
-	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/magnific-popup.css" />
 	<!-- Nivo Slider CSS -->
-	<link rel="stylesheet" type="text/css" href="css/nivo-slider.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/nivo-slider.css" />
 	<!-- Stylesheet CSS -->
-	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="../../style.css" />
 	<!-- Responsive Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/responsive.css" />
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
@@ -94,7 +94,7 @@
 			<div class="col-sm-4 col-lg-6">
 				<div class="logo text-center">
 					<a href="index.html">
-						<img src="img/header/logo.png" alt="" />
+						<img src="../../img/header/logo.png" alt="" />
 						<h4>online jewelry store</h4>
 					</a>
 				</div>
@@ -216,7 +216,7 @@
 										</ul>
 									</div>
 									<div class="column-4 column">
-										<a href="#"><img src="img/product/10.jpg" alt="" /></a>
+										<a href="#"><img src="../../img/product/10.jpg" alt="" /></a>
 									</div>
 								</div>
 							</li>
@@ -436,7 +436,7 @@
 					<!-- single-sidebar end -->
 					<!-- single-sidebar start -->
 					<div class="sin-shop-sidebar shop-add">
-						<a href="#"><img src="img/shop-add-1.jpg" alt=""></a>
+						<a href="#"><img src="../../img/shop-add-1.jpg" alt=""></a>
 					</div>
 					<!-- single-sidebar end -->
 					<!-- single-sidebar start -->
@@ -467,7 +467,7 @@
 					<!-- single-sidebar end -->
 					<!-- single-sidebar start -->
 					<div class="sin-shop-sidebar shop-add">
-						<a href="#"><img src="img/shop-add-2.jpg" alt=""></a>
+						<a href="#"><img src="../../img/shop-add-2.jpg" alt=""></a>
 					</div>
 					<!-- single-sidebar end -->
 					<!-- single-sidebar start -->
@@ -523,7 +523,7 @@
 						<div class="single-list-product col-sm-12">
 							<div class="list-pro-image">
 								<a href="product-details.html">
-									<img src="img/product/1.jpg" alt="" />
+									<img src="../../img/product/1.jpg" alt="" />
 								</a>
 							</div>
 							<div class="list-pro-des fix">
@@ -548,7 +548,7 @@
 						<div class="single-list-product col-sm-12">
 							<div class="list-pro-image">
 								<a href="product-details.html">
-									<img src="img/product/2.jpg" alt="" />
+									<img src="../../img/product/2.jpg" alt="" />
 								</a>
 							</div>
 							<div class="list-pro-des fix">
@@ -573,7 +573,7 @@
 						<div class="single-list-product col-sm-12">
 							<div class="list-pro-image">
 								<a href="product-details.html">
-									<img src="img/product/3.jpg" alt="" />
+									<img src="../../img/product/3.jpg" alt="" />
 								</a>
 							</div>
 							<div class="list-pro-des fix">
@@ -598,7 +598,7 @@
 						<div class="single-list-product col-sm-12">
 							<div class="list-pro-image">
 								<a href="product-details.html">
-									<img src="img/product/4.jpg" alt="" />
+									<img src="../../img/product/4.jpg" alt="" />
 								</a>
 							</div>
 							<div class="list-pro-des fix">
@@ -623,7 +623,7 @@
 						<div class="single-list-product col-sm-12">
 							<div class="list-pro-image">
 								<a href="product-details.html">
-									<img src="img/product/5.jpg" alt="" />
+									<img src="../../img/product/5.jpg" alt="" />
 								</a>
 							</div>
 							<div class="list-pro-des fix">
@@ -648,7 +648,7 @@
 						<div class="single-list-product col-sm-12">
 							<div class="list-pro-image">
 								<a href="product-details.html">
-									<img src="img/product/6.jpg" alt="" />
+									<img src="../../img/product/6.jpg" alt="" />
 								</a>
 							</div>
 							<div class="list-pro-des fix">
@@ -673,7 +673,7 @@
 						<div class="single-list-product col-sm-12">
 							<div class="list-pro-image">
 								<a href="product-details.html">
-									<img src="img/product/7.jpg" alt="" />
+									<img src="../../img/product/7.jpg" alt="" />
 								</a>
 							</div>
 							<div class="list-pro-des fix">
@@ -698,7 +698,7 @@
 						<div class="single-list-product col-sm-12">
 							<div class="list-pro-image">
 								<a href="product-details.html">
-									<img src="img/product/8.jpg" alt="" />
+									<img src="../../img/product/8.jpg" alt="" />
 								</a>
 							</div>
 							<div class="list-pro-des fix">
@@ -723,7 +723,7 @@
 						<div class="single-list-product col-sm-12">
 							<div class="list-pro-image">
 								<a href="product-details.html">
-									<img src="img/product/9.jpg" alt="" />
+									<img src="../../img/product/9.jpg" alt="" />
 								</a>
 							</div>
 							<div class="list-pro-des fix">
@@ -748,7 +748,7 @@
 						<div class="single-list-product col-sm-12">
 							<div class="list-pro-image">
 								<a href="product-details.html">
-									<img src="img/product/10.jpg" alt="" />
+									<img src="../../img/product/10.jpg" alt="" />
 								</a>
 							</div>
 							<div class="list-pro-des fix">
@@ -799,16 +799,16 @@
 				<div class="underline"></div>
 			</div>
 			<div class="brand-slider owl-carousel">
-				<div class="brand-item"><img src="img/brand/brand-1.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-2.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-3.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-4.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-5.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-1.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-2.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-3.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-4.png" alt="" /></div>
-				<div class="brand-item"><img src="img/brand/brand-5.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-1.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-2.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-3.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-4.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-5.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-1.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-2.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-3.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-4.png" alt="" /></div>
+				<div class="brand-item"><img src="../../img/brand/brand-5.png" alt="" /></div>
 			</div>
 		</div>
 	</div>
@@ -845,7 +845,7 @@
 			<div class="col-sm-6 col-md-3">
 				<div class="footer-about">
 					<div class="image">
-						<img src="img/header/logo.png" alt="" />
+						<img src="../../img/header/logo.png" alt="" />
 						<h3>online jewelry store</h3>
 					</div>
 					<p>perspiciatis unde omnis iste natus error sit voluptatem accm doloremque antium, totam rem aperiam, eaque ipsa perspiciatis unde omnis iste</p>
@@ -944,11 +944,11 @@
 			<div class="col-sm-6">
 				<div class="payment">
 					<ul>
-						<li><a href="#"><img src="img/footer/paypal.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="img/footer/visa.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="img/footer/master.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="img/footer/cards.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="img/footer/discover.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/paypal.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/visa.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/master.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/cards.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/discover.jpg" alt="" /></a></li>
 					</ul>
 				</div>
 			</div>
@@ -957,36 +957,36 @@
 </div><!--End Footer Area-->
 	
 <!-- jQuery 2.1.4 -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
 <!-- Bootstrap JS -->
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
 <!-- Owl Carousel JS -->
-<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="../../js/owl.carousel.min.js"></script>
 <!--countTo JS -->
-<script type="text/javascript" src="js/jquery.countTo.js"></script>
+<script type="text/javascript" src="../../js/jquery.countTo.js"></script>
 <!-- mixitup JS -->
-<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.mixitup.min.js"></script>
 <!-- magnific popup JS -->
-<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.magnific-popup.min.js"></script>
 <!-- Appear JS -->
-<script type="text/javascript" src="js/jquery.appear.js"></script>
+<script type="text/javascript" src="../../js/jquery.appear.js"></script>
 <!-- MeanMenu JS -->
-<script type="text/javascript" src="js/jquery.meanmenu.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.meanmenu.min.js"></script>
 <!-- Nivo Slider JS -->
-<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="../../js/jquery.nivo.slider.pack.js"></script>
 <!-- Scrollup JS -->
-<script type="text/javascript" src="js/jquery.scrollup.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.scrollup.min.js"></script>
 <!-- simpleLens JS -->
-<script type="text/javascript" src="js/jquery.simpleLens.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.simpleLens.min.js"></script>
 <!-- Price Slider JS -->
-<script type="text/javascript" src="js/jquery-price-slider.js"></script>
+<script type="text/javascript" src="../../js/jquery-price-slider.js"></script>
 <!-- WOW JS -->
-<script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript" src="../../js/wow.min.js"></script>
 <script>
 	new WOW().init();
 </script>	
 <!-- Main JS -->
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="../../js/main.js"></script>
 
 </body>
 

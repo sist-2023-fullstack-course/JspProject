@@ -88,12 +88,12 @@
 			<div class="col-sm-4 col-lg-3">
 				<div class="log-link">
 					<p>Well come visitor you can</p>
-					<h5><a href="login.html">Login</a> or <a href="login.html">Create an account</a></h5>
+					<h5><a href="jsp/login/login.jsp">Login</a> or <a href="jsp/login/login.jsp">Create an account</a></h5>
 				</div>
 			</div>
 			<div class="col-sm-4 col-lg-6">
 				<div class="logo text-center">
-					<a href="index.html">
+					<a href="index.jsp">
 						<img src="img/header/logo.png" alt="" />
 						<h4>online jewelry store</h4>
 					</a>
@@ -101,7 +101,7 @@
 			</div>
 			<div class="col-sm-4 col-lg-3">
 				<div class="cart-info float-right">
-					<a href="cart.html">
+					<a href="jsp/shop/cart.jsp">
 						<h5>My cart <span>2</span> items - <span>$390</span></h5>
 						<i class="fa fa-shopping-cart"></i>
 					</a>
@@ -119,7 +119,7 @@
 							</li>
 						</ul>
 						<div class="header-button-price">
-							<a href="checkout.html"><i class="fa fa-sign-out"></i><span>Check Out</span></a>
+							<a href="jsp/etc/checkout.jsp"><i class="fa fa-sign-out"></i><span>Check Out</span></a>
 							<div class="total-price"><h3>Total Price : <span>$390</span></h3></div>
 						</div>
 					</div>
@@ -139,80 +139,80 @@
 				<div class="main-menu hidden-sm hidden-xs">
 					<nav>
 						<ul>
-							<li><a href="index.html" class="active">Home</a>
+							<li><a href="index.jsp" class="active">Home</a>
 								<ul class="sub-menu">
-									<li><a href="index.html">Home 1</a></li>
-									<li><a href="index-2.html">Home 2</a></li>
-									<li><a href="index-3.html">Home 3</a></li>
+									<li><a href="index.jsp">Home 1</a></li>
+									<li><a href="index-2.jsp">Home 2</a></li>
+									<li><a href="index-3.jsp">Home 3</a></li>
 								</ul>
 							</li>
 							<li><a href="#">Pages</a>
 								<div class="mega-menu mega-menu-page">
 									<div class="column-1 column">
 										<ul>
-											<li><a href="about-us.html">About US</a></li>
-											<li><a href="blog.html">Blog</a></li>
-											<li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-											<li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>
-											<li><a href="blog-details.html">Blog details</a></li>
+											<li><a href="jsp/etc/about-us.jsp">About US</a></li>
+											<li><a href="jsp/search/blog.jsp">Blog</a></li>
+											<li><a href="jsp/search/blog-left-sidebar.jsp">Blog left sidebar</a></li>
+											<li><a href="jsp/search/blog-right-sidebar.jsp">Blog right sidebar</a></li>
+											<li><a href="jsp/search/blog-details.jsp">Blog details</a></li>
 										</ul>
 									</div>
 									<div class="column-2 column">
 										<ul>
-											<li><a href="cart.html">Cart</a></li>
-											<li><a href="checkout.html">Checkout</a></li>
-											<li><a href="coming-soon.html">Coming soon</a></li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="contact-2.html">Contact 2</a></li>
+											<li><a href="jsp/shop/cart.jsp">Cart</a></li>
+											<li><a href="jsp/etc/checkout.jsp">Checkout</a></li>
+											<li><a href="jsp/etc/coming-soon.jsp">Coming soon</a></li>
+											<li><a href="jsp/etc/contact.jsp">Contact</a></li>
+											<li><a href="jsp/etc/contact-2.jsp">Contact 2</a></li>
 										</ul>
 									</div>
 									<div class="column-3 column">
 										<ul>
-											<li><a href="faq.html">FAQ</a></li>
-											<li><a href="login.html">Login</a></li>
-											<li><a href="portfolio.html">Portfolio 3 column</a></li>
-											<li><a href="portfolio-2.html">Portfolio 4 column</a></li>
-											<li><a href="404.html">404</a></li>
+											<li><a href="jsp/etc/faq.jsp">FAQ</a></li>
+											<li><a href="jsp/login/login.jsp">Login</a></li>
+											<li><a href="jsp/search/portfolio.jsp">Portfolio 3 column</a></li>
+											<li><a href="jsp/search/portfolio-2.jsp">Portfolio 4 column</a></li>
+											<li><a href="jsp/etc/404.jsp">404</a></li>
 										</ul>
 									</div>
 									<div class="column-4 column">
 										<ul>
-											<li><a href="shop.html">Shop</a></li>
-											<li><a href="shop-list.html">Shop list</a></li>
-											<li><a href="shop-left-sidebar.html">Shop left sidebar</a></li>
-											<li><a href="shop-right-sidebar.html">Shop right sidebar</a></li>
-											<li><a href="product-details.html">Product details</a></li>
+											<li><a href="jsp/shop/shop.jsp">Shop</a></li>
+											<li><a href="jsp/shop/shop-list.jsp">Shop list</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">Shop left sidebar</a></li>
+											<li><a href="jsp/shop/shop-right-sidebar.jsp">Shop right sidebar</a></li>
+											<li><a href="jsp/shop/product-details.jsp">Product details</a></li>
 										</ul>
 									</div>
 								</div>
 							</li>
-							<li><a href="shop.html">Shop</a>
+							<li><a href="jsp/shop/shop.jsp">Shop</a>
 								<div class="mega-menu mega-menu-1">
 									<div class="column-1 column">
 										<ul>
-											<li><a href="shop-list.html">rings</a></li>
-											<li><a href="shop-left-sidebar.html">diamond ring</a></li>
-											<li><a href="shop-right-sidebar.html">gold ring</a></li>
-											<li><a href="shop-list.html">sliver ring</a></li>
-											<li><a href="shop-left-sidebar.html">Platinum ring</a></li>
+											<li><a href="jsp/shop/shop-list.jsp">rings</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">diamond ring</a></li>
+											<li><a href="jsp/shop/shop-right-sidebar.jsp">gold ring</a></li>
+											<li><a href="jsp/shop/shop-list.jsp">sliver ring</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">Platinum ring</a></li>
 										</ul>
 									</div>
 									<div class="column-2 column">
 										<ul>
-											<li><a href="shop-list.html">Bracelets</a></li>
-											<li><a href="shop-left-sidebar.html">diamond Bracelets</a></li>
-											<li><a href="shop-right-sidebar.html">gold Bracelets</a></li>
-											<li><a href="shop-left-sidebar.html">sliver Bracelets</a></li>
-											<li><a href="shop-right-sidebar.html">Platinum Bracelets</a></li>
+											<li><a href="jsp/shop/shop-list.jsp">Bracelets</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">diamond Bracelets</a></li>
+											<li><a href="jsp/shop/shop-right-sidebar.jsp">gold Bracelets</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">sliver Bracelets</a></li>
+											<li><a href="jsp/shop/shop-right-sidebar.jsp">Platinum Bracelets</a></li>
 										</ul>
 									</div>
 									<div class="column-3 column">
 										<ul>
-											<li><a href="shop-list.html">lecklaces</a></li>
-											<li><a href="shop-right-sidebar.html">diamond lecklaces</a></li>
-											<li><a href="shop-left-sidebar.html">gold lecklaces</a></li>
-											<li><a href="shop-right-sidebar.html">sliver lecklaces</a></li>
-											<li><a href="shop-left-sidebar.html">Platinum lecklaces</a></li>
+											<li><a href="jsp/shop/shop-list.jsp">lecklaces</a></li>
+											<li><a href="jsp/shop/shop-right-sidebar.jsp">diamond lecklaces</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">gold lecklaces</a></li>
+											<li><a href="jsp/shop/shop-right-sidebar.jsp">sliver lecklaces</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">Platinum lecklaces</a></li>
 										</ul>
 									</div>
 									<div class="column-4 column">
@@ -220,64 +220,64 @@
 									</div>
 								</div>
 							</li>
-							<li><a href="shop.html">New Arrivals</a>
+							<li><a href="jsp/shop/shop.jsp">New Arrivals</a>
 								<div class="mega-menu mega-menu-1">
 									<div class="column-1 column">
 										<ul>
-											<li><a href="shop-list.html">rings</a></li>
-											<li><a href="shop-left-sidebar.html">diamond ring</a></li>
-											<li><a href="shop-right-sidebar.html">gold ring</a></li>
-											<li><a href="shop-list.html">sliver ring</a></li>
-											<li><a href="shop-left-sidebar.html">Platinum ring</a></li>
+											<li><a href="jsp/shop/shop-list.jsp">rings</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">diamond ring</a></li>
+											<li><a href="jsp/shop/shop-right-sidebar.jsp">gold ring</a></li>
+											<li><a href="jsp/shop/shop-list.jsp">sliver ring</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">Platinum ring</a></li>
 										</ul>
 									</div>
 									<div class="column-2 column">
 										<ul>
-											<li><a href="shop-list.html">Bracelets</a></li>
-											<li><a href="shop-left-sidebar.html">diamond Bracelets</a></li>
-											<li><a href="shop-right-sidebar.html">gold Bracelets</a></li>
-											<li><a href="shop-left-sidebar.html">sliver Bracelets</a></li>
-											<li><a href="shop-right-sidebar.html">Platinum Bracelets</a></li>
+											<li><a href="jsp/shop/shop-list.jsp">Bracelets</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">diamond Bracelets</a></li>
+											<li><a href="jsp/shop/shop-right-sidebar.jsp">gold Bracelets</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">sliver Bracelets</a></li>
+											<li><a href="jsp/shop/shop-right-sidebar.jsp">Platinum Bracelets</a></li>
 										</ul>
 									</div>
 									<div class="column-3 column">
 										<ul>
-											<li><a href="shop-list.html">lecklaces</a></li>
-											<li><a href="shop-right-sidebar.html">diamond lecklaces</a></li>
-											<li><a href="shop-left-sidebar.html">gold lecklaces</a></li>
-											<li><a href="shop-right-sidebar.html">sliver lecklaces</a></li>
-											<li><a href="shop-left-sidebar.html">Platinum lecklaces</a></li>
+											<li><a href="jsp/shop/shop-list.jsp">lecklaces</a></li>
+											<li><a href="jsp/shop/shop-right-sidebar.jsp">diamond lecklaces</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">gold lecklaces</a></li>
+											<li><a href="jsp/shop/shop-right-sidebar.jsp">sliver lecklaces</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">Platinum lecklaces</a></li>
 										</ul>
 									</div>
 									<div class="column-4 column">
 										<ul>
-											<li><a href="shop-right-sidebar.html">earrings</a></li>
-											<li><a href="shop-list.html">diamond earrings</a></li>
-											<li><a href="shop-left-sidebar.html">gold earrings</a></li>
-											<li><a href="shop-list.html">sliver earrings</a></li>
-											<li><a href="shop-left-sidebar.html">Platinum earrings</a></li>
+											<li><a href="jsp/shop/shop-right-sidebar.jsp">earrings</a></li>
+											<li><a href="jsp/shop/shop-list.jsp">diamond earrings</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">gold earrings</a></li>
+											<li><a href="jsp/shop/shop-list.jsp">sliver earrings</a></li>
+											<li><a href="jsp/shop/shop-left-sidebar.jsp">Platinum earrings</a></li>
 										</ul>
 									</div>
 								</div>
 							</li>
-							<li><a href="portfolio.html">Portfolio</a>
+							<li><a href="jsp/search/portfolio.jsp">Portfolio</a>
 								<ul class="sub-menu">
-									<li><a href="portfolio.html">Portfolio 3 column</a></li>
-									<li><a href="portfolio-2.html">Portfolio 4 column</a></li>
+									<li><a href="jsp/search/portfolio.jsp">Portfolio 3 column</a></li>
+									<li><a href="jsp/search/portfolio-2.jsp">Portfolio 4 column</a></li>
 								</ul>
 							</li>
-							<li><a href="blog.html">Blog</a>
+							<li><a href="jsp/search/blog.jsp">Blog</a>
 								<ul class="sub-menu">
-									<li><a href="blog.html">Blog Page</a></li>
-									<li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-									<li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>
+									<li><a href="jsp/search/blog.jsp">Blog Page</a></li>
+									<li><a href="jsp/search/blog-left-sidebar.jsp">Blog left sidebar</a></li>
+									<li><a href="jsp/search/blog-right-sidebar.jsp">Blog right sidebar</a></li>
 								</ul>
 							</li>
-							<li><a href="about-us.html">About Us</a></li>
-							<li><a href="contact.html">Contact</a>
+							<li><a href="jsp/etc/about-us.jsp">About Us</a></li>
+							<li><a href="jsp/etc/contact.jsp">Contact</a>
 								<ul class="sub-menu">
-									<li><a href="contact.html">Contact 1</a></li>
-									<li><a href="contact-2.html">Contact 2</a></li>
+									<li><a href="jsp/etc/contact.jsp">Contact 1</a></li>
+									<li><a href="jsp/etc/contact-2.jsp">Contact 2</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -286,119 +286,119 @@
 				<div class="mobile-menu hidden-md hidden-lg">
 					<nav>
 						<ul>
-							<li><a href="index.html" class="active">Home</a>
+							<li><a href="index.jsp" class="active">Home</a>
 								<ul>
-									<li><a href="index.html">Home 1</a></li>
-									<li><a href="index-2.html">Home 2</a></li>
-									<li><a href="index-3.html">Home 3</a></li>
+									<li><a href="index.jsp">Home 1</a></li>
+									<li><a href="index-2.jsp">Home 2</a></li>
+									<li><a href="index-3.jsp">Home 3</a></li>
 								</ul>
 							</li>
 							<li><a href="#">Pages</a>
 								<ul>
-									<li><a href="about-us.html">About US</a></li>
-									<li><a href="blog.html">Blog</a></li>
-									<li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-									<li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>
-									<li><a href="blog-details.html">Blog details</a></li>
-									<li><a href="cart.html">Cart</a></li>
-									<li><a href="checkout.html">Checkout</a></li>
-									<li><a href="coming-soon.html">Coming soon</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li><a href="contact-2.html">Contact 2</a></li>
-									<li><a href="faq.html">FAQ</a></li>
-									<li><a href="login.html">Login</a></li>
-									<li><a href="portfolio.html">Portfolio 3 column</a></li>
-									<li><a href="portfolio-2.html">Portfolio 4 column</a></li>
-									<li><a href="404.html">404</a></li>
-									<li><a href="shop.html">Shop</a></li>
-									<li><a href="shop-list.html">Shop list</a></li>
-									<li><a href="shop-left-sidebar.html">Shop left sidebar</a></li>
-									<li><a href="shop-right-sidebar.html">Shop right sidebar</a></li>
-									<li><a href="product-details.html">Product details</a></li>
+									<li><a href="jsp/etc/about-us.jsp">About US</a></li>
+									<li><a href="jsp/search/blog.jsp">Blog</a></li>
+									<li><a href="jsp/search/blog-left-sidebar.jsp">Blog left sidebar</a></li>
+									<li><a href="jsp/search/blog-right-sidebar.jsp">Blog right sidebar</a></li>
+									<li><a href="jsp/search/blog-details.jsp">Blog details</a></li>
+									<li><a href="jsp/shop/cart.jsp">Cart</a></li>
+									<li><a href="jsp/etc/checkout.jsp">Checkout</a></li>
+									<li><a href="jsp/etc/coming-soon.jsp">Coming soon</a></li>
+									<li><a href="jsp/etc/contact.jsp">Contact</a></li>
+									<li><a href="jsp/etc/contact-2.jsp">Contact 2</a></li>
+									<li><a href="jsp/etc/faq.jsp">FAQ</a></li>
+									<li><a href="jsp/login/login.jsp">Login</a></li>
+									<li><a href="jsp/search/portfolio.jsp">Portfolio 3 column</a></li>
+									<li><a href="jsp/search/portfolio-2.jsp">Portfolio 4 column</a></li>
+									<li><a href="jsp/etc/404.jsp">404</a></li>
+									<li><a href="jsp/shop/shop.jsp">Shop</a></li>
+									<li><a href="jsp/shop/shop-list.jsp">Shop list</a></li>
+									<li><a href="jsp/shop/shop-left-sidebar.jsp">Shop left sidebar</a></li>
+									<li><a href="jsp/shop/shop-right-sidebar.jsp">Shop right sidebar</a></li>
+									<li><a href="jsp/shop/product-details.jsp">Product details</a></li>
 								</ul>
 							</li>
-							<li><a href="shop.html">Shop</a>
+							<li><a href="jsp/shop/shop.jsp">Shop</a>
 								<ul>
-									<li><a href="shop-list.html">rings</a>
+									<li><a href="jsp/shop/shop-list.jsp">rings</a>
 									<ul>
-										<li><a href="shop-left-sidebar.html">diamond ring</a></li>
-										<li><a href="shop-right-sidebar.html">gold ring</a></li>
-										<li><a href="shop-list.html">sliver ring</a></li>
-										<li><a href="shop-left-sidebar.html">Platinum ring</a></li>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">diamond ring</a></li>
+										<li><a href="jsp/shop/shop-right-sidebar.jsp">gold ring</a></li>
+										<li><a href="jsp/shop/shop-list.jsp">sliver ring</a></li>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">Platinum ring</a></li>
 									</ul>
 									</li>
-									<li><a href="shop-list.html">Bracelets</a>
+									<li><a href="jsp/shop/shop-list.jsp">Bracelets</a>
 									<ul>
-										<li><a href="shop-left-sidebar.html">diamond Bracelets</a></li>
-										<li><a href="shop-right-sidebar.html">gold Bracelets</a></li>
-										<li><a href="shop-left-sidebar.html">sliver Bracelets</a></li>
-										<li><a href="shop-right-sidebar.html">Platinum Bracelets</a></li>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">diamond Bracelets</a></li>
+										<li><a href="jsp/shop/shop-right-sidebar.jsp">gold Bracelets</a></li>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">sliver Bracelets</a></li>
+										<li><a href="jsp/shop/shop-right-sidebar.jsp">Platinum Bracelets</a></li>
 									</ul>
 									</li>
-									<li><a href="shop-list.html">lecklaces</a>
+									<li><a href="jsp/shop/shop-list.jsp">lecklaces</a>
 									<ul>
-										<li><a href="shop-right-sidebar.html">diamond lecklaces</a></li>
-										<li><a href="shop-left-sidebar.html">gold lecklaces</a></li>
-										<li><a href="shop-right-sidebar.html">sliver lecklaces</a></li>
-										<li><a href="shop-left-sidebar.html">Platinum lecklaces</a></li>
-									</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="shop.html">New Arrivals</a>
-								<ul>
-									<li><a href="shop-list.html">rings</a>
-									<ul>
-										<li><a href="shop-left-sidebar.html">diamond ring</a></li>
-										<li><a href="shop-right-sidebar.html">gold ring</a></li>
-										<li><a href="shop-list.html">sliver ring</a></li>
-										<li><a href="shop-left-sidebar.html">Platinum ring</a></li>
-									</ul>
-									</li>
-									<li><a href="shop-list.html">Bracelets</a>
-									<ul>
-										<li><a href="shop-left-sidebar.html">diamond Bracelets</a></li>
-										<li><a href="shop-right-sidebar.html">gold Bracelets</a></li>
-										<li><a href="shop-left-sidebar.html">sliver Bracelets</a></li>
-										<li><a href="shop-right-sidebar.html">Platinum Bracelets</a></li>
-									</ul>
-									</li>
-									<li><a href="shop-list.html">lecklaces</a>
-									<ul>
-										<li><a href="shop-right-sidebar.html">diamond lecklaces</a></li>
-										<li><a href="shop-left-sidebar.html">gold lecklaces</a></li>
-										<li><a href="shop-right-sidebar.html">sliver lecklaces</a></li>
-										<li><a href="shop-left-sidebar.html">Platinum lecklaces</a></li>
-									</ul>
-									</li>
-									<li><a href="shop-right-sidebar.html">earrings</a>
-									<ul>
-										<li><a href="shop-right-sidebar.html">diamond lecklaces</a></li>
-										<li><a href="shop-left-sidebar.html">gold earrings</a></li>
-										<li><a href="shop-list.html">sliver earrings</a></li>
-										<li><a href="shop-left-sidebar.html">Platinum earrings</a></li>
+										<li><a href="jsp/shop/shop-right-sidebar.jsp">diamond lecklaces</a></li>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">gold lecklaces</a></li>
+										<li><a href="jsp/shop/shop-right-sidebar.jsp">sliver lecklaces</a></li>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">Platinum lecklaces</a></li>
 									</ul>
 									</li>
 								</ul>
 							</li>
-							<li><a href="portfolio.html">Portfolio</a>
+							<li><a href="jsp/shop/shop.jsp">New Arrivals</a>
 								<ul>
-									<li><a href="portfolio.html">Portfolio 3 column</a></li>
-									<li><a href="portfolio-2.html">Portfolio 4 column</a></li>
+									<li><a href="jsp/shop/shop-list.jsp">rings</a>
+									<ul>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">diamond ring</a></li>
+										<li><a href="jsp/shop/shop-right-sidebar.jsp">gold ring</a></li>
+										<li><a href="jsp/shop/shop-list.jsp">sliver ring</a></li>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">Platinum ring</a></li>
+									</ul>
+									</li>
+									<li><a href="jsp/shop/shop-list.jsp">Bracelets</a>
+									<ul>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">diamond Bracelets</a></li>
+										<li><a href="jsp/shop/shop-right-sidebar.jsp">gold Bracelets</a></li>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">sliver Bracelets</a></li>
+										<li><a href="jsp/shop/shop-right-sidebar.jsp">Platinum Bracelets</a></li>
+									</ul>
+									</li>
+									<li><a href="jsp/shop/shop-list.jsp">lecklaces</a>
+									<ul>
+										<li><a href="jsp/shop/shop-right-sidebar.jsp">diamond lecklaces</a></li>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">gold lecklaces</a></li>
+										<li><a href="jsp/shop/shop-right-sidebar.jsp">sliver lecklaces</a></li>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">Platinum lecklaces</a></li>
+									</ul>
+									</li>
+									<li><a href="jsp/shop/shop-right-sidebar.jsp">earrings</a>
+									<ul>
+										<li><a href="jsp/shop/shop-right-sidebar.jsp">diamond lecklaces</a></li>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">gold earrings</a></li>
+										<li><a href="jsp/shop/shop-list.jsp">sliver earrings</a></li>
+										<li><a href="jsp/shop/shop-left-sidebar.jsp">Platinum earrings</a></li>
+									</ul>
+									</li>
 								</ul>
 							</li>
-							<li><a href="blog.html">Blog</a>
+							<li><a href="jsp/search/portfolio.jsp">Portfolio</a>
 								<ul>
-									<li><a href="blog.html">Blog 1</a></li>
-									<li><a href="blog-left-sidebar.html">Blog 2</a></li>
-									<li><a href="blog-right-sidebar.html">Blog 3</a></li>
+									<li><a href="jsp/search/portfolio.jsp">Portfolio 3 column</a></li>
+									<li><a href="jsp/search/portfolio-2.jsp">Portfolio 4 column</a></li>
 								</ul>
 							</li>
-							<li><a href="about-us.html">About Us</a></li>
-							<li><a href="contact.html">Contact</a>
+							<li><a href="jsp/search/blog.jsp">Blog</a>
 								<ul>
-									<li><a href="contact.html">Contact 1</a></li>
-									<li><a href="contact-2.html">Contact 2</a></li>
+									<li><a href="jsp/search/blog.jsp">Blog 1</a></li>
+									<li><a href="jsp/search/blog-left-sidebar.jsp">Blog 2</a></li>
+									<li><a href="jsp/search/blog-right-sidebar.jsp">Blog 3</a></li>
+								</ul>
+							</li>
+							<li><a href="jsp/etc/about-us.jsp">About Us</a></li>
+							<li><a href="jsp/etc/contact.jsp">Contact</a>
+								<ul>
+									<li><a href="jsp/etc/contact.jsp">Contact 1</a></li>
+									<li><a href="jsp/etc/contact-2.jsp">Contact 2</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -462,7 +462,7 @@
 					<div class="product-item fix">
 						<div class="product-img-hover">
 							<!-- Product image -->
-							<a href="product-details.html" class="pro-image fix"><img src="img/featured/1.jpg" alt="featured" /></a>
+							<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/featured/1.jpg" alt="featured" /></a>
 							<!-- Product action Btn -->
 							<div class="product-action-btn">
 								<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -473,7 +473,7 @@
 						<div class="pro-name-price-ratting">
 							<!-- Product Name -->
 							<div class="pro-name">
-								<a href="product-details.html">Product Name Demo</a>
+								<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 							</div>
 							<!-- Product Ratting -->
 							<div class="pro-ratting">
@@ -493,7 +493,7 @@
 					<div class="product-item fix">
 						<div class="product-img-hover">
 							<!-- Product image -->
-							<a href="product-details.html" class="pro-image fix"><img src="img/featured/2.jpg" alt="featured" /></a>
+							<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/featured/2.jpg" alt="featured" /></a>
 							<!-- Product action Btn -->
 							<div class="product-action-btn">
 								<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -504,7 +504,7 @@
 						<div class="pro-name-price-ratting">
 							<!-- Product Name -->
 							<div class="pro-name">
-								<a href="product-details.html">Product Name Demo</a>
+								<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 							</div>
 							<!-- Product Ratting -->
 							<div class="pro-ratting">
@@ -524,7 +524,7 @@
 					<div class="product-item fix">
 						<div class="product-img-hover">
 							<!-- Product image -->
-							<a href="product-details.html" class="pro-image fix"><img src="img/featured/3.jpg" alt="featured" /></a>
+							<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/featured/3.jpg" alt="featured" /></a>
 							<!-- Product action Btn -->
 							<div class="product-action-btn">
 								<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -535,7 +535,7 @@
 						<div class="pro-name-price-ratting">
 							<!-- Product Name -->
 							<div class="pro-name">
-								<a href="product-details.html">Product Name Demo</a>
+								<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 							</div>
 							<!-- Product Ratting -->
 							<div class="pro-ratting">
@@ -555,7 +555,7 @@
 					<div class="product-item fix">
 						<div class="product-img-hover">
 							<!-- Product image -->
-							<a href="product-details.html" class="pro-image fix"><img src="img/featured/4.jpg" alt="featured" /></a>
+							<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/featured/4.jpg" alt="featured" /></a>
 							<!-- Product action Btn -->
 							<div class="product-action-btn">
 								<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -566,7 +566,7 @@
 						<div class="pro-name-price-ratting">
 							<!-- Product Name -->
 							<div class="pro-name">
-								<a href="product-details.html">Product Name Demo</a>
+								<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 							</div>
 							<!-- Product Ratting -->
 							<div class="pro-ratting">
@@ -586,7 +586,7 @@
 					<div class="product-item fix">
 						<div class="product-img-hover">
 							<!-- Product image -->
-							<a href="product-details.html" class="pro-image fix"><img src="img/featured/1.jpg" alt="featured" /></a>
+							<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/featured/1.jpg" alt="featured" /></a>
 							<!-- Product action Btn -->
 							<div class="product-action-btn">
 								<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -597,7 +597,7 @@
 						<div class="pro-name-price-ratting">
 							<!-- Product Name -->
 							<div class="pro-name">
-								<a href="product-details.html">Product Name Demo</a>
+								<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 							</div>
 							<!-- Product Ratting -->
 							<div class="pro-ratting">
@@ -617,7 +617,7 @@
 					<div class="product-item fix">
 						<div class="product-img-hover">
 							<!-- Product image -->
-							<a href="product-details.html" class="pro-image fix"><img src="img/featured/2.jpg" alt="featured" /></a>
+							<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/featured/2.jpg" alt="featured" /></a>
 							<!-- Product action Btn -->
 							<div class="product-action-btn">
 								<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -628,7 +628,7 @@
 						<div class="pro-name-price-ratting">
 							<!-- Product Name -->
 							<div class="pro-name">
-								<a href="product-details.html">Product Name Demo</a>
+								<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 							</div>
 							<!-- Product Ratting -->
 							<div class="pro-ratting">
@@ -648,7 +648,7 @@
 					<div class="product-item fix">
 						<div class="product-img-hover">
 							<!-- Product image -->
-							<a href="product-details.html" class="pro-image fix"><img src="img/featured/3.jpg" alt="featured" /></a>
+							<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/featured/3.jpg" alt="featured" /></a>
 							<!-- Product action Btn -->
 							<div class="product-action-btn">
 								<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -659,7 +659,7 @@
 						<div class="pro-name-price-ratting">
 							<!-- Product Name -->
 							<div class="pro-name">
-								<a href="product-details.html">Product Name Demo</a>
+								<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 							</div>
 							<!-- Product Ratting -->
 							<div class="pro-ratting">
@@ -679,7 +679,7 @@
 					<div class="product-item fix">
 						<div class="product-img-hover">
 							<!-- Product image -->
-							<a href="product-details.html" class="pro-image fix"><img src="img/featured/4.jpg" alt="featured" /></a>
+							<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/featured/4.jpg" alt="featured" /></a>
 							<!-- Product action Btn -->
 							<div class="product-action-btn">
 								<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -690,7 +690,7 @@
 						<div class="pro-name-price-ratting">
 							<!-- Product Name -->
 							<div class="pro-name">
-								<a href="product-details.html">Product Name Demo</a>
+								<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 							</div>
 							<!-- Product Ratting -->
 							<div class="pro-ratting">
@@ -785,7 +785,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -796,7 +796,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -816,7 +816,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -827,71 +827,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-						</div>
-						<div class="single-product-item fix">
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -913,7 +849,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -924,7 +860,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -944,7 +880,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/7.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -955,71 +891,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-						</div>
-						<div class="single-product-item fix">
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1041,7 +913,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1052,7 +924,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1072,7 +944,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/7.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1083,71 +955,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-						</div>
-						<div class="single-product-item fix">
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1169,7 +977,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1180,7 +988,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1200,7 +1008,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/7.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1211,7 +1019,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1233,7 +1041,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1244,7 +1052,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1264,7 +1072,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1275,7 +1083,199 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+						</div>
+						<div class="single-product-item fix">
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+						</div>
+						<div class="single-product-item fix">
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/7.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+						</div>
+						<div class="single-product-item fix">
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1301,7 +1301,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1312,7 +1312,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1332,7 +1332,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1343,71 +1343,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-						</div>
-						<div class="single-product-item fix">
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1429,7 +1365,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1440,7 +1376,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1460,7 +1396,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1471,71 +1407,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-						</div>
-						<div class="single-product-item fix">
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/7.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1557,7 +1429,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1568,7 +1440,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1588,7 +1460,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1599,71 +1471,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-						</div>
-						<div class="single-product-item fix">
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1685,7 +1493,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1696,7 +1504,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1716,7 +1524,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/7.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1727,7 +1535,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1749,7 +1557,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1760,7 +1568,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1780,7 +1588,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/7.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1791,7 +1599,199 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+						</div>
+						<div class="single-product-item fix">
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+						</div>
+						<div class="single-product-item fix">
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+						</div>
+						<div class="single-product-item fix">
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/7.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1817,7 +1817,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/10.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/10.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1828,7 +1828,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1848,7 +1848,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1859,71 +1859,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-						</div>
-						<div class="single-product-item">
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1945,7 +1881,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1956,7 +1892,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -1976,7 +1912,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -1987,71 +1923,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-						</div>
-						<div class="single-product-item">
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2073,7 +1945,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/10.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2084,7 +1956,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2104,7 +1976,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2115,71 +1987,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-						</div>
-						<div class="single-product-item">
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2201,7 +2009,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2212,7 +2020,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2232,7 +2040,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2243,7 +2051,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2265,7 +2073,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/10.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2276,7 +2084,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2296,7 +2104,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2307,7 +2115,199 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+						</div>
+						<div class="single-product-item">
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+						</div>
+						<div class="single-product-item">
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+						</div>
+						<div class="single-product-item">
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2333,7 +2333,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2344,7 +2344,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2364,7 +2364,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2375,71 +2375,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-						</div>
-						<div class="single-product-item">
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2461,7 +2397,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/9.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2472,7 +2408,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2492,7 +2428,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/10.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2503,71 +2439,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-						</div>
-						<div class="single-product-item">
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/8.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2589,7 +2461,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/3.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/9.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2600,7 +2472,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2620,7 +2492,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/10.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2631,71 +2503,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-						</div>
-						<div class="single-product-item">
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
-									</div>
-									<!-- Product Ratting -->
-									<div class="pro-ratting">
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star"></i>
-										<i class="on fa fa-star-half-o"></i>
-									</div>
-									<!-- Product Price -->
-									<div class="pro-price fix">
-										<p><span class="old">$165</span><span class="new">$150</span></p>
-									</div>
-								</div>
-							</div><!-- Single Product End -->
-							<!-- Single Product Start -->
-							<div class="product-item fix">
-								<div class="product-img-hover">
-									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
-									<!-- Product action Btn -->
-									<div class="product-action-btn">
-										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
-										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
-										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-									</div>
-								</div>
-								<div class="pro-name-price-ratting">
-									<!-- Product Name -->
-									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2717,7 +2525,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/9.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2728,7 +2536,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2748,7 +2556,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/10.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/8.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2759,7 +2567,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2781,7 +2589,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/3.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2792,7 +2600,7 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2812,7 +2620,7 @@
 							<div class="product-item fix">
 								<div class="product-img-hover">
 									<!-- Product image -->
-									<a href="product-details.html" class="pro-image fix"><img src="img/product/8.jpg" alt="product" /></a>
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/2.jpg" alt="product" /></a>
 									<!-- Product action Btn -->
 									<div class="product-action-btn">
 										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
@@ -2823,7 +2631,199 @@
 								<div class="pro-name-price-ratting">
 									<!-- Product Name -->
 									<div class="pro-name">
-										<a href="product-details.html">Product Name Demo</a>
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+						</div>
+						<div class="single-product-item">
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/6.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/4.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+						</div>
+						<div class="single-product-item">
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/9.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/10.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+						</div>
+						<div class="single-product-item">
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/1.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
+									</div>
+									<!-- Product Ratting -->
+									<div class="pro-ratting">
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star"></i>
+										<i class="on fa fa-star-half-o"></i>
+									</div>
+									<!-- Product Price -->
+									<div class="pro-price fix">
+										<p><span class="old">$165</span><span class="new">$150</span></p>
+									</div>
+								</div>
+							</div><!-- Single Product End -->
+							<!-- Single Product Start -->
+							<div class="product-item fix">
+								<div class="product-img-hover">
+									<!-- Product image -->
+									<a href="jsp/shop/product-details.jsp" class="pro-image fix"><img src="img/product/8.jpg" alt="product" /></a>
+									<!-- Product action Btn -->
+									<div class="product-action-btn">
+										<a class="quick-view" href="#"><i class="fa fa-search"></i></a>
+										<a class="favorite" href="#"><i class="fa fa-heart-o"></i></a>
+										<a class="add-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+									</div>
+								</div>
+								<div class="pro-name-price-ratting">
+									<!-- Product Name -->
+									<div class="pro-name">
+										<a href="jsp/shop/product-details.jsp">Product Name Demo</a>
 									</div>
 									<!-- Product Ratting -->
 									<div class="pro-ratting">
@@ -2867,13 +2867,13 @@
 			<div class="blog-slider owl-carousel">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.html"><img src="img/blog/blog-1.jpg" alt="" />
+						<a class="image fix" href="jsp/search/blog-details.jsp"><img src="img/blog/blog-1.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.html">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="jsp/search/blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -2884,13 +2884,13 @@
 				</div>
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.html"><img src="img/blog/blog-2.jpg" alt="" />
+						<a class="image fix" href="jsp/search/blog-details.jsp"><img src="img/blog/blog-2.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.html">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="jsp/search/blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -2901,13 +2901,13 @@
 				</div>
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.html"><img src="img/blog/blog-3.jpg" alt="" />
+						<a class="image fix" href="jsp/search/blog-details.jsp"><img src="img/blog/blog-3.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.html">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="jsp/search/blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -2918,13 +2918,13 @@
 				</div>
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.html"><img src="img/blog/blog-4.jpg" alt="" />
+						<a class="image fix" href="jsp/search/blog-details.jsp"><img src="img/blog/blog-4.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.html">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="jsp/search/blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -3110,14 +3110,14 @@
 				<div class="footer-quick-link footer-links">
 					<h2>QUICK LINK</h2>
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="shop.html">Shop</a></li>
-						<li><a href="shop-left-sidebar.html">New Arrivals</a></li>
-						<li><a href="services.html">Services</a></li>	
-						<li><a href="portfolio-1.html">Portfolio</a></li>
-						<li><a href="blog.html">Blog</a></li>
+						<li><a href="index.jsp">Home</a></li>
+						<li><a href="jsp/shop/shop.jsp">Shop</a></li>
+						<li><a href="jsp/shop/shop-left-sidebar.jsp">New Arrivals</a></li>
+						<li><a href="services.jsp">Services</a></li>	
+						<li><a href="portfolio-1.jsp">Portfolio</a></li>
+						<li><a href="jsp/search/blog.jsp">Blog</a></li>
 						<li><a href="#">Shortcodes</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="jsp/etc/contact.jsp">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -3131,9 +3131,9 @@
 							<li><a href="#">Your Account</a></li>
 							<li><a href="#">Term & Conditions</a></li>
 							<li><a href="#">Advance Search</a></li>
-							<li><a href="faq.html">Help & FAQs</a></li>
+							<li><a href="jsp/etc/faq.jsp">Help & FAQs</a></li>
 							<li><a href="#">Gift Voucher</a></li>
-							<li><a href="contact-2.html">Contact Us</a></li>
+							<li><a href="jsp/etc/contact-2.jsp">Contact Us</a></li>
 						</ul>
 					</div>
 					<div class="col-sm-4 footer-account footer-links">
