@@ -3,8 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
 </head>
 <body>
 <div class="footer-top-area fix"><!--Start Footer top area-->
@@ -13,7 +11,7 @@
 			<div class="col-sm-6 col-md-3">
 				<div class="footer-about">
 					<div class="image">
-						<img src="../../img/header/logo.png" alt="" />
+						<img src="../img/header/logo.png" alt="" />
 						<h3>online jewelry store</h3>
 					</div>
 					<p>perspiciatis unde omnis iste natus error sit voluptatem accm doloremque antium, totam rem aperiam, eaque ipsa perspiciatis unde omnis iste</p>
@@ -52,7 +50,7 @@
 				<div class="footer-quick-link footer-links">
 					<h2>QUICK LINK</h2>
 					<ul>
-						<li><a href="index.html">Home</a></li>
+						<li><a href="#">Home</a></li>
 						<li><a href="shop.html">Shop</a></li>
 						<li><a href="shop-left-sidebar.html">New Arrivals</a></li>
 						<li><a href="services.html">Services</a></li>	
@@ -112,11 +110,11 @@
 			<div class="col-sm-6">
 				<div class="payment">
 					<ul>
-						<li><a href="#"><img src="../../img/footer/paypal.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="../../img/footer/visa.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="../../img/footer/master.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="../../img/footer/cards.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="../../img/footer/discover.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../img/footer/paypal.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../img/footer/visa.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../img/footer/master.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../img/footer/cards.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../img/footer/discover.jpg" alt="" /></a></li>
 					</ul>
 				</div>
 			</div>
