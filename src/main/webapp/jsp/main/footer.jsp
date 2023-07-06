@@ -1,13 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!--Start Support Area-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
 <div class="footer-top-area fix"><!--Start Footer top area-->
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 col-md-3">
 				<div class="footer-about">
 					<div class="image">
-						<img src="img/header/logo.png" alt="" />
+						<img src="../../img/header/logo.png" alt="" />
 						<h3>online jewelry store</h3>
 					</div>
 					<p>perspiciatis unde omnis iste natus error sit voluptatem accm doloremque antium, totam rem aperiam, eaque ipsa perspiciatis unde omnis iste</p>
@@ -46,14 +52,14 @@
 				<div class="footer-quick-link footer-links">
 					<h2>QUICK LINK</h2>
 					<ul>
-						<li><a href="index.jsp">Home</a></li>
-						<li><a href="jsp/shop/shop.jsp">Shop</a></li>
-						<li><a href="jsp/shop/shop-left-sidebar.jsp">New Arrivals</a></li>
-						<li><a href="services.jsp">Services</a></li>	
-						<li><a href="portfolio-1.jsp">Portfolio</a></li>
-						<li><a href="jsp/search/blog.jsp">Blog</a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="shop.html">Shop</a></li>
+						<li><a href="shop-left-sidebar.html">New Arrivals</a></li>
+						<li><a href="services.html">Services</a></li>	
+						<li><a href="portfolio-1.html">Portfolio</a></li>
+						<li><a href="blog.html">Blog</a></li>
 						<li><a href="#">Shortcodes</a></li>
-						<li><a href="jsp/etc/contact.jsp">Contact</a></li>
+						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -67,9 +73,9 @@
 							<li><a href="#">Your Account</a></li>
 							<li><a href="#">Term & Conditions</a></li>
 							<li><a href="#">Advance Search</a></li>
-							<li><a href="jsp/etc/faq.jsp">Help & FAQs</a></li>
+							<li><a href="faq.html">Help & FAQs</a></li>
 							<li><a href="#">Gift Voucher</a></li>
-							<li><a href="jsp/etc/contact-2.jsp">Contact Us</a></li>
+							<li><a href="contact-2.html">Contact Us</a></li>
 						</ul>
 					</div>
 					<div class="col-sm-4 footer-account footer-links">
@@ -106,14 +112,16 @@
 			<div class="col-sm-6">
 				<div class="payment">
 					<ul>
-						<li><a href="#"><img src="img/footer/paypal.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="img/footer/visa.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="img/footer/master.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="img/footer/cards.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="img/footer/discover.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/paypal.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/visa.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/master.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/cards.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="../../img/footer/discover.jpg" alt="" /></a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 </div><!--End Footer Area-->
+</body>
+</html>

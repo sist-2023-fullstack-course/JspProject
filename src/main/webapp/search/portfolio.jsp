@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Olongkar | Portfolio 4 Column</title>
+	<title>Olongkar | Portfolio 3 Column</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Fav Icon -->
 	<link id="favicon" rel="icon" type="image/png" href="../../img/favicon.ico" />
@@ -37,10 +37,9 @@
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
-<jsp:include page="../header.jsp"></jsp:include>
 <div class="page-title fix"><!--Start Title-->
 	<div class="overlay section">
-		<h2>Portfolio 4 columns</h2>
+		<h2>Portfolio 3 columns</h2>
 	</div>
 </div><!--End Title-->
 <div class="portfolio-page page fix"><!--Start Portfolio Area-->
@@ -54,73 +53,73 @@
 				<button class="filter" data-filter=".webdesign">Web Design</button>
 			</div>
 			<div id="portfolio">
-				<div class="mix business webdesign col-sm-4 col-md-3">
+				<div class="mix business webdesign col-sm-4">
 					<div class="port-wrap">
 						<img src="../../img/portfolio/portfolio-1.jpg" alt="" />
 						<a href="../../img/portfolio/portfolio-1.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
-				<div class="mix photography print col-sm-4 col-md-3">
+				<div class="mix photography print col-sm-4">
 					<div class="port-wrap">
 						<img src="../../img/portfolio/portfolio-2.jpg" alt="" />
 						<a href="../../img/portfolio/portfolio-2.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
-				<div class="mix print business col-sm-4 col-md-3">
+				<div class="mix print business col-sm-4">
 					<div class="port-wrap">
 						<img src="../../img/portfolio/portfolio-3.jpg" alt="" />
 						<a href="../../img/portfolio/portfolio-3.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
-				<div class="mix webdesign photography col-sm-4 col-md-3">
+				<div class="mix webdesign photography col-sm-4">
 					<div class="port-wrap">
 						<img src="../../img/portfolio/portfolio-4.jpg" alt="" />
 						<a href="../../img/portfolio/portfolio-4.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
-				<div class="mix business webdesign col-sm-4 col-md-3">
+				<div class="mix business webdesign col-sm-4">
 					<div class="port-wrap">
 						<img src="../../img/portfolio/portfolio-5.jpg" alt="" />
 						<a href="../../img/portfolio/portfolio-5.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
-				<div class="mix photography print col-sm-4 col-md-3">
+				<div class="mix photography print col-sm-4">
 					<div class="port-wrap">
 						<img src="../../img/portfolio/portfolio-6.jpg" alt="" />
 						<a href="../../img/portfolio/portfolio-6.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
-				<div class="mix print business col-sm-4 col-md-3">
+				<div class="mix print business col-sm-4">
 					<div class="port-wrap">
 						<img src="../../img/portfolio/portfolio-7.jpg" alt="" />
 						<a href="../../img/portfolio/portfolio-7.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
-				<div class="mix webdesign photography col-sm-4 col-md-3">
+				<div class="mix webdesign photography col-sm-4">
 					<div class="port-wrap">
 						<img src="../../img/portfolio/portfolio-8.jpg" alt="" />
 						<a href="../../img/portfolio/portfolio-8.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
-				<div class="mix business webdesign col-sm-4 col-md-3">
+				<div class="mix business webdesign col-sm-4">
 					<div class="port-wrap">
 						<img src="../../img/portfolio/portfolio-9.jpg" alt="" />
 						<a href="../../img/portfolio/portfolio-9.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
-				<div class="mix photography print col-sm-4 col-md-3">
+				<div class="mix photography print col-sm-4">
 					<div class="port-wrap">
 						<img src="../../img/portfolio/portfolio-10.jpg" alt="" />
 						<a href="../../img/portfolio/portfolio-10.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
-				<div class="mix print business col-sm-4 col-md-3">
+				<div class="mix print business col-sm-4">
 					<div class="port-wrap">
 						<img src="../../img/portfolio/portfolio-11.jpg" alt="" />
 						<a href="../../img/portfolio/portfolio-11.jpg" class="hover"><i class="fa fa-search"></i></a>
 					</div>
 				</div>
-				<div class="mix webdesign photography col-sm-4 col-md-3">
+				<div class="mix webdesign photography col-sm-4">
 					<div class="port-wrap">
 						<img src="../../img/portfolio/portfolio-12.jpg" alt="" />
 						<a href="../../img/portfolio/portfolio-12.jpg" class="hover"><i class="fa fa-search"></i></a>
@@ -178,7 +177,6 @@
 		</div>
 	</div>
 </div>
-<jsp:include page="../footer.jsp"></jsp:include>
 	
 <!-- jQuery 2.1.4 -->
 <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>

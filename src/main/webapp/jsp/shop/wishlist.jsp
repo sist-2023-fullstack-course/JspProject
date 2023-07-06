@@ -37,7 +37,6 @@
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
-<jsp:include page="../header.jsp"></jsp:include>
 <div class="page-title fix"><!--Start Title-->
 	<div class="overlay section">
 		<h2>Wishlist</h2>
@@ -62,7 +61,7 @@
 						<tbody>
 							<tr class="table-info">
 								<td class="produ">
-									<a href="#"><img alt="" src="img/cart-1.jpg"></a>
+									<a href="#"><img alt="" src="../../img/cart-1.jpg"></a>
 								</td>
 								<td class="namedes">
 									<h2><a href="#">PRODUCT NAME DEMO</a></h2>
@@ -85,7 +84,7 @@
 							</tr>
 							<tr class="table-info">
 								<td class="produ">
-									<a href="#"><img alt="" src="img/cart-2.jpg"></a>
+									<a href="#"><img alt="" src="../../img/cart-2.jpg"></a>
 								</td>
 								<td class="namedes">
 									<h2><a href="#">PRODUCT NAME DEMO</a></h2>
@@ -161,7 +160,6 @@
 		</div>
 	</div>
 </div><!--Start Support Area-->
-<jsp:include page="../footer.jsp"></jsp:include>
 <!-- jQuery 2.1.4 -->
 <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
 <!-- Bootstrap JS -->

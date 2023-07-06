@@ -37,7 +37,6 @@
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
-<jsp:include page="../header.jsp"></jsp:include>
 <div class="page-title fix"><!--Start Title-->
 	<div class="overlay section">
 		<h2>Blog Details</h2>
@@ -272,7 +271,6 @@
 		</div>
 	</div>
 </div>
-<jsp:include page="../footer.jsp"></jsp:include>
 	
 <!-- jQuery 2.1.4 -->
 <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
