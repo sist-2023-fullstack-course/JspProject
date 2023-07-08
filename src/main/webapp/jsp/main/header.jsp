@@ -183,7 +183,7 @@
 									</div>
 								</div>
 							</li>
-							<li><a href="shop.html">커뮤니티</a>
+							<li><a href="../board/list.do">커뮤니티</a>
 								<div class="mega-menu mega-menu-1">
 									<div class="column-1 column">
 										<ul>

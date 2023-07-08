@@ -9,10 +9,18 @@ import lombok.Setter;
 @Setter
 
 public class BoardVO {
-	//  
-	private int no, hit, board_id, comment_index, comment_tab, comment_cnt;
-	private String name, title, content, category;
-	private Date regdate;
+	// 글번호, 조회수, 갖고올 순서, 댓글수
+	// 제목 내용 작성자 작성일, 카테고리
+	private int no, hit, rownum, depth;
+    private String title, content, name, dbday, type;
+    private Date regdate;
+    
+    
+    
+    
+    
+    
+    
 }
 
 

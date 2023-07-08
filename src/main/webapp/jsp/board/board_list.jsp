@@ -4,7 +4,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:useBean id="dao" class="com.sist.dao.BoardDAO"/>
 <%
-    // 사용자로부터 페이지 받기
+    // 참고페이지 middle5
+	// 사용자로부터 페이지 받기
     String strPage=request.getParameter("page");
     // 첫페이지 처리
     
