@@ -26,17 +26,10 @@
 			<div class="col-sm-12 col-md-6">
 				<div id="top-menu" class="float-right">
 					<ul>
-						<li><a href="">My Account</a></li>
-						<li><a href="">$USD <i class="fa fa-angle-down"></i></a>
+						<li><a href="">로그인 <i class="fa fa-angle-down"></i></a>
 							<ul>
-								<li><a href="">Pound</a></li>
-								<li><a href="">BDT</a></li>
-							</ul>
-						</li>
-						<li><a href="">English(UK) <i class="fa fa-angle-down"></i></a>
-							<ul>
-								<li><a href="">English(USA)</a></li>
-								<li><a href="">Bangla</a></li>
+								<li><a href="">로그인</a></li>
+								<li><a href="">회원가입</a></li>
 							</ul>
 						</li>
 					</ul>
