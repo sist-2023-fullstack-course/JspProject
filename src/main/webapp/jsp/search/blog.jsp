@@ -7,33 +7,33 @@
 	<title>Olongkar | Blog</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Fav Icon -->
-	<link id="favicon" rel="icon" type="image/png" href="../../img/favicon.ico" />
+	<link id="favicon" rel="icon" type="image/png" href="../img/favicon.ico" />
 	<!-- Google Font Raleway -->
 	<link href='https://fonts.googleapis.com/css?family=Raleway:200,300,500,400,600,700,800' rel='stylesheet' type='text/css'>
 	<!-- Google Font Dancing Script -->
 	<link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
 	<!-- Font Awesome CSS -->
-	<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
 	<!-- Owl Carousel CSS -->
-	<link rel="stylesheet" type="text/css" href="../../css/owl.carousel.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/owl.carousel.min.css" />
 	<!-- Animate CSS -->
-	<link rel="stylesheet" type="text/css" href="../../css/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/animate.min.css" />
 	<!-- simpleLens CSS -->
-	<link rel="stylesheet" type="text/css" href="../../css/jquery.simpleLens.css" />
+	<link rel="stylesheet" type="text/css" href="../css/jquery.simpleLens.css" />
 	<!-- Price Slider CSS -->
-	<link rel="stylesheet" type="text/css" href="../../css/jquery-price-slider.css" />
+	<link rel="stylesheet" type="text/css" href="../css/jquery-price-slider.css" />
 	<!-- MeanMenu CSS -->
-	<link rel="stylesheet" type="text/css" href="../../css/meanmenu.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/meanmenu.min.css" />
 	<!-- Magnific Popup CSS -->
-	<link rel="stylesheet" type="text/css" href="../../css/magnific-popup.css" />
+	<link rel="stylesheet" type="text/css" href="../css/magnific-popup.css" />
 	<!-- Nivo Slider CSS -->
-	<link rel="stylesheet" type="text/css" href="../../css/nivo-slider.css" />
+	<link rel="stylesheet" type="text/css" href="../css/nivo-slider.css" />
 	<!-- Stylesheet CSS -->
-	<link rel="stylesheet" type="text/css" href="../../style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 	<!-- Responsive Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="../../css/responsive.css" />
+	<link rel="stylesheet" type="text/css" href="../css/responsive.css" />
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
@@ -48,13 +48,13 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.jsp"><img src="../../img/blog/blog-1.jpg" alt="" />
+						<a class="image fix" href="detail.do"><img src="../img/blog/blog-1.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="detail.do">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -67,13 +67,13 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.jsp"><img src="../../img/blog/blog-2.jpg" alt="" />
+						<a class="image fix" href="detail.do"><img src="../img/blog/blog-2.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="detail.do">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -86,13 +86,13 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.jsp"><img src="../../img/blog/blog-3.jpg" alt="" />
+						<a class="image fix" href="detail.do"><img src="../img/blog/blog-3.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="detail.do">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -105,13 +105,13 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.jsp"><img src="../../img/blog/blog-4.jpg" alt="" />
+						<a class="image fix" href="detail.do"><img src="../img/blog/blog-4.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="detail.do">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -124,13 +124,13 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.jsp"><img src="../../img/blog/blog-5.jpg" alt="" />
+						<a class="image fix" href="detail.do"><img src="../img/blog/blog-5.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="detail.do">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -143,13 +143,13 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.jsp"><img src="../../img/blog/blog-6.jpg" alt="" />
+						<a class="image fix" href="detail.do"><img src="../img/blog/blog-6.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="detail.do">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -162,13 +162,13 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.jsp"><img src="../../img/blog/blog-7.jpg" alt="" />
+						<a class="image fix" href="detail.do"><img src="../img/blog/blog-7.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="detail.do">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -181,13 +181,13 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.jsp"><img src="../../img/blog/blog-8.jpg" alt="" />
+						<a class="image fix" href="detail.do"><img src="../img/blog/blog-8.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="detail.do">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -200,13 +200,13 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.jsp"><img src="../../img/blog/blog-1.jpg" alt="" />
+						<a class="image fix" href="detail.do"><img src="../img/blog/blog-1.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="detail.do">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -219,13 +219,13 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.jsp"><img src="../../img/blog/blog-2.jpg" alt="" />
+						<a class="image fix" href="detail.do"><img src="../img/blog/blog-2.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="detail.do">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -238,13 +238,13 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.jsp"><img src="../../img/blog/blog-3.jpg" alt="" />
+						<a class="image fix" href="detail.do"><img src="../img/blog/blog-3.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="detail.do">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -257,13 +257,13 @@
 			<div class="col-sm-6 col-md-4">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="blog-details.jsp"><img src="../../img/blog/blog-4.jpg" alt="" />
+						<a class="image fix" href="detail.do"><img src="../img/blog/blog-4.jpg" alt="" />
 							<div class="date">
 								<h4>25</h4>
 								<h5>Aug</h5>
 							</div>
 						</a>
-						<h2><a class="title" href="blog-details.jsp">Lorem ipsum dolor sit amet</a></h2>
+						<h2><a class="title" href="detail.do">Lorem ipsum dolor sit amet</a></h2>
 						<div class="meta">
 							<a href="#"><i class="fa fa-pencil-square-o"></i>John Lee</a>
 							<a href="#"><i class="fa fa-calendar"></i>2 Days ago</a>
@@ -300,16 +300,16 @@
 				<div class="underline"></div>
 			</div>
 			<div class="brand-slider owl-carousel">
-				<div class="brand-item"><img src="../../img/brand/brand-1.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-2.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-3.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-4.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-5.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-1.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-2.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-3.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-4.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-5.png" alt="" /></div>
+				<div class="brand-item"><img src="../img/brand/brand-1.png" alt="" /></div>
+				<div class="brand-item"><img src="../img/brand/brand-2.png" alt="" /></div>
+				<div class="brand-item"><img src="../img/brand/brand-3.png" alt="" /></div>
+				<div class="brand-item"><img src="../img/brand/brand-4.png" alt="" /></div>
+				<div class="brand-item"><img src="../img/brand/brand-5.png" alt="" /></div>
+				<div class="brand-item"><img src="../img/brand/brand-1.png" alt="" /></div>
+				<div class="brand-item"><img src="../img/brand/brand-2.png" alt="" /></div>
+				<div class="brand-item"><img src="../img/brand/brand-3.png" alt="" /></div>
+				<div class="brand-item"><img src="../img/brand/brand-4.png" alt="" /></div>
+				<div class="brand-item"><img src="../img/brand/brand-5.png" alt="" /></div>
 			</div>
 		</div>
 	</div>
@@ -342,36 +342,36 @@
 </div>
 	
 <!-- jQuery 2.1.4 -->
-<script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <!-- Bootstrap JS -->
-<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <!-- Owl Carousel JS -->
-<script type="text/javascript" src="../../js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="../js/owl.carousel.min.js"></script>
 <!--countTo JS -->
-<script type="text/javascript" src="../../js/jquery.countTo.js"></script>
+<script type="text/javascript" src="../js/jquery.countTo.js"></script>
 <!-- mixitup JS -->
-<script type="text/javascript" src="../../js/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="../js/jquery.mixitup.min.js"></script>
 <!-- magnific popup JS -->
-<script type="text/javascript" src="../../js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="../js/jquery.magnific-popup.min.js"></script>
 <!-- Appear JS -->
-<script type="text/javascript" src="../../js/jquery.appear.js"></script>
+<script type="text/javascript" src="../js/jquery.appear.js"></script>
 <!-- MeanMenu JS -->
-<script type="text/javascript" src="../../js/jquery.meanmenu.min.js"></script>
+<script type="text/javascript" src="../js/jquery.meanmenu.min.js"></script>
 <!-- Nivo Slider JS -->
-<script type="text/javascript" src="../../js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="../js/jquery.nivo.slider.pack.js"></script>
 <!-- Scrollup JS -->
-<script type="text/javascript" src="../../js/jquery.scrollup.min.js"></script>
+<script type="text/javascript" src="../js/jquery.scrollup.min.js"></script>
 <!-- simpleLens JS -->
-<script type="text/javascript" src="../../js/jquery.simpleLens.min.js"></script>
+<script type="text/javascript" src="../js/jquery.simpleLens.min.js"></script>
 <!-- Price Slider JS -->
-<script type="text/javascript" src="../../js/jquery-price-slider.js"></script>
+<script type="text/javascript" src="../js/jquery-price-slider.js"></script>
 <!-- WOW JS -->
-<script type="text/javascript" src="../../js/wow.min.js"></script>
+<script type="text/javascript" src="../js/wow.min.js"></script>
 <script>
 	new WOW().init();
 </script>	
 <!-- Main JS -->
-<script type="text/javascript" src="../../js/main.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
 
 </body>
 

@@ -28,8 +28,8 @@
 					<ul>
 						<li><a href="">로그인 <i class="fa fa-angle-down"></i></a>
 							<ul>
-								<li><a href="">로그인</a></li>
-								<li><a href="">회원가입</a></li>
+								<li><a href="../login/login.do">로그인</a></li>
+								<li><a href="../login/join.do">회원가입</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -93,14 +93,14 @@
 						<ul>
 							<li><a href="#" class="active">Home</a>
 							</li>
-							<li><a href="#">업체</a>
+							<li><a href="../company/main.do">업체</a>
 								<ul class="sub-menu">
-									<li><a href="#">동반숙소/호텔링</a></li>
-									<li><a href="#">동반카페/식당</a></li>
-									<li><a href="#">미용</a></li>
-									<li><a href="#">용품샵</a></li>
-									<li><a href="#">동물병원</a></li>
-									<li><a href="#">장례</a></li>
+									<li><a href="../company/main.do">동반숙소/호텔링</a></li>
+									<li><a href="../company/main.do">동반카페/식당</a></li>
+									<li><a href="../company/main.do">미용</a></li>
+									<li><a href="../company/main.do">용품샵</a></li>
+									<li><a href="../company/main.do">동물병원</a></li>
+									<li><a href="../company/main.do">장례</a></li>
 								</ul>
 							</li>
 							<li><a href="shop.html">쇼핑몰</a>
