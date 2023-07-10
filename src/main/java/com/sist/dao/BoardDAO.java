@@ -50,7 +50,7 @@ public class BoardDAO {
 			   {
 				   BoardVO vo=new BoardVO();
 				   vo.setNo(rs.getInt(1));
-				   vo.setSubject(rs.getString(2));
+				   //vo.setSubject(rs.getString(2));
 				   vo.setName(rs.getString(3));
 				   vo.setDbday(rs.getString(4));
 				   vo.setHit(rs.getInt(5));
