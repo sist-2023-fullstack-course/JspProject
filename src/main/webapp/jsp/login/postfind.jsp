@@ -28,7 +28,7 @@ $(function(){
 		
 		$.ajax({
 			type:'post',
-			url:'../member/postfind_result.do',
+			url:'../jsp/login/postfind_result.do',
 			data:{"dong":dong},
 			success:function(result)
 			{
@@ -52,7 +52,7 @@ $(function(){
 	      </tr>
 	      <tr>
 	        <td class="text-right">
-	          <sub style="color:red">※동읍면을 입력하세요</sub>
+	          <sub style="color:red">※동 읍 면을 입력하세요</sub>
 	        </td>
 	      </tr>
 	    </table>

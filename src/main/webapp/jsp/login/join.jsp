@@ -1,23 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-
 <script type="text/javascript" src="../shadow/js/shadowbox.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script type="text/javascript">
-
 Shadowbox.init({
-   players:['iframe']
+	players:['iframe']
 })
 
 $(function(){
    $('#idCheckBtn').click(function(){
       Shadowbox.open({
-    	  content:'../member/idcheck.do',
+    	  content:'idcheck.do',
     	  player:'iframe',
     	  width:370,
     	  height:180,
@@ -25,9 +18,39 @@ $(function(){
       })
    })
    
-   $('#postBtn').click(function(){
+   $('#nicknameCheckBtn').click(function(){
       Shadowbox.open({
-    	  content:'../member/postfind.do',
+    	  content:'../jsp/login/nicknamecheck.do',
+    	  player:'iframe',
+    	  width:370,
+    	  height:180,
+    	  title:'닉네임 중복체크'
+      })
+   })
+   
+	$('#phoneCheckBtn').click(function(){ // 전화와 이메일은 클릭 후 바로 옆에 빨간 글씨 나오게
+      Shadowbox.open({
+    	  content:'../jsp/login/phonecheck.do',
+    	  player:'iframe',
+    	  width:370,
+    	  height:180,
+    	  title:'전화 중복체크'
+      })
+   })
+   
+    $('#emailCheckBtn').click(function(){
+      Shadowbox.open({
+    	  content:'../jsp/login/emailcheck.do',
+    	  player:'iframe',
+    	  width:370,
+    	  height:180,
+    	  title:'이메일 중복체크'
+      })
+   })
+   
+	$('#postBtn').click(function(){
+      Shadowbox.open({
+    	  content:'../jsp/login/postfind.do',
     	  player:'iframe',
     	  width:520,
     	  height:350,
@@ -46,14 +69,13 @@ $(function(){
    <main class="container clear">
     <h2 class="sectiontitle">회원가입</h2>
     <div class="row">
-     <form method="post" action="../member/join_ok.do" name="joinFrm" id="joinFrm">
+     <form method="post" action="../jsp/login/join_ok.do" name="joinFrm" id="joinFrm">
       <table class="table">
         <tr>
          <th class="text-right" width=10%>ID</th>
          <td width=90% class="inline">
-          <input type=text name=id id=id size=20 class="input-sm"
-           readonly>
-          <input type=button value="중복체크" class="btn btn-sm btn-success" id="idCheckBtn">
+          <input type=text name=id id=id size=20 class="input-sm" readonly>
+          <input type=button value="중복체크" class="btn btn-sm btn-primary" id="idCheckBtn">
          </td>
         </tr>
         
@@ -61,7 +83,7 @@ $(function(){
          <th class="text-right" width=10%>비밀번호</th>
          <td width=90% class="inline">
           <input type=password name=pwd id=pwd size=20 class="input-sm">
-          &nbsp;재입력:<input type=password name=pwd1 id=pwd1 size=20 class="input-sm">
+          &nbsp;비밀번호 확인 <input type=password name=pwd1 id=pwd1 size=20 class="input-sm">
          </td>
         </tr>
         
@@ -86,13 +108,31 @@ $(function(){
           <input type="date" name=birthday size=20>
          </td>
         </tr>
+       
+        <tr>
+         <th class="text-right" width=10%>닉네임</th>
+         <td width=90% class="inline">
+          <input type=text name=nickname id=nickname size=20 class="input-sm" readonly>
+          <input type=button value="중복체크" class="btn btn-sm btn-primary" id="nicknameCheckBtn">
+         </td>
+        </tr> 
+        
+        <tr>
+         <th class="text-right" width=10%>전화</th>
+         <td width=90% class="inline">
+          <select name=phone1 class="input-sm">
+           <option>010</option>
+          </select>
+          <input type=text name=phone id=phone size=12 class="input-sm">
+          <input type=button value="중복체크" class="btn btn-sm btn-primary" id="phoneBtn">
+         </td>
+        </tr> 
         
         <tr>
          <th class="text-right" width=10%>이메일</th>
          <td width=90% class="inline">
           <input type=text name=email id=email size=55 class="input-sm">
-          <input type=button value="이메일체크" 
-            class="btn btn-sm btn-danger" id="emailBtn">
+          <input type=button value="중복체크" class="btn btn-sm btn-primary" id="emailBtn">
          </td>
         </tr>
         
@@ -100,17 +140,14 @@ $(function(){
          <th class="text-right" width=10%>우편번호</th>
          <td width=90% class="inline">
           <input type=text name=post id=post size=10 class="input-sm">
-          <input type=button value="우편번호검색" class="btn btn-sm btn-info"
-            id="postBtn">
+          <input type=button value="우편번호 검색" class="btn btn-sm btn-warning" id="postBtn">
          </td>
         </tr>
         
         <tr>
          <th class="text-right" width=10%>주소</th>
          <td width=90% class="inline">
-          <input type=text name=addr1 id=addr1 size=55 class="input-sm"
-           readonly
-          >
+          <input type=text name=addr1 id=addr1 size=55 class="input-sm" readonly>
          </td>
         </tr>
         
@@ -120,31 +157,11 @@ $(function(){
           <input type=text name=addr2 id=addr2 size=55 class="input-sm">
          </td>
         </tr>
-       
-        <tr>
-         <th class="text-right" width=10%>전화</th>
-         <td width=90% class="inline">
-          <select name=phone1 class="input-sm">
-           <option>010</option>
-          </select>
-          <input type=text name=phone id=phone size=12 class="input-sm">
-          <input type=button value="전화체크" 
-            class="btn btn-sm btn-warning" id="phoneBtn">
-         </td>
-        </tr> 
-       
-        <tr>
-         <th class="text-right" width=10%>소개</th>
-         <td width=90% class="inline">
-          <textarea rows="10" cols="55" name=content></textarea>
-         </td>
-        </tr> 
         
         <tr>
           <td colspan="2" class="text-center">
            <input type="button" value="회원가입" class="btn btn-success btn-sm" id="joinBtn">
-           <input type=button value="취소"
-             class="btn btn-info btn-sm" onclick="javascript:history.back()">
+           <input type=button value="취소" class="btn btn-danger btn-sm" onclick="javascript:history.back()">
           </td>
         </tr>
       </table>
@@ -152,5 +169,3 @@ $(function(){
     </div>
    </main>
   </div>
-</body>
-</html>

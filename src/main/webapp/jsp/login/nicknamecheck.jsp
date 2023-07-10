@@ -20,31 +20,31 @@
 $(function(){
 	$('#ok').hide();
 	$('#checkBtn').click(function(){
-		let id=$('#id').val();
-		if(id.trim()=="")
+		let nickname=$('#nickname').val();
+		if(nickname.trim()=="")
 		{
-			$('#id').focus();
+			$('#nickname').focus();
 			return;
 		}
 		
 		$.ajax({
 			type:'post',
-			url:'../jsp/login/idcheck_ok.do',
-			data:{"id":id},
+			url:'../../login/nicknamecheck_ok.do',
+			data:{"nickname":nickname},
 			success: function(result)
 			{
 				alert("result="+result);
 				let count=Number(result.trim());
-				if(count==0) /* id가 없다 */
+				if(count==0) /* 닉네임이 없다 */
 				{
 					$('#ok').show();
-					$('#res').html('<span style="color:blue">'+id+"는(은) 사용 가능한 아이디입니다.</span>");
+					$('#res').html('<span style="color:blue">'+"\'"+nickname+"\' 는(은) 사용 가능한 닉네임입니다.</span>");
 					$('#id').prop('disabled',true);
 				}
-				else /* id가 있다 */
+				else /* 닉네임이 있다 */
 				{
 					$('#ok').hide();
-					$('#res').html('<span style="color:red">'+id+"는(은) 이미 사용중인 아이디입니다!</span>");
+					$('#res').html('<span style="color:red">'+"\'"+nickname+"\' 는(은) 이미 사용중인 닉네임입니다!</span>");
 					$('#id').val();
 					$('#id').focus();
 				}
@@ -54,7 +54,7 @@ $(function(){
 	
 	$('#okBtn').click(function(){
 		// parent=join.jsp
-		parent.joinFrm.id.value=$('#id').val()
+		parent.joinFrm.id.value=$('#nickname').val()
 		parent.Shadowbox.close();
 	})
 })
@@ -65,7 +65,7 @@ $(function(){
   	<div class="row">
   		<table class="table">
   		  <tr>
-  		    <td>ID: <input type=text name=id id=id size=15 class="input-sm">
+  		    <td>닉네임 : <input type=text name=nickname id=nickname size=15 class="input-sm">
   		    	<input type=button value="중복체크" class="btn btn-sm btn-warning" id="checkBtn">
   		    </td>
   		  </tr>
