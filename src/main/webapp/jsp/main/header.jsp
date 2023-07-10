@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,27 +9,21 @@
 <div class="header-top"><!--Start Header Top Area-->
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 col-md-4">
+			<div class="col-sm-12 col-md-6">
 				<div class="info">
-					<div class="phn-num float-left">
+					<!-- <div class="phn-num float-left">
 						<i class="fa fa-phone float-left"></i>
 						<p>(000)  123  288  456 </p>
 					</div>
 					<div class="mail-id float-left">
 						<i class="fa fa-envelope-o float-left"></i>
 						<p><a href="#">info@olongker.com</a></p>
-					</div>
+					</div> -->
 				</div>
 			</div>
-			<div class="col-sm-12 col-md-4">
-				<div class="socials text-center">
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-google-plus"></i></a>
-				</div>
+			<div class="col-md-4">
 			</div>
-			<div class="col-sm-12 col-md-4">
+			<div class="col-sm-12 col-md-6">
 				<div id="top-menu" class="float-right">
 					<ul>
 						<li><a href="">My Account</a></li>
@@ -53,13 +48,9 @@
 <div class="header-area"><!--Start Header Area-->
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4 col-lg-3">
-				<div class="log-link">
-					<p>Well come visitor you can</p>
-					<h5><a href="login.html">Login</a> or <a href="login.html">Create an account</a></h5>
-				</div>
+			<div class="col-sm-4 col-lg-4">
 			</div>
-			<div class="col-sm-4 col-lg-6">
+			<div class="col-sm-4 col-lg-4">
 				<div class="logo text-center">
 					<a href="#">
 						<img src="../img/header/logo.png" alt="" />
@@ -67,13 +58,18 @@
 					</a>
 				</div>
 			</div>
-			<div class="col-sm-4 col-lg-3">
-				<div class="cart-info float-right">
-					<a href="cart.html">
-						<h5>My cart <span>2</span> items - <span>$390</span></h5>
-						<i class="fa fa-shopping-cart"></i>
-					</a>
-					<div class="cart-hover">
+			<div class="col-sm-4 col-lg-4">
+				<div class="float-right" > 
+				   <br>
+				   <a href="#" class="inline">장바구니 <i class="fa fa-shopping-cart"></i></a>&nbsp;
+				   <a href="#">위시리스트 <i class="fa fa-shopping-cart"></i></a>&nbsp;&nbsp;&nbsp;
+				
+				</div>	
+		    </div>
+				 
+				  		  
+					<%--
+					 <div class="cart-hover">
 						<ul class="header-cart-pro">
 							<li>
 								<div class="image"><a href="#"><img alt="cart item" src="../img/cart-1.jpg"></a></div>
@@ -90,159 +86,65 @@
 							<a href="checkout.html"><i class="fa fa-sign-out"></i><span>Check Out</span></a>
 							<div class="total-price"><h3>Total Price : <span>$390</span></h3></div>
 						</div>
-					</div>
-				</div>
-				<div class="search float-right">
-					<input type="text" value="" placeholder="Search Here...." />
-					<button class="submit"><i class="fa fa-search"></i></button>
-				</div>
-			</div>
+					</div> 
+					--%>
 		</div>
 	</div>
 </div><!--End Header Area-->
 <div class="menu-area"><!--Start Main Menu Area-->
 	<div class="container">
 		<div class="row">
-			<div class="clo-md-12">
+			<div class="col-md-12">
 				<div class="main-menu hidden-sm hidden-xs">
 					<nav>
 						<ul>
 							<li><a href="#" class="active">Home</a>
 							</li>
 							<li><a href="#">업체</a>
-								<div class="mega-menu mega-menu-page">
-									<div class="column-1 column">
-										<ul>
-											<li><a href="about-us.html">About US</a></li>
-											<li><a href="blog.html">Blog</a></li>
-											<li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-											<li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>
-											<li><a href="blog-details.html">Blog details</a></li>
-										</ul>
-									</div>
-									<div class="column-2 column">
-										<ul>
-											<li><a href="cart.html">Cart</a></li>
-											<li><a href="checkout.html">Checkout</a></li>
-											<li><a href="coming-soon.html">Coming soon</a></li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="contact-2.html">Contact 2</a></li>
-										</ul>
-									</div>
-									<div class="column-3 column">
-										<ul>
-											<li><a href="faq.html">FAQ</a></li>
-											<li><a href="login.html">Login</a></li>
-											<li><a href="portfolio.html">Portfolio 3 column</a></li>
-											<li><a href="portfolio-2.html">Portfolio 4 column</a></li>
-											<li><a href="404.html">404</a></li>
-										</ul>
-									</div>
-									<div class="column-4 column">
-										<ul>
-											<li><a href="shop.html">Shop</a></li>
-											<li><a href="shop-list.html">Shop list</a></li>
-											<li><a href="shop-left-sidebar.html">Shop left sidebar</a></li>
-											<li><a href="shop-right-sidebar.html">Shop right sidebar</a></li>
-											<li><a href="product-details.html">Product details</a></li>
-										</ul>
-									</div>
-								</div>
+								<ul class="sub-menu">
+									<li><a href="#">동반숙소/호텔링</a></li>
+									<li><a href="#">동반카페/식당</a></li>
+									<li><a href="#">미용</a></li>
+									<li><a href="#">용품샵</a></li>
+									<li><a href="#">동물병원</a></li>
+									<li><a href="#">장례</a></li>
+								</ul>
 							</li>
 							<li><a href="shop.html">쇼핑몰</a>
-								<div class="mega-menu mega-menu-1">
-									<div class="column-1 column">
-										<ul>
-											<li><a href="shop-list.html">rings</a></li>
-											<li><a href="shop-left-sidebar.html">diamond ring</a></li>
-											<li><a href="shop-right-sidebar.html">gold ring</a></li>
-											<li><a href="shop-list.html">sliver ring</a></li>
-											<li><a href="shop-left-sidebar.html">Platinum ring</a></li>
-										</ul>
-									</div>
-									<div class="column-2 column">
-										<ul>
-											<li><a href="shop-list.html">Bracelets</a></li>
-											<li><a href="shop-left-sidebar.html">diamond Bracelets</a></li>
-											<li><a href="shop-right-sidebar.html">gold Bracelets</a></li>
-											<li><a href="shop-left-sidebar.html">sliver Bracelets</a></li>
-											<li><a href="shop-right-sidebar.html">Platinum Bracelets</a></li>
-										</ul>
-									</div>
-									<div class="column-3 column">
-										<ul>
-											<li><a href="shop-list.html">lecklaces</a></li>
-											<li><a href="shop-right-sidebar.html">diamond lecklaces</a></li>
-											<li><a href="shop-left-sidebar.html">gold lecklaces</a></li>
-											<li><a href="shop-right-sidebar.html">sliver lecklaces</a></li>
-											<li><a href="shop-left-sidebar.html">Platinum lecklaces</a></li>
-										</ul>
-									</div>
-									<div class="column-4 column">
-										<a href="#"><img src="../img/product/10.jpg" alt="" /></a>
-									</div>
-								</div>
+								<ul class="sub-menu">
+									<li><a href="#">rings</a></li>
+									<li><a href="#">diamond ring</a></li>
+									<li><a href="#">gold ring</a></li>
+									<li><a href="#">sliver ring</a></li>
+									<li><a href="#">Platinum ring</a></li>
+								</ul>
 							</li>
-							<li><a href="../board/list.do">커뮤니티</a>
-								<div class="mega-menu mega-menu-1">
-									<div class="column-1 column">
-										<ul>
-											<li><a href="shop-list.html">rings</a></li>
-											<li><a href="shop-left-sidebar.html">diamond ring</a></li>
-											<li><a href="shop-right-sidebar.html">gold ring</a></li>
-											<li><a href="shop-list.html">sliver ring</a></li>
-											<li><a href="shop-left-sidebar.html">Platinum ring</a></li>
-										</ul>
-									</div>
-									<div class="column-2 column">
-										<ul>
-											<li><a href="shop-list.html">Bracelets</a></li>
-											<li><a href="shop-left-sidebar.html">diamond Bracelets</a></li>
-											<li><a href="shop-right-sidebar.html">gold Bracelets</a></li>
-											<li><a href="shop-left-sidebar.html">sliver Bracelets</a></li>
-											<li><a href="shop-right-sidebar.html">Platinum Bracelets</a></li>
-										</ul>
-									</div>
-									<div class="column-3 column">
-										<ul>
-											<li><a href="shop-list.html">lecklaces</a></li>
-											<li><a href="shop-right-sidebar.html">diamond lecklaces</a></li>
-											<li><a href="shop-left-sidebar.html">gold lecklaces</a></li>
-											<li><a href="shop-right-sidebar.html">sliver lecklaces</a></li>
-											<li><a href="shop-left-sidebar.html">Platinum lecklaces</a></li>
-										</ul>
-									</div>
-									<div class="column-4 column">
-										<ul>
-											<li><a href="shop-right-sidebar.html">earrings</a></li>
-											<li><a href="shop-list.html">diamond earrings</a></li>
-											<li><a href="shop-left-sidebar.html">gold earrings</a></li>
-											<li><a href="shop-list.html">sliver earrings</a></li>
-											<li><a href="shop-left-sidebar.html">Platinum earrings</a></li>
-										</ul>
-									</div>
+							<li><a href="shop.html">커뮤니티</a>
+								<div>
+									<ul class="sub-menu">
+										<li><a href="#">자유토크</a></li>
+										<li><a href="#">마이펫 자랑하기</a></li>
+									</ul>
 								</div>
 							</li>
 							<li><a href="portfolio.html">공지사항</a>
 								<ul class="sub-menu">
-									<li><a href="portfolio.html">Portfolio 3 column</a></li>
-									<li><a href="portfolio-2.html">Portfolio 4 column</a></li>
+									<li><a href="#">Portfolio 3 column</a></li>
+									<li><a href="#">Portfolio 4 column</a></li>
 								</ul>
 							</li>
 							<li><a href="blog.html">문의하기</a>
 								<ul class="sub-menu">
-									<li><a href="blog.html">Blog Page</a></li>
-									<li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-									<li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>
 								</ul>
 							</li>
-							<li><a href="about-us.html">About Us</a></li>
-							<li><a href="contact.html">Contact</a>
-								<ul class="sub-menu">
-									<li><a href="contact.html">Contact 1</a></li>
-									<li><a href="contact-2.html">Contact 2</a></li>
-								</ul>
-							</li>
+							<c:if test="${sessionScope.id!=null }">
+							  <c:if test="${sessionScope.admin=='n' }">
+							    <li><a href="about-us.html">마이페이지</a></li>
+							  </c:if>
+							  <c:if test="${sessionScope.admin=='y' }">
+							    <li><a href="contact.html">관리자페이지</a></li>
+							  </c:if>
+							</c:if>
 						</ul>
 					</nav>
 				</div>
