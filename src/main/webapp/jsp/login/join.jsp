@@ -1,69 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<script type="text/javascript" src="../shadow/js/shadowbox.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-<script type="text/javascript">
-Shadowbox.init({
-	players:['iframe']
-})
-
-$(function(){
-   $('#idCheckBtn').click(function(){
-      Shadowbox.open({
-    	  content:'idcheck.do',
-    	  player:'iframe',
-    	  width:370,
-    	  height:180,
-    	  title:'아이디 중복체크'
-      })
-   })
-   
-   $('#nicknameCheckBtn').click(function(){
-      Shadowbox.open({
-    	  content:'../jsp/login/nicknamecheck.do',
-    	  player:'iframe',
-    	  width:370,
-    	  height:180,
-    	  title:'닉네임 중복체크'
-      })
-   })
-   
-	$('#phoneCheckBtn').click(function(){ // 전화와 이메일은 클릭 후 바로 옆에 빨간 글씨 나오게
-      Shadowbox.open({
-    	  content:'../jsp/login/phonecheck.do',
-    	  player:'iframe',
-    	  width:370,
-    	  height:180,
-    	  title:'전화 중복체크'
-      })
-   })
-   
-    $('#emailCheckBtn').click(function(){
-      Shadowbox.open({
-    	  content:'../jsp/login/emailcheck.do',
-    	  player:'iframe',
-    	  width:370,
-    	  height:180,
-    	  title:'이메일 중복체크'
-      })
-   })
-   
-	$('#postBtn').click(function(){
-      Shadowbox.open({
-    	  content:'../jsp/login/postfind.do',
-    	  player:'iframe',
-    	  width:520,
-    	  height:350,
-    	  title:'우편번호 검색'
-      })
-   })
-   
-   $('#joinBtn').click(function(){
-	   $('#joinFrm').submit();
-   })
-})
-</script>
-</head>
 <body>
   <div class="wrapper row3">
    <main class="container clear">
@@ -167,5 +103,6 @@ $(function(){
       </table>
       </form>
     </div>
+    <div id="dialog" title="중복체크" style="display: none"></div>
    </main>
   </div>

@@ -33,6 +33,8 @@
 <!-- Responsive Stylesheet -->
 <link rel="stylesheet" type="text/css" href="../css/responsive.css" />
 <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
@@ -40,6 +42,10 @@
 <jsp:include page="footer.jsp"></jsp:include>
 <!-- jQuery 2.1.4 -->
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<!-- jQuery ui -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- idcheck JS -->
+<script type="text/javascript" src="../js/idcheck.js"></script>
 <!-- Bootstrap JS -->
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <!-- Owl Carousel JS -->
