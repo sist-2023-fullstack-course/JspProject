@@ -46,8 +46,7 @@
 			<div class="col-sm-4 col-lg-4">
 				<div class="logo text-center">
 					<a href="#">
-						<img src="../img/header/logo.png" alt="" />
-						<h4>PetMily</h4>
+						<img src="../img/header/logo_pet.jpg" alt="" />
 					</a>
 				</div>
 			</div>

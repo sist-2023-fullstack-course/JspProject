@@ -8,8 +8,8 @@
 <link id="favicon" rel="icon" type="image/png" href="../img/favicon.ico" />
 <!-- Google Font Raleway -->
 <link href='https://fonts.googleapis.com/css?family=Raleway:200,300,500,400,600,700,800' rel='stylesheet' type='text/css'>
-<!-- Google Font Dancing Script -->
-<link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+<!-- Google Font Noto Sans KR -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" type='text/css'>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
 <!-- Font Awesome CSS -->

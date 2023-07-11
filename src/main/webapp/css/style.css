@@ -54,9 +54,9 @@
 ------------------------*/
 *{margin:0;padding:0;}
 body {
-  background: #ebebeb none repeat scroll 0 0;
+  background: #EEEEEE none repeat scroll 0 0;
   color: #3e3f3f;
-  font-family: "Raleway",sans-serif;
+  font-family: "Noto Sans KR",sans-serif;
 }
 h1, h2, h3, h4, h5, h6, p {
   margin:0;
@@ -179,7 +179,7 @@ img {
 -------------------------------------*/
 /*----- 3.1 Header Top -----*/
 .header-top {
-  background: #e09e25 none repeat scroll 0 0;
+  color:#888888; background-color:#FFFFFF;;
 }
 .info, .socials {
   margin-top: 17px;
@@ -236,10 +236,11 @@ img {
   display: inline-block;
   margin: 0;
   position:relative;
+  font-size:14px;
 }
 #top-menu > ul > li > a {
   color: #fff;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
   padding: 20px 10px;
   -webkit-transition: all 0.3s ease 0s;
@@ -277,6 +278,7 @@ img {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   padding: 5px 10px;
+  text-align:center;
 }
 #top-menu > ul > li > ul li a:hover{color:#e09e25;}
 
@@ -287,7 +289,8 @@ img {
 }
 /*----- 3.3 Header Area -----*/
 .header-area {
-  background: #ebebeb none repeat scroll 0 0;
+  color:#888888; 
+  background-color:#FFFFFF;
   padding-top: 20px;
 }
 .log-link p {
@@ -461,12 +464,17 @@ img {
 }
 /*----- 3.4 Main Menu -----*/
 .menu-area {
-  background:#ebebeb;
+  background:#FFFFFF;
+   padding-bottom:50px;
 }
 .main-menu {
   text-align: center;
 }
-.main-menu > nav{}
+.main-menu > nav{
+	margin-top:10px;
+	background:#77D6C9;
+	border-radius:10px;
+}
 .main-menu > nav > ul {
   display: inline-block;
   margin: 0;
@@ -478,17 +486,18 @@ img {
   position: relative;
 }
 .main-menu > nav > ul > li > a {
-  font-size: 14px;
-  font-weight: 700;
-  padding: 20px 15px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 20px 50px;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  color:white;
 }
 .main-menu > nav > ul > li > a:hover, .main-menu > nav > ul > li > a:focus {
-  color:#e09e25;
+  color:black;
 }
 .sub-menu, .mega-menu {
   background: #fff none repeat scroll 0 0;
@@ -709,7 +718,7 @@ img {
 }
 .cap-title h1 {
   background: rgba(224, 158, 37, 0.6) none repeat scroll 0 0;
-  color: #ebebeb;
+  color: #EEEEEE;
   display: inline-block;
   font-size: 50px;
   font-weight: 500;
@@ -1325,14 +1334,14 @@ img {
 .testimonial-item .content {}
 .testimonial-item .content p {
   color: #fff;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size: 26px;
   font-weight: 400;
   letter-spacing: 1px;
 }
 .testimonial-item .content h3 {
   color: #fff;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size: 26px;
   font-weight: 400;
   text-align: right;
@@ -1528,7 +1537,7 @@ img {
 }
 /*----- 3.16 Footer Area -----*/
 .footer-area {
-  background: #EBEBEB;
+  background: #EEEEEE;
   padding: 25px 0;
 }
 .copy-right p {
@@ -1881,7 +1890,7 @@ img {
   padding: 15px;
 }
 #slider-range {
-  background: #EBEBEB none repeat scroll 0 0;
+  background: #EEEEEE none repeat scroll 0 0;
   border: 0 none;
   border-radius: 0;
   height: 6px;
@@ -2360,7 +2369,7 @@ h4.heading {
   margin-bottom: 5px;
 }
 .contact-form input, .contact-form textarea {
-  background: #ebebeb none repeat scroll 0 0;
+  background: #EEEEEE none repeat scroll 0 0;
   border: 1px solid #cccccc;
   margin-bottom: 7px;
   padding: 5px 10px;
@@ -2443,7 +2452,7 @@ h4.heading {
   width: 100%;
 }
 .login input {
-  background: #ebebeb none repeat scroll 0 0;
+  background: #EEEEEE none repeat scroll 0 0;
   border: 1px solid #ccc;
   color: #3e3f3f;
   font-size: 13px;
@@ -2454,7 +2463,7 @@ h4.heading {
   margin-top: 25px;
 }
 .remember input {
-  background: #ebebeb none repeat scroll 0 0;
+  background: #EEEEEE none repeat scroll 0 0;
   border: 1px solid #e1e1e1;
   float: left;
   margin-right: 6px;
@@ -3002,7 +3011,7 @@ h4.heading {
   margin-top: 10px;
 }
 .coupon a {
-  background: #ebebeb none repeat scroll 0 0;
+  background: #EEEEEE none repeat scroll 0 0;
   border: 1px solid #cccccc;
   color: #595a5a;
   font-size: 12px;
@@ -3028,7 +3037,7 @@ h4.heading {
   width: 40%;
 }
 .coupon a, .proceed a{
-  background: #ebebeb none repeat scroll 0 0;
+  background: #EEEEEE none repeat scroll 0 0;
   border: 1px solid #cccccc;
   color: #595a5a;
   font-size: 12px;
