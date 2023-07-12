@@ -1213,7 +1213,10 @@ img {
   transition: all 0.4s ease 0s;
   width: 100%;
 }
-.single-blog .image img{}
+.single-blog .image img{
+	border-radius: 5px;
+    margin-bottom: 5px;
+}
 .single-blog img {
   width: 100%;
 }
@@ -2176,12 +2179,15 @@ h4.heading {
   margin-bottom: 30px;
   background-color: #77D6C9;
   padding: 10px;
+  border-radius:10px;
 }
 .single-sidebar h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
+  color:white;
   margin-bottom: 15px;
-  padding: 15px 0;
+  margin-top:10px;
+  padding: 1px 0;
   text-align: center;
   text-transform: uppercase;
   width: 100%;
@@ -2190,20 +2196,22 @@ h4.heading {
   background: #fff none repeat scroll 0 0;
   list-style: outside none none;
   background-color: white;
+  border-radius:10px;
 }
 .single-sidebar ul > li {
   border-bottom: 1px solid #eee;
+  font-size: 14px;
 }
 .single-sidebar ul > li:last-child {
   border-bottom: 0px solid #eee;
 }
 .single-sidebar ul > li > a {
   display: block;
-  font-weight: 500;
   padding: 10px 15px;
+  font-weight: 600;
 }
 .single-sidebar ul > li > a:hover {
-  color: #E09E25;
+  color: black;
   padding-left: 25px;
 }
 .resent-post {
