@@ -1,31 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-<div class="header-top"><!--Start Header Top Area-->
+	<div class="header-area"><!--Start Header Area-->
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 col-md-6">
-				<div class="info">
-					<!-- <div class="phn-num float-left">
-						<i class="fa fa-phone float-left"></i>
-						<p>(000)  123  288  456 </p>
-					</div>
-					<div class="mail-id float-left">
-						<i class="fa fa-envelope-o float-left"></i>
-						<p><a href="#">info@olongker.com</a></p>
-					</div> -->
+			<div class="col-sm-4 col-lg-4">
+			</div>
+			<div class="col-sm-4 col-lg-4">
+				<div class="logo text-center">
+					<a href="../main/main.do">
+						<img src="../img/header/logo_pet.jpg" alt="" />
+					</a>
 				</div>
 			</div>
-			<div class="col-md-4">
-			</div>
-			<div class="col-sm-12 col-md-6">
+			<div class="col-sm-4 col-lg-4">
 				<div id="top-menu" class="float-right">
 					<ul>
+						<li><a href="#" class="inline">장바구니 <i class="fa fa-shopping-cart"></i></a></li>
+						<li><a href="#">위시리스트 <i class="fa fa-shopping-cart"></i></a></li>
 						<li><a href="">로그인 <i class="fa fa-angle-down"></i></a>
 							<ul>
 								<li><a href="../login/login.do">로그인</a></li>
@@ -34,29 +26,6 @@
 						</li>
 					</ul>
 				</div>
-			</div>
-		</div>
-	</div>
-</div><!--End Header Top Area-->
-<div class="header-area"><!--Start Header Area-->
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-4 col-lg-4">
-			</div>
-			<div class="col-sm-4 col-lg-4">
-				<div class="logo text-center">
-					<a href="#">
-						<img src="../img/header/logo_pet.jpg" alt="" />
-					</a>
-				</div>
-			</div>
-			<div class="col-sm-4 col-lg-4">
-				<div class="float-right" > 
-				   <br>
-				   <a href="#" class="inline">장바구니 <i class="fa fa-shopping-cart"></i></a>&nbsp;
-				   <a href="#">위시리스트 <i class="fa fa-shopping-cart"></i></a>&nbsp;&nbsp;&nbsp;
-				
-				</div>	
 		    </div>
 				 
 				  		  
@@ -90,16 +59,16 @@
 				<div class="main-menu hidden-sm hidden-xs">
 					<nav>
 						<ul>
-							<li><a href="#" class="active">Home</a>
+							<li><a href="../main/main.do" class="active">Home</a>
 							</li>
 							<li><a href="../company/main.do">업체</a>
 								<ul class="sub-menu">
-									<li><a href="../company/main.do">동반숙소/호텔링</a></li>
-									<li><a href="../company/main.do">동반카페/식당</a></li>
-									<li><a href="../company/main.do">미용</a></li>
-									<li><a href="../company/main.do">용품샵</a></li>
+									<li><a href="../company/main.do">애견미용</a></li>
 									<li><a href="../company/main.do">동물병원</a></li>
-									<li><a href="../company/main.do">장례</a></li>
+									<li><a href="../company/main.do">애견카페</a></li>
+									<li><a href="../company/main.do">애견숙소</a></li>
+									<li><a href="../company/main.do">반려동물용품</a></li>
+									<li><a href="../company/main.do">반려동물장례</a></li>
 								</ul>
 							</li>
 							<li><a href="shop.html">쇼핑몰</a>
@@ -144,5 +113,3 @@
 		</div>
 	</div>
 </div><!--End Main Menu Area-->
-</body>
-</html>

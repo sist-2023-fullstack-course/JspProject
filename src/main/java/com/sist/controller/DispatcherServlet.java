@@ -89,6 +89,9 @@ public class DispatcherServlet extends HttpServlet {
 					}
 				}
 			}
+			// 유효한 요청이 아닐 시 404페이지
+			RequestDispatcher rd = request.getRequestDispatcher("/jsp/etc/404.jsp");
+			rd.forward(request, response);
 		} catch(Exception ex) {
 			ex.printStackTrace();
 		}

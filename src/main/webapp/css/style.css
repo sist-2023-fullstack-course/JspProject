@@ -94,7 +94,7 @@ img {
   padding: 80px 0;
 }
 .page {
-  padding: 80px 0 0;
+  padding: 40px 0 0;
 }
 .section-title {
   text-align: center;
@@ -239,7 +239,7 @@ img {
   font-size:14px;
 }
 #top-menu > ul > li > a {
-  color: #fff;
+  color: 77D6C9;
   font-size: 15px;
   font-weight: 700;
   padding: 20px 10px;
@@ -1231,20 +1231,13 @@ img {
 .meta {
   margin-bottom: 10px;
 }
-.meta a {
+.meta a {	
   color: #555555;
   font-size: 12px;
   font-weight: 400;
-  margin-right: 20px;
 }
 .blog-details .meta a {
   font-size: 14px;
-}
-.meta a {
-  color: #555555;
-  font-size: 12px;
-  font-weight: 400;
-  margin-right: 20px;
 }
 .meta a:hover {
   color: #e09e25;
@@ -1631,7 +1624,7 @@ img {
   text-align: center;
 }
 .page-title h2 {
-  color: #fff;
+  color: #77D6C9;
   font-size: 50px;
   font-weight: 700;
   text-transform: uppercase;
@@ -2180,9 +2173,10 @@ h4.heading {
 }
 .single-sidebar {
   margin-bottom: 30px;
+  background-color: #77D6C9;
+  padding: 10px;
 }
 .single-sidebar h2 {
-  background: #fff none repeat scroll 0 0;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -2194,6 +2188,7 @@ h4.heading {
 .single-sidebar ul {
   background: #fff none repeat scroll 0 0;
   list-style: outside none none;
+  background-color: white;
 }
 .single-sidebar ul > li {
   border-bottom: 1px solid #eee;
@@ -3447,4 +3442,45 @@ h4.heading {
 .checkout-right li a:hover {
   color: #E09E25;
   padding-left: 10px;
+}
+
+/* search bar */
+.custom-select {
+	position: relative;
+	margin:23px 30px 20px 30px; 
+}
+.custom-select select {
+	font-size:16px;
+	border-radius:60px;
+	padding:12px 28px;
+	width:150px;
+	border:1px solid #ddd;
+	background:url('http://appdata.hungryapp.co.kr/images/hatdog/img/pc_img/tour/arrow_search.png')  120px center no-repeat ;
+	background-size:18px;
+	margin:0 10px 0 10px
+}
+.custom-select select {
+	-webkit-appearance: none ! important;
+	-moz-appearance: none ! important; 
+	appearance: none ! important; 
+}
+.custom-select select::-ms-expand{ 
+	display: none; 
+}
+.search_button{
+	margin-top:0px;
+	border-radius:60px;
+	padding:10px 33px;
+	background:#77D6C9;
+	color:#fff;
+	font-size:20px;
+	margin-left:15px;
+	display:inline-block;
+	border: 0px;
+}
+.SearchInput{
+	font-size:16px;
+	border-radius:60px;
+	padding:12px 40px;
+	border:1px solid #ddd;
 }

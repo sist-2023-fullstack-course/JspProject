@@ -67,22 +67,6 @@
 					</form>
 				</div>
 			</div>
-			<div class="col-md-2"></div>
-			<div class="col-sm-6 col-md-5">
-				<div class="login">
-					<form id="signup-form" action="#">
-						<h2>Create A new Account</h2>
-						<p>Create your own account</p>
-						<label>E-mail Address<span>*</span></label>
-						<input type="text" />
-						<label>Password<span>*</span></label>
-						<input type="password" />
-						<label>Confirm Password<span>*</span></label>
-						<input type="password" />
-						<input type="submit" value="Sign up" />
-					</form>
-				</div>
-			</div>
 		</div>
 	</div>
 </div><!--End login Area-->
