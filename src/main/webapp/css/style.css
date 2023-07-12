@@ -250,7 +250,7 @@ img {
 }
 #top-menu > ul > li:hover > a {
   background:#fff;
-  color:#e09e25;
+  color:black;
 }
 #top-menu > ul li > ul {
   background: #fff none repeat scroll 0 0;
@@ -495,6 +495,7 @@ img {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   color:white;
+  font-weight:700;
 }
 .main-menu > nav > ul > li > a:hover, .main-menu > nav > ul > li > a:focus {
   color:black;
@@ -525,13 +526,13 @@ img {
 .sub-menu > li{}
 .sub-menu > li > a {
   display: block;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   padding: 5px 0;
   text-transform: uppercase;
 }
 .sub-menu > li > a:hover, .sub-menu > li > a:focus  {
-  color:#e09e25;
+  color:black;
   padding-left: 5px;
 }
 .mega-menu {
