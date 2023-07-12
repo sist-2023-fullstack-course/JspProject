@@ -488,7 +488,7 @@ img {
 .main-menu > nav > ul > li > a {
   font-size: 20px;
   font-weight: 500;
-  padding: 20px 50px;
+  padding: 20px 40px;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease 0s;

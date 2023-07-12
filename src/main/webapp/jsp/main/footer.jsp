@@ -11,7 +11,7 @@
 			<div class="col-sm-6 col-md-3">
 				<div class="footer-about">
 					<div class="image">
-						<img src="../img/header/logo.png" alt="" />
+						<img src="../img/header/logo_pet.png" alt="" />
 						<h3>online jewelry store</h3>
 					</div>
 					<p>perspiciatis unde omnis iste natus error sit voluptatem accm doloremque antium, totam rem aperiam, eaque ipsa perspiciatis unde omnis iste</p>

@@ -98,14 +98,10 @@
 								<ul class="sub-menu">
 								</ul>
 							</li>
-							<c:if test="${sessionScope.id!=null }">
-							  <c:if test="${sessionScope.admin=='n' }">
-							    <li><a href="about-us.html">마이페이지</a></li>
-							  </c:if>
+							    <li><a href="../mypage/main.do">마이페이지</a></li>
 							  <c:if test="${sessionScope.admin=='y' }">
 							    <li><a href="contact.html">관리자페이지</a></li>
 							  </c:if>
-							</c:if>
 						</ul>
 					</nav>
 				</div>
