@@ -31,7 +31,6 @@ public class CompanyDAO {
 	// 리스트 출력
 	public List<CompanyVO> getCompanyVOListByPage(int page, int sc, int ec, int cate){
 		List<CompanyVO> list = new ArrayList<>();
-		
 		try {
 			conn = db.getConnection();
 			String sql = "SELECT /*+ INDEX_ACSC(company PK_COMPANY) */ com_id,com_name,address,time,poster,com_star_sum,com_star_cnt "
@@ -84,18 +83,32 @@ public class CompanyDAO {
 		finally {
 			db.disConnection(conn, ps);
 		}
-		System.out.println("db수행" + list.size());
 		return list;
 	}
 	
 	// totalpage
-	public int getTotalPage() {
+	public int getTotalPage(int sc, int ec, int cate) {
 		int cnt = 0;
 		
 		try {
 			conn = db.getConnection();
-			String sql = "SELECT ceil(count(*)/10.0) FROM company";
+			String sql = "SELECT ceil(count(*)/10.0) FROM company "
+					   + "WHERE com_category_id BETWEEN ? AND ? AND loc_category_id BETWEEN ? AND ?";
 			ps = conn.prepareStatement(sql);
+			ps.setInt(1, cate);
+			
+			if(cate==0) {
+				ps.setInt(1, 1);
+				ps.setInt(2, 6);
+			}
+			else {
+				ps.setInt(1, cate);
+				ps.setInt(2, cate);
+			}
+			
+			ps.setInt(3, sc);
+			ps.setInt(4, ec);
+			
 			rs = ps.executeQuery();
 			
 			if(rs.next()) {
@@ -104,6 +117,9 @@ public class CompanyDAO {
 			rs.close();
 		} catch(Exception e) {
 			e.printStackTrace();
+		}
+		finally {
+			db.disConnection(conn, ps);
 		}
 		
 		return cnt;
