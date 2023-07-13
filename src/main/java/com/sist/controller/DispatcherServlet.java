@@ -57,6 +57,7 @@ public class DispatcherServlet extends HttpServlet {
 		try {
 			String path=request.getRequestURI();
 			path=path.substring(request.getContextPath().length()+1);
+			System.out.println(path);
 			
 			for(String cls:clsList)
 			{
