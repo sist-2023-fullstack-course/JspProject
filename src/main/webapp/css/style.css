@@ -2214,6 +2214,9 @@ h4.heading {
   padding: 10px 15px;
   font-weight: 600;
 }
+.single-sidebar ul > li > a.selected {
+	color:red;
+}
 .single-sidebar ul > li > a:hover {
   color: black;
   padding-left: 25px;
