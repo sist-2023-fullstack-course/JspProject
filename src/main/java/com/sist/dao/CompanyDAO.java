@@ -29,29 +29,49 @@ public class CompanyDAO {
 	}
 	
 	// 리스트 출력
-	public List<CompanyVO> getCompanyVOListByPage(int page, int sc, int ec, int cate){
+	public List<CompanyVO> getCompanyVOListByPage(int page, String cate, String addr1, String addr2, String searchword){
 		List<CompanyVO> list = new ArrayList<>();
 		try {
 			conn = db.getConnection();
-			String sql = "SELECT /*+ INDEX_ACSC(company PK_COMPANY) */ com_id,com_name,address,time,poster,com_star_sum,com_star_cnt "
-					   + "FROM company "
-					   + "WHERE com_id BETWEEN ? AND ? "
-					   + "AND loc_category_id BETWEEN ? AND ? "
-					   + "AND com_category_id BETWEEN ? AND ?";
+			String sql = "SELECT com_id,com_name,address,time,poster,com_star_sum,com_star_cnt "
+					   + "FROM ("
+					   + "	SELECT /*+ INDEX(c, PK_COMPANY) */ "
+					   + "	rownum AS num, com_id,com_name,address,time,poster,com_star_sum,com_star_cnt "
+					   + "	FROM COMPANY c, LOCAL_CATEGORY lc , COMPANY_CATEGORY cc "
+					   + "	WHERE c.LOC_CATEGORY_ID = lc.LOC_CATEGORY_ID AND c.COM_CATEGORY_ID = cc.COM_CATEGORY_ID "
+					   + "	AND lc.LOCAL1 LIKE '%'||?||'%' "
+					   + "	AND lc.LOCAL2 LIKE '%'||?||'%' "
+					   + "	AND cc.CATEGORY LIKE '%'||?||'%' "
+					   + "	AND c.com_name LIKE '%'||?||'%' "
+					   + ")"
+					   + "WHERE num BETWEEN ? AND ?";
 			ps = conn.prepareStatement(sql);
-			ps.setInt(1, (page-1)*PAGE_POSTING_COUNT + 1);
-			ps.setInt(2, page*PAGE_POSTING_COUNT);
-			ps.setInt(3, sc);
-			ps.setInt(4, ec);
-			if(cate==0) {
-				ps.setInt(5, 1);
-				ps.setInt(6, 6);
+			
+			if(addr1.equals("전국")) {
+				ps.setString(1, "");
+				ps.setString(2, "");
 			}
 			else {
-				ps.setInt(5, cate);
-				ps.setInt(6, cate);
+				ps.setString(1, addr1);
+				if(addr2.equals("시군선택")) {
+					ps.setString(2, "");
+				}
+				else {
+					ps.setString(2, addr2);
+				}
 			}
 			
+			if(cate.equals("전체")) {
+				ps.setString(3, "");
+			}
+			else {
+				ps.setString(3, cate);
+			}
+
+			ps.setString(4, searchword);
+			ps.setInt(5, (page-1)*PAGE_POSTING_COUNT + 1);
+			ps.setInt(6, page*PAGE_POSTING_COUNT);
+		
 			rs = ps.executeQuery();
 			while(rs.next()) {
 				CompanyVO vo = new CompanyVO();
@@ -87,32 +107,46 @@ public class CompanyDAO {
 	}
 	
 	// totalpage
-	public int getTotalPage(int sc, int ec, int cate) {
+	public int getTotalPage(int page, String cate, String addr1, String addr2, String searchword) {
 		int cnt = 0;
 		
 		try {
 			conn = db.getConnection();
-			String sql = "SELECT ceil(count(*)/10.0) FROM company "
-					   + "WHERE com_category_id BETWEEN ? AND ? AND loc_category_id BETWEEN ? AND ?";
+			String sql = "SELECT count(*) "
+					   + "FROM COMPANY c, LOCAL_CATEGORY lc , COMPANY_CATEGORY cc "
+					   + "WHERE c.LOC_CATEGORY_ID = lc.LOC_CATEGORY_ID AND c.COM_CATEGORY_ID = cc.COM_CATEGORY_ID "
+					   + "AND lc.LOCAL1 LIKE '%'||?||'%' "
+					   + "AND lc.LOCAL2 LIKE '%'||?||'%' "
+					   + "AND cc.CATEGORY LIKE '%'||?||'%' "
+					   + "AND c.com_name LIKE '%'||?||'%'";
 			ps = conn.prepareStatement(sql);
-			ps.setInt(1, cate);
 			
-			if(cate==0) {
-				ps.setInt(1, 1);
-				ps.setInt(2, 6);
+			if(addr1.equals("전국")) {
+				ps.setString(1, "");
+				ps.setString(2, "");
 			}
 			else {
-				ps.setInt(1, cate);
-				ps.setInt(2, cate);
+				ps.setString(1, addr1);
+				if(addr2.equals("시군선택")) {
+					ps.setString(2, "");
+				}
+				else {
+					ps.setString(2, addr2);
+				}
 			}
-			
-			ps.setInt(3, sc);
-			ps.setInt(4, ec);
+			if(cate.equals("전체")) {
+				ps.setString(3, "");
+			}
+			else {
+				ps.setString(3, cate);
+			}
+			ps.setString(4, searchword);
 			
 			rs = ps.executeQuery();
 			
 			if(rs.next()) {
 				cnt = rs.getInt(1);
+				cnt = (int)Math.ceil(cnt/(double)PAGE_POSTING_COUNT);
 			}
 			rs.close();
 		} catch(Exception e) {

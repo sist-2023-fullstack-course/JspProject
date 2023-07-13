@@ -35,6 +35,12 @@
 <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<!-- container 크기 조정 -->
+<style type="text/css">
+.container{
+	width: 70%;
+}
+</style>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
@@ -70,7 +76,7 @@
 <script type="text/javascript" src="../js/jquery-price-slider.js"></script>
 <!-- WOW JS -->
 <script type="text/javascript" src="../js/wow.min.js"></script>
-<script type="text/javascript" src="../js/localselect.js"></script>
+<script type="text/javascript" src="../js/search.js"></script>
 <script>
 	new WOW().init();
 </script>	

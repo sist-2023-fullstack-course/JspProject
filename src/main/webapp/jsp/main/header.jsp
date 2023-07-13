@@ -27,28 +27,6 @@
 					</ul>
 				</div>
 		    </div>
-				 
-				  		  
-					<%--
-					 <div class="cart-hover">
-						<ul class="header-cart-pro">
-							<li>
-								<div class="image"><a href="#"><img alt="cart item" src="../img/cart-1.jpg"></a></div>
-								<div class="content fix"><a href="#">Product Name</a><span class="price">Price: $130</span><span class="quantity">Quantity: 1</span></div>
-								<i class="fa fa-trash delete"></i>
-							</li>
-							<li>
-								<div class="image"><a href="#"><img alt="cart item" src="../img/cart-2.jpg"></a></div>
-								<div class="content fix"><a href="#">Product Name</a><span class="price">Price: $130</span><span class="quantity">Quantity: 2</span></div>
-								<i class="fa fa-trash delete"></i>
-							</li>
-						</ul>
-						<div class="header-button-price">
-							<a href="checkout.html"><i class="fa fa-sign-out"></i><span>Check Out</span></a>
-							<div class="total-price"><h3>Total Price : <span>$390</span></h3></div>
-						</div>
-					</div> 
-					--%>
 		</div>
 	</div>
 </div><!--End Header Area-->
@@ -61,14 +39,14 @@
 						<ul>
 							<li><a href="../main/main.do" class="active">Home</a>
 							</li>
-							<li><a href="../company/main.do">업체</a>
+							<li><a href="../company/list.do">업체</a>
 								<ul class="sub-menu">
-									<li><a href="../company/main.do">애견미용</a></li>
-									<li><a href="../company/main.do">동물병원</a></li>
-									<li><a href="../company/main.do">애견카페</a></li>
-									<li><a href="../company/main.do">애견숙소</a></li>
-									<li><a href="../company/main.do">반려동물용품</a></li>
-									<li><a href="../company/main.do">반려동물장례</a></li>
+									<li><a href="../company/list.do?cate=애견미용">애견미용</a></li>
+									<li><a href="../company/list.do?cate=동물병원">동물병원</a></li>
+									<li><a href="../company/list.do?cate=애견카페">애견카페</a></li>
+									<li><a href="../company/list.do?cate=애견숙소">애견숙소</a></li>
+									<li><a href="../company/list.do?cate=반려동물용품">반려동물용품</a></li>
+									<li><a href="../company/list.do?cate=반려동물장례">반려동물장례</a></li>
 								</ul>
 							</li>
 							<li><a href="shop.html">쇼핑몰</a>
