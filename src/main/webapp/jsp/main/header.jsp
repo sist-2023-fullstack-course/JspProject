@@ -58,11 +58,11 @@
 									<li><a href="#">Platinum ring</a></li>
 								</ul>
 							</li>
-							<li><a href="shop.html">커뮤니티</a>
+							<li><a href="../board/board_list.do">커뮤니티</a>
 								<div>
 									<ul class="sub-menu">
-										<li><a href="#">자유토크</a></li>
-										<li><a href="#">마이펫 자랑하기</a></li>
+										<li><a href="../board/board_list.do">자유토크</a></li>
+										<li><a href="../board/board_list.do">마이펫 자랑하기</a></li>
 									</ul>
 								</div>
 							</li>
