@@ -29,7 +29,7 @@ $(function(){
 		
 		$.ajax({
 			type:'post',
-			url:'../../login/nicknamecheck_ok.do',
+			url:'../../member/nicknamecheck_ok.do',
 			data:{"nickname":nickname},
 			success: function(result)
 			{

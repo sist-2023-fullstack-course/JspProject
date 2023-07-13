@@ -20,31 +20,31 @@
 $(function(){
 	$('#ok').hide();
 	$('#checkBtn').click(function(){
-		let nickname=$('#nickname').val();
-		if(nickname.trim()=="")
+		let phone=$('#phone').val();
+		if(phone.trim()=="")
 		{
-			$('#nickname').focus();
+			$('#phone').focus();
 			return;
 		}
 		
 		$.ajax({
 			type:'post',
-			url:'../../login/nicknamecheck_ok.do',
-			data:{"nickname":nickname},
+			url:'../../member/phonecheck_ok.do',
+			data:{"phone":phone},
 			success: function(result)
 			{
 				alert("result="+result);
 				let count=Number(result.trim());
-				if(count==0) /* 닉네임이 없다 */
+				if(count==0)
 				{
 					$('#ok').show();
-					$('#res').html('<span style="color:blue">'+"\'"+nickname+"\' 는(은) 사용 가능한 닉네임입니다.</span>");
+					$('#res').html('<span style="color:blue">'+"사용 가능한 번호입니다.</span>");
 					$('#id').prop('disabled',true);
 				}
-				else /* 닉네임이 있다 */
+				else
 				{
 					$('#ok').hide();
-					$('#res').html('<span style="color:red">'+"\'"+nickname+"\' 는(은) 이미 사용중인 닉네임입니다!</span>");
+					$('#res').html('<span style="color:red">'+"이미 사용 중인 번호입니다.</span>");
 					$('#id').val();
 					$('#id').focus();
 				}
@@ -54,7 +54,7 @@ $(function(){
 	
 	$('#okBtn').click(function(){
 		// parent=join.jsp
-		parent.joinFrm.id.value=$('#nickname').val()
+		parent.joinFrm.id.value=$('#phone').val()
 		parent.Shadowbox.close();
 	})
 })
@@ -65,7 +65,7 @@ $(function(){
   	<div class="row">
   		<table class="table">
   		  <tr>
-  		    <td>닉네임 : <input type=text name=nickname id=nickname size=15 class="input-sm">
+  		    <td>닉네임 : <input type=text name=phone id=phone size=15 class="input-sm">
   		    	<input type=button value="중복체크" class="btn btn-sm btn-warning" id="checkBtn">
   		    </td>
   		  </tr>

@@ -5,13 +5,12 @@
   	<div class="row">
   		<table class="table">
   		  <tr>
-  		    <td>ID: <input type=text name=id id="idInput" size=15 class="input-sm">
+  		    <td>닉네임 : <input type=text name=nickname id=nicknameInput size=15 class="input-sm">
   		    	<input type=button value="중복체크" class="btn btn-sm btn-warning" id="checkBtn">
   		    </td>
   		  </tr>
   		  <tr>
   		    <td class="text-center" id="res">
-  		    
   		    </td>
   		  </tr>
   		  <tr id="ok">

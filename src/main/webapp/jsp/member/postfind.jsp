@@ -28,7 +28,7 @@ $(function(){
 		
 		$.ajax({
 			type:'post',
-			url:'../jsp/login/postfind_result.do',
+			url:'../jsp/member/postfind_result.do',
 			data:{"dong":dong},
 			success:function(result)
 			{

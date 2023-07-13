@@ -20,8 +20,8 @@
 						<li><a href="#">위시리스트 <i class="fa fa-shopping-cart"></i></a></li>
 						<li><a href="">로그인 <i class="fa fa-angle-down"></i></a>
 							<ul>
-								<li><a href="../login/login.do">로그인</a></li>
-								<li><a href="../login/join.do">회원가입</a></li>
+								<li><a href="../member/login.do">로그인</a></li>
+								<li><a href="../member/join.do">회원가입</a></li>
 							</ul>
 						</li>
 					</ul>

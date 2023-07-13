@@ -73,7 +73,7 @@ public class MemberDAO {
 		int count=0;
 		try {
 			conn=db.getConnection();
-			String sql="SELECT COUNT(*) FROM pet_member WHERE email=?";
+			String sql="SELECT COUNT(*) FROM member WHERE email=?";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, email);
 			ResultSet rs=ps.executeQuery();
@@ -96,7 +96,7 @@ public class MemberDAO {
 		int count=0;
 		try {
 			conn=db.getConnection();
-			String sql="SELECT COUNT(*) FROM pet_member WHERE nickname=?";
+			String sql="SELECT COUNT(*) FROM member WHERE nickname=?";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, nickname);
 			ResultSet rs=ps.executeQuery();

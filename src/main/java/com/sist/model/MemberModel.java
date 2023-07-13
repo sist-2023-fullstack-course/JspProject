@@ -15,7 +15,7 @@ import com.sist.vo.ZipcodeVO;
 public class MemberModel {
 	
 	
-	@RequestMapping("login/login.do")
+	@RequestMapping("member/login.do")
 	public String memberLogin(HttpServletRequest request, HttpServletResponse response)
 	{
 //		String id=request.getParameter("id");
@@ -36,24 +36,24 @@ public class MemberModel {
 //			PrintWriter out=response.getWriter();
 //			out.println(vo.getMsg()); // NOID, NOPWD, OK
 //		} catch (Exception e) {}
-		request.setAttribute("main_jsp", "../login/login.jsp");
+		request.setAttribute("main_jsp", "../member/login.jsp");
 		return "../jsp/main/main.jsp";
 	}
 	
-	@RequestMapping("login/join.do")
+	@RequestMapping("member/join.do")
 	public String memberJoin(HttpServletRequest request, HttpServletResponse response)
 	{
-		request.setAttribute("main_jsp", "../login/join.jsp");
+		request.setAttribute("main_jsp", "../member/join.jsp");
 		return "../jsp/main/main.jsp";
 	}
 	
-	@RequestMapping("login/idcheck.do")
+	@RequestMapping("member/idcheck.do")
 	public String memberIdCheck(HttpServletRequest request, HttpServletResponse response)
 	{
-		return "../jsp/login/idcheck.jsp";
+		return "../jsp/member/idcheck.jsp";
 	}
 	
-	@RequestMapping("login/idcheck_ok.do")
+	@RequestMapping("member/idcheck_ok.do")
 	public void memberIdCheckOk(HttpServletRequest request, HttpServletResponse response)
 	{
 		String id=request.getParameter("id");
@@ -66,18 +66,18 @@ public class MemberModel {
 		} catch (Exception e) {}
 	}
 	
-	@RequestMapping("login/nicknamecheck.do")
+	@RequestMapping("member/nicknamecheck.do")
 	public String memberNicknameCheck(HttpServletRequest request, HttpServletResponse response)
 	{
-		return "../jsp/login/nicknamecheck.jsp";
+		return "../jsp/member/nicknamecheck.jsp";
 	}
 	
-	@RequestMapping("login/nicknamecheck_ok.do")
+	@RequestMapping("member/nicknamecheck_ok.do")
 	public void memberNicknameCheckOk(HttpServletRequest request, HttpServletResponse response)
 	{
 		String nickname=request.getParameter("nickname");
 		MemberDAO dao=MemberDAO.newInstance();
-		int count=dao.IdCheck(nickname);
+		int count=dao.NicknameCheck(nickname);
 		
 		try {
 			PrintWriter out=response.getWriter();
@@ -89,13 +89,13 @@ public class MemberModel {
 	
 	// emailcheck
 	
-	@RequestMapping("login/postfind.do")
+	@RequestMapping("member/postfind.do")
 	public String memberPostFind(HttpServletRequest request, HttpServletResponse response)
 	{
-		return "../jsp/login/postfind.jsp";
+		return "../jsp/member/postfind.jsp";
 	}
 	
-	@RequestMapping("login/postfind_result.do")
+	@RequestMapping("member/postfind_result.do")
 	public String memberPostFindResult(HttpServletRequest request, HttpServletResponse response)
 	{
 		try {
@@ -109,10 +109,10 @@ public class MemberModel {
 		
 		request.setAttribute("count", count);
 		request.setAttribute("list", list);
-		return "../jsp/login/postfind_result.jsp";
+		return "../jsp/member/postfind_result.jsp";
 	}
 	
-	@RequestMapping("login/join_ok.do")
+	@RequestMapping("member/join_ok.do")
 	public String memberJoinOk(HttpServletRequest request, HttpServletResponse response)
 	{
 		try {
@@ -152,7 +152,7 @@ public class MemberModel {
 	}
 	
 	
-	@RequestMapping("login/logout.do")
+	@RequestMapping("member/logout.do")
 	public String memberLogout(HttpServletRequest request, HttpServletResponse response)
 	{
 		HttpSession session=request.getSession();

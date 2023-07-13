@@ -37,86 +37,14 @@
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
-<div class="page-title fix"><!--Start Title-->
-	<div class="overlay section">
-		<h2>login / Register</h2>
-	</div>
-</div><!--End Title-->
-<div class="login-page page fix"><!--start login Area-->
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-6 col-md-5">
-				<div class="login">
-					<form id="login-form" action="#">
-						<h2>Login</h2>
-						<p>Welcome to your account</p>
-						<div class="social-login">
-							<a id="facebook" href="#"><i class="fa fa-facebook"></i>Sign In with Facebook</a>
-							<a id="twitter" href="#"><i class="fa fa-twitter"></i>Sign In with Twitter</a>
-						</div>
-						<label>E-mail Address<span>*</span></label>
-						<input type="text" />
-						<label>Password<span>*</span></label>
-						<input type="password" />
-						<div class="remember">
-							<input type="checkbox" />
-							<p>Remember me!</p>
-							<a href="#">Forgot Your Password ?</a>
-						</div>
-						<input type="submit" value="login" />
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</div><!--End login Area-->
-<div class="brand-area section fix"><!--Start Brand Area-->
-	<div class="container">
-		<div class="row">
-			<div class="section-title">
-				<h2>Our Brands</h2>
-				<div class="underline"></div>
-			</div>
-			<div class="brand-slider owl-carousel">
-				<div class="brand-item"><img src="../../img/brand/brand-1.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-2.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-3.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-4.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-5.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-1.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-2.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-3.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-4.png" alt="" /></div>
-				<div class="brand-item"><img src="../../img/brand/brand-5.png" alt="" /></div>
-			</div>
-		</div>
-	</div>
-</div><!--End Brand Area-->
-<div class="support-area section fix"><!--Start Support Area-->
-	<div class="container">
-		<div class="row">
-			<div class="support col-sm-3">
-				<i class="fa fa-thumbs-up"></i>
-				<h3>High quality</h3>
-				<p>Lorem ipsum dolor sit amet, conseetur adipiscing elit, consectetur</p>
-			</div>
-			<div class="support col-sm-3">
-				<i class="fa fa-bus"></i>
-				<h3>Fast Delivery</h3>
-				<p>Lorem ipsum dolor sit amet, conseetur adipiscing elit, consectetur</p>
-			</div>
-			<div class="support col-sm-3">
-				<i class="fa fa-phone"></i>
-				<h3>24/7 support</h3>
-				<p>Lorem ipsum dolor sit amet, conseetur adipiscing elit, consectetur</p>
-			</div>
-			<div class="support col-sm-3">
-				<i class="fa fa-random"></i>
-				<h3>14 - Day Returns</h3>
-				<p>Lorem ipsum dolor sit amet, conseetur adipiscing elit, consectetur</p>
-			</div>
-		</div>
-	</div>
+<!--End Title-->
+<div class="main">
+   <p class="sign" align="center">로그인</p>
+    <form class="form1" style="text-align: center">
+      <input class="un " type="text" align="center" placeholder="Username">
+      <input class="pass" type="password" align="center" placeholder="Password">
+      <a class="submit" align="center">로그인</a>
+    <p class="forgot" align="center"><a href="#">Forgot Password?</p>
 </div>
 <!-- jQuery 2.1.4 -->
 <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>

@@ -7,7 +7,7 @@
   	<div class="col-sm-8">
 	    <h2 class="sectiontitle">회원가입</h2>
 	    <div class="row">
-	     <form method="post" action="../jsp/login/join_ok.do" name="joinFrm" id="joinFrm">
+	     <form method="post" action="../jsp/member/join_ok.do" name="joinFrm" id="joinFrm">
 	      <table class="table">
 	        <tr>
 	         <th class="text-right" width=10%>ID</th>
@@ -98,8 +98,8 @@
 	        
 	        <tr>
 	          <td colspan="2" class="text-center">
-	           <input type="button" value="회원가입" class="btn btn-success btn-sm" id="joinBtn">
-	           <input type=button value="취소" class="btn btn-danger btn-sm" onclick="javascript:history.back()">
+	           <input type="button" value="회원가입" class="btn btn-danger btn-lg" id="joinBtn">
+	           <!-- <input type=button value="취소" class="btn btn-danger btn-sm" onclick="javascript:history.back()"> -->
 	          </td>
 	        </tr>
 	      </table>
