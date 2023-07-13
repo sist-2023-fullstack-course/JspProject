@@ -2,7 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="page-title fix"><!--Start Title-->
-	<div class="section" style="padding: 0px;">
+	<h2>업체별 검색</h2>
+	<div class="section">
 		<div class="container">
 			<div class="row">
 					 <div class="sm_search">
@@ -74,7 +75,7 @@
 					<div class="col-md-4 poster">
 						<div class="single-blog">
 							<div class="content fix">
-								<a class="image fix" href="detail.do?id=${vo.id }"><img src="${vo.poster }" width="100%" height="200px"/></a>
+								<a class="image fix" href="detail.do?id=${vo.id }"><img src="${vo.poster }" width="100%" height="220px"/></a>
 								<h2><a class="title" href="detail.do?id=${vo.id }">${vo.com_name }</a></h2>
 								<div class="meta">
 									<a href="" class="time"><i class="fa fa-calendar"></i>${vo.time }</a>

@@ -23,7 +23,7 @@ public class CompanyModel {
 			cate="전체";
 				
 		CompanyDAO dao = CompanyDAO.getInstance();
-		List<CompanyVO> list = dao.getCompanyVOListByPage(1, cate, "전국", "시군선택", "");
+		List<CompanyVO> list = dao.getCompanyVOList(1, cate, "전국", "시군선택", "");
 		int totalpage = dao.getTotalPage(1, cate, "전국", "시군선택", "");
 		int endpage = (10>totalpage)?totalpage:10;
 		
@@ -39,6 +39,12 @@ public class CompanyModel {
 	
 	@RequestMapping("company/detail.do")
 	public String company_detail(HttpServletRequest request, HttpServletResponse response) {
+		int com_id = Integer.parseInt(request.getParameter("id"));
+		
+		CompanyDAO dao = CompanyDAO.getInstance();
+		CompanyVO vo = dao.getCompanyVO(com_id);
+		
+		request.setAttribute("vo", vo);
 		request.setAttribute("main_jsp", "../search/company_details.jsp");
 		return "../jsp/main/main.jsp";
 	}
@@ -52,7 +58,7 @@ public class CompanyModel {
 		String searchword = request.getParameter("searchword");
 		
 		CompanyDAO dao = CompanyDAO.getInstance();
-		List<CompanyVO> list = dao.getCompanyVOListByPage(page, cate, addr1, addr2, searchword);
+		List<CompanyVO> list = dao.getCompanyVOList(page, cate, addr1, addr2, searchword);
 		int totalpage = dao.getTotalPage(page, cate, addr1, addr2, searchword);
 		int startpage = (page-1)/10*10+1;
 		int endpage = (startpage+9>totalpage) ? totalpage : startpage+9;

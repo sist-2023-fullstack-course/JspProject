@@ -30,7 +30,11 @@
 <link rel="stylesheet" type="text/css" href="../css/nivo-slider.css" />
 <!-- Stylesheet CSS -->
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
+<!-- search CSS -->
+<link rel="stylesheet" type="text/css" href="../css/search.css" />
 <!-- Responsive Stylesheet -->
+<!-- swiper CSS-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 <link rel="stylesheet" type="text/css" href="../css/responsive.css" />
 <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -38,7 +42,7 @@
 <!-- container 크기 조정 -->
 <style type="text/css">
 .container{
-	width: 70%;
+	width: 1300px;
 }
 </style>
 </head>
@@ -76,7 +80,10 @@
 <script type="text/javascript" src="../js/jquery-price-slider.js"></script>
 <!-- WOW JS -->
 <script type="text/javascript" src="../js/wow.min.js"></script>
+<!-- search JS -->
 <script type="text/javascript" src="../js/search.js"></script>
+<!-- swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
 	new WOW().init();
 </script>	

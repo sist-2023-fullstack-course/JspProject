@@ -29,7 +29,7 @@ public class CompanyDAO {
 	}
 	
 	// 리스트 출력
-	public List<CompanyVO> getCompanyVOListByPage(int page, String cate, String addr1, String addr2, String searchword){
+	public List<CompanyVO> getCompanyVOList(int page, String cate, String addr1, String addr2, String searchword){
 		List<CompanyVO> list = new ArrayList<>();
 		try {
 			conn = db.getConnection();
@@ -157,5 +157,45 @@ public class CompanyDAO {
 		}
 		
 		return cnt;
+	}
+	
+	// 상세보기
+	public CompanyVO getCompanyVO(int id) {
+		CompanyVO vo = new CompanyVO();
+		
+		try {
+			conn = db.getConnection();
+			String sql = "SELECT com_name, address, time, content, com_star_sum, com_star_cnt, poster, cc.category, phone "
+					   + "FROM company c, company_category cc "
+					   + "WHERE c.com_category_id=cc.com_category_id "
+					   + "AND com_id=?";
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				vo.setCom_name(rs.getString(1));
+				vo.setAddress(rs.getString(2));
+				vo.setTime(rs.getString(3));
+				vo.setContent(rs.getString(4));
+				
+				int sum = rs.getInt(5);
+				int cnt = rs.getInt(6);
+				if(cnt > 0)
+					vo.setStar((double)sum/cnt);
+				else
+					vo.setStar(0.0);
+				vo.setPoster(rs.getString(7));
+				vo.setCategory(rs.getString(8));
+				vo.setPhone(rs.getString(9));
+			}
+			rs.close();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			db.disConnection(conn, ps);
+		}
+		
+		return vo;
 	}
 }

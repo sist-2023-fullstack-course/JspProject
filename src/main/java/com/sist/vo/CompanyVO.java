@@ -10,5 +10,5 @@ import lombok.Setter;
 public class CompanyVO{
 	private int id;
 	private double star;
-	private String com_name, address, time, content, map_info, local_name, category, poster;
+	private String com_name, address, time, content, map_info, local_name, category, poster, phone;
 }
