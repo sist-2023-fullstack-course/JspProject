@@ -7,12 +7,14 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import com.sist.controller.RequestMapping;
 import com.sist.dao.CompanyDAO;
+import com.sist.dao.WishListDAO;
 import com.sist.vo.CompanyVO;
 
 public class CompanyModel {
@@ -43,6 +45,13 @@ public class CompanyModel {
 		
 		CompanyDAO dao = CompanyDAO.getInstance();
 		CompanyVO vo = dao.getCompanyVO(com_id);
+		
+		HttpSession session = request.getSession();
+		if(session.getAttribute("id")!=null) {
+			String user_id = (String)session.getAttribute("id");
+			boolean isClicked = WishListDAO.newInstance().isClicked(user_id, com_id);
+			request.setAttribute("like", isClicked);
+		}
 		
 		request.setAttribute("vo", vo);
 		request.setAttribute("main_jsp", "../search/company_details.jsp");

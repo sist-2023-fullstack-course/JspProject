@@ -184,6 +184,7 @@ public class CompanyDAO {
 					vo.setStar((double)sum/cnt);
 				else
 					vo.setStar(0.0);
+				vo.setId(id);
 				vo.setPoster(rs.getString(7));
 				vo.setCategory(rs.getString(8));
 				vo.setPhone(rs.getString(9));

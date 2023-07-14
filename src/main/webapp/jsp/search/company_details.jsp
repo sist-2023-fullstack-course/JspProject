@@ -56,11 +56,22 @@
 	                                    <img src="../img/reserve.png">
 	                                <dd>예약하기</dd>
 	                            </dl>
-	                            <dl class="heart_button">
+	                            <c:if test="${sessionScope.id!=null }">
+	                            <c:if test="${like }">
+	                            <dl class="heart_button clicked" onclick="clickHeartBtn('${sessionScope.id}', ${vo.id })">
+	                                <dt>
+	                                    <img src="../img/afterheart.png">
+	                                <dd>좋아요</dd>
+	                            </dl>
+	                            </c:if>
+	                            <c:if test="${!like }">
+	                            <dl class="heart_button" onclick="clickHeartBtn('${sessionScope.id}', ${vo.id })">
 	                                <dt>
 	                                    <img src="../img/beforeheart.png">
 	                                <dd>좋아요</dd>
 	                            </dl>
+	                            </c:if>
+	                            </c:if>
 	                        </div>
 	                        <!--// 하단 분류 e -->
 	                    </div>

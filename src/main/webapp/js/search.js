@@ -163,16 +163,28 @@ function pageClick(){
 	}
 }
 
-function clickHeartBtn(){
+function clickHeartBtn(uid, cid){
+	let isInsert;
 	if($('.heart_button').attr('class').includes('clicked')){
 		$('.heart_button').attr('class', 'heart_button');
 		$('.heart_button > dt > img').attr('src', '../img/beforeheart.png');
+		isInsert = false;
 	}
 	else{
 		$('.heart_button').attr('class', 'heart_button clicked');
 		$('.heart_button > dt > img').attr('src', '../img/afterheart.png');
+		isInsert = true;
 	}
+	
+	$.ajax({
+		type:'post',
+		url:'../wishlist/update_ajax.do',
+		data:{
+			'isInsert':isInsert,
+			'uid' : uid,
+			'cid' : cid
+		}
+	})
 }
-$('.heart_button').click(clickHeartBtn);
 $('ul.category > li > a').click(categoryClick);
 $('.pagination > ul > li > a').click(pageClick);
