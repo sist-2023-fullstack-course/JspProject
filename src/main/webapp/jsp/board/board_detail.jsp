@@ -8,12 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<style type="text/css">
-.row{
-  margin: 0px auto;
-  width:600px;
-}
-</style>
+
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script type="text/javascript">
 let i=0; // 전역변수 
@@ -46,8 +41,8 @@ $(function(){
 		// delete.do?no=1&pwd=1111
 		$.ajax({
 			type:'post',
-			url:'../board/delete.do',
-			data:{"baord_id":no,"pwd":pwd},
+			url:'../board/board_delete.do',
+			data:{"no":no,"pwd":pwd},
 			success:function(result) //YES, NO전달
 			{
 				let res=result.trim();
@@ -59,14 +54,14 @@ $(function(){
 				}
 				else
 				{
-					location.href="../board/list.do"
+					location.href="../board/board_list.do"
 				}
 			}
 		})
 	})
 	// Update (댓글 수정)
 	$('.ups').click(function(){
-		let no=$(this).attr("data-no");
+		let no=$(this).attr("data-no"); //댓글의 번호
 		$('.ups').text("수정");
 		$('.updates').hide();
 		$('.reins').hide();
@@ -118,6 +113,7 @@ $(function(){
       <th width=15% class="text-center">조회수</th>
       <td width=20% class="text-center">${vo.hit }</td>
      </tr>
+     
      <tr>
       <th width=15% class="text-center">제목</th>
       <td colspan=2 class="text-center">${vo.title }</td>
@@ -131,14 +127,14 @@ $(function(){
      </tr>
      <tr>
        <td colspan="6" class="text-right">
-         <a href="../board/update.do?no=${vo.board_id }" class="btn btn-xs btn-info">수정</a>
+         <a href="../board/board_update.do?no=${vo.board_id }" class="btn btn-xs btn-info">수정</a>
          <span class="btn btn-xs btn-success" id="del">삭제</span>
          <a href="../board/board_list.do" class="btn btn-xs btn-warning">목록</a>
        </td>
      </tr>
       </table>
     <table>
-     <tr style="display:show" id="delTr">
+     <tr style="display:none" id="delTr">
        <td colspan="6" class="text-right inline">
        비밀번호:<input type=password name=pwd id=pwd1 size=10 class="input-sm">
        <input type=button value="삭제" data-no="${vo.board_id }" class="btn btn-sm btn-primary" id="delBtn">
@@ -147,92 +143,94 @@ $(function(){
    </table>
    <div style="height: 20px"></div> 
    
-   
-   <%-- <div class="col-sm-8">
+   <div class="col-sm-8">
        <table class="table">
-	     댓글 출력 위치
+	     <!-- 댓글 출력 위치 -->
 	     <tr>
 	      <td>
 	        <c:forEach var="rvo" items="${list }">
 	          <table class="table">
 	           <tr>
 	             <td class="text-left">
-	             답글의 탭이 있다면 이미지 첨부
+	             <!-- 답글의 탭이 있다면 이미지 첨부 -->
 	               <c:if test="${rvo.group_tab>0 }">
 	                 <c:forEach var="i" begin="1" end="${rvo.group_tab }">
-	                  &nbsp;&nbsp;
+	                  &nbsp;&nbsp;&nbsp;
 	                 </c:forEach>
 	                 <img src="image/re_icon.png">
 	               </c:if>
-	               
-	               ◑${rvo.name }&nbsp;(${rvo.dbday })
+	               ◑${rvo.user_id }&nbsp;(${rvo.dbday })
 	             </td>
 	             
-	             id공백여부
+	            <!--  id공백여부 -->
 	             <td class="text-right">
-	               <c:if test="${sessionScope.id!=null }">
-	                <c:if test="${sessionScope.id==rvo.id }">
-	                 <span class="btn btn-xs btn-success ups" data-no="${rvo.no }">수정</span>
-	                 <a href="../board/reply_delete.do?no=${rvo.no }&bno=${vo.no}" class="btn btn-xs btn-info">삭제</a>
-	                </c:if>
-	                <span class="btn btn-xs btn-warning ins" data-no="${rvo.no }">댓글</a>
-	               </c:if>
+	               <%-- <c:if test="${sessionScope.id!=null }">
+	                <c:if test="${sessionScope.id==rvo.id }"> --%>
+	                 <span class="btn btn-xs btn-success ups" data-no="${rvo.rep_id }">수정</span>
+	                 <a href="../board/reply_delete.do?no=${rvo.rep_id }&bno=${vo.board_id}" class="btn btn-xs btn-info">삭제</a>
+	                <%-- </c:if> --%>
+	                <span class="btn btn-xs btn-warning ins" data-no="${rvo.rep_id }">댓글</span>
+	               <%-- </c:if> --%>
 	             </td>
 	             
 	           </tr>
 	           
-	           댓글 내용
+	           <!-- 댓글 내용 -->
 	           <tr>
 	             <td colspan="2">
-	             <pre style="white-space: pre-wrap;background-color: white;border: none">${rvo.msg }</pre>
+	             <pre style="white-space: pre-wrap;background-color: white;border: none">${rvo.rep_content }</pre>
 	             </td>
 	           </tr>
 	           
-	           댓글의 댓글 쓰기
-	           <tr style="display:none" class="reins" id="i${rvo.no }">
+	           
+	           <!-- 댓글의 댓글 쓰기 -->
+	           <tr style="display:none" class="reins" id="i${rvo.rep_id }">
 			      <td colspan="2">
 			        <form method="post" action="../board/reply_reply_insert.do" class="inline">
-			         <input type=hidden name=bno value="${vo.no}">
-			         bno는 다시 detail.do로 이동
-			         <input type=hidden name=pno value="${rvo.no }">
+			         <input type=hidden name=bno value="${vo.board_id}">
+			         <!-- bno는 다시 detail.do로 이동 -->
+			         <input type=hidden name=pno value="${rvo.rep_id }">
 			         <textarea rows="5" cols="55" name="msg" style="float: left"></textarea>
 		             <input type=submit value="댓글쓰기" style="width: 100px;height: 104px;background-color: green;color:white;">
 			        </form>
 			      </td>
 			   </tr>
-			     댓글의 댓글 수정
-	           <tr style="display: none" class="updates" id="u${rvo.no }">
+			   
+			    <!--  댓글의 댓글 수정 -->
+	           <tr style="display: none" class="updates" id="u${rvo.rep_id }">
 			      <td colspan="2">
 			        <form method="post" action="../board/reply_update.do" class="inline">
-			         <input type=hidden name=bno value="${vo.no}"> bno는 다시 detail.do로 이동
-			         <input type=hidden name=no value="${rvo.no }">
-			         <textarea rows="5" cols="55" name="msg" style="float: left">${rvo.msg }</textarea>
+			         <input type=hidden name=bno value="${vo.board_id}"> <!-- bno는 다시 detail.do로 이동 -->
+			         <input type=hidden name=no value="${rvo.rep_id }">
+			         <textarea rows="5" cols="55" name="msg" style="float: left">${rvo.rep_content }</textarea>
 		             <input type=submit value="댓글수정" style="width: 100px;height: 104px;background-color: green;color:white;">
 			        </form>
 			      </td>
 			    </tr>
 			    
 	          </table>
+	          
 	        </c:forEach>
 	      </td>
 	     </tr>
+	     
 	   </table>
-	   <c:if test="${sessionScope.id!=null }">
+	   <%-- <c:if test="${sessionScope.id!=null }"> --%>
 		   <table class="table">
-		     새댓글 입력
+		     <!-- 새댓글 입력 -->
 		     <tr>
 		      <td>
 		        <form method="post" action="../board/reply_insert.do" class="inline">
-		         <input type=hidden name=bno value="${vo.no}">
+		         <input type=hidden name=bno value="${vo.board_id}">
 		         <textarea rows="5" cols="60" name="msg" style="float: left"></textarea>
 	             <input type=submit value="댓글쓰기" style="width: 120px;height: 104px;background-color: green;color:white;">
 		        </form>
 		      </td>
 		     </tr>
 		   </table>
-	   </c:if>
+	   <%-- </c:if> --%>
    </div>
-    --%>
+    
    <div class="col-sm-4">
    
    </div>
