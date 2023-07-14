@@ -310,7 +310,10 @@ img {
   text-decoration: none;
   text-align: right;
 }
-.logo a img{}
+.logo a img{
+	height:180px;
+	width:360px;
+}
 .logo a h4 {
   color: #414141;
   font-size: 14px;
