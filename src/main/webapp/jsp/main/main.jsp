@@ -32,6 +32,8 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 <!-- search CSS -->
 <link rel="stylesheet" type="text/css" href="../css/search.css" />
+<!-- mypage CSS -->
+<link rel="stylesheet" type="text/css" href="../css/mypage.css" />
 <!-- Responsive Stylesheet -->
 <!-- swiper CSS-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>

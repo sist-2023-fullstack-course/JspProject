@@ -9,16 +9,25 @@ public class MyPageModel {
 	@RequestMapping("mypage/main.do")
 	public String mypage_main(HttpServletRequest request, HttpServletResponse response)
 	  {
-		  request.setAttribute("mypage_jsp", "mypage_wishlist.jsp");
+		  request.setAttribute("mypage_jsp", "mypage_info.jsp");
 		  request.setAttribute("main_jsp", "../mypage/mypage_main.jsp");
 		  return "../jsp/main/main.jsp";
 	  }
 	
-	@RequestMapping("mypage/mypage_info.do")
+	@RequestMapping("mypage/myinfo.do")
 	public String mypage_info(HttpServletRequest request, HttpServletResponse response)
 	{
 
 		request.setAttribute("mypage_jsp", "mypage_info.jsp");
+		request.setAttribute("main_jsp", "../mypage/mypage_main.jsp");
+		return "../jsp/main/main.jsp";
+	}
+	
+	@RequestMapping("mypage/mypet.do")
+	public String mypage_mypet(HttpServletRequest request, HttpServletResponse response)
+	{
+		
+		request.setAttribute("mypage_jsp", "mypage_mypet.jsp");
 		request.setAttribute("main_jsp", "../mypage/mypage_main.jsp");
 		return "../jsp/main/main.jsp";
 	}
@@ -30,4 +39,7 @@ public class MyPageModel {
 		request.setAttribute("main_jsp", "../mypage/mypage_main.jsp");
 		return "../jsp/main/main.jsp";
 	}
+	
+	
+	
 }

@@ -37,7 +37,7 @@ $(function(){
 						</c:if>
 						<!-- 로그인 된 상태 -->
 						<c:if test="${sessionScope.id!=null }">
-							<li><a href="" style="color: orange;">${sessionScope.name } <i class="fa fa-angle-down"></i></a>
+							<li><a href="" style="color: black;">${sessionScope.name } <i class="fa fa-angle-down"></i></a>
 								<ul>
 									<li><a href="../member/logout.do" id="logoutBtn">로그아웃</a></li>
 									<li><a href="###">회원정보</a></li>
@@ -96,10 +96,14 @@ $(function(){
 								<ul class="sub-menu">
 								</ul>
 							</li>
+							<c:if test="${sessionScope.id!=null }">
+							  <c:if test="${sessionScope.admin=='n' }">
 							    <li><a href="../mypage/main.do">마이페이지</a></li>
+							  </c:if>
 							  <c:if test="${sessionScope.admin=='y' }">
 							    <li><a href="../adminpage/main.do">관리자페이지</a></li>
 							  </c:if>
+							 </c:if>
 						</ul>
 					</nav>
 				</div>
