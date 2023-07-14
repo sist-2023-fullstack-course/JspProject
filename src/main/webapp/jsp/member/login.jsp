@@ -7,6 +7,7 @@
     <form class="form1" style="text-align: center">
       <input class="login-username " type="text" align="center" placeholder="Username" style="margin-bottom: 30px;" id="idInput">
       <input class="login-password" type="password" align="center" placeholder="Password" id="pwdInput">
+      <p id="loginMsg" style="color: red; display: none"></p> 
       <span class="login-submit" align="center" style="text-decoration: none;" id="loginBtn">로그인</span>
       <span href="../member/join.do" class="login-to-join-submit" align="center" style="text-decoration: none;">회원가입</span>
       <div class="login-find">

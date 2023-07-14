@@ -6,6 +6,8 @@ function idCheckfc(){
 		if(id.trim()=="")
 		{
 			$('#idInput').focus();
+			$('#loginMsg').text('아이디를 입력해주세요');
+			$('#loginMsg').attr('style', 'display:block; color:red;');
 			return;
 		}
 		
@@ -13,6 +15,8 @@ function idCheckfc(){
 		if(pwd.trim()=="")
 		{
 			$('#pwdInput').focus();
+			$('#loginMsg').text('비밀번호를 입력해주세요');
+			$('#loginMsg').attr('style', 'display:block; color:red;');
 			return;
 		}
 		
@@ -23,18 +27,19 @@ function idCheckfc(){
 			data:{"id":id,"pwd":pwd},
 			success:function(result) // NOID, NOPWD, OK
 			{
-				console.log(result);
 				let res=result.trim();
 				if(res=='NOID')
 				{
-					alert("아이디가 존재하지 않습니다!!")
-					$('#idInput').val("");
-					$('#pwdInput').val("");
+					$('#loginMsg').text('아이디가 존재하지 않습니다')
+					$('#loginMsg').attr('style', 'display:block; color:red;');
+					$('#idInput').val('');
+					$('#pwdInput').val('');
 					$('#idInput').focus();
 				}
 				else if(res=='NOPWD')
 				{
-					alert("비밀번호가 틀립니다!!")
+					$('#loginMsg').text('비밀번호가 틀렸습니다')
+					$('#loginMsg').attr('style', 'display:block; color:red;');
 					$('#pwdInput').val("");
 					$('#pwd').focus();
 				}
