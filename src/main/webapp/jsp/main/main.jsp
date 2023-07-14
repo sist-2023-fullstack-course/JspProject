@@ -82,8 +82,8 @@
 <script type="text/javascript" src="../js/wow.min.js"></script>
 <!-- search JS -->
 <script type="text/javascript" src="../js/search.js"></script>
-<!-- swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- login JS -->
+<script type="text/javascript" src="../js/login.js"></script>
 <script>
 	new WOW().init();
 </script>	

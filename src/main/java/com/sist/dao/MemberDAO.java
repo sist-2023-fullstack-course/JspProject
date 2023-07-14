@@ -224,48 +224,36 @@ public class MemberDAO {
 		MemberVO vo=new MemberVO();
 		try {
 			conn=db.getConnection();
-			String sql="SELECT COUNT(*) "
+			String sql="SELECT password, user_name, admin, gender, nickname "
 					+ "FROM member "
 					+ "WHERE user_id=?";
+			
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, id);
 			ResultSet rs=ps.executeQuery();
-			rs.next();
-			int count=rs.getInt(1);
-			rs.close();
 			
-			if(count==0) // id가 없는 상태
-			{
-				vo.setMsg("NOID");
-			}
-			else // id가 있는 상태
-			{
-				sql="SELECT pwd,name,admin,gender "
-					+ "FROM member "
-					+ "WHERE user_id=?";
-				ps=conn.prepareStatement(sql);
-				ps.setString(1, id);
-				rs=ps.executeQuery();
-				rs.next();
-				String db_pwd=rs.getString(1);
-				String name=rs.getString(2);
-				String admin=rs.getString(3);
-				String gender=rs.getString(4);
-				rs.close();
+			if(rs.next()) {// id가 있는 경우
+				vo.setId(id);
+				vo.setPwd(rs.getString(1));
+				vo.setName(rs.getString(2));
+				vo.setAdmin(rs.getString(3));
+				vo.setGender(rs.getString(4));
+				vo.setNickname(rs.getString(5));
 				
-				if(db_pwd.equals(pwd)) // 로그인 된 상태
-				{
-					vo.setId(id);
-					vo.setName(name);
-					vo.setAdmin(admin);
-					vo.setGender(gender);
+				if(pwd.equals(vo.getPwd())) {
+					// 비밀번호가 맞는 경우 => 로그인 성공
 					vo.setMsg("OK");
 				}
-				else // 비밀번호가 틀린 상태
-				{
+				else {
+					// 비밀번호가 틀린 경우
 					vo.setMsg("NOPWD");
 				}
 			}
+			
+			else {// id가 없는 경우
+				vo.setMsg("NOID");
+			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -37,6 +37,7 @@ public class MemberModel {
 			session.setAttribute("name", vo.getName());
 			session.setAttribute("gender", vo.getGender());
 			session.setAttribute("admin", vo.getAdmin());
+			session.setAttribute("nickname", vo.getNickname());
 		}
 		try {
 			PrintWriter out=response.getWriter();
@@ -152,7 +153,7 @@ public class MemberModel {
 		MemberDAO dao=MemberDAO.newInstance();
 		dao.memberInsert(vo);
 		
-		return "redirect:../jsp/main/main.do";
+		return "redirect:../main/main.do";
 	}
 	
 	
@@ -162,6 +163,6 @@ public class MemberModel {
 		HttpSession session=request.getSession();
 		session.invalidate();
 		
-		return "redirect:../jsp/main/main.do";
+		return "redirect:../main/main.do";
 	}
 }
