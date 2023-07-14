@@ -70,7 +70,9 @@ public class MemberModel {
 		try {
 			PrintWriter out=response.getWriter();
 			out.println(count);
-		} catch (Exception e) {}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@RequestMapping("member/nicknamecheck.do")
@@ -89,12 +91,40 @@ public class MemberModel {
 		try {
 			PrintWriter out=response.getWriter();
 			out.println(count);
-		} catch (Exception e) {}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
-	// phonecheck
-	
-	// emailcheck
+	@RequestMapping("member/emailcheck.do")
+	public void memberEmailCheck(HttpServletRequest request, HttpServletResponse response)
+	{
+		String email=request.getParameter("email");
+		MemberDAO dao=MemberDAO.newInstance();
+		int count=dao.EmailCheck(email);
+		
+		try {
+			PrintWriter out=response.getWriter();
+			out.println(count);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@RequestMapping("member/phonecheck.do")
+	public void memberPhoneCheck(HttpServletRequest request, HttpServletResponse response)
+	{
+		String phone=request.getParameter("phone");
+		MemberDAO dao=MemberDAO.newInstance();
+		int count=dao.PhoneCheck(phone);
+		try {
+			PrintWriter out=response.getWriter();
+			out.println(count);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 	
 	@RequestMapping("member/postfind.do")
 	public String memberPostFind(HttpServletRequest request, HttpServletResponse response)

@@ -61,6 +61,26 @@ function idok(){
 	})
 }
 
+function pwdcheck(){
+		$('#pwdBtn').click(function(){
+			let pwd1=$('#pwd1').val();
+			let pwd2=$('#pwd2').val();
+			
+			if(pwd1==pwd2)
+			{
+				$('#pwdMsg').text('일치합니다.');
+				$('#pwdMsg').attr('style', 'display:inline; color:blue;');
+			}
+			else
+			{
+				$('#pwdMsg').text('비밀번호가 일치하지 않습니다.')
+				$('#pwdMsg').attr('style', 'display:inline; color:red;');
+				$('#pwd2').val("");
+				$('#pwd2').focus();
+			}
+		})
+}
+
 function nicknamecheck() {
     $.ajax({
 		type:'post',
@@ -121,5 +141,83 @@ function nickok(){
 	})
 }
 
+function phonecheck(){
+		$('#phoneBtn').click(function(){
+			let phone=$('#phoneInput').val();
+			
+			if(phone.trim()=="")
+			{
+				$('#phoneInput').focus();
+				$('#phoneMsg').text('전화번호를 입력해주세요.');
+				$('#phoneMsg').attr('style', 'display:inline; color:red;');
+				return;
+			}
+			
+			$.ajax({
+				type:'post',
+				url:'../member/phonecheck.do',
+				data:{"phone":phone},
+				success: function(result)
+				{
+					let count=Number(result.trim());
+					if(count==0) /* 전화번호가 없다 */
+					{
+						$('#phoneMsg').text('사용 가능한 전화번호입니다.')
+						$('#phoneMsg').attr('style', 'display:inline; color:blue;');
+	
+					}
+					else /* 전화번호가 있다 */
+					{
+						$('#phoneMsg').text('이미 사용중인 전화번호입니다.')
+						$('#phoneMsg').attr('style', 'display:inline; color:red;');
+						$('#phoneInput').val("");
+						$('#phone').focus();
+					}
+				}
+			})
+		})
+}
+
+
+function emailcheck(){
+		$('#emailBtn').click(function(){
+			let email=$('#emailInput').val();
+			
+			if(email.trim()=="")
+			{
+				$('#emailInput').focus();
+				$('#emailMsg').text('이메일을 입력해주세요.');
+				$('#emailMsg').attr('style', 'display:inline; color:red;');
+				return;
+			}
+			
+			$.ajax({
+				type:'post',
+				url:'../member/emailcheck.do',
+				data:{"email":email},
+				success: function(result)
+				{
+					let count=Number(result.trim());
+					if(count==0) /* 이메일이 없다 */
+					{
+						$('#emailMsg').text('사용 가능한 이메일입니다.')
+						$('#emailMsg').attr('style', 'display:inline; color:blue;');
+	
+					}
+					else /* 이메일이 있다 */
+					{
+						$('#emailMsg').text('이미 사용중인 이메일입니다.')
+						$('#emailMsg').attr('style', 'display:inline; color:red;');
+						$('#emailInput').val("");
+						$('#email').focus();
+					}
+				}
+			})
+		})
+}
+
 $('#idCheckBtn').click(idcheck);
+$('#pwdBtn').click(pwdcheck);
 $('#nicknameCheckBtn').click(nicknamecheck);
+$('#emailBtn').click(emailcheck);
+$('#phoneBtn').click(phonecheck);

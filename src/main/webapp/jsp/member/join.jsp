@@ -20,8 +20,11 @@
 	        <tr>
 	         <th class="text-right" width=10%>비밀번호</th>
 	         <td width=90% class="inline">
-	          <input type=password name=pwd id=pwd size=20 class="input-sm">
-	          &nbsp;비밀번호 확인 <input type=password name=pwd1 id=pwd1 size=20 class="input-sm">
+	          <input type=password name=pwd id=pwd1 size=20 class="input-sm">&nbsp;&nbsp;
+	           비밀번호 확인 <input type=password name=pwd1 id=pwd2 size=20 class="input-sm" display="inline">
+	          <input type=button value="확인" class="btn btn-sm btn-primary" id="pwdBtn">	         
+	           &nbsp;<p id="pwdMsg" style="color: red; display: none"></p> 
+	          
 	         </td>
 	        </tr>
 	        
@@ -58,19 +61,18 @@
 	        <tr>
 	         <th class="text-right" width=10%>전화</th>
 	         <td width=90% class="inline">
-	          <select name=phone1 class="input-sm">
-	           <option>010</option>
-	          </select>
-	          <input type=text name=phone id=phone size=12 class="input-sm">
+	          <input type=text name=phone id=phoneInput size=15 class="input-sm">
 	          <input type=button value="중복체크" class="btn btn-sm btn-primary" id="phoneBtn">
+	           &nbsp;<p id="phoneMsg" style="color: red; display: none"></p> 
 	         </td>
 	        </tr> 
 	        
 	        <tr>
 	         <th class="text-right" width=10%>이메일</th>
-	         <td width=90% class="inline">
-	          <input type=text name=email id=email size=55 class="input-sm">
+	         <td width=90% class="inline"> 
+	          <input type=text name=email id=emailInput size=40 class="input-sm">
 	          <input type=button value="중복체크" class="btn btn-sm btn-primary" id="emailBtn">
+	          &nbsp;<p id="emailMsg" style="color: red; display: none"></p> 
 	         </td>
 	        </tr>
 	        

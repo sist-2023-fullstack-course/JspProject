@@ -232,7 +232,7 @@ public class MemberDAO {
 			ps.setString(1, id);
 			ResultSet rs=ps.executeQuery();
 			
-			if(rs.next()) {// id가 있는 경우
+			if(rs.next()) { // id가 있는 경우
 				vo.setId(id);
 				vo.setPwd(rs.getString(1));
 				vo.setName(rs.getString(2));
@@ -250,7 +250,7 @@ public class MemberDAO {
 				}
 			}
 			
-			else {// id가 없는 경우
+			else { // id가 없는 경우
 				vo.setMsg("NOID");
 			}
 			
