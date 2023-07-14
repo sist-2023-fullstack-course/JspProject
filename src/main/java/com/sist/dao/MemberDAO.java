@@ -178,7 +178,7 @@ public class MemberDAO {
 	{
 		try {
 			conn=db.getConnection();
-			String sql="INSERT INTO pet_member VALUES("
+			String sql="INSERT INTO member VALUES("
 					+ "?,?,?,?,?,?,?,?,?,?,?,'n',SYSDATE)";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, vo.getId());
@@ -225,8 +225,8 @@ public class MemberDAO {
 		try {
 			conn=db.getConnection();
 			String sql="SELECT COUNT(*) "
-					+ "FROM pet_member "
-					+ "WHERE id=?";
+					+ "FROM member "
+					+ "WHERE user_id=?";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, id);
 			ResultSet rs=ps.executeQuery();
@@ -241,8 +241,8 @@ public class MemberDAO {
 			else // id가 있는 상태
 			{
 				sql="SELECT pwd,name,admin,gender "
-					+ "FROM pet_member "
-					+ "WHERE id=?";
+					+ "FROM member "
+					+ "WHERE user_id=?";
 				ps=conn.prepareStatement(sql);
 				ps.setString(1, id);
 				rs=ps.executeQuery();

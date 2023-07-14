@@ -14,30 +14,34 @@ import com.sist.vo.ZipcodeVO;
 
 public class MemberModel {
 	
-	
-	@RequestMapping("member/login.do")
-	public String memberLogin(HttpServletRequest request, HttpServletResponse response)
+	@RequestMapping("member/loginpage.do")
+	public String memberLoginPage(HttpServletRequest request, HttpServletResponse response)
 	{
-//		String id=request.getParameter("id");
-//		String pwd=request.getParameter("pwd");
-//		MemberDAO dao=MemberDAO.newInstance();
-//		MemberVO vo=dao.Login(id, pwd);
-//		HttpSession session=request.getSession();
-//		
-//		// 로그인 => 사용자의 일부 정보를 저장
-//		if(vo.getMsg().equals("OK"))
-//		{
-//			session.setAttribute("id", vo.getId());
-//			session.setAttribute("name", vo.getName());
-//			session.setAttribute("gender", vo.getGender());
-//			session.setAttribute("admin", vo.getAdmin());
-//		}
-//		try {
-//			PrintWriter out=response.getWriter();
-//			out.println(vo.getMsg()); // NOID, NOPWD, OK
-//		} catch (Exception e) {}
 		request.setAttribute("main_jsp", "../member/login.jsp");
 		return "../jsp/main/main.jsp";
+	}
+	
+	@RequestMapping("member/login.do")
+	public void memberLogin(HttpServletRequest request, HttpServletResponse response)
+	{
+		String id=request.getParameter("id");
+		String pwd=request.getParameter("pwd");
+		MemberDAO dao=MemberDAO.newInstance();
+		MemberVO vo=dao.Login(id, pwd);
+		HttpSession session=request.getSession();
+		
+		// 로그인 => 사용자의 일부 정보를 저장
+		if(vo.getMsg().equals("OK"))
+		{
+			session.setAttribute("id", vo.getId());
+			session.setAttribute("name", vo.getName());
+			session.setAttribute("gender", vo.getGender());
+			session.setAttribute("admin", vo.getAdmin());
+		}
+		try {
+			PrintWriter out=response.getWriter();
+			out.println(vo.getMsg()); // NOID, NOPWD, OK
+		} catch (Exception e) {}
 	}
 	
 	@RequestMapping("member/join.do")

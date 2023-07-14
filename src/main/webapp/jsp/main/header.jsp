@@ -1,6 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#logoutBtn').click(function(){
+		location.href="../member/logout.do";
+	})
+})	
+</script>
 	<div class="header-area"><!--Start Header Area-->
 	<div class="container">
 		<div class="row">
@@ -18,12 +26,24 @@
 					<ul>
 						<li><a href="#" class="inline">장바구니 <i class="fa fa-shopping-cart"></i></a></li>
 						<li><a href="#">위시리스트 <i class="fa fa-shopping-cart"></i></a></li>
-						<li><a href="">로그인 <i class="fa fa-angle-down"></i></a>
-							<ul>
-								<li><a href="../member/login.do">로그인</a></li>
-								<li><a href="../member/join.do">회원가입</a></li>
-							</ul>
-						</li>
+						<!-- 로그인 안 된 상태 -->
+						<c:if test="${sessionScope.id==null }">
+							<li>로그인 <i class="fa fa-angle-down"></i>
+								<ul>
+									<li><a href="../member/loginpage.do">로그인</a></li>
+									<li><a href="../member/join.do">회원가입</a></li>
+								</ul>
+							</li>
+						</c:if>
+						<!-- 로그인 된 상태 -->
+						<c:if test="${sessionScope.id!=null }">
+							<li><a href="">"${nickname }" <i class="fa fa-angle-down"></i></a>
+								<ul>
+									<li><a href="../member/logout.do" id="logoutBtn">로그아웃</a></li>
+									<li><a href="###">회원정보</a></li>
+								</ul>
+							</li>
+						</c:if>
 					</ul>
 				</div>
 		    </div>

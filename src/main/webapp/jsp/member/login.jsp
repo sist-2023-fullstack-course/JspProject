@@ -35,16 +35,70 @@
 	<!-- Responsive Stylesheet -->
 	<link rel="stylesheet" type="text/css" href="../../css/responsive.css" />
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 유효성 검사 => 반드시 입력
+	$('#loginBtn').click(function(){
+		let id=$('#id').val();
+		if(id.trim()=="")
+		{
+			$('#id').focus();
+			return;
+		}
+		
+		let pwd=$('#pwd').val();
+		if(pwd.trim()=="")
+		{
+			$('#pwd').focus();
+			return;
+		}
+		
+		// 전송 => 실행결과를 가지고 온다 (자체 처리) (요청=응답:Ajax, Vue, React)
+		$.ajax({
+			type:'post',
+			url:'../member/login.do',
+			data:{"id":id,"pwd":pwd},
+			success:function(result) // NOID, NOPWD, OK
+			{
+				let res=result.trim();
+				if(res==='NOID')
+				{
+					alert("아이디가 존재하지 않습니다!!")
+					$('#id').val("");
+					$('#pwd').val("");
+					$('#id').focus();
+				}
+				else if(res==='NOPWD')
+				{
+					alert("비밀번호가 틀립니다!!")
+					$('#pwd').val("");
+					$('#pwd').focus();
+				}
+				else
+				{
+					location.href="../main/main.do"
+				}
+			}
+		})
+	})
+})
+</script>
 </head>
 <body>
 <!--End Title-->
-<div class="main">
-   <p class="sign" align="center">로그인</p>
+<div class="login-main">
+   <p class="login-sign" align="center" style="padding-bottom: 30px; padding-top: 70px;">로그인</p>
     <form class="form1" style="text-align: center">
-      <input class="un " type="text" align="center" placeholder="Username">
-      <input class="pass" type="password" align="center" placeholder="Password">
-      <a class="submit" align="center">로그인</a>
-    <p class="forgot" align="center"><a href="#">Forgot Password?</p>
+      <input class="login-username " type="text" align="center" placeholder="Username" style="margin-bottom: 30px;" id="id">
+      <input class="login-password" type="password" align="center" placeholder="Password" id="pwd">
+      <a href="" class="login-submit" align="center" style="text-decoration: none;" id="loginBtn">로그인</a>
+      <a href="../member/join.do" class="login-to-join-submit" align="center" style="text-decoration: none;">회원가입</a>
+      <div class="login-find">
+        <a href="">아이디 찾기</a>
+        <a href="">패스워드 찾기</a>
+      </div>
+    </form>
 </div>
 <!-- jQuery 2.1.4 -->
 <script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
