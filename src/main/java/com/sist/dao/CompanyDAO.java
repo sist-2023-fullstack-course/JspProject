@@ -165,7 +165,7 @@ public class CompanyDAO {
 		
 		try {
 			conn = db.getConnection();
-			String sql = "SELECT com_name, address, time, content, com_star_sum, com_star_cnt, poster, cc.category, phone "
+			String sql = "SELECT com_name,address,time,content,com_star_sum,com_star_cnt,poster,cc.category,phone,homepage,map_info "
 					   + "FROM company c, company_category cc "
 					   + "WHERE c.com_category_id=cc.com_category_id "
 					   + "AND com_id=?";
@@ -187,6 +187,10 @@ public class CompanyDAO {
 				vo.setPoster(rs.getString(7));
 				vo.setCategory(rs.getString(8));
 				vo.setPhone(rs.getString(9));
+				vo.setHomepage(rs.getString(10));
+				String[] map = rs.getString(11).split(" ");
+				vo.setMap_x(Double.parseDouble(map[0]));
+				vo.setMap_y(Double.parseDouble(map[1]));
 			}
 			rs.close();
 		} catch(Exception e) {
