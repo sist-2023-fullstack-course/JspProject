@@ -42,7 +42,9 @@ public class MemberModel {
 		try {
 			PrintWriter out=response.getWriter();
 			out.println(vo.getMsg()); // NOID, NOPWD, OK
-		} catch (Exception e) {}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@RequestMapping("member/join.do")
