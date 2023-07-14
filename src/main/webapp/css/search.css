@@ -39,6 +39,7 @@
 	width: 100%;
 	max-height: 450px;
 	min-height: 450px;
+	border-radius: 20px;
 }
 
 .s21_detail_tbox {
@@ -131,12 +132,20 @@
 }
 
 .s21_detail_top_btm dl {
+	float: left;
 	padding: 10px;
 	height: 80px;
 	width: 18%;
 	margin: 10px;
 	border-radius: 6px;
+}
+.s21_detail_top_btm dl.reserve_button{
+	cursor: pointer;
 	background-color: #77D6C9;
+}
+.s21_detail_top_btm dl.heart_button{
+	cursor:pointer;
+	width:15%;
 }
 
 .s21_detail_top_btm dt {
@@ -182,10 +191,6 @@
 	cursor: pointer
 }
 
-.reserve_button{
-	cursor: pointer;
-}
-
 #map_area{
 	margin-top: 20px;
 }
@@ -199,4 +204,8 @@
 	margin-top: 20px;
     margin-bottom: 20px;
     text-transform: uppercase;
+}
+
+.row_margin{
+	margin-bottom: 50px;
 }

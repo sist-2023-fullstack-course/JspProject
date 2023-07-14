@@ -163,5 +163,16 @@ function pageClick(){
 	}
 }
 
+function clickHeartBtn(){
+	if($('.heart_button').attr('class').includes('clicked')){
+		$('.heart_button').attr('class', 'heart_button');
+		$('.heart_button > dt > img').attr('src', '../img/beforeheart.png');
+	}
+	else{
+		$('.heart_button').attr('class', 'heart_button clicked');
+		$('.heart_button > dt > img').attr('src', '../img/afterheart.png');
+	}
+}
+$('.heart_button').click(clickHeartBtn);
 $('ul.category > li > a').click(categoryClick);
 $('.pagination > ul > li > a').click(pageClick);

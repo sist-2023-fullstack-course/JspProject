@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <section class="product-page fix"><!--Start Product Details Area-->
 	<div class="container">
 		<div class="row">
@@ -12,8 +13,6 @@
 	                    <div class="s21_detail_img">
 	                        <img src="${vo.poster }">
 	                    </div>
-	
-	
 	                    <div class="s21_detail_tbox">
 	                        <!-- 우측 정보 s -->
 	                        <ul class="s21_detail_twrap">
@@ -52,10 +51,15 @@
 	                        <!-- //우측 정보 e -->
 	                        <!-- 하단 분류 s -->
 	                        <div class="s21_detail_top_btm">
-	                            <dl  class="reserve_button">
+	                            <dl class="reserve_button">
 	                                <dt>
 	                                    <img src="../img/reserve.png">
 	                                <dd>예약하기</dd>
+	                            </dl>
+	                            <dl class="heart_button">
+	                                <dt>
+	                                    <img src="../img/beforeheart.png">
+	                                <dd>좋아요</dd>
 	                            </dl>
 	                        </div>
 	                        <!--// 하단 분류 e -->
@@ -65,7 +69,7 @@
 	            <!--// sub m top -->
 			</div>
 		</div>
-		<div class="row">
+		<div class="row row_margin">
 			<div class="col-sm-12">
 				<div style="border-top: 3px solid #77D6C9;"></div>
 			</div>
@@ -106,6 +110,8 @@
 							</li><!-- #comment-## -->
 						</ol>
 					</div>
+					
+					<c:if test="${sessionScope.id!=null }">
 					<div class="commentform">
 						<h4 class="detail_heading">댓글쓰기</h4>
 						<form class="comment-form" id="commentform" method="post" action="#">
@@ -117,6 +123,7 @@
 							</p>
 						</form>
 					</div><!-- end commentform -->
+					</c:if>
 				</div>
 			</div>
 		</div>
