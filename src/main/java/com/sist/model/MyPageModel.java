@@ -1,9 +1,15 @@
 package com.sist.model;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.sist.controller.RequestMapping;
+import com.sist.dao.MyPageDAO;
+import com.sist.vo.CompanyVO;
+import com.sist.vo.ReserveVO;
 
 public class MyPageModel {
 	@RequestMapping("mypage/main.do")
@@ -17,7 +23,7 @@ public class MyPageModel {
 	@RequestMapping("mypage/myinfo.do")
 	public String mypage_info(HttpServletRequest request, HttpServletResponse response)
 	{
-
+		
 		request.setAttribute("mypage_jsp", "mypage_info.jsp");
 		request.setAttribute("main_jsp", "../mypage/mypage_main.jsp");
 		return "../jsp/main/main.jsp";
@@ -32,12 +38,42 @@ public class MyPageModel {
 		return "../jsp/main/main.jsp";
 	}
 	
-	@RequestMapping("mypage/mypage_wishlist.do")
+	@RequestMapping("mypage/wishlist.do")
 	public String mypage_wishlist(HttpServletRequest request, HttpServletResponse response)
 	{
 		request.setAttribute("mypage_jsp", "mypage_wishlist.jsp");
 		request.setAttribute("main_jsp", "../mypage/mypage_main.jsp");
 		return "../jsp/main/main.jsp";
+	}
+	
+	@RequestMapping("mypage/booking.do")
+	public String mypage_booking_list(HttpServletRequest request, HttpServletResponse response)
+	{
+		HttpSession session=request.getSession();
+		String uid=(String)session.getAttribute("id");
+		
+		MyPageDAO dao=MyPageDAO.newInstance();
+		List<ReserveVO> list=dao.booking_list(uid);
+
+		request.setAttribute("list", list);
+		request.setAttribute("mypage_jsp", "mypage_booking.jsp");
+		request.setAttribute("main_jsp", "../mypage/mypage_main.jsp");
+		return "../jsp/main/main.jsp";
+	}
+	
+	@RequestMapping("mypage/booking_detail.do")
+	public String mypage_booking_detail(HttpServletRequest request, HttpServletResponse response)
+	{
+		String res_id=request.getParameter("res_id");
+		String com_id=request.getParameter("com_id");
+		MyPageDAO dao=MyPageDAO.newInstance();
+		//dao 예약번호로 예약정보 조회!
+		ReserveVO rvo=dao.booking_detail(Integer.parseInt(res_id));
+		CompanyVO cvo=dao.company_detail(Integer.parseInt(com_id));
+		
+		request.setAttribute("rvo", rvo);
+		request.setAttribute("cvo", cvo);
+		return "../jsp/mypage/mypage_booking_detail.jsp";
 	}
 	
 	
