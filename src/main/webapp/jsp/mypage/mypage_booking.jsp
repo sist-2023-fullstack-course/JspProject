@@ -16,7 +16,7 @@
 		    
 		   </tr>
 		   <c:forEach var="vo" items="${list}">
-		     <tr>
+		     <tr >
 		        <td width=10% class="text-center">${vo.res_id }</td>
 			    <td width=30% class="text-center">${vo.com_name }</td>
 			    <td width=20% class="text-center">${vo.res_date }</td>
@@ -43,20 +43,31 @@
 
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script type="text/javascript">
-
-$(function(){
+let i=0; //전역변수 
 	$('.checks').click(function(){
 		let com_id=$(this).attr("data-com_id");
 		let res_id=$(this).attr("data-res_id");
-		$.ajax({
-			type:'post',
-			url:'../mypage/booking_detail.do',
-			data:{"com_id":com_id,"res_id":res_id},
-			success:function(result)
-			{
-				$('#booking_detail').html(result)
-			}
-		})
+		if(i===0)
+		{
+			$(this).text("닫기");
+			$('#booking_detail').show();
+			i=1;
+			$.ajax({
+				type:'post',
+				url:'booking_detail.do',
+				data:{"com_id":com_id,"res_id":res_id},
+				success:function(result)
+				{
+					$('#booking_detail').html(result)
+				}
+			})
+		}
+		else 
+		{
+			$(this).text("상세보기");
+			$('#booking_detail').hide();
+			i=0;
+		}
+		
 	})
-})
 </script>

@@ -18,7 +18,7 @@ section{
 			<div class="row">
 				<div class="col-sm-4 col-md-3">
 					<div class="single-sidebar">
-						<h2><a href="../adminpage/main.do" style="color:white;text-decoration:none;">관리자페이지 홈</a></h2>
+						<h2><a href="../admin/main.do" style="color:white;text-decoration:none;">관리자페이지 홈</a></h2>
 						<ul class="text-center">
 							<li><a href="#">회원 관리</a></li>
 							<li><a href="#">예약 관리</a></li>
@@ -30,7 +30,7 @@ section{
 					</div>
 				</div>
 				
-		    <jsp:include page="${adminpage_jsp }"></jsp:include>
+		    <jsp:include page="${admin_jsp }"></jsp:include>
 				</div>
 			</div>
 	</section>
