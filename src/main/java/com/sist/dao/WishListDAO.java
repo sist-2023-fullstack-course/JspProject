@@ -31,7 +31,7 @@ public class WishListDAO {
 		{
 			conn=db.getConnection();
 			String sql="INSERT INTO wish_company VALUES("
-					+ "SYSDATE,?,?,wc_wn_seq.nextval)";
+					+ "SYSDATE,?,?)";
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, cid);
 			ps.setString(2, uid);
@@ -100,7 +100,7 @@ public class WishListDAO {
 		try
 		{
 			conn=db.getConnection();
-			String sql="SELECT wish_no,com_id,companyName(com_id),companyCategory(com_id) "
+			String sql="SELECT com_id,companyName(com_id),companyCategory(com_id) "
 					+ "FROM wish_company "
 					+ "WHERE id=? "
 					+ "ORDER BY wish_no DESC";
@@ -111,10 +111,9 @@ public class WishListDAO {
 			while(rs.next())
 			{
 				WishListVO vo=new WishListVO();
-				vo.setWish_no(rs.getInt(1));
-				vo.setCom_category_id(rs.getInt(2));
-				vo.setCom_name(rs.getString(3));
-				vo.setCom_category_id(rs.getInt(4));
+				vo.setCom_id(1);
+				vo.setCom_name(rs.getString(2));
+				vo.setCom_category_id(rs.getInt(3));
 				list.add(vo);
 			}
 			rs.close();
