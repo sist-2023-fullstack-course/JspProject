@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.sist.controller.*;
 import com.sist.dao.*;
 import com.sist.vo.*;
-public class GoodsModel {
+public class ProductModel {
 	
 	@RequestMapping("shop/shop.do")
 	public String goods_list(HttpServletRequest request, HttpServletResponse response)
@@ -23,20 +23,20 @@ public class GoodsModel {
 		int curpage=Integer.parseInt(page);
 		
 		// DB 연동
-		GoodsDAO dao=GoodsDAO.newInstance();
-		List<GoodsVO> list=dao.goodsListData(curpage, Integer.parseInt(type));
-		
-		// 총 페이지
-		int totalpage=dao.goodsTotalPage(Integer.parseInt(type));
-		request.setAttribute("list", list);
-		request.setAttribute("curpage", curpage);
-		request.setAttribute("totalpage", totalpage);
-		request.setAttribute("type", type);
-		String[] msg= {"","전체 상품 목록","베스트 상품 목록","신상품 목록","특가 상품 목록"};
-		request.setAttribute("msg", msg[Integer.parseInt(type)]);
-		request.setAttribute("main_jsp", "../shop/shop.jsp");
-		request.setAttribute("type", type);
-		
+//		ProductDAO dao=ProductDAO.newInstance();
+//		List<ProductVO> list=dao.goodsListData(curpage, Integer.parseInt(type));
+//		
+//		// 총 페이지
+//		int totalpage=dao.goodsTotalPage(Integer.parseInt(type));
+//		request.setAttribute("list", list);
+//		request.setAttribute("curpage", curpage);
+//		request.setAttribute("totalpage", totalpage);
+//		request.setAttribute("type", type);
+//		String[] msg= {"","전체 상품 목록","베스트 상품 목록","신상품 목록","특가 상품 목록"};
+//		request.setAttribute("msg", msg[Integer.parseInt(type)]);
+//		request.setAttribute("main_jsp", "../shop/shop.jsp");
+//		request.setAttribute("type", type);
+//		
 		return "../jsp/main/main.jsp";
 	}
 	
@@ -73,11 +73,11 @@ public class GoodsModel {
 		String type=request.getParameter("type");
 		
 		// DAO 연결
-		GoodsDAO dao=GoodsDAO.newInstance();
+//		ProductDAO dao=ProductDAO.newInstance();
 		
 		// 결과값을 request로 묶어서 => goods_detail.jsp로 전송
-		GoodsVO vo=dao.goodsDetailData(Integer.parseInt(no), Integer.parseInt(type));
-		request.setAttribute("vo", vo);
+//		ProductVO vo=dao.goodsDetailData(Integer.parseInt(no), Integer.parseInt(type));
+//		request.setAttribute("vo", vo);
 		request.setAttribute("type", type);
 		
 		// 데이터 => goods_detail
