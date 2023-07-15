@@ -34,6 +34,8 @@
 <link rel="stylesheet" type="text/css" href="../css/search.css" />
 <!-- mypage CSS -->
 <link rel="stylesheet" type="text/css" href="../css/mypage.css" />
+<!-- join CSS -->
+<link rel="stylesheet" type="text/css" href="../css/join.css" />
 <!-- Responsive Stylesheet -->
 <!-- swiper CSS-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -56,8 +58,8 @@
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <!-- jQuery ui -->
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-<!-- idcheck JS -->
-<script type="text/javascript" src="../js/idcheck.js"></script>
+<!-- join JS -->
+<script type="text/javascript" src="../js/join_check.js"></script>
 <!-- Bootstrap JS -->
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <!-- Owl Carousel JS -->
@@ -85,7 +87,7 @@
 <!-- search JS -->
 <script type="text/javascript" src="../js/search.js"></script>
 <!-- login JS -->
-<script type="text/javascript" src="../js/login.js"></script>
+<script type="text/javascript" src="../js/login_check.js"></script>
 <script>
 	new WOW().init();
 </script>	

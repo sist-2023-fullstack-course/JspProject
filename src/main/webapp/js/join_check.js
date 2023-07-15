@@ -62,7 +62,6 @@ function idok(){
 }
 
 function pwdcheck(){
-		$('#pwdBtn').click(function(){
 			let pwd1=$('#pwd1').val();
 			let pwd2=$('#pwd2').val();
 			
@@ -78,7 +77,6 @@ function pwdcheck(){
 				$('#pwd2').val("");
 				$('#pwd2').focus();
 			}
-		})
 }
 
 function nicknamecheck() {
@@ -142,7 +140,6 @@ function nickok(){
 }
 
 function phonecheck(){
-		$('#phoneBtn').click(function(){
 			let phone=$('#phoneInput').val();
 			
 			if(phone.trim()=="")
@@ -175,12 +172,10 @@ function phonecheck(){
 					}
 				}
 			})
-		})
 }
 
 
 function emailcheck(){
-		$('#emailBtn').click(function(){
 			let email=$('#emailInput').val();
 			
 			if(email.trim()=="")
@@ -213,7 +208,6 @@ function emailcheck(){
 					}
 				}
 			})
-		})
 }
 
 $('#idCheckBtn').click(idcheck);
