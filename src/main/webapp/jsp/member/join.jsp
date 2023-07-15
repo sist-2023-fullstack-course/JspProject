@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<body>
   <div class="join-main">
   	<div class="row">
   	<div class="col-sm-2"></div>
   	<div class="col-sm-8">
       <p class="join-sign" align="center">회원가입</p>
 	    <div class="row">
-	     <form method="post" action="../jsp/member/join_ok.do" name="joinFrm" id="joinFrm">
+	     <form method="post" action="../member/join_ok.do" name="joinFrm" id="joinFrm">
 	      <table class="table">
 	        <tr>
 	         <th class="text-center" width=10% style="padding-top: 20px">ID</th>
@@ -37,15 +36,15 @@
 	        <tr>
 	         <th class="text-center" width=10% style="padding-top: 20px;">성별</th>
 	         <td width=90% class="inline" style="padding-top: 15px">
-	          <input type="radio" name=sex value="남자" checked> 남자 
-	          <input type="radio" name=sex value="여자"> 여자
+	          <input type="radio" name=gender id=gender value="남자" checked> 남자 
+	          <input type="radio" name=gender id=gender value="여자"> 여자
 	         </td>
 	        </tr>
 	        
 	        <tr>
 	         <th class="text-left" width=10% style="padding-top: 20px; font-size: 13px;" >생년월일</th>
 	         <td width=90% class="inline" style="padding-top:15px">
-	          <input type="date" name=birthday size=20>
+	          <input type="date" name=birthday id=birthday size=20>
 	         </td>
 	        </tr>
 	       
@@ -79,7 +78,7 @@
 	         <th class="text-left" width=10% style="padding-top: 20px; font-size: 13px;">우편번호</th>
 	         <td width=90% class="inline">
 	         <input class="join-id" type="text" align="center" name=post id=post  style="width: 20%" readonly>
-	          <input type=button value="우편번호 검색" class="btn btn-sm btn-warning" id="postBtn">
+	          <span class="post-submit" align="center" style="text-decoration: none;" id="postBtn">우편번호 검색</span>
 	         </td>
 	        </tr>
 	        

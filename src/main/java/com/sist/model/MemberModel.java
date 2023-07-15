@@ -157,7 +157,7 @@ public class MemberModel {
 		} catch (Exception e) {}
 		
 		String id=request.getParameter("id");
-		String pwd=request.getParameter("pwd");
+		String pwd=request.getParameter("pwd1");
 		String name=request.getParameter("name");
 		String gender=request.getParameter("gender");
 		String birthday=request.getParameter("birthday");
@@ -166,7 +166,6 @@ public class MemberModel {
 		String addr1=request.getParameter("addr1");
 		String addr2=request.getParameter("addr2");
 		String phone=request.getParameter("phone");
-		String phone1=request.getParameter("phone1");
 		String nickname=request.getParameter("nickname");
 		
 		MemberVO vo=new MemberVO();
@@ -179,7 +178,7 @@ public class MemberModel {
 		vo.setPost(post);
 		vo.setAddr1(addr1);
 		vo.setAddr2(addr2);
-		vo.setPhone(phone1+"-"+phone);
+		vo.setPhone(phone);
 		vo.setNickname(nickname);
 		
 		MemberDAO dao=MemberDAO.newInstance();

@@ -210,8 +210,62 @@ function emailcheck(){
 			})
 }
 
+function zipcodecheck() {
+    $.ajax({
+		type:'post',
+		url:'../member/postfind.do',
+		success:function(res) // 정상수행을 했다면 res에 기능을 넣어줌
+		{
+			$('#dialog').html(res);
+			$('#dialog').dialog({
+				autoOpen:false,
+				width:500,
+				height:450,
+				modal:true // 다른 화면 클릭 안됨
+			}).dialog("open")
+			zipcodeok();
+		}
+	})
+}
+
+function zipcodeok(){
+	$('#postfindBtn').click(function(){
+		let dong=$('#dongInput').val();
+		
+		if(dong.trim()=="")
+		{
+			$('#dongInput').focus();
+			return;
+		}
+		
+		$.ajax({
+			type:'post',
+			url:'../member/postfind_result.do',
+			data:{"dong":dong},
+			success:function(result)
+			{
+				$('#result').html(result);
+			}
+		})
+	})
+}
+
+function findok(zip,addr)
+{
+	parent.joinFrm.post.value=zip;
+	parent.joinFrm.addr1.value=addr;
+	$('#dialog').dialog('close');
+}
+
+$(function(){
+	$('#joinBtn').click(function(){
+		$('#joinFrm').submit();
+	})
+})
+
 $('#idCheckBtn').click(idcheck);
 $('#pwdBtn').click(pwdcheck);
 $('#nicknameCheckBtn').click(nicknamecheck);
 $('#emailBtn').click(emailcheck);
 $('#phoneBtn').click(phonecheck);
+$('#postBtn').click(zipcodecheck);
