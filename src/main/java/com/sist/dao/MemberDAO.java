@@ -179,20 +179,19 @@ public class MemberDAO {
 		try {
 			conn=db.getConnection();
 			String sql="INSERT INTO member VALUES("
-					+ "?,?,?,?,?,?,?,?,?,?,?,'n',SYSDATE)"; // java.sql.SQLDataException: ORA-01841: 년은 영이 아닌 -4713 과 +4713 사이의 값으로 지정해야 합니다.
-				// + "?,?,?,?,?,?,?,TO_DATE(birthday,'yy/MM/dd'),?,?,?,'n',SYSDATE)"; // java.sql.SQLSyntaxErrorException: ORA-00984: 열을 사용할 수 없습니다
+					+ "?,?,?,?,?,?,?,?,?,SYSDATE,'n',?,?)"; 
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, vo.getId());
 			ps.setString(2, vo.getPwd());
 			ps.setString(3, vo.getName());
-			ps.setString(4, vo.getGender());
-			ps.setString(5, vo.getPhone());
-			ps.setString(6, vo.getEmail());
-			ps.setString(7, vo.getNickname());
-			ps.setString(8, vo.getBirthday());
-			ps.setString(9, vo.getPost());
-			ps.setString(10, vo.getAddr1());
-			ps.setString(11, vo.getAddr2());
+			ps.setString(4, vo.getPhone());
+			ps.setString(5, vo.getEmail());
+			ps.setString(6, vo.getNickname());
+			ps.setString(7, vo.getPost());
+			ps.setString(8, vo.getAddr1());
+			ps.setString(9, vo.getAddr2());
+			ps.setString(10, vo.getGender());
+			ps.setString(11, vo.getBirthday());
 			ps.executeUpdate();
 			
 		} catch (Exception e) {

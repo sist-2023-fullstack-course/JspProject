@@ -257,12 +257,10 @@ function findok(zip,addr)
 	$('#dialog').dialog('close');
 }
 
-$(function(){
-	$('#joinBtn').click(function(){
-		$('#joinFrm').submit();
-	})
-})
 
+$('#joinBtn').click(function(){
+	$('#joinFrm').submit();
+})
 $('#idCheckBtn').click(idcheck);
 $('#pwdBtn').click(pwdcheck);
 $('#nicknameCheckBtn').click(nicknamecheck);
