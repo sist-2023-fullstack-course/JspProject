@@ -90,7 +90,7 @@ public class BoardReplyModel {
 	  // DAO에 삭제 요청 
 	  BoardReplyDAO dao=BoardReplyDAO.newInstance();
 	  dao.replyDelete(Integer.parseInt(no));
-	  return "redirect:../board/board_detail.do?no="+bno;
+	  return "redirect:board_detail.do?no="+bno;
   }
   
 }

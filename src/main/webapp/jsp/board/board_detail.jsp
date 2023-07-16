@@ -1,106 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-<script type="text/javascript">
-let i=0; // 전역변수 
-let u=0;
-let k=0;
-$(function(){
-	$('#del').click(function(){
-		if(i==0)
-		{
-			$(this).text("취소");
-			$('#delTr').show();
-			i=1;
-		}
-		else
-		{
-			$(this).text("수정");
-			$('#delTr').hide();
-			i=0;
-		}
-	})
-	//게시물 삭제
-	$('#delBtn').click(function(){
-		let pwd=$('#pwd1').val();
-		let no=$('#delBtn').attr("data-no");
-		if(pwd.trim()=="")
-		{
-			$('#pwd1').focus();
-			return;
-		}
-		// delete.do?no=1&pwd=1111
-		$.ajax({
-			type:'post',
-			url:'../board/board_delete.do',
-			data:{"no":no,"pwd":pwd},
-			success:function(result) //YES, NO전달
-			{
-				let res=result.trim();
-				if(res==='NO')
-				{
-					alert("비밀번호가 틀립니다")
-					$('#pwd1').val("")
-					$('#pwd1').focus()
-				}
-				else
-				{
-					location.href="../board/board_list.do"
-				}
-			}
-		})
-	})
-	// Update (댓글 수정)
-	$('.ups').click(function(){
-		let no=$(this).attr("data-no"); //댓글의 번호
-		$('.ups').text("수정");
-		$('.updates').hide();
-		$('.reins').hide();
-		if(u===0)
-		{
-			$('#u'+no).show();
-			$(this).text("취소");
-			u=1;
-		}
-		else
-		{
-			$('#u'+no).hide();
-			$(this).text("수정");
-			u=0;
-		}
-	})
-	$('.ins').click(function(){
-		let no=$(this).attr("data-no");
-		$('.ins').text("댓글");
-		$('.reins').hide();
-		$('.updates').hide();
-		if(k==0)
-		{
-			$(this).text("취소");
-			$('#i'+no).show();
-			k=1;
-		}
-		else
-		{
-			$(this).text("댓글");
-			$('#i'+no).hide();
-			k=0;
-		}
-		
-	})
-})
-</script>
-</head>
-<body>
 <div class="wrapper row3">
   <main class="container clear">
    <h2 class="sectiontitle">글쓰기</h2>
@@ -125,6 +25,7 @@ $(function(){
         <pre style="white-space: pre-wrap;border:none;background-color: white">${vo.content }</pre>
        </td>
      </tr>
+     <c:if test="${sessionScope.id==vo.user_id}">
      <tr>
        <td colspan="6" class="text-right">
          <a href="../board/board_update.do?no=${vo.board_id }" class="btn btn-xs btn-info">수정</a>
@@ -132,6 +33,7 @@ $(function(){
          <a href="../board/board_list.do" class="btn btn-xs btn-warning">목록</a>
        </td>
      </tr>
+     </c:if>
       </table>
     <table>
      <tr style="display:none" id="delTr">
@@ -164,13 +66,13 @@ $(function(){
 	             
 	            <!--  id공백여부 -->
 	             <td class="text-right">
-	               <%-- <c:if test="${sessionScope.id!=null }">
-	                <c:if test="${sessionScope.id==rvo.id }"> --%>
+	              <c:if test="${sessionScope.id!=null }">
+	                <c:if test="${sessionScope.id==rvo.user_id }">
 	                 <span class="btn btn-xs btn-success ups" data-no="${rvo.rep_id }">수정</span>
-	                 <a href="../board/reply_delete.do?no=${rvo.rep_id }&bno=${vo.board_id}" class="btn btn-xs btn-info">삭제</a>
-	                <%-- </c:if> --%>
+	                 <span class="btn btn-xs btn-info" onclick="deleteComment(${rvo.rep_id}, ${vo.board_id })">삭제</span>
+	                </c:if>
 	                <span class="btn btn-xs btn-warning ins" data-no="${rvo.rep_id }">댓글</span>
-	               <%-- </c:if> --%>
+	               </c:if>
 	             </td>
 	             
 	           </tr>
@@ -215,7 +117,7 @@ $(function(){
 	     </tr>
 	     
 	   </table>
-	   <%-- <c:if test="${sessionScope.id!=null }"> --%>
+	   <c:if test="${sessionScope.id!=null }">
 		   <table class="table">
 		     <!-- 새댓글 입력 -->
 		     <tr>
@@ -228,7 +130,7 @@ $(function(){
 		      </td>
 		     </tr>
 		   </table>
-	   <%-- </c:if> --%>
+	   </c:if>
    </div>
     
    <div class="col-sm-4">
@@ -237,5 +139,3 @@ $(function(){
   
   </main>
 </div>
-</body>
-</html>

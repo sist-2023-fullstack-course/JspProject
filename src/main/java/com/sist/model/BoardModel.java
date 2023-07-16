@@ -19,21 +19,26 @@ public class BoardModel {
 		if(page==null)
 			page="1";
 		int curpage=Integer.parseInt(page);
-		// DAO연동 
 		BoardDAO dao=BoardDAO.newInstance();
-		// 게시물 목록
 		List<BoardVO> list=dao.boardListData(curpage);
-		// 총페이지 
 		int totalpage=dao.freeboardTotalPage();
+		int endpage = (10>totalpage)?totalpage:10;
+		
+		final int BLOCK=10;
+	    int startPage=((curpage-1)/BLOCK*BLOCK)+1; // 1,11,21...
+	    // 1~10 => 1 , 11~20 => 11
+	    int endPage=((curpage-1)/BLOCK*BLOCK)+BLOCK;// 10 20 30...
+	    if(endPage>totalpage)
+		   endPage=totalpage;
 		
 		// 출력에 필요한 데이터를 모아서 전송 
 		request.setAttribute("curpage", curpage);
 		request.setAttribute("totalpage", totalpage);
+		request.setAttribute("startPage", startPage);
+		request.setAttribute("endPage", endPage);
 		request.setAttribute("list", list);
-		// board/list.jsp로 전송 
-		request.setAttribute("main_jsp", "../board/board_list.jsp");
-		//CommonModel.commonRequestData(request);
-		// main_jsp => 화면 출력 
+		request.setAttribute("board_jsp", "board_list.jsp");
+		request.setAttribute("main_jsp", "../board/board_main.jsp"); 
 		return "../jsp/main/main.jsp";
 	}
 	
@@ -54,6 +59,8 @@ public class BoardModel {
 		
 		BoardVO vo=new BoardVO();
 		vo.setUser_id(request.getParameter("name"));
+		System.out.println(vo.getUser_id());
+		
 		vo.setTitle(request.getParameter("subject"));
 		vo.setContent(request.getParameter("content"));
 		vo.setBoard_category(request.getParameter("category"));
