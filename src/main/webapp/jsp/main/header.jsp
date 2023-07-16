@@ -69,13 +69,19 @@ $(function(){
 									<li><a href="../company/list.do?cate=반려동물장례">반려동물장례</a></li>
 								</ul>
 							</li>
-							<li><a href="shop.html">쇼핑몰</a>
+							<li><a href="../product/list.do">쇼핑몰</a>
 								<ul class="sub-menu">
-									<li><a href="#">rings</a></li>
-									<li><a href="#">diamond ring</a></li>
-									<li><a href="#">gold ring</a></li>
-									<li><a href="#">sliver ring</a></li>
-									<li><a href="#">Platinum ring</a></li>
+									<li><a href="../product/list.do?cate=사료">사료</a></li>
+									<li><a href="../product/list.do?cate=간식">간식</a></li>
+									<li><a href="../product/list.do?cate=배변/위생">배변/위생</a></li>
+									<li><a href="../product/list.do?cate=산책/이동장">산책/이동장</a></li>
+									<li><a href="../product/list.do?cate=건강관리">건강관리</a></li>
+									<li><a href="../product/list.do?cate=식기">식기</a></li>
+									<li><a href="../product/list.do?cate=의류/악세서리">의류/악세서리</a></li>
+									<li><a href="../product/list.do?cate=장난감">장난감</a></li>
+									<li><a href="../product/list.do?cate=목욕/미용">목욕/미용</a></li>
+									<li><a href="../product/list.do?cate=하우스/울타리">하우스/울타리</a></li>
+									<li><a href="../product/list.do?cate=훈련">훈련</a></li>
 								</ul>
 							</li>
 							<li><a href="../board/board_list.do">커뮤니티</a>
