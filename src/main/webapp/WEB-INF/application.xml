@@ -8,5 +8,6 @@
 	<bean id="replyboard" class="com.sist.model.BoardReplyModel"/>
 	<bean id="mypage" class="com.sist.model.MyPageModel"/>
 	<bean id="wishlist" class="com.sist.model.WishListModel"/>
+	<bean id="wishlist" class="com.sist.model.AdminModel"/>
 <!-- 	<bean id="admin" class="com.sist.model.AdminModel"/> -->
 </beans>
