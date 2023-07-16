@@ -7,6 +7,6 @@ import lombok.Setter;
 @Setter
 
 public class ProductVO {
-	private int id, category, star_sum, star_cnt, price, discount_price;
-	private String name, info, delivery;
+	private int id, star_sum, star_cnt, price, discount_price;
+	private String name, info, delivery, category, poster;
 }
