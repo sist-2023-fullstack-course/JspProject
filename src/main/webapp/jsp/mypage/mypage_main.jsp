@@ -21,7 +21,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-sm-8 col-md-9 ">
+				<div class="col-sm-8 col-md-9 mypage">
 				 <div class="row">
 				    <jsp:include page="${mypage_jsp }"></jsp:include>
 				 </div>

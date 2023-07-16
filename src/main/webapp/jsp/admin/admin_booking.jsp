@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 <div class="mypage-main" style="text-align: center">
     <div class="col-sm-1"></div>
@@ -24,7 +25,7 @@
 			        <span>예약확정</span>
 			     </c:if>
 			     <c:if test="${vo.res_state=='n' }">
-			        <span onclick="res_confirm(${vo.res_id})" class="btn btn-sm btn-success">확정하기</span>
+			        <span onclick="res_confirm(${vo.res_id})" class="btn btn-sm btn-success confirm">확정하기</span>
 			     </c:if>
 			    </td>
 			    <td width=15% class="text-center">
@@ -90,7 +91,15 @@ function myfunction(res_id){
 }
 
 function res_confirm(res_id){
-	
+	$.ajax({
+		type:'post',
+		url:'booking_confirm.do',
+		data:{
+			"res_id":res_id
+		},
+		
+	})
 }
+
 
 </script>
