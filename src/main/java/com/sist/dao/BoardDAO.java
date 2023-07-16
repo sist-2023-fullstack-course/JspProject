@@ -30,11 +30,14 @@ public class BoardDAO {
 		List<BoardVO> list = new ArrayList<BoardVO>();
 		try {
 			conn = db.getConnection();
-
-			String sql = "SELECT BOARD_ID, title , USER_ID, TO_CHAR(regdate,'yyyy-mm-dd'),hit, board_category ,num "
-					+ "FROM (SELECT BOARD_ID, title, USER_ID, regdate, hit, board_category, rownum as num "
-					+ "FROM (SELECT /*+ INDEX_DESC(BOARD_ID PK_BOARD)*/BOARD_ID, title, USER_ID, regdate, hit, board_category "
-					+ "FROM BOARD)) " + "WHERE num BETWEEN ? AND ?";
+			String sql1="SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title , board_category, USER_ID, regdate, hit "
+					+ "FROM BOARD";
+			
+			String sql = "SELECT BOARD_ID, title, board_category, USER_ID, TO_CHAR(regdate,'yyyy-MM-dd'),hit ,num "
+					   + "FROM (SELECT BOARD_ID, title , board_category, USER_ID, regdate, hit, rownum as num "
+					   + "FROM (SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title, board_category, USER_ID, regdate, hit "
+					   + "FROM BOARD)) " + "WHERE num BETWEEN ? AND ?";
+			
 			ps = conn.prepareStatement(sql);
 			int rowSize = 10;
 			int start = (rowSize * page) - (rowSize - 1);
@@ -48,10 +51,10 @@ public class BoardDAO {
 				BoardVO vo = new BoardVO();
 				vo.setBoard_id(rs.getInt(1));
 				vo.setTitle(rs.getString(2));
-				vo.setUser_id(rs.getString(3));
-				vo.setDbday(rs.getString(4));
-				vo.setHit(rs.getInt(5));
-				vo.setBoard_category(rs.getString(6));
+				vo.setBoard_category(rs.getString(3));
+				vo.setUser_id(rs.getString(4));
+				vo.setDbday(rs.getString(5));
+				vo.setHit(rs.getInt(6));
 				vo.setRownum(rs.getInt(7));
 				list.add(vo);
 			}
@@ -118,6 +121,17 @@ public class BoardDAO {
 		}
 		return vo;
 	}
+	/*
+	 * BOARD_ID
+		TITLE
+		REGDATE
+		CONTENT
+		HIT
+		COMMENT_CNT
+		BOARD_CATEGORY
+		USER_ID
+	 */
+
 
 	// 게시글 추가
 	public void boardInsert(BoardVO vo) {

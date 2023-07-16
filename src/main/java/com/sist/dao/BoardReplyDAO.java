@@ -218,20 +218,6 @@ public class BoardReplyDAO {
 		   ps.executeUpdate(); // (commit()=>X)
 		   // insert => insert
 		   /*
-		    *   NO         NOT NULL NUMBER       
-				BNO                 NUMBER       
-				ID                  VARCHAR2(20) 
-				NAME       NOT NULL VARCHAR2(51) 
-				MSG        NOT NULL CLOB         
-				REGDATE             DATE         
-				GROUP_ID            NUMBER    ==> 답변끼리 모아주는 역할     
-				GROUP_STEP          NUMBER    ==> 답변출력 순서 
-				GROUP_TAB           NUMBER    ==> 어느 댓글에 대한 표시
-				--------------------------------------------------- 댓글  
-				ROOT                NUMBER    ==> 상위 댓글번호  
-				DEPTH               NUMBER    ==> 댓글 갯수 
-				pfr_no_seq.nextval
-				
 				REP_ID
 				BOARD_ID
 				USER_ID

@@ -1,0 +1,71 @@
+@charset "EUC-KR";
+
+/* border-top: 3px solid #77D6C9; */
+
+.board-main {
+	padding: 20px;	
+}
+
+.board-title {
+	font-size: 30px;
+    font-weight: bold;   
+    height: 75px;
+    text-align: center;
+    line-height: 63px;
+}
+
+.board-search {    
+	display: flex;
+	border-radius: 8px;
+    align-items: center;
+    height: 50px;
+    background-color: #d1d1d19e;
+}
+
+.board-search-title {
+	width: 105px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 2px;
+}
+
+.board-search-combo {
+	width: 100px;
+}
+
+.border-select {
+    width: 87px;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid #c3c3c3;
+}
+
+.board-search-search {
+	width: 180px;
+}
+
+.board-search-btn {
+	width: 80px;
+}
+
+.board-btn {
+	margin-left: 10px;
+    height: 30px;
+    border: 1px solid #c1c1c1 !important;
+}
+
+.board-search-insert {
+	flex: 1;    
+	text-align: end;
+	margin-right: 10px;
+}
+
+.board-table { 
+	height:462px;
+    padding: 30px 0 5px 0;
+}
+
+.board-page {
+	
+}

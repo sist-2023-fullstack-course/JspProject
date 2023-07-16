@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,9 +28,9 @@
       </td>
     </tr>
     <tr>
-      <th width=15%>user_id</th>
+      <th width=15%>사용자 ID</th>
       <td width=85%>
-       <input type=text name=name size=20 class="input-sm"><%-- sessionScope=${id } --%>
+       <input type=text name=name size=20 class="input-sm" value="${sessionScope.id }" readonly>
       </td>
     </tr>
     <tr>
