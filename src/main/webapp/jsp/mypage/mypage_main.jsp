@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-	<section class="blog-page page fix mypage"><!-- Start Blog Area-->
+	<section class="blog-page page fix adminpage"><!-- Start Blog Area-->
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4 col-md-3">
