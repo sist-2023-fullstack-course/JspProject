@@ -26,6 +26,7 @@ public class MyPageDAO {
 	public List<ReserveVO> booking_list(String uid)
 	{
 		List<ReserveVO> list=new ArrayList<ReserveVO>();
+		conn=db.getConnection();
 		try
 		{
 			String sql="SELECT res_id,res_state,res_date,res_msg,res_img,user_id,com_id,pet_id,companyName(com_id) "
