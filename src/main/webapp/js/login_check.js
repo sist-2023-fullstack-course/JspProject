@@ -7,7 +7,7 @@ function idCheckfc(){
 		{
 			$('#idInput').focus();
 			$('#loginMsg').text('아이디를 입력해주세요');
-			$('#loginMsg').attr('style', 'display:block; color:red;');
+			$('#loginMsg').attr('style', 'display:block; color:red; ');
 			return;
 		}
 		

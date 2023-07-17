@@ -259,8 +259,92 @@ function findok(zip,addr)
 
 
 $('#joinBtn').click(function(){
+	if($('#id').val().trim()==="")
+	{
+		$('#joinMsg').text('아이디를 입력해주세요.')
+		$('#joinMsg').attr('style','display:block; color:red; margin: 0px;')
+		return
+	}
+	
+	if($('#pwd1').val().trim()==="")
+	{
+		$('#pwd1').focus()
+		$('#joinMsg').text('비밀번호를 입력해주세요.')
+		$('#joinMsg').attr('style','display:block; color:red; margin: 0px;')
+		return
+	}
+	
+	if($('#pwd2').val().trim()==="")
+	{
+		$('#pwd2').focus()
+		$('#joinMsg').text('비밀번호를 확인해주세요.')
+		$('#joinMsg').attr('style','display:block; color:red; margin: 0px;')
+		return
+	}
+	
+	if($('#name').val().trim()==="")
+	{
+		$('#name').focus()
+		$('#joinMsg').text('이름을 입력해주세요.')
+		$('#joinMsg').attr('style','display:block; color:red; margin: 0px;')
+		return
+	}
+	
+	if($('#birthday').val().trim()==="")
+	{
+		$('#joinMsg').text('생년월일을 입력해주세요.')
+		$('#joinMsg').attr('style','display:block; color:red; margin: 0px;')
+		return
+	}
+	
+	if($('#nickname').val().trim()==="")
+	{
+		$('#joinMsg').text('닉네임을 입력해주세요.')
+		$('#joinMsg').attr('style','display:block; color:red; margin: 0px')
+		return
+	}
+	
+	if($('#phoneInput').val().trim()==="")
+	{
+		$('#phone').focus()
+		$('#joinMsg').text('전화번호를 입력해주세요.')
+		$('#joinMsg').attr('style','display:block; color:red; margin: 0px;')
+		return
+	}
+
+	if($('#emailInput').val().trim()==="")
+	{
+		$('#email').focus()
+		$('#joinMsg').text('이메일을 입력해주세요.')
+		$('#joinMsg').attr('style','display:block; color:red; margin: 0px;')
+		return
+	}
+
+	if($('#post').val().trim()==="")
+	{
+		$('#joinMsg').text('우편번호를 입력해주세요.')
+		$('#joinMsg').attr('style','display:block; color:red; margin: 0px;')
+		return
+	}
+	
+	if($('#addr1').val().trim()==="")
+	{
+		$('#joinMsg').text('주소를 입력해주세요.')
+		$('#joinMsg').attr('style','display:block; color:red; margin: 0px;')
+		return
+	}
+	
+	if($('#addr2').val().trim()==="")
+	{
+		$('#addr2').focus()
+		$('#joinMsg').text('상세주소를 입력해주세요.')
+		$('#joinMsg').attr('style','display:block; color:red; margin: 0px;')
+		return
+	}
+		
 	$('#joinFrm').submit();
 })
+
 $('#idCheckBtn').click(idcheck);
 $('#pwdBtn').click(pwdcheck);
 $('#nicknameCheckBtn').click(nicknamecheck);

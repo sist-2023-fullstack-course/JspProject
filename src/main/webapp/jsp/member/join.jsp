@@ -85,7 +85,7 @@
 	        <tr>
 	         <th class="text-center" width=10% style="padding-top: 20px">주소</th>
 	         <td width=90% class="inline">
-	         <input class="join-id" type="text" align="center" name=addr1 id=addr1 style="width: 60%">
+	         <input class="join-id" type="text" align="center" name=addr1 id=addr1 style="width: 60%" readonly>
 	         </td>
 	        </tr>
 	        
@@ -95,15 +95,12 @@
 	         <input class="join-id" type="text" align="center" name=addr2 id=addr2 style="width: 60%">
 	         </td>
 	        </tr>
-	        
-	        <tr>
-	          <td colspan="2" class="text-center">
-	          <span class="join-ok-submit" align="center" style="text-decoration: none; font-style: bold" id="joinBtn">회원가입</span>
-	           <!-- <input type=button value="취소" class="btn btn-danger btn-sm" onclick="javascript:history.back()"> -->
-	          </td>
-	        </tr>
 	      </table>
 	      </form>
+	      <div align="center">
+	      	<p style="margin: 0px; display: none" id=joinMsg></p>
+		  	<span class="join-ok-submit" align="center" style="text-decoration: none; font-style: bold" id="joinBtn">회원가입</span>
+	      </div>
 	    </div>
 	    <div id="dialog" title="중복체크" style="display: none"></div>
   		<div class="col-sm-2"></div>
