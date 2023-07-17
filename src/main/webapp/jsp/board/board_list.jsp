@@ -13,7 +13,7 @@
 			게시글 검색
 		</div>
 		<div class='board-search-combo'> 
-			<select class="form-select border-select" >
+			<select name=search class="form-select border-select" >
 			  <option selected> 제목 </option>
 			  <option value="1">제목</option>
 			  <option value="2">내용</option>
@@ -63,12 +63,15 @@
 	          <li><a href="../board/board_list.do?page=${startPage-1 }">&laquo; 이전페이지</a></li>
 	         </c:if>
 	         
-	         
+	         <c:if test="${curpage>1 }">
 	         <li> <a href="../board/board_list.do?page=${curpage-1 }">&lt;</a> </li>
+	         </c:if>
 	         <c:forEach var="i" begin="${startPage }" end="${endPage }">
 	            <li ${curpage==i?"class=current":"" }><a href="../board/board_list.do?page=${i }">${i }</a></li>
 	         </c:forEach>
+	         <c:if test="${curpage < totalpage }">
 	         <li><a href="../board/board_list.do?page=${curpage+1 }">&gt;</a></li>
+	         </c:if>
 	         
 	         
 	         <c:if test="${endPage<totalpage }">
@@ -78,56 +81,4 @@
 	    </nav>
 	</div>
 </div>
- <%--  <main style="width:800px;">
-   <h2 class="section-title">자유게시판</h2>
-   <div style="height: 450px;">
-   <table class="table">
-    <tr>
-    <c:if test="${sessionScope.id != null }">
-     <td>
-      <a href="../board/board_insert.do" class="btn btn-sm btn-danger">새글</a>
-     </td>
-    </tr>
-    </c:if>
-   </table>
-   <table class="table">
-     <tr>
-      <th width=10% class="text-center">번호</th>
-      <th width=40% class="text-center">제목</th>
-      <th width=10% class="text-center">카테고리</th>
-      <th width=10% class="text-center">이름</th>
-      <th width=20% class="text-center">작성일</th>
-      <th width=10% class="text-center">조회수</th>
-     </tr>
-     
-     <c:forEach var="vo" items="${list }">
-       <tr>
-         <td width=10% class="text-center">${vo.board_id }</td>
-         <td width=40% class="text-center"><a href="../board/board_detail.do?no=${vo.board_id }">${vo.title }</a></td>
-         <td width=10% class="text-center">${vo.board_category }</td>
-         <td width=10% class="text-center">${vo.user_id }</td>
-         <td width=20% class="text-center">${vo.dbday }</td>
-         <td width=10% class="text-center">${vo.hit }</td>
-       </tr>
-     </c:forEach>
-   </table>
-   </div>
-   <!-- Pagination -->
-   <nav class="pagination">
-	<ul>
-         startPage : 1 , 11 , 21 , 31...
-         <c:if test="${startPage>1 }">
-          <li><a href="../board/board_list.do?page=${startPage-1 }">&laquo; Previous</a></li>
-         </c:if>
-         
-         <c:forEach var="i" begin="${startPage }" end="${endPage }">
-            <li ${curpage==i?"class=current":"" }><a href="../board/board_list.do?page=${i }">${i }</a></li>
-         </c:forEach>
-         
-          
-         <c:if test="${endPage<totalpage }">
-          <li><a href="../board/board_list.do?page=${endPage+1 }">Next &raquo;</a></li>
-         </c:if>
-        </ul>
-    </nav>
-  </main> --%>
+ 

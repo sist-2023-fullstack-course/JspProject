@@ -1,15 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    
 
-</head>
-<body>
+<div>
+	<div>1</div>
+	<div class="board-title"> 
+		게시글 작성
+	</div>
+	<div>
+		<div>븐류</div>
+		<div class='board-search-combo'> 
+		<select name=search class="form-select border-select" >
+		  <option selected> 제목 </option>
+		  <option value="1">제목</option>
+		  <option value="2">내용</option>
+		  <option value="3">작성자</option>
+		</select>
+		</div>
+	</div>
+	<div>3</div>
+	<div>4</div>
+	<div>5</div>
+	<div>6</div>
+</div>
+
+
+<!--
 <div class="wrapper row3">
   <main class="container clear">
    <h2 class="sectiontitle">글쓰기</h2>
@@ -56,5 +74,4 @@
    </div>
   </main>
 </div>
-</body>
-</html>
+  -->

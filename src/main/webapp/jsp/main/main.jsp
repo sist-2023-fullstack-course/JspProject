@@ -36,6 +36,8 @@
 <link rel="stylesheet" type="text/css" href="../css/mypage.css" />
 <!-- join CSS -->
 <link rel="stylesheet" type="text/css" href="../css/join.css" />
+<!-- join CSS -->
+<link rel="stylesheet" type="text/css" href="../css/board.css" />
 <!-- Responsive Stylesheet -->
 <!-- swiper CSS-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -86,6 +88,8 @@
 <script type="text/javascript" src="../js/wow.min.js"></script>
 <!-- search JS -->
 <script type="text/javascript" src="../js/search.js"></script>
+<!-- bpard JS -->
+<script type="text/javascript" src="../js/board.js"></script>
 <!-- login JS -->
 <script type="text/javascript" src="../js/login_check.js"></script>
 <script>
