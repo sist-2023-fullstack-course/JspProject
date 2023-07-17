@@ -56,7 +56,7 @@
 	                            </c:if>
 	                            <li>
 	                                <dl>
-	                                    <dt>택배비</dt>
+	                                    <dt>배송</dt>
 	                                    <dd>${vo.delivery }</dd>
 	                                </dl>
 	                            </li>

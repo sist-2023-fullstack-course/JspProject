@@ -105,8 +105,9 @@ function requestData(page, cate) {
 					$('.single-blog > .content > h2 > a').get(i).setAttribute('href', 'detail.do?id='+json.data[i].id);
 					$('.single-blog > .content > h2 > a').get(i).innerHTML = json.data[i].name;
 					$('.single-blog > .content > a > img').get(i).setAttribute('src', json.data[i].poster);
-					$('.single-blog .meta .time').get(i).innerHTML = '<i class="fa fa-calendar"></i>' + json.data[i].time;
-					$('.single-blog p').get(i).innerHTML = json.data[i].address;
+					$('.single-blog .meta .fa-calendar').get(i).innerHTML = json.data[i].time;
+					$('.single-blog .meta .fa-map-marker').get(i).innerHTML = json.data[i].address;
+					$('.single-blog .meta .fa-star').get(i).innerHTML = json.data[i].star;
 				}
 				else{
 					$('.poster').get(i).setAttribute('style', 'display:none');

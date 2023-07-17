@@ -85,6 +85,7 @@ public class CompanyModel {
 			tmp.put("name", vo.getCom_name());
 			tmp.put("time", vo.getTime());
 			tmp.put("address", vo.getAddress());
+			tmp.put("star", vo.getStar());
 			data.add(tmp);
 		}
 		hash.put("data", data);
