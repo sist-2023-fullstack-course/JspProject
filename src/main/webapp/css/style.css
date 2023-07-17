@@ -224,6 +224,9 @@ img {
   color: #e09e25;
 }
 /*----- 3.2 Top Menu -----*/
+#top-menu{
+	margin-top: 90px;
+}
 #top-menu > ul {
   list-style: outside none none;
   margin: 0;
@@ -231,9 +234,11 @@ img {
 }
 #top-menu > ul > li {
   display: inline-block;
-  margin: 0;
+  margin: 0px 5px 0px 5px;
   position:relative;
   font-size:14px;
+  width:80px;
+  height: 80px;
 }
 #top-menu > ul > li > a {
   color: 77D6C9;
@@ -284,6 +289,10 @@ img {
   opacity: 1;
   transform: scaleY(1);
   z-index: 999;
+}
+#top-menu .fa{
+	font-size: 40px;
+	color: #77D6C9;
 }
 /*----- 3.3 Header Area -----*/
 .header-area {
@@ -1151,7 +1160,6 @@ img {
   margin-bottom: 30px;
 }
 .single-blog .date {
-  background: #e09e25 none repeat scroll 0 0;
   color: #fff;
   height: 60px;
   left: 0;
@@ -1162,8 +1170,8 @@ img {
   z-index: 99;
 }
 .single-blog .date h4 {
-  color: #fff;
-  font-size: 30px;
+  color: red;
+  font-size: 23px;
   font-weight: 600;
   line-height: 20px;
   text-align: center;
@@ -1223,8 +1231,8 @@ img {
   width: 100%;
 }
 .single-blog .content h2 {
-  font-size: 18px;
-  margin: 10px 0 5px;
+  font-size: 22px;
+  margin: 10px 0 20px;
 }
 .single-blog.blog-details .content h2 {
   font-size: 30px;
@@ -1239,7 +1247,7 @@ img {
 }
 .meta a {	
   color: #555555;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
 }
 .blog-details .meta a {
@@ -1250,12 +1258,17 @@ img {
 }
 .meta i {
   margin-right: 5px;
+  color: #555555;
+  font-size: 16px;
+  font-weight: 400;
+}
+.meta i::before{
+	margin-right: 5px;
 }
 .single-blog .content p {
   color: #555555;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
-  margin-bottom: 20px;
 }
 .read-more {
   background: #e09e25 none repeat scroll 0 0;
