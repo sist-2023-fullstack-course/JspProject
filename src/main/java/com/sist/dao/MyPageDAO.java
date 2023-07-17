@@ -136,4 +136,45 @@ public class MyPageDAO {
 		return vo;
 	}
 	
+    /* ---- END OF 예약 ----- */
+
+	
+	/* ---- START OF myinfo ----- */
+	// 로그인 된 내정보 찾기
+	public MemberVO myinfo_detail(String id)
+	{
+		MemberVO vo=new MemberVO();
+		try
+		{
+			conn=db.getConnection();
+			String sql="SELECT USER_ID,USER_NAME,PHONE,EMAIL,NICKNAME,BIRTHDAY,POST,ADDR1,ADDR2,gender FROM member WHERE user_id=?";
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, id);
+			rs=ps.executeQuery();
+			rs.next();
+			vo.setId(rs.getString(1));
+			vo.setName(rs.getString(2));
+			vo.setPhone(rs.getString(3));
+			vo.setEmail(rs.getString(4));
+			vo.setNickname(rs.getString(5));
+			vo.setBirthday(rs.getString(6));
+			vo.setPost(rs.getString(7));
+			vo.setAddr1(rs.getString(8));
+			vo.setAddr2(rs.getString(9));
+			vo.setGender(rs.getString(10));
+			rs.close();
+			
+		}catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
+		finally
+		{
+			db.disConnection(conn, ps);
+		}
+		return vo;
+	}
+	
+	
+	
 }

@@ -17,9 +17,11 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-sm-8 col-md-9 ">
+				<div class="col-sm-8 col-md-9 mypage-main" style="text-align: center">
+				 <div class="row">
 				    <jsp:include page="${admin_jsp }"></jsp:include>
-				</div>
+			     </div>
+			 	</div>
 				</div>
 			</div>
 	</section>

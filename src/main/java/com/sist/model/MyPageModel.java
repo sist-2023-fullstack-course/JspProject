@@ -7,9 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.sist.controller.RequestMapping;
-import com.sist.dao.MyPageDAO;
-import com.sist.vo.CompanyVO;
-import com.sist.vo.ReserveVO;
+import com.sist.dao.*;
+import com.sist.vo.*;
 
 public class MyPageModel {
 	@RequestMapping("mypage/main.do")
@@ -23,7 +22,13 @@ public class MyPageModel {
 	@RequestMapping("mypage/myinfo.do")
 	public String mypage_info(HttpServletRequest request, HttpServletResponse response)
 	{
+		HttpSession session=request.getSession();
+		String uid=(String)session.getAttribute("id");
 		
+		MyPageDAO dao=MyPageDAO.newInstance();
+		MemberVO vo=dao.myinfo_detail(uid);
+		
+		request.setAttribute("vo", vo);
 		request.setAttribute("mypage_jsp", "mypage_info.jsp");
 		request.setAttribute("main_jsp", "../mypage/mypage_main.jsp");
 		return "../jsp/main/main.jsp";
@@ -76,6 +81,17 @@ public class MyPageModel {
 		return "../jsp/mypage/mypage_booking_detail.jsp";
 	}
 	
+	//개인정보 수정
+	@RequestMapping("mypage/updatemyinfo")
+	public String mypage_updatemyinfo(HttpServletRequest request,HttpServletResponse response)
+	{
+		HttpSession session=request.getSession();
+		String id=(String)session.getAttribute("id");
+		
+		MemberDAO dao=MemberDAO.newInstance();
+		
+		return "../jsp/main/main.jsp";
+	}
 	
 	
 }

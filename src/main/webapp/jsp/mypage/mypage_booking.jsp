@@ -2,10 +2,11 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<div style="text-align: center">
+<div style="padding-top: 40px;"></div>
     <div class="col-sm-1 col-md-1" ></div>
-    <div class="col-sm-10 col-md-10 mypage-main">
-    	<table class="cart-table table" style="margin-top:30px;">
+    <div class="col-sm-10 col-md-10">
+      <div class="row">
+    	<table class="cart-table table">
     	  <tr>
 		    <th width=15% class="text-center">예약번호</th>
 		    <th width=30% class="text-center">업체명</th>
@@ -33,11 +34,11 @@
 		     </tr>
 		   </c:forEach>
     	</table>
+      </div>
     	<div style="height:10px"></div>
 		      <div id="booking_detail" class="mypage-sub"></div>
     </div>
     <div class="col-sm-1 col-md-1"></div>
-</div>
 
 
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
