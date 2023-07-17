@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import com.sist.controller.RequestMapping;
 import com.sist.dao.ProductDAO;
@@ -44,7 +46,22 @@ public class ProductModel {
 	
 	@RequestMapping("product/detail.do")
 	public String product_detail(HttpServletRequest request, HttpServletResponse response) {
+		int id = Integer.parseInt(request.getParameter("id"));
 		
+		ProductDAO dao = ProductDAO.newInstance();
+		ProductVO vo = dao.getProductDetailById(id);
+		
+		JSONObject json = null;
+		try {
+			JSONParser p = new JSONParser();
+			json = (JSONObject)p.parse(vo.getInfo());
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		request.setAttribute("vo", vo);
+		request.setAttribute("info", json);
+		request.setAttribute("main_jsp", "/jsp/product/product_detail.jsp");
 		return "/jsp/main/main.jsp";
 	}
 	

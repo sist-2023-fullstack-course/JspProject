@@ -109,4 +109,52 @@ public class ProductDAO {
 		
 		return count;
 	}
+	
+	public ProductVO getProductDetailById(int id) {
+		ProductVO vo = new ProductVO();
+		
+		try {
+			conn = db.getConnection();
+			String sql = "SELECT /*+ INDEX(shop, PK_SHOP) */ "
+					   + "product_name, product_category, product_info, product_price, product_discount_price, "
+					   + "delivery, product_star_sum, product_star_cnt, product_poster "
+					   + "FROM shop WHERE PRODUCT_ID = ?";
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+			
+			if(rs.next()) {
+				vo.setId(id);
+				vo.setName(rs.getString(1));
+				vo.setCategory(rs.getString(2));
+				vo.setInfo(rs.getString(3));
+				vo.setPrice(rs.getInt(4));
+				vo.setDiscount_price(rs.getInt(5));
+				vo.setDelivery(rs.getString(6));
+				int sum = rs.getInt(7);
+				int cnt = rs.getInt(8);
+				if(cnt==0) {
+					vo.setStar(0.0);
+				}
+				else if(cnt>0){
+					
+					vo.setStar(Math.round((double)sum/cnt*10)/10);
+				}
+				vo.setPoster(rs.getString(9));
+				
+				int p = vo.getPrice();
+				int dp = vo.getDiscount_price();
+				int rate = (int)Math.round((double)(p-dp)/p*100);
+				vo.setDiscount_rate(rate);
+			}
+			rs.close();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			db.disConnection(conn, ps);
+		}
+		
+		return vo;
+	}
 }

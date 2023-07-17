@@ -51,12 +51,12 @@
 	                        <!-- //우측 정보 e -->
 	                        <!-- 하단 분류 s -->
 	                        <div class="s21_detail_top_btm">
+	                            <c:if test="${sessionScope.id!=null }">
 	                            <dl class="reserve_button">
 	                                <dt>
 	                                    <img src="../img/reserve.png">
 	                                <dd>예약하기</dd>
 	                            </dl>
-	                            <c:if test="${sessionScope.id!=null }">
 	                            <c:if test="${like }">
 	                            <dl class="heart_button clicked" onclick="clickHeartBtn('${sessionScope.id}', ${vo.id })">
 	                                <dt>
