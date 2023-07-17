@@ -90,22 +90,24 @@ $(function(){
 									<li><a href="../product/list.do?cate=훈련">훈련</a></li>
 								</ul>
 							</li>
-							<li><a href="../board/board_list.do?cat=자유토크">커뮤니티</a>
+							<li><a href="../board/board_list.do?cat=전체">커뮤니티</a>
 								<div>
 									<ul class="sub-menu">
+										<li><a href="../board/board_list.do?cat=전체">전체</a></li>
 										<li><a href="../board/board_list.do?cat=자유토크">자유토크</a></li>
 										<li><a href="../board/board_list.do?cat=자랑하기">마이펫 자랑하기</a></li>
+										<li><a href="../board/board_list.do?cat=QNA">Q&amp;A</a></li>
 									</ul>
 								</div>
 							</li>
 							<li><a href="../board/board_list.do?cat=공지사항">공지사항</a>
 								<ul class="sub-menu">
 									<li><a href="../board/board_list.do?cat=공지사항">공지사항_1</a></li>
+									<li><a href="#">이벤트_구상</a></li>
 								</ul>
 							</li>
 							<li><a href="../board/board_list.do?cat=QNA">문의하기</a>
-								<ul class="sub-menu">
-								</ul>
+								
 							</li>
 							<c:if test="${sessionScope.id!=null }">
 							  <c:if test="${sessionScope.admin=='n' }">
