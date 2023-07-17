@@ -6,8 +6,8 @@
 			<div class="row">
 				<div class="col-sm-4 col-md-3">
 					<div class="single-sidebar">
-						<h2><a href="../mypage/main.do" style="color:white;text-decoration:none;">마이페이지 홈</a></h2>
 						<ul class="text-center">
+							<li><a href="../mypage/myinfo.do">공지사항</a></li>
 							<li><a href="../mypage/myinfo.do">자유토크</a></li>
 							<li><a href="../mypage/mypet.do">마이펫 자랑하기</a></li>
 							<li><a href="#">Q&amp;A</a></li>
