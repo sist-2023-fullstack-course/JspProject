@@ -100,7 +100,7 @@
 				<table class="table">
 					<c:forEach var="entry" items="${info }">
 						<tr>
-							<th width="30%">${entry.key }</th>
+							<th width="27%">${entry.key }</th>
 							<td>${entry.value }</td>
 						</tr>
 					</c:forEach>

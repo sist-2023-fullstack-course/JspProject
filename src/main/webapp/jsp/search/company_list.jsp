@@ -78,10 +78,17 @@
 								<a class="image fix" href="detail.do?id=${vo.id }"><img src="${vo.poster }" width="100%" height="220px"/></a>
 								<h2><a class="title" href="detail.do?id=${vo.id }">${vo.com_name }</a></h2>
 								<div class="meta">
-									<a href="detail.do?id=${vo.id }" class="time"><i class="fa fa-calendar"></i>${vo.time }</a>
-									<a href="detail.do?id=${vo.id }" style="float: right;"><i class="fa fa-comments"></i>0개</a>
+									<p>
+										<i class="fa fa-calendar">${vo.time }</i>
+									</p>
+									<p>
+										<i class="fa fa-map-marker">${vo.address }</i>
+									</p>
+									<p>
+										<i class="fa fa-comments" style="font-size: 14px;">0개</i>
+										<i class="fa fa-star" style="font-size: 14px;">${vo.star }</i>
+									</p>
 								</div>
-								<p>${vo.address }</p>
 							</div>
 						</div>
 					</div>
