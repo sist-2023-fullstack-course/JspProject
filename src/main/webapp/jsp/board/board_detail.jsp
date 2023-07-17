@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="wrapper row3">
   <main class="container clear">
-   <h2 class="sectiontitle">글쓰기</h2>
+   <h2 class="sectiontitle">제목 : ${vo.title }</h2>
    <table class="table">
      <tr>
       <th width=15% class="text-center">번호</th>
@@ -25,15 +25,17 @@
         <pre style="white-space: pre-wrap;border:none;background-color: white">${vo.content }</pre>
        </td>
      </tr>
-     <c:if test="${sessionScope.id==vo.user_id}">
+     <%-- id값 확인 --%>
      <tr>
        <td colspan="6" class="text-right">
+     <c:if test="${sessionScope.id==vo.user_id}">
          <a href="../board/board_update.do?no=${vo.board_id }" class="btn btn-xs btn-info">수정</a>
          <span class="btn btn-xs btn-success" id="del">삭제</span>
+     </c:if>
          <a href="../board/board_list.do" class="btn btn-xs btn-warning">목록</a>
        </td>
      </tr>
-     </c:if>
+     
       </table>
     <table>
      <tr style="display:none" id="delTr">
@@ -59,12 +61,12 @@
 	                 <c:forEach var="i" begin="1" end="${rvo.group_tab }">
 	                  &nbsp;&nbsp;&nbsp;
 	                 </c:forEach>
-	                 <img src="image/re_icon.png">
+	                 <img src="re_icon.png">
 	               </c:if>
 	               ◑${rvo.user_id }&nbsp;(${rvo.dbday })
 	             </td>
 	             
-	            <!--  id공백여부 -->
+	            <!--  로그인 여부 -->
 	             <td class="text-right">
 	              <c:if test="${sessionScope.id!=null }">
 	                <c:if test="${sessionScope.id==rvo.user_id }">
@@ -89,8 +91,7 @@
 	           <tr style="display:none" class="reins" id="i${rvo.rep_id }">
 			      <td colspan="2">
 			        <form method="post" action="../board/reply_reply_insert.do" class="inline">
-			         <input type=hidden name=bno value="${vo.board_id}">
-			         <!-- bno는 다시 detail.do로 이동 -->
+			         <input type=hidden name=bno value="${vo.board_id}"><!-- bno는 다시 detail.do로 이동 -->
 			         <input type=hidden name=pno value="${rvo.rep_id }">
 			         <textarea rows="5" cols="55" name="msg" style="float: left"></textarea>
 		             <input type=submit value="댓글쓰기" style="width: 100px;height: 104px;background-color: green;color:white;">

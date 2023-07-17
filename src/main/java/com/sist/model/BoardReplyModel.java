@@ -21,13 +21,13 @@ public class BoardReplyModel {
 	  String bno=request.getParameter("bno");
 	  String msg=request.getParameter("msg");
 	  
-//	  HttpSession session=request.getSession();
-//	  String id=(String)session.getAttribute("id");
+	  HttpSession session=request.getSession();
+	  String id=(String)session.getAttribute("id");
 	  
 	  BoardReplyVO vo=new BoardReplyVO();
 	  vo.setBoard_id(Integer.parseInt(bno));
 	  vo.setRep_content(msg);
-	  vo.setUser_id("admin"); //임시 -> session 으로받아옴
+	  vo.setUser_id(id);
 	  
 	  // DAO로 전송 
 	  BoardReplyDAO dao=BoardReplyDAO.newInstance();
@@ -66,14 +66,15 @@ public class BoardReplyModel {
 	  String pno=request.getParameter("pno"); // 댓글의 번호
 	  String msg=request.getParameter("msg"); // 작성한 댓글 내용
 	  
-//	  HttpSession session=request.getSession();
-//	  String id=(String)session.getAttribute("id");
+	  HttpSession session=request.getSession();
+	  String id=(String)session.getAttribute("id");
 //	  String name=(String)session.getAttribute("name");
 	  
 	  BoardReplyVO vo=new BoardReplyVO();
 	  vo.setBoard_id(Integer.parseInt(bno));
+	  vo.setRoot(Integer.parseInt(pno));
 	  vo.setRep_content(msg);
-//	  vo.setUser_id(id);
+	  vo.setUser_id(id);
 	  
 	  BoardReplyDAO dao=BoardReplyDAO.newInstance();
 	  dao.replyReplyInsert(Integer.parseInt(pno), vo);
@@ -82,8 +83,7 @@ public class BoardReplyModel {
   
   
   @RequestMapping("board/reply_delete.do")
-  public String reply_delete(HttpServletRequest request,
-		  HttpServletResponse response)
+  public String reply_delete(HttpServletRequest request, HttpServletResponse response)
   {
 	  String no=request.getParameter("no");
 	  String bno=request.getParameter("bno");

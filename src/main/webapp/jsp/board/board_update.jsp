@@ -1,28 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-</head>
-<body>
-<div class="wrapper row3">
-  <main class="container clear">
-   <h2 class="sectiontitle">글쓰기</h2>
-   <div class="row">
+    
+    
+<div class="container">
+	<div class="row">
+		<div class="board-insert-main">
+		<div class="board-title"> 
+			자유게시판 
+		</div>
    
    <form method=post action="../board/board_update_ok.do">
-   <table class="table">
+   <table class="board-table table">
    <tr>
       <th width=15%>게시글 종류</th>
       <td width=85%>
 		  <select name="category" >
-		    <option value="none" >=== 선택 ===</option>
-		    <option value="자유글" selected>자유글</option>
-		    <option value="공지">공지</option>
+		    <option value="공지사항" ${vo.board_category=='공지사항'?"selected":"" }>공지사항</option>
+		    <option value="자유토크" ${vo.board_category=='자유토크'?"selected":"" }>자유토크</option>
+		    <option value="자랑하기" ${vo.board_category=='자랑하기'?"selected":"" }>자랑하기</option>
+		    <option value="QNA" ${vo.board_category=='QNA'?"selected":"" }>Q&amp;A</option>
 		  </select>
       </td>
     </tr>
@@ -45,24 +41,28 @@
        <textarea rows="10" cols="50" name="content">${vo.content }</textarea>
       </td>
     </tr>
+   
+   
     </table>
-    
-    <tr style="display:show" id="delTr">
-       <td colspan="6" class="text-right inline">
-       비밀번호:<input type=password name=pwd id=pwd1 size=10 class="input-sm">
+    <table class="table" style="font-size:18px; font-weight:500px; !important">
+      <tr style="display:show" id="delTr" >
+       <td width=15% class="inline text-left">
+      		비밀번호:
        </td>
-       </tr>
-       <tr>
-      <td colspan="2" class="text-center">
+       <td width=15% class="inline text-left">
+       		<input type=password name=pwd id=pwd1 size=10 class="input-sm">
+       </td>
+       <td class="text-right inline">
         <input type=submit value="수정" class="btn btn-sm btn-success">
         <input type=button value="취소" class="btn btn-sm btn-info" onclick="javascript:history.back()">
       </td>
     </tr>
+    </table>
+    
+    
    
    </form>
    <!-- <table></table> -->
    </div>
-  </main>
+  </div>
 </div>
-</body>
-</html>

@@ -24,6 +24,7 @@ public class BoardModel {
 		int totalpage=dao.freeboardTotalPage();
 		int endpage = (10>totalpage)?totalpage:10;
 		
+		
 		final int BLOCK=10;
 	    int startPage=((curpage-1)/BLOCK*BLOCK)+1; // 1,11,21...
 	    // 1~10 => 1 , 11~20 => 11
@@ -37,6 +38,7 @@ public class BoardModel {
 		request.setAttribute("startPage", startPage);
 		request.setAttribute("endPage", endPage);
 		request.setAttribute("list", list);
+		request.setAttribute("category", dao);
 		request.setAttribute("board_jsp", "board_list.jsp");
 		request.setAttribute("main_jsp", "../board/board_main.jsp"); 
 		return "../jsp/main/main.jsp";

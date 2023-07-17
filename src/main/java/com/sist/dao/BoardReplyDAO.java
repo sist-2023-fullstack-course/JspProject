@@ -58,6 +58,7 @@ public class BoardReplyDAO {
 	   return list;
    }
    
+   //댓글 추가
    public void replyInsert(BoardReplyVO vo)
    {
 	   try
@@ -235,7 +236,7 @@ public class BoardReplyDAO {
 			  +"pm_rpi_seq.nextval,?,?,?,SYSDATE,?,?,?,?,0)";
 		   ps=conn.prepareStatement(sql);
 		   ps.setInt(1, vo.getBoard_id());
-		   ps.setString(2, "admin");
+		   ps.setString(2, vo.getUser_id());
 		   ps.setString(3, vo.getRep_content());
 		   
 		   ps.setInt(4,gi);

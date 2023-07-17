@@ -4,35 +4,63 @@
     
     
 
-<div>
-	<div>1</div>
-	<div class="board-title"> 
-		게시글 작성
-	</div>
-	<div>
-		<div>븐류</div>
-		<div class='board-search-combo'> 
-		<select name=search class="form-select border-select" >
-		  <option selected> 제목 </option>
-		  <option value="1">제목</option>
-		  <option value="2">내용</option>
-		  <option value="3">작성자</option>
-		</select>
+<div class="container">
+	<div class="row">
+		<div class="board-insert-main">
+		<div class="board-title"> 
+			자유게시판 
+		</div>
+			<form method=post action="../board/board_insert_ok.do">
+			   <table class="board-table table">
+			   <tr>
+			      <th width=20% style="padding-top:20px">게시글 종류</th>
+			      <td width=80%>
+					  <select name="category" >
+					    <option value="none" >=== 선택 ===</option>
+					    <option value="공지사항">공지사항</option>
+					    <option value="자유토크" selected>자유토크</option>
+					    <option value="자랑하기">자랑하기</option>
+					    <option value="QNA">Q&amp;A</option>
+					  </select>
+			      </td>
+			    </tr>
+			    <tr>
+			      <th width=20%>사용자 ID</th>
+			      <td width=80%>
+			       <input type=text name=name size=45 class="input-sm" value="${sessionScope.id }" readonly style="font-size:18px">
+			      </td>
+			    </tr>
+			    <tr>
+			      <th width=20%>title</th>
+			      <td width=80%>
+			       <input type=text name=subject size=45 class="input-sm" style="font-size:18px">
+			      </td>
+			    </tr>
+			    <tr>
+			      <th width=20%>내용 content</th>
+			      <td width=80%>
+			       <textarea rows="10" cols="50" name="content"></textarea>
+			      </td>
+			    </tr>
+			    <tr>
+			      <td colspan="2" class="text-center">
+			        <input type=submit value="글쓰기" class="btn btn-sm btn-success">
+			        <input type=button value="취소" class="btn btn-sm btn-info" onclick="javascript:history.back()">
+			      </td>
+			    </tr>
+			    
+			   </table>
+		   </form>
 		</div>
 	</div>
-	<div>3</div>
-	<div>4</div>
-	<div>5</div>
-	<div>6</div>
 </div>
 
 
 <!--
-<div class="wrapper row3">
-  <main class="container clear">
-   <h2 class="sectiontitle">글쓰기</h2>
+<div class="board-insert">
+	<div>
+   <h2 class="board-title">게시글 작성</h2>
    <div class="row">
-   
    <form method=post action="../board/board_insert_ok.do">
    <table class="table">
    <tr>
@@ -72,6 +100,6 @@
    </table>
    </form>
    </div>
-  </main>
+   </div>
 </div>
   -->

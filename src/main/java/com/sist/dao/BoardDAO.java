@@ -36,7 +36,7 @@ public class BoardDAO {
 			String sql = "SELECT BOARD_ID, title, board_category, USER_ID, TO_CHAR(regdate,'yyyy-MM-dd'),hit ,num "
 					   + "FROM (SELECT BOARD_ID, title , board_category, USER_ID, regdate, hit, rownum as num "
 					   + "FROM (SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title, board_category, USER_ID, regdate, hit "
-					   + "FROM BOARD)) " + "WHERE num BETWEEN ? AND ?";
+					   + "FROM BOARD)) " + "WHERE num BETWEEN ? AND ? AND board_category = ?";
 			
 			ps = conn.prepareStatement(sql);
 			int rowSize = 10;
@@ -44,6 +44,7 @@ public class BoardDAO {
 			int end = rowSize * page;
 			ps.setInt(1, start);
 			ps.setInt(2, end);
+			ps.setString(3, sql);
 
 			// 결과값 읽기
 			ResultSet rs = ps.executeQuery();
@@ -137,12 +138,12 @@ public class BoardDAO {
 	public void boardInsert(BoardVO vo) {
 		try {
 			conn = db.getConnection();
-			String sql = "INSERT INTO board VALUES(" + "board_bi_seq.nextval,?,SYSDATE,?,0,0,?,?)";
+			String sql = "INSERT INTO board VALUES(" + "pm_bi_seq.nextval,?,SYSDATE,?,0,0,?,?)";
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, vo.getTitle());
 			ps.setString(2, vo.getContent());
-			ps.setString(3, vo.getBoard_category());
-			ps.setString(4, vo.getUser_id());
+			ps.setString(3, vo.getUser_id());
+			ps.setString(4, vo.getBoard_category());
 			ps.executeUpdate(); // commit => autocommit
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -247,12 +248,12 @@ public class BoardDAO {
 				   
 				   // 댓글후
 				   // 참조하고 있는 댓글을 먼저 지운다.
-//				   sql="DELETE FROM reply "
-//				   		+ "WHERE board_id=?";
-//				   
-//				   ps=conn.prepareStatement(sql);
-//				   ps.setInt(1, no);
-//				   ps.executeUpdate();
+				   sql="DELETE FROM reply "
+				   		+ "WHERE board_id=?";
+				   
+				   ps=conn.prepareStatement(sql);
+				   ps.setInt(1, no);
+				   ps.executeUpdate();
 				   
 				   
 				   sql="DELETE FROM board "
