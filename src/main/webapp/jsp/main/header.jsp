@@ -24,25 +24,31 @@ $(function(){
 			<div class="col-sm-4 col-lg-4">
 				<div id="top-menu" class="float-right">
 					<ul>
-						<li><a href="#" class="inline">장바구니 <i class="fa fa-shopping-cart"></i></a></li>
-						<li><a href="#">위시리스트 <i class="fa fa-shopping-cart"></i></a></li>
 						<!-- 로그인 안 된 상태 -->
 						<c:if test="${sessionScope.id==null }">
-							<li><a>로그인<i class="fa fa-angle-down"></i></a>
-								<ul>
-									<li><a href="../member/loginpage.do">로그인</a></li>
-									<li><a href="../member/join.do">회원가입</a></li>
-								</ul>
+							<li>
+								<p class="text-center"><a href="../member/join.do"><i class="fa fa-user-plus"></i></a></p>
+								<p class="text-center"><a href="../member/join.do">회원가입</a></p>
+							</li>
+							<li>
+								<p class="text-center"><a href="../member/loginpage.do"><i class="fa fa-sign-in"></i></a></p>
+								<p class="text-center"><a href="../member/loginpage.do">로그인</a></p>
 							</li>
 						</c:if>
 						<!-- 로그인 된 상태 -->
 						<c:if test="${sessionScope.id!=null }">
-							<li><a href="" style="color: black;">${sessionScope.name } <i class="fa fa-angle-down"></i></a>
-								<ul>
-									<li><a href="../member/logout.do" id="logoutBtn">로그아웃</a></li>
-									<li><a href="###">회원정보</a></li>
-								</ul>
-							</li>
+						<li>
+							<p class="text-center"><a href="#"><i class="fa fa-heart"></i></a></p>
+							<p class="text-center"><a href="#">위시리스트</a></p>
+						</li>
+						<li>
+							<p class="text-center"><a href="#"><i class="fa fa-shopping-cart"></i></a></p>
+							<p class="text-center"><a href="#">장바구니</a></p>
+						</li>
+						<li>
+							<p class="text-center"><a href="../member/logout.do"><i class="fa fa-sign-out"></i></a></p>
+							<p class="text-center"><a href="../member/logout.do">로그아웃</a></p>
+						</li>
 						</c:if>
 					</ul>
 				</div>
@@ -69,13 +75,19 @@ $(function(){
 									<li><a href="../company/list.do?cate=반려동물장례">반려동물장례</a></li>
 								</ul>
 							</li>
-							<li><a href="shop.html">쇼핑몰</a>
+							<li><a href="../product/list.do">쇼핑몰</a>
 								<ul class="sub-menu">
-									<li><a href="#">rings</a></li>
-									<li><a href="#">diamond ring</a></li>
-									<li><a href="#">gold ring</a></li>
-									<li><a href="#">sliver ring</a></li>
-									<li><a href="#">Platinum ring</a></li>
+									<li><a href="../product/list.do?cate=사료">사료</a></li>
+									<li><a href="../product/list.do?cate=간식">간식</a></li>
+									<li><a href="../product/list.do?cate=배변/위생">배변/위생</a></li>
+									<li><a href="../product/list.do?cate=산책/이동장">산책/이동장</a></li>
+									<li><a href="../product/list.do?cate=건강관리">건강관리</a></li>
+									<li><a href="../product/list.do?cate=식기">식기</a></li>
+									<li><a href="../product/list.do?cate=의류/악세서리">의류/악세서리</a></li>
+									<li><a href="../product/list.do?cate=장난감">장난감</a></li>
+									<li><a href="../product/list.do?cate=목욕/미용">목욕/미용</a></li>
+									<li><a href="../product/list.do?cate=하우스/울타리">하우스/울타리</a></li>
+									<li><a href="../product/list.do?cate=훈련">훈련</a></li>
 								</ul>
 							</li>
 							<li><a href="../board/board_list.do">커뮤니티</a>
