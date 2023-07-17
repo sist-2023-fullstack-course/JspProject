@@ -21,23 +21,25 @@ public class ProductDAO {
 	}
 	
 	// product list 페이지의 데이터를 찾는 dao 함수
-	public List<ProductVO> getProductList(String cate, int page){
+	public List<ProductVO> getProductList(String cate, int page, String searchword){
 		List<ProductVO> list = new ArrayList<>();
 		
 		try {
 			conn = db.getConnection();
 			String sql = "SELECT product_id,product_name,product_category,product_price,product_discount_price,product_star_sum,product_star_cnt,product_poster "
 					   + "FROM ("
-					       + "SELECT /*+ INDEX(c, PK_COMPANY) */ "
+					       + "SELECT /*+ INDEX(shop, PK_SHOP) */ "
 					       + "rownum as num,product_id,product_name,product_category,product_price,product_discount_price,product_star_sum,product_star_cnt,product_poster "
 					       + "FROM shop "
-					       + "WHERE product_category LIKE '%'||?||'%') "
+					       + "WHERE product_category LIKE '%'||?||'%' "
+					       + "AND product_name LIKE '%'||?||'%') "
 					   + "WHERE num BETWEEN ? AND ?";
 			
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, cate);
-			ps.setInt(2, (page-1)*12 + 1);
-			ps.setInt(3, page*12);
+			ps.setString(2, searchword);
+			ps.setInt(3, (page-1)*12 + 1);
+			ps.setInt(4, page*12);
 			
 			rs = ps.executeQuery();
 			
@@ -49,9 +51,21 @@ public class ProductDAO {
 				vo.setCategory(rs.getString(3));
 				vo.setPrice(rs.getInt(4));
 				vo.setDiscount_price(rs.getInt(5));
-				vo.setStar_sum(rs.getInt(6));
-				vo.setStar_cnt(rs.getInt(7));
+				int sum = rs.getInt(6);
+				int cnt = rs.getInt(7);
+				if(cnt==0) {
+					vo.setStar(0.0);
+				}
+				else if(cnt>0){
+					
+					vo.setStar(Math.round((double)sum/cnt*10)/10);
+				}
 				vo.setPoster(rs.getString(8));
+				
+				int p = vo.getPrice();
+				int dp = vo.getDiscount_price();
+				int rate = (int)Math.round((double)(p-dp)/p*100);
+				vo.setDiscount_rate(rate);
 				
 				list.add(vo);
 			}

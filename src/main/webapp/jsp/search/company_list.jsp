@@ -30,7 +30,7 @@
 							<select name="state" id="state">
 								<option>시군선택</option>
 							</select>
-				  			<input type="text" class="SearchInput" name="sch_text" id="sch_text" placeholder="업체명을 입력하세요" title=""> 
+				  			<input type="text" class="SearchInput" id="sch_text" placeholder="업체명을 입력하세요"> 
 				  			<button type="button" class="search_button" onclick="requestData(1, 'none')">검색하기</button>
 						</div>
 					</div>
@@ -44,7 +44,7 @@
 			<div class="col-sm-4 col-md-3">
 				<div class="single-sidebar">
 					<h2>카테고리</h2>
-					<ul class="text-center category">
+					<ul class="text-center com-category">
 						<li><a ${cate=='전체' ? 'class=selected' : '' }>전체</a></li>
 						<li><a ${cate=='애견미용' ? 'class=selected' : '' }>애견미용</a></li>
 						<li><a ${cate=='동물병원' ? 'class=selected' : '' }>동물병원</a></li>
@@ -78,8 +78,8 @@
 								<a class="image fix" href="detail.do?id=${vo.id }"><img src="${vo.poster }" width="100%" height="220px"/></a>
 								<h2><a class="title" href="detail.do?id=${vo.id }">${vo.com_name }</a></h2>
 								<div class="meta">
-									<a href="" class="time"><i class="fa fa-calendar"></i>${vo.time }</a>
-									<a href="#" style="float: right;"><i class="fa fa-comments"></i>0개</a>
+									<a href="detail.do?id=${vo.id }" class="time"><i class="fa fa-calendar"></i>${vo.time }</a>
+									<a href="detail.do?id=${vo.id }" style="float: right;"><i class="fa fa-comments"></i>0개</a>
 								</div>
 								<p>${vo.address }</p>
 							</div>
@@ -89,21 +89,24 @@
 				</div>
 				<!-- Pagination -->
 				<div class="pagination">
-					<ul>
+					<ul class="company">
 						<li><a class="leftPage"><i class="fa fa-angle-left"></i></a></li>
 						
-						<c:forEach var="i" begin="${startpage }" end="${startpage + 9 }">
+						<c:forEach var="i" begin="${1 }" end="${10 }">
 						<c:if test="${i==curpage }">
 						<li class="active"><span>${i }</span></li>
 						</c:if>
-						<c:if test="${i!=curpage }">
+						<c:if test="${i<=totalpage && i!=curpage }">
 						<li><a class="numPage">${i }</a></li>
+						</c:if>
+						<c:if test="${i>totalpage && i!=curpage }">
+						<li><a class="numPage" style="display: none;">${i }</a></li>
 						</c:if>
 						</c:forEach>
 						
 						<li><a class="rightPage"><i class="fa fa-angle-right"></i></a></li>
 					</ul>
-					<input type="hidden" value="${totalpage }" class="totalPage">
+					<input type="hidden" value="${totalpage }" id="com-totalPage">
 				</div>
 			</div>
 		</div>

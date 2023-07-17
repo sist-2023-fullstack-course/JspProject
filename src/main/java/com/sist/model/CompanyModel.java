@@ -32,8 +32,6 @@ public class CompanyModel {
 		request.setAttribute("list", list);
 		request.setAttribute("curpage", 1);
 		request.setAttribute("totalpage", totalpage);
-		request.setAttribute("startpage", 1);
-		request.setAttribute("endpage", endpage);
 		request.setAttribute("cate", cate);
 		request.setAttribute("main_jsp", "../search/company_list.jsp");
 		return "../jsp/main/main.jsp";

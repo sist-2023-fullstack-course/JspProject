@@ -81,7 +81,7 @@ function requestData(page, cate) {
 	if(cate=="none"){
 		cate = $('a.selected').text();
 	}
-	let searchword = $('.SearchInput').val();
+	let searchword = $('#sch_text').val();
 	
 	$.ajax({
 		type:'post',
@@ -96,7 +96,7 @@ function requestData(page, cate) {
 		success : function(data){
 			// json 파싱
 			let json = JSON.parse(data);
-			
+			console.log(json);
 			// 12개의 업체 내용 업데이트
 			for(let i=0;i<12;i++){
 				if(i < json.listcount){
@@ -115,37 +115,37 @@ function requestData(page, cate) {
 			
 			// pagination 수정
 			curpage = json.curpage;
-			$('.totalPage').val(json.totalpage);
+			$('#com-totalPage').val(json.totalpage);
 			
-			$('.pagination > ul > li').remove();
-			$('.pagination > ul').append('<li><a class="leftPage"><i class="fa fa-angle-left"></i></a></li>');
+			$('.pagination > ul.company > li').remove();
+			$('.pagination > ul.company').append('<li><a class="leftPage"><i class="fa fa-angle-left"></i></a></li>');
 			
 			for(let i=json.startpage;i<=json.endpage;i++){
 				if(i==curpage){
-					$('.pagination > ul').append('<li class="active"><span>' + i + '</span></li>');
+					$('.pagination > ul.company').append('<li class="active"><span>' + i + '</span></li>');
 				}
 				else{
-					$('.pagination > ul').append('<li><a class="numPage">'+ i +'</a></li>');
+					$('.pagination > ul.company').append('<li><a class="numPage">'+ i +'</a></li>');
 				}
 			}
 			
-			$('.pagination > ul').append('<li><a class="rightPage"><i class="fa fa-angle-right"></i></a></li>');
-			$('.pagination > ul > li > a').click(pageClick);
+			$('.pagination > ul.company').append('<li><a class="rightPage"><i class="fa fa-angle-right"></i></a></li>');
+			$('.pagination > ul.company > li > a').click(pageClick);
 		}
 	})
 }
 
 // 카테고리 목록 클릭 
 function categoryClick(){
-	$('ul.category > li > a').removeAttr('class');
-	$(this).attr('class', 'selected');
 	requestData(1, $(this).text());
+	$('ul.com-category > li > a').removeAttr('class');
+	$(this).attr('class', 'selected');
 }
 
 // pagination 클릭
 function pageClick(){
 	let kind = $(this).attr('class');
-	let totalpage = $('.totalPage').val();
+	let totalpage = $('#com-totalPage').val();
 	let selectedCate = $('ul.category > li > a.selected').text();
 	
 	if(kind == 'numPage'){
@@ -166,13 +166,9 @@ function pageClick(){
 function clickHeartBtn(uid, cid){
 	let isInsert;
 	if($('.heart_button').attr('class').includes('clicked')){
-		$('.heart_button').attr('class', 'heart_button');
-		$('.heart_button > dt > img').attr('src', '../img/beforeheart.png');
 		isInsert = false;
 	}
 	else{
-		$('.heart_button').attr('class', 'heart_button clicked');
-		$('.heart_button > dt > img').attr('src', '../img/afterheart.png');
 		isInsert = true;
 	}
 	
@@ -183,8 +179,20 @@ function clickHeartBtn(uid, cid){
 			'isInsert':isInsert,
 			'uid' : uid,
 			'cid' : cid
+		},
+		success : function(result){
+			if(result=='success'){
+				if(isInsert){
+					$('.heart_button').attr('class', 'heart_button clicked');
+					$('.heart_button > dt > img').attr('src', '../img/afterheart.png');
+				}
+				else{
+					$('.heart_button').attr('class', 'heart_button');
+					$('.heart_button > dt > img').attr('src', '../img/beforeheart.png');
+				}
+			}
 		}
 	})
 }
-$('ul.category > li > a').click(categoryClick);
-$('.pagination > ul > li > a').click(pageClick);
+$('ul.com-category > li > a').click(categoryClick);
+$('.pagination > ul.company > li > a').click(pageClick);

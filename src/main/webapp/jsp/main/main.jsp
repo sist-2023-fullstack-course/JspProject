@@ -92,6 +92,8 @@
 <script type="text/javascript" src="../js/board.js"></script>
 <!-- login JS -->
 <script type="text/javascript" src="../js/login_check.js"></script>
+<!-- Product JS -->
+<script type="text/javascript" src="../js/product.js"></script>
 <script>
 	new WOW().init();
 </script>	

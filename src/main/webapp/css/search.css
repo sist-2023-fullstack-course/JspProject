@@ -209,3 +209,31 @@
 .row_margin{
 	margin-bottom: 50px;
 }
+
+a.title{
+	color:#000000;
+}
+
+.poster{
+	height:420px;
+}
+
+.thumb_gray::before{
+	position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background-color: rgba(0, 0, 0, .025);
+    border: 1px solid rgba(0, 0, 0, .03);
+    border-radius: 14px;
+    z-index: 1;
+}
+.poster_margin{
+	margin-bottom: 20px;
+}
+
+.product .meta p{
+	margin: 0px;
+}

@@ -1,5 +1,7 @@
 package com.sist.model;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -22,6 +24,13 @@ public class WishListModel {
 		}
 		else {
 			dao.company_wish_cancel(uid, cid);
+		}
+		
+		try {
+			response.setCharacterEncoding("UTF-8");
+			response.getWriter().write("success");
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 }
