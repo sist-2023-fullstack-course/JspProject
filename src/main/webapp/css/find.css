@@ -9,11 +9,13 @@
 	order: 1;
 	display: block;
 	padding: 1rem 2rem;
-	margin-right: 0.2rem;
 	cursor: pointer;
     background:  #fff;
   	font-weight: bold;
   	transition: background ease 0.2s;
+  	width: 50%;
+  	margin:0px;
+  	
 }
 
 .find_tabs .tab {
@@ -22,7 +24,7 @@
 	width: 100%;
 	display: none;
   	padding: 60px 10px;
-  	background: #fff;
+  	border:3px solid #77D6C9;
 }
 
 .find_tabs input[type="radio"] {
@@ -88,6 +90,8 @@
 	    box-sizing: border-box;
 	    border: 2px solid rgba(0, 0, 0, 0.02);
 	    font-family: 'Ubuntu', sans-serif;
+	    margin-right: 20px;
+	    text-align: left;
     }
     
     .find-check {
@@ -104,4 +108,10 @@
         display: inline-block;
         margin: center;
         width: 50px;
+        text-align: center;
+    }
+    
+    .find-info{
+    	display: inline-block;
+    	width:70px;
     }
