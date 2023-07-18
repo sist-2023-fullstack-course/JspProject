@@ -8,11 +8,10 @@
 					<div class="single-sidebar">
 						<h2><a href="../mypage/main.do" style="color:white;text-decoration:none;">마이페이지 홈</a></h2>
 						<ul class="text-center">
-							<li><a href="../mypage/myinfo.do">개인정보 확인/수정</a></li>
+							<li><a href="../mypage/editprofile.do">개인정보 수정</a></li>
 							<li><a href="../mypage/mypet.do">마이펫 관리</a></li>
 							<li><a href="../mypage/booking.do">예약 내역</a></li>
 							<li><a href="#">구매 내역</a></li>
-							<li><a href="#">후기 관리</a></li>
 							<li><a href="#">장바구니</a></li>
 							<li><a href="../mypage/wishlist.do">위시리스트</a></li>
 						</ul>

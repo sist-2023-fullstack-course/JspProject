@@ -196,4 +196,85 @@ public class MemberModel {
 		
 		return "redirect:../main/main.do";
 	}
+	
+	@RequestMapping("member/id_find.do")
+	public String idFind(HttpServletRequest request, HttpServletResponse response)
+	{
+		request.setAttribute("main_jsp", "../member/id_find.jsp");
+		
+		return "../jsp/main/main.jsp";
+	}
+	
+	@RequestMapping("member/idfind_email_ok.do")
+	public void idFind_Email_ok(HttpServletRequest request, HttpServletResponse response)
+	{
+		String email=request.getParameter("email");
+		
+		// DAO 연동
+		MemberDAO dao=MemberDAO.newInstance();
+		String res=dao.memberIdFind_Email(email);
+		try {
+			PrintWriter out=response.getWriter();
+			out.println(res);
+		} catch (Exception e) {}
+	}
+	
+	@RequestMapping("member/idfind_phone_ok.do")
+	public void idFind_Phone_ok(HttpServletRequest request, HttpServletResponse response)
+	{
+		String phone=request.getParameter("phone");
+		
+		// DAO 연동
+		MemberDAO dao=MemberDAO.newInstance();
+		String res=dao.memberIdFind_Phone(phone);
+		try {
+			PrintWriter out=response.getWriter();
+			out.println(res);
+		} catch (Exception e) {}
+	}
+	
+	@RequestMapping("member/pwd_find.do")
+	public String pwdFind(HttpServletRequest request, HttpServletResponse response)
+	{
+		request.setAttribute("main_jsp", "../member/pwd_find.jsp");
+		
+		return "../jsp/main/main.jsp";
+	}
+	
+	@RequestMapping("member/pwdfind_email_ok.do")
+	public void pwdFind_Email_ok(HttpServletRequest request, HttpServletResponse response)
+	{
+		try {
+			request.setCharacterEncoding("UTF-8");
+		} catch (Exception e) {}
+		
+		String id=request.getParameter("id");
+		String email=request.getParameter("email");
+		
+		MemberDAO dao=MemberDAO.newInstance();
+		String res=dao.memberPasswordFind_Email(id, email);
+		try {
+			PrintWriter out=response.getWriter();
+			out.println(res);
+		} catch (Exception e) {}
+	}
+	
+	@RequestMapping("member/pwdfind_phone_ok.do")
+	public void pwdFind_phone_ok(HttpServletRequest request, HttpServletResponse response)
+	{
+		try {
+			request.setCharacterEncoding("UTF-8");
+		} catch (Exception e) {}
+		
+		String id=request.getParameter("id");
+		String phone=request.getParameter("phone");
+		
+		MemberDAO dao=MemberDAO.newInstance();
+		String res=dao.memberPasswordFind_Phone(id, phone);
+		try {
+			PrintWriter out=response.getWriter();
+			out.println(res);
+		} catch (Exception e) {}
+	}
+	
 }

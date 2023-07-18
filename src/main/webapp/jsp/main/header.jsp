@@ -38,16 +38,16 @@ $(function(){
 						<!-- 로그인 된 상태 -->
 						<c:if test="${sessionScope.id!=null }">
 						<li>
-							<p class="text-center"><a href="#"><i class="fa fa-heart" style="color:red"></i></a></p>
-							<p class="text-center"><a href="#">위시리스트</a></p>
+							<p class="text-center"><a href="../mypage/wishlist.do"><i class="fa fa-heart" style="color:red"></i></a></p>
+							<p class="text-center"><a href="../mypage/wishlist.do" style="text-decoration:none">위시리스트</a></p>
 						</li>
 						<li>
 							<p class="text-center"><a href="#"><i class="fa fa-shopping-cart" style="color:#034D7E"></i></a></p>
-							<p class="text-center"><a href="#">장바구니</a></p>
+							<p class="text-center"><a href="#" style="text-decoration:none">장바구니</a></p>
 						</li>
 						<li>
 							<p class="text-center"><a href="../member/logout.do"><i class="fa fa-sign-out" style="color:#034D7E"></i></a></p>
-							<p class="text-center"><a href="../member/logout.do">로그아웃</a></p>
+							<p class="text-center"><a href="../member/logout.do" style="text-decoration:none">로그아웃</a></p>
 						</li>
 						</c:if>
 					</ul>

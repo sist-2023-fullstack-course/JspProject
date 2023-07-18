@@ -11,8 +11,8 @@
       <span class="login-submit" align="center" style="text-decoration: none;" id="loginBtn">로그인</span>
       <a href="../member/join.do" class="login-to-join-submit" align="center" style="text-decoration: none;">회원가입</a>
       <div class="login-find">
-        <a href="">아이디 찾기</a>
-        <a href="">패스워드 찾기</a>
+        <a href="../member/id_find.do">아이디 찾기</a>
+        <a href="../member/pwd_find.do">패스워드 찾기</a>
       </div>
     </form>
 </div>

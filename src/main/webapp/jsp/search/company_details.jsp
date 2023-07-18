@@ -138,6 +138,7 @@
 				</div>
 			</div>
 		</div>
+		<span id="back_to_list" onclick="javascript:history.back();">목록</span>
 	</div>
 </section><!--End Product Details Area-->
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1139269c033f918e1755e459b1b17604"></script>

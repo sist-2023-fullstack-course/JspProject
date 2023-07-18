@@ -1327,7 +1327,7 @@ img {
 }
 /*----- 3.12 Testimonial Area -----*/
 .testimonial-area {
-  background: url(img/testimonial/testimonial-bg.jpg) no-repeat center center; 
+  background: no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1639,7 +1639,7 @@ img {
 	5. Shop Page
 -------------------*/
 .page-title {
-  background: rgba(0, 0, 0, 0) url("img/title-bg.jpg") no-repeat scroll center center / cover ;
+  background: rgba(0, 0, 0, 0) no-repeat scroll center center / cover ;
   text-align: center;
 }
 .page-title h2 {
@@ -2243,22 +2243,22 @@ h4.heading {
   border: medium none !important;
   margin-bottom: 15px !important;
   overflow: hidden;
+  position:relative;
 }
 .resent-post li:last-child {
   margin-bottom: 0 !important;
 }
 .resent-post .image {
-  display: block;
+  display: inline-block;
   float: left;
   margin-right: 10px;
-  width: 70px;
 }
 .resent-post .image a {
-  display: block;
+  display: inline-block;
   position: relative;
 }
 .resent-post .image a::before {
-  background: rgba(224,158,37,0.6);
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   content: "\f002";
   font-family: "fontawesome";
@@ -2272,15 +2272,24 @@ h4.heading {
   transition: all 0.3s ease 0s;
   width: 100%;
 }
-.resent-post li:hover .image a::before {
+.resent-post .rsp_content:hover .image a::before {
   opacity: 1;
 }
-.resent-post .image a img{}
+.resent-post .rsp_content{
+	display: inline-block;
+}
+.resent-post .image a img{
+  width: 70px;
+  height: 70px;
+}
 .resent-post .content {
-  margin-top: 5px;
+  margin: 5px 10px 0px 0px;
+  display:inline-block;
+  width: 100px;
 }
 .resent-post .content h5 {
   margin-bottom: 5px;
+  display: block;
 }
 .resent-post .content h5 a {
   font-size: 14px;
@@ -2289,7 +2298,8 @@ h4.heading {
 .resent-post .content h5 a:hover {
   color: #E09E25;
 }
-.resent-post .content span{}
+.resent-post .content span{
+}
 .resent-post .content span i {
   margin: 0 5px 0 1px;
 }

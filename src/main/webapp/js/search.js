@@ -195,5 +195,35 @@ function clickHeartBtn(uid, cid){
 		}
 	})
 }
+
+function deleteRecentPost(){
+	let id = event.target.dataset.id;
+	let parent = event.target.parentElement;
+	
+	$.ajax({
+		type:'post',
+		url:'remove_cookie_ajax.do',
+		data:{
+			"id":id
+		},
+		success : function(result){
+			if(result == 'success'){
+				if(id=='all'){
+					$('#com-recent-sidebar .resent-post li').remove();
+				}
+				else{
+					parent.remove();
+				}
+				
+				if($('#com-recent-sidebar .resent-post li').length==0){
+					$('#com-recent-sidebar .resent-post').remove();
+					$('#com-recent-sidebar h2').text('최근 방문한 곳이 없습니다');
+				}
+			}
+		}
+	})
+}
+
+
 $('ul.com-category > li > a').click(categoryClick);
 $('.pagination > ul.company > li > a').click(pageClick);

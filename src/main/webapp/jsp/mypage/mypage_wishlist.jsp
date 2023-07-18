@@ -1,18 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<div class="col-sm-8 col-md-9">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<div class="col-sm-8 col-md-12">
 		<div class="row">
+		<c:forEach var="vo" items="${list }">
 			<div class="col-md-4 poster">
 				<div class="single-blog">
 					<div class="content fix">
-						<a class="image fix" href="#"><img src="../jsp/mypage/noimage.jpeg" width="100%" height="200px"/></a>
-						<h2><a class="title" href="#">업체명</a></h2>
+						<a class="image fix" href="../company/detail.do?id=${vo.com_id }"><img src="${vo.poster }" width="100%" height="220px"/></a>
+						<div class="meta">
+							<a class="text-left" href="../company/detail.do?id=${vo.com_id }">${vo.category }</a>
+						<h2><a class="title" href="../company/detail.do?id=${vo.com_id }">${vo.com_name }</a></h2>
+						<a href="#" >취소</a>
+						</div>
 					</div>
 				</div>
 			</div>
+	    </c:forEach>
 		</div>
-		
+</div>		
+
+
 	<%-- 	
 		<!-- START Pagination -->
 		<div class="pagination">
@@ -34,4 +42,9 @@
 		</div>
 	    <!-- END Pagination -->
 	 --%>
-</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+function clickHeart(uid, cid){
+
+}
+</script>

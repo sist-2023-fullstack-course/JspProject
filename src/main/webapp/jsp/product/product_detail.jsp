@@ -154,5 +154,6 @@
 				</div>
 			</div>
 		</div>
+		<span id="back_to_list" onclick="javascript:history.back();">목록</span>
 	</div>
 </section><!--End Product Details Area-->

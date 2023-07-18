@@ -175,6 +175,128 @@ public class MyPageDAO {
 		return vo;
 	}
 	
+	// 회원정보 수정
+	public int memberinfoUpdate(MemberVO vo)
+	{
+		int cnt = 0;
+		try
+		{
+			conn=db.getConnection();
+			String sql="SELECT password "
+					+ "FROM member "
+					+ "WHERE user_id=?";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, vo.getId());
+			ResultSet rs=ps.executeQuery();
+			rs.next();
+			String db_pwd=rs.getString(1);
+			rs.close();
+			
+			if(db_pwd.equals(vo.getPwd()))
+			{
+				// 수정
+				sql="UPDATE member SET "
+						+ "user_name=?, "
+						+ "email=?, "
+						+ "phone=?, "
+						+ "nickname=?, "
+						+ "birthday=?, "
+						+ "post=?, "
+						+ "addr1=?, "
+						+ "addr2=? "
+						+ "WHERE user_id=?";
+				ps=conn.prepareStatement(sql);
+				ps.setString(1, vo.getName());
+				ps.setString(2, vo.getEmail());
+				ps.setString(3, vo.getPhone());
+				ps.setString(4, vo.getNickname());
+				ps.setString(5, vo.getBirthday());
+				ps.setString(6, vo.getPost());
+				ps.setString(7, vo.getAddr1());
+				ps.setString(8, vo.getAddr2());
+				ps.setString(9, vo.getId());
+				cnt = ps.executeUpdate();
+			}
+			
+		
+		}catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
+		finally
+		{
+			db.disConnection(conn, ps);
+		}
+		return cnt;
+	}
 	
+	/* ----- END OF MYINFO ------- */
+	
+	
+	/* --- START OF WISHLIST  ----*/
+	// 위시리스트 취소 - 마이페이지> 위시리스트
+		public void company_wish_cancel(int cno, String uid)
+		{
+			try
+			{
+				conn=db.getConnection();
+				String sql="DELETE FROM wish_company "
+						+ "WHERE com_id=? AND user_id=?";
+				ps=conn.prepareStatement(sql);
+				ps.setInt(1, cno);
+				ps.setString(2, uid);
+				ps.executeUpdate();
+				
+			}catch(Exception ex)
+			{
+				ex.printStackTrace();
+			}
+			finally
+			{
+				db.disConnection(conn, ps);
+			}
+		}
+		
+		// 위시리스트 목록 => 마이페이지 (위시리스트)
+		public List<WishListVO> company_wish_list(String uid)
+		{
+			List<WishListVO> list=new ArrayList<WishListVO>();
+			try
+			{
+				conn=db.getConnection();
+				String sql="SELECT wc.USER_ID, c.COM_NAME, c.POSTER, cc.CATEGORY, wc.com_id "
+						+ "FROM wish_company wc "
+						+ "JOIN company c ON wc.COM_ID = c.COM_ID "
+						+ "JOIN company_category cc ON c.COM_CATEGORY_ID = cc.COM_CATEGORY_ID "
+						+ "WHERE wc.USER_ID = ?";
+				ps=conn.prepareStatement(sql);
+				ps.setString(1, uid);
+				ResultSet rs=ps.executeQuery();
+				while(rs.next())
+				{
+					WishListVO vo=new WishListVO();
+					vo.setCom_id(1);
+					vo.setCom_name(rs.getString(2));
+					vo.setPoster(rs.getString(3));
+					vo.setCategory(rs.getString(4));
+					vo.setUser_id(rs.getString(5));
+					list.add(vo);
+				}
+				rs.close();
+				
+			}catch(Exception ex)
+			{
+				ex.printStackTrace();
+			}
+			finally
+			{
+				db.disConnection(conn, ps);
+			}
+			return list;
+		}
+
+	
+	
+	/* --- END OF WISHLIST  ----*/
 	
 }
