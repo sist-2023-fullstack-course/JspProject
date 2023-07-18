@@ -244,3 +244,47 @@ a.title{
 .product .meta p{
 	margin: 0px;
 }
+
+.recent_delete_btn{
+	cursor: pointer;
+    border-radius: 1em;
+    color: #fff;
+    background: #0584C5;
+    border: 0;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-size: 12px;
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    top:25%;
+    position:absolute;
+    margin-left:1px;
+}
+.recent_delete_all_btn{
+	cursor: pointer;
+    border-radius: 1em;
+    color: #fff;
+    background: #0584C5;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-size: 12px;
+    width: 100px;
+    text-align: center;
+    display:block;
+    margin:0px auto;
+}
+
+#back_to_list{
+	cursor: pointer;
+    border-radius: 1em;
+    color: #fff;
+    background: #0584C5;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 12px;
+    width: 100px;
+    text-align: center;
+    display:block;
+    margin:10px auto;
+}

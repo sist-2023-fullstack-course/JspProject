@@ -38,19 +38,30 @@
 						<li><a ${cate=='훈련' ? 'class=selected' : '' }>훈련</a></li>
 					</ul>
 				</div>
-				<div class="single-sidebar">
-					<h2>Recent Post</h2>
+				<div class="single-sidebar" id="com-recent-sidebar">
+					<c:if test="${recentList.size() > 0 }">
+					<h2>최근 방문</h2>
 					<ul class="resent-post">
-						<li><!-- SINGLE POST -->
-							<div class="image">
-								<a href="#"><img alt="" src="../img/blog/recent-1.jpg"></a>
+						<c:forEach var="vo" items="${recentList }">
+						<li>
+							<div class="rsp_content">
+								<div class="image">
+									<a href="detail.do?id=${vo.id }"><img src="${vo.poster }"></a>
+								</div>
+								<div class="content fix">
+									<h5><a href="detail.do?id=${vo.id }">${vo.name }</a></h5>
+									<span><i class="fa fa-star"></i>${vo.star }</span>
+								</div>
 							</div>
-							<div class="content fix">
-								<h5><a href="#">Lorem ipsum</a></h5>
-								<span><i class="fa fa-clock-o"></i>20-2-2015</span>
-							</div>
+							<span class="recent_delete_btn" data-id="${vo.id }" onclick="deleteRecentPost()">삭제</span>
 						</li>
+						</c:forEach>
 					</ul>
+					<span class="recent_delete_all_btn" data-id="all" onclick="deleteRecentPost()">전체삭제</span>
+					</c:if>
+					<c:if test="${recentList.size() == 0 }">
+					<h2>최근 방문한 곳이 없습니다</h2>
+					</c:if>
 				</div>
 			</div>
 			<div class="col-sm-8 col-md-9">
