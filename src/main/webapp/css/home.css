@@ -6,10 +6,26 @@
 	margin-bottom: 50px;
 }
 
-#category-icons img{
-	margin:10px 20px;
-	width:100px;
+
+#category-icons .icon-area{
+	display:inline-block;
+}
+
+#category-icons .icon-area a{
+	display:block;
+}
+
+#category-icons .icon-area a img{
+	margin:10px 30px;
+	padding:20px;
+	width: 100px;
 	height: 100px;
+	border:1px solid #77D6C9;
+	border-radius: 1em;
+}
+
+#category-icons .icon-area span{
+	display:block;
 }
 
 #realtime-hot{
@@ -100,4 +116,28 @@
 
 .board-box-date {
     margin-right: 6px
+}
+
+.btmspace-80 {
+    margin-bottom: 80px;
+}
+
+.sectiontitle {
+    display: block;
+    margin:0px 15px 40px 15px;
+    padding: 0px 0px 10px 10px;
+    border-bottom: 1px solid;
+    color: #77D6C9;
+}
+
+.flexslider figcaption{
+	text-align: center;
+}
+
+.flexslider figcaption a{
+	font-size: 18px;
+	color: black;
+}
+.flexslider figcaption a i::before{
+	margin-right: 8px;
 }

@@ -42,6 +42,8 @@
 <link rel="stylesheet" type="text/css" href="../css/find.css" />
 <!-- Home CSS -->
 <link rel="stylesheet" type="text/css" href="../css/home.css" />
+<!-- flexslider CSS -->
+<link rel="stylesheet" type="text/css" href="../css/custom.flexslider.css" />
 <!-- Responsive Stylesheet -->
 <!-- swiper CSS-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -100,6 +102,8 @@
 <script type="text/javascript" src="../js/product.js"></script>
 <!-- find JS -->
 <script type="text/javascript" src="../js/find.js"></script>
+<!-- slider JS -->
+<script type="text/javascript" src="../js/jquery.flexslider-min.js"></script>
 <script>
 	new WOW().init();
 </script>	

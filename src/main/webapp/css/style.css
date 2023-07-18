@@ -1269,6 +1269,7 @@ img {
   color: #555555;
   font-size: 16px;
   font-weight: 400;
+  margin:3px;
 }
 .read-more {
   background: #e09e25 none repeat scroll 0 0;
