@@ -1,6 +1,8 @@
 package com.sist.model;
 
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,19 +19,22 @@ public class BoardModel {
 	{
 		String page=request.getParameter("page");
 		String cat=request.getParameter("cat");
+		if(cat==null)
+			cat="전체";
 		if(page==null)
 			page="1";
 		int curpage=Integer.parseInt(page);
 		BoardDAO dao=BoardDAO.newInstance();
 		List<BoardVO> list=dao.boardListData(curpage, cat);
-		int totalpage=dao.freeboardTotalPage();
+		int totalpage=dao.freeboardTotalPage(cat);
 		
 		final int BLOCK=10;
 	    int startPage=((curpage-1)/BLOCK*BLOCK)+1; // 1,11,21...
 	    // 1~10 => 1 , 11~20 => 11
 	    int endPage=((curpage-1)/BLOCK*BLOCK)+BLOCK;// 10 20 30...
-	    if(endPage>totalpage)
-		   endPage=totalpage;
+	    if(endPage>totalpage) {
+	    	endPage=totalpage;
+	    }
 		
 		// 출력에 필요한 데이터를 모아서 전송 
 		request.setAttribute("curpage", curpage);
@@ -37,7 +42,7 @@ public class BoardModel {
 		request.setAttribute("startPage", startPage);
 		request.setAttribute("endPage", endPage);
 		request.setAttribute("list", list);
-		request.setAttribute("category", cat);
+		request.setAttribute("cat", cat); //category
 		
 		request.setAttribute("board_jsp", "board_list.jsp");
 		request.setAttribute("main_jsp", "../board/board_main.jsp"); 
@@ -61,11 +66,10 @@ public class BoardModel {
 		
 		BoardVO vo=new BoardVO();
 		vo.setUser_id(request.getParameter("name"));
-		System.out.println(vo.getUser_id());
 		
 		vo.setTitle(request.getParameter("subject"));
 		vo.setContent(request.getParameter("content"));
-		vo.setBoard_category(request.getParameter("category"));
+		vo.setBoard_category(request.getParameter("cat"));
 		BoardDAO dao=BoardDAO.newInstance();
 		dao.boardInsert(vo);
 		

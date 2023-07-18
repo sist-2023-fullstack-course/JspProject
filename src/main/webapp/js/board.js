@@ -95,7 +95,7 @@ $(function(){
 	})
 })
 
-
+//댓글 삭제
 function deleteComment(no, bno){
 		let check=confirm("정말 삭제 하시겠습니까?");
 		

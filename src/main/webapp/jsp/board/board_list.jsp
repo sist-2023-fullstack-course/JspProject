@@ -6,7 +6,7 @@
 
 <div class="mypage-main board-main">
 	<div class="board-title"> 
-		자유게시판 
+		${cat }
 	</div>
 	<div class="board-search">
 		<div class='board-search-title'> 
@@ -60,17 +60,17 @@
 	   <nav class="pagination" >
 		<ul>
 	         <c:if test="${startPage>1 }">
-	          <li><a href="../board/board_list.do?page=${startPage-1 }">&laquo; 이전페이지</a></li>
+	          <li><a href="../board/board_list.do?page=${startPage-1 }&cat=${cat}">&laquo; 이전페이지</a></li>
 	         </c:if>
 	         
 	         <c:if test="${curpage>1 }">
-	         <li> <a href="../board/board_list.do?page=${curpage-1 }">&lt;</a> </li>
+	         <li> <a href="../board/board_list.do?page=${curpage-1 }&cat=${cat}">&lt;</a> </li>
 	         </c:if>
 	         <c:forEach var="i" begin="${startPage }" end="${endPage }">
-	            <li ${curpage==i?"class=current":"" }><a href="../board/board_list.do?page=${i }">${i }</a></li>
+	            <li ${curpage==i?"class=current":"" }><a href="../board/board_list.do?page=${i }&cat=${cat}">${i }</a></li>
 	         </c:forEach>
 	         <c:if test="${curpage < totalpage }">
-	         <li><a href="../board/board_list.do?page=${curpage+1 }">&gt;</a></li>
+	         <li><a href="../board/board_list.do?page=${curpage+1 }&cat=${cat}">&gt;</a></li>
 	         </c:if>
 	         
 	         

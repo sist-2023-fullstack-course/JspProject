@@ -30,26 +30,31 @@ public class BoardDAO {
 		List<BoardVO> list = new ArrayList<BoardVO>();
 		try {
 			conn = db.getConnection();
-			String sql = "SELECT BOARD_ID, title, board_category, USER_ID, TO_CHAR(regdate,'yyyy-MM-dd'),hit ,num "
-					   + "FROM (SELECT BOARD_ID, title , board_category, USER_ID, regdate, hit, rownum as num "
-					   + "FROM (SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title, board_category, USER_ID, regdate, hit "
-					   + "FROM BOARD WHERE board_category = ?)) " + "WHERE num BETWEEN ? AND ? ";
-			if(cat=="전체")
-			{
-				System.out.println("DAO cat : "+cat);
-				sql = "SELECT BOARD_ID, title, board_category, USER_ID, TO_CHAR(regdate,'yyyy-MM-dd'),hit ,num "
-						   + "FROM (SELECT BOARD_ID, title , board_category, USER_ID, regdate, hit, rownum as num "
-						   + "FROM (SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title, board_category, USER_ID, regdate, hit "
-						   + "FROM BOARD)) " + "WHERE num BETWEEN ? AND ? ";
-			}
-			
-			ps = conn.prepareStatement(sql);
 			int rowSize = 10;
 			int start = (rowSize * page) - (rowSize - 1);
 			int end = rowSize * page;
-			ps.setString(1, cat);
-			ps.setInt(2, start);
-			ps.setInt(3, end);
+			
+			if(cat.equals("전체"))
+			{
+				String sql = "SELECT BOARD_ID, title, board_category, USER_ID, TO_CHAR(regdate,'yyyy-MM-dd'),hit ,num "
+						   + "FROM (SELECT BOARD_ID, title , board_category, USER_ID, regdate, hit, rownum as num "
+						   + "FROM (SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title, board_category, USER_ID, regdate, hit "
+						   + "FROM BOARD)) " + "WHERE num BETWEEN ? AND ? ";
+				ps = conn.prepareStatement(sql);
+				ps.setInt(1, start);
+				ps.setInt(2, end);
+				
+			}else {
+				String sql = "SELECT BOARD_ID, title, board_category, USER_ID, TO_CHAR(regdate,'yyyy-MM-dd'),hit ,num "
+						   + "FROM (SELECT BOARD_ID, title , board_category, USER_ID, regdate, hit, rownum as num "
+						   + "FROM (SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title, board_category, USER_ID, regdate, hit "
+						   + "FROM BOARD WHERE board_category = ?)) " + "WHERE num BETWEEN ? AND ? ";
+				
+				ps = conn.prepareStatement(sql);
+				ps.setString(1, cat);
+				ps.setInt(2, start);
+				ps.setInt(3, end);
+			}
 
 			// 결과값 읽기
 			ResultSet rs = ps.executeQuery();
@@ -74,16 +79,27 @@ public class BoardDAO {
 	}
 
 	// 1-1 총페이지 구하기
-	public int freeboardTotalPage() {
+	public int freeboardTotalPage(String cat) {
 		int total = 0;
 		try {
 			conn = db.getConnection();
-			String sql = "SELECT CEIL(COUNT(*)/10.0) FROM BOARD";
-			ps = conn.prepareStatement(sql);
+			if(cat.equals("전체")) {
+				String sql = "SELECT CEIL(COUNT(*)/10.0) FROM BOARD";
+				ps = conn.prepareStatement(sql);
+				
+			}else {
+				String sql = "SELECT CEIL(COUNT(*)/10.0) FROM BOARD "
+						+ "WHERE board_category = ?";
+				ps = conn.prepareStatement(sql);
+				ps.setString(1, cat);
+				
+			}
+				
 			ResultSet rs = ps.executeQuery();
 			rs.next();
 			total = rs.getInt(1);
 			rs.close();
+			
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		} finally {
@@ -210,9 +226,6 @@ public class BoardDAO {
 			ps.setString(3, vo.getBoard_category());
 			ps.setInt(4, vo.getBoard_id());
 			ps.setString(5, pwd);
-			
-			System.out.println(vo.getContent());
-			System.out.println(pwd);
 
 			int ret = ps.executeUpdate();
 			if(ret == 0) {

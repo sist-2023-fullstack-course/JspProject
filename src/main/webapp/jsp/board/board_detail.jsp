@@ -61,7 +61,7 @@
 	                 <c:forEach var="i" begin="1" end="${rvo.group_tab }">
 	                  &nbsp;&nbsp;&nbsp;
 	                 </c:forEach>
-	                 <img src="re_icon.png">
+	                 <img src="../board/re_icon.png">
 	               </c:if>
 	               ◑${rvo.user_id }&nbsp;(${rvo.dbday })
 	             </td>

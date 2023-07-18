@@ -9,7 +9,7 @@
 							<li><a href="../board/board_list.do?cat=공지사항">공지사항</a></li>
 							<li><a href="../board/board_list.do?cat=자유토크">자유토크</a></li>
 							<li><a href="../board/board_list.do?cat=자랑하기">마이펫 자랑하기</a></li>
-							<li><a href="#">Q&amp;A</a></li>
+							<li><a href="../board/board_list.do?cat=QNA">Q&amp;A</a></li>
 						</ul>
 					</div>
 				</div>

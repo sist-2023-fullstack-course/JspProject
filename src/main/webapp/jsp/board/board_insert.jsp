@@ -15,7 +15,7 @@
 			   <tr>
 			      <th width=20% style="padding-top:20px">게시글 종류</th>
 			      <td width=80%>
-					  <select name="category" >
+					  <select name="cat" >
 					    <option value="none" >=== 선택 ===</option>
 					    <option value="공지사항">공지사항</option>
 					    <option value="자유토크" selected>자유토크</option>
