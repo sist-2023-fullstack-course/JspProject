@@ -85,6 +85,18 @@
 	vertical-align: middle !important;
 	font-size:18px;
 }
+/*---- board detail css ¿ä¼Ò  */
+.board-detail-main{
+    margin: 20px auto;
+    width: 80%;	
+}
+
+.detail-table tr th{
+background-color:#77d6c9;
+	
+	
+}
+
 
 	
 

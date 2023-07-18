@@ -64,7 +64,14 @@ public class BoardReplyDAO {
 	   try
 	   {
 		   conn=db.getConnection();
-		   String sql="INSERT INTO reply(rep_id, board_id, user_id, rep_content, group_id) "
+		   //게시물 댓글수 증가
+		   String sql = "UPDATE board SET comment_cnt=comment_cnt+1 WHERE board_id=?";
+			// 조회수 증가
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, vo.getBoard_id());
+			ps.executeUpdate();
+		   
+		   sql="INSERT INTO reply(rep_id, board_id, user_id, rep_content, group_id) "
 				     +"VALUES(pm_rpi_seq.nextval,?,?,?,"
 				     +"(SELECT NVL(MAX(group_id)+1,1) FROM reply))";
 		   ps=conn.prepareStatement(sql);
@@ -114,7 +121,7 @@ public class BoardReplyDAO {
 		   conn=db.getConnection();
 		   conn.setAutoCommit(false);
 		   // SQL문장이 여러개 수행 
-		   String sql="SELECT root, depth "
+		   String sql="SELECT root, depth, rep_content "
 				     +"FROM reply "
 				     +"WHERE rep_id=?";
 		   ps=conn.prepareStatement(sql);
@@ -123,36 +130,85 @@ public class BoardReplyDAO {
 		   rs.next();
 		   int root=rs.getInt(1);
 		   int depth=rs.getInt(2);
+		   String msg1=rs.getString(3);
 		   rs.close();
 		   
-		   if(depth==0)
-		   {
-			   sql="DELETE FROM reply "
-				  +"WHERE rep_id=?";
-			   ps=conn.prepareStatement(sql);
-			   ps.setInt(1, no);
-			   ps.executeUpdate();
-		   }
-		   else
-		   {
-			   String msg="관리자가 삭제한 댓글입니다.";
-			   sql="UPDATE reply SET "
-				  +"rep_content=? "
-				  +"WHERE rep_id=?";
-			   ps=conn.prepareStatement(sql);
-			   ps.setString(1, msg);
-			   ps.setInt(2, no);
-			   ps.executeUpdate();
+		   //댓글이 부모인지 확인
+		   if(root==0) {
+			   if(depth==0 || msg1.equals("관리자가 삭제한 댓글입니다.") )
+			   {
+				   sql="DELETE FROM reply "
+					  +"WHERE rep_id=?";
+				   ps=conn.prepareStatement(sql);
+				   ps.setInt(1, no);
+				   ps.executeUpdate();
+				   conn.commit();
+			   }
+			   else
+			   {
+				   //가리기만 해둔다.
+				   String msg="관리자가 삭제한 댓글입니다.";
+				   sql="UPDATE reply SET "
+					  +"rep_content=? "
+					  +"WHERE rep_id=?";
+				   ps=conn.prepareStatement(sql);
+				   ps.setString(1, msg);
+				   ps.setInt(2, no);
+				   ps.executeUpdate();
+				   conn.commit();
+			   }
+		   }else {
+			   if(depth==0)
+			   {
+				   sql="DELETE FROM reply "
+					  +"WHERE rep_id=?";
+				   ps=conn.prepareStatement(sql);
+				   ps.setInt(1, no);
+				   ps.executeUpdate();
+				   
+				   // depth감소 
+				   sql="UPDATE reply SET "
+					  +"depth=depth-1 "
+					  +"WHERE rep_id=?";
+				   ps=conn.prepareStatement(sql);
+				   ps.setInt(1,root);
+				   ps.executeUpdate();
+				   System.out.println("부모depth 감소");
+				   
+				   sql="SELECT depth "
+				   		+ "FROM reply "
+				   		+ "WHERE rep_id=?";
+				   ps=conn.prepareStatement(sql);
+				   ps.setInt(1, root);
+				   rs=ps.executeQuery();
+				   rs.next();
+				   int rodepth=rs.getInt(1);
+				   rs.close();
+				   
+				   //부모의 depth가 0이면 가려둔 부모도 삭제
+				   if(rodepth<=0) {
+					   sql="DELETE FROM reply "
+								  +"WHERE rep_id=?";
+					   ps=conn.prepareStatement(sql);
+					   ps.setInt(1, root);
+					   ps.executeUpdate();
+					   conn.commit();
+				   }
+				   conn.commit();
+				   
+			   }else {
+				 //가리기만 해둔다.
+				   String msg="관리자가 삭제한 댓글입니다.";
+				   sql="UPDATE reply SET "
+					  +"rep_content=? "
+					  +"WHERE rep_id=?";
+				   ps=conn.prepareStatement(sql);
+				   ps.setString(1, msg);
+				   ps.setInt(2, no);
+				   ps.executeUpdate();
+			   }
 		   }
 		   
-		   // depth감소 
-		   sql="UPDATE reply SET "
-			  +"depth=depth-1 "
-			  +"WHERE rep_id=?";
-		   ps=conn.prepareStatement(sql);
-		   ps.setInt(1,root);
-		   ps.executeUpdate();
-		   conn.commit();
 	   }catch(Exception ex)
 	   {
 		   try

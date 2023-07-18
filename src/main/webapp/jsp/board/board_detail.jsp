@@ -2,9 +2,10 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="wrapper row3">
-  <main class="container clear">
+  <main class="container">
+  <div class="board-detail-main">
    <h2 class="sectiontitle">제목 : ${vo.title }</h2>
-   <table class="table">
+   <table class="table detail-table">
      <tr>
       <th width=15% class="text-center">번호</th>
       <td width=15% class="text-center">${vo.board_id }</td>
@@ -61,7 +62,7 @@
 	                 <c:forEach var="i" begin="1" end="${rvo.group_tab }">
 	                  &nbsp;&nbsp;&nbsp;
 	                 </c:forEach>
-	                 <img src="../board/re_icon.png">
+	                 <img src="../jsp/board/re_icon.png">
 	               </c:if>
 	               ◑${rvo.user_id }&nbsp;(${rvo.dbday })
 	             </td>
@@ -133,10 +134,6 @@
 		   </table>
 	   </c:if>
    </div>
-    
-   <div class="col-sm-4">
-   
-   </div>
-  
+  </div>
   </main>
 </div>
