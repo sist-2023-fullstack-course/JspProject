@@ -40,8 +40,8 @@
 <link rel="stylesheet" type="text/css" href="../css/board.css" />
 <!-- find CSS -->
 <link rel="stylesheet" type="text/css" href="../css/find.css" />
-<!-- homeBottom CSS -->
-<link rel="stylesheet" type="text/css" href="../css/categorylist.css" />
+<!-- Home CSS -->
+<link rel="stylesheet" type="text/css" href="../css/home.css" />
 <!-- Responsive Stylesheet -->
 <!-- swiper CSS-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -59,7 +59,6 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 <jsp:include page="${main_jsp }"></jsp:include>
-<jsp:include page="categorylist.jsp"></jsp:include>
 <jsp:include page="footer.jsp"></jsp:include>
 <!-- jQuery 2.1.4 -->
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>

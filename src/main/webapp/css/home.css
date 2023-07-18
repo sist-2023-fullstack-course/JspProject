@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+#category-icons{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#category-icons img{
+	margin:10px 20px;
+	width:100px;
+	height: 100px;
+}
+
+#realtime-hot{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#realtime-hot .hot img{
+	height: 350px;
+}
+
+#board-preview{
+	margin:100px 80px 100px 80px;
+}
+.section-board {
+    padding-bottom: 160px
+}
+
+.main-board-row {
+}
+
+.main-board-col {
+    width: 100%;
+    padding: 15px
+}
+
+.board-box {
+    display: block;
+    border: 1px solid #dcdcdc;
+    padding: 30px 40px
+}
+
+.board-box-title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    color: #0dbcaf;
+    padding: 2px 2px 10px;
+    border-bottom: 2px solid #0dbcaf
+}
+
+.board-box-more {
+    position: absolute;
+    top: 7px;
+    right: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333
+}
+
+.board-box-list>ul {
+    padding-top: 10px
+}
+
+.board-box-list>ul>li {
+    position: relative;
+    padding: 6px 0 6px 8px
+}
+
+.board-box-list>ul>li:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 2px;
+    height: 2px;
+    background-color: #777;
+    border-radius: 100%;
+    transform: translateY(-50%)
+}
+
+.board-box-list>ul>li>a,.board-box-list>ul>li>button {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.board-box-date,.board-box-tit {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -.04em;
+    color: #777
+}
+
+.board-box-date {
+    margin-right: 6px
+}
