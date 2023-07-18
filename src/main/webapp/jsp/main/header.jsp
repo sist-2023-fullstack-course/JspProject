@@ -27,26 +27,26 @@ $(function(){
 						<!-- 로그인 안 된 상태 -->
 						<c:if test="${sessionScope.id==null }">
 							<li>
-								<p class="text-center"><a href="../member/join.do"><i class="fa fa-user-plus"></i></a></p>
+								<p class="text-center"><a href="../member/join.do"><i class="fa fa-user-plus" style="color:#034D7E"></i></a></p>
 								<p class="text-center"><a href="../member/join.do">회원가입</a></p>
 							</li>
 							<li>
-								<p class="text-center"><a href="../member/loginpage.do"><i class="fa fa-sign-in"></i></a></p>
+								<p class="text-center"><a href="../member/loginpage.do"><i class="fa fa-sign-in" style="color:#034D7E"></i></a></p>
 								<p class="text-center"><a href="../member/loginpage.do">로그인</a></p>
 							</li>
 						</c:if>
 						<!-- 로그인 된 상태 -->
 						<c:if test="${sessionScope.id!=null }">
 						<li>
-							<p class="text-center"><a href="#"><i class="fa fa-heart"></i></a></p>
+							<p class="text-center"><a href="#"><i class="fa fa-heart" style="color:red"></i></a></p>
 							<p class="text-center"><a href="#">위시리스트</a></p>
 						</li>
 						<li>
-							<p class="text-center"><a href="#"><i class="fa fa-shopping-cart"></i></a></p>
+							<p class="text-center"><a href="#"><i class="fa fa-shopping-cart" style="color:#034D7E"></i></a></p>
 							<p class="text-center"><a href="#">장바구니</a></p>
 						</li>
 						<li>
-							<p class="text-center"><a href="../member/logout.do"><i class="fa fa-sign-out"></i></a></p>
+							<p class="text-center"><a href="../member/logout.do"><i class="fa fa-sign-out" style="color:#034D7E"></i></a></p>
 							<p class="text-center"><a href="../member/logout.do">로그아웃</a></p>
 						</li>
 						</c:if>
