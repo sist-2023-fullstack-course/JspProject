@@ -121,7 +121,7 @@ $(document).ready(function($){
 	$.scrollUp({
 		scrollText: '<i class="fa fa-chevron-up"></i>',
 		easingType: 'linear',
-		scrollSpeed: 900,
+		scrollSpeed: 1500,
 		animation: 'fade'
 	});
 
