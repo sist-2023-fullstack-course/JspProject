@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+.find_tabs {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.find_tabs label {
+	order: 1;
+	display: block;
+	padding: 1rem 2rem;
+	margin-right: 0.2rem;
+	cursor: pointer;
+    background:  #fff;
+  	font-weight: bold;
+  	transition: background ease 0.2s;
+}
+
+.find_tabs .tab {
+  	order: 99;
+  	flex-grow: 1;
+	width: 100%;
+	display: none;
+  	padding: 60px 10px;
+  	background: #fff;
+}
+
+.find_tabs input[type="radio"] {
+	display: none;
+}
+
+.find_tabs input[type="radio"]:checked + label {
+	background: #77D6C9
+}
+
+.find_tabs input[type="radio"]:checked + label + .tab {
+	display: block;
+}
+
+@media (max-width: 45em) {
+  .find_tabs .tab,
+  .find_tabs label {
+    order: initial;
+  }
+  .find_tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
+
+    .find-main {
+        background-color: #FFFFFF;
+        width: 600px;
+        height: 500px;
+        margin: 7em auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    }
+    
+    .find-main-pwd {
+        background-color: #FFFFFF;
+        width: 600px;
+        height: 600px;
+        margin: 7em auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    }
+    
+    .find-sign {
+        color: #77D6C9;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+    }
+    
+    .find-input {
+	    width: 60%;
+	    color: rgb(38, 50, 56);
+	    font-weight: 700;
+	    font-size: 12px;
+	    letter-spacing: 1px;
+	    background: rgba(136, 126, 126, 0.04);
+	    padding: 10px 20px;
+	    border: none;
+	    border-radius: 20px;
+	    outline: none;
+	    box-sizing: border-box;
+	    border: 2px solid rgba(0, 0, 0, 0.02);
+	    font-family: 'Ubuntu', sans-serif;
+    }
+    
+    .find-check {
+        cursor: pointer;
+        border-radius: 5em;
+        color: #fff;
+        background: #77D6C9;
+        border: 0;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 12px;
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+        display: inline-block;
+        margin: center;
+        width: 50px;
+    }

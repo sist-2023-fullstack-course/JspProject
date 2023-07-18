@@ -38,6 +38,8 @@
 <link rel="stylesheet" type="text/css" href="../css/join.css" />
 <!-- join CSS -->
 <link rel="stylesheet" type="text/css" href="../css/board.css" />
+<!-- find CSS -->
+<link rel="stylesheet" type="text/css" href="../css/find.css" />
 <!-- Responsive Stylesheet -->
 <!-- swiper CSS-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -94,6 +96,8 @@
 <script type="text/javascript" src="../js/login_check.js"></script>
 <!-- Product JS -->
 <script type="text/javascript" src="../js/product.js"></script>
+<!-- find JS -->
+<script type="text/javascript" src="../js/find.js"></script>
 <script>
 	new WOW().init();
 </script>	

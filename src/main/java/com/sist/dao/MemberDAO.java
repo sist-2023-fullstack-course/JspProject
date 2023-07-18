@@ -209,11 +209,175 @@ public class MemberDAO {
 	// 회원탈퇴
 	
 	
-	// 아이디 찾기
+	// 아이디 찾기 - 이메일
+	public String memberIdFind_Email(String email)
+	{
+		String result="";
+		try {
+			conn=db.getConnection();
+			String sql="SELECT COUNT(*) FROM member "
+					+ "WHERE email=?";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, email);
+			ResultSet rs=ps.executeQuery();
+			rs.next();
+			int count=rs.getInt(1);
+			rs.close();
+			
+			if(count==0)
+			{
+				result="NO";
+			}
+			else
+			{
+				sql="SELECT RPAD(SUBSTR(user_id,1,2),LENGTH(user_id),'*') "
+					+ "FROM member "
+					+ "WHERE email=?";
+				ps=conn.prepareStatement(sql);
+				ps.setString(1, email);
+				rs=ps.executeQuery();
+				rs.next();
+				result=rs.getString(1);
+				rs.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally
+		{
+			db.disConnection(conn, ps);
+		}
+		return result;
+	}
 	
+	// 아이디 찾기 - 전화번호
+	public String memberIdFind_Phone(String phone)
+	{
+		String result="";
+		try {
+			conn=db.getConnection();
+			String sql="SELECT COUNT(*) FROM member "
+					+ "WHERE phone=?";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, phone);
+			ResultSet rs=ps.executeQuery();
+			rs.next();
+			int count=rs.getInt(1);
+			rs.close();
+			
+			if(count==0)
+			{
+				result="NO";
+			}
+			else
+			{
+				sql="SELECT RPAD(SUBSTR(user_id,1,2),LENGTH(user_id),'*') "
+					+ "FROM member "
+					+ "WHERE phone=?";
+				ps=conn.prepareStatement(sql);
+				ps.setString(1, phone);
+				rs=ps.executeQuery();
+				rs.next();
+				result=rs.getString(1);
+				rs.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally
+		{
+			db.disConnection(conn, ps);
+		}
+		return result;
+	} 
 	
-	// 비밀번호 찾기
+	// 비밀번호 찾기 - 아이디, 이메일
+	public String memberPasswordFind_Email(String id, String email)
+	{
+		String result="";
+		try {
+			conn=db.getConnection();
+			String sql="SELECT COUNT(*) FROM member "
+					+ "WHERE user_id=? AND email=?";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, id);
+			ps.setString(2, email);
+			ResultSet rs=ps.executeQuery();
+			rs.next();
+			int count=rs.getInt(1);
+			rs.close();
+			
+			if(count==0)
+			{
+				result="NO";
+			}
+			else
+			{
+				sql="SELECT password "
+					+ "FROM member "
+					+ "WHERE user_id=? AND email=?";
+				ps=conn.prepareStatement(sql);
+				ps.setString(1, id);
+				ps.setString(2, email);
+				rs=ps.executeQuery();
+				rs.next();
+				result=rs.getString(1);
+				rs.close();
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally
+		{
+			db.disConnection(conn, ps);
+		}
+		return result;
+	}
 	
+	// 비밀번호 찾기 - 아이디, 전화번호
+	public String memberPasswordFind_Phone(String id, String phone)
+	{
+		String result="";
+		try {
+			conn=db.getConnection();
+			String sql="SELECT COUNT(*) FROM member "
+					+ "WHERE user_id=? AND phone=?";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, id);
+			ps.setString(2, phone);
+			ResultSet rs=ps.executeQuery();
+			rs.next();
+			int count=rs.getInt(1);
+			rs.close();
+			
+			if(count==0)
+			{
+				result="NO";
+			}
+			else
+			{
+				sql="SELECT password "
+					+ "FROM member "
+					+ "WHERE user_id=? AND phone=?";
+				ps=conn.prepareStatement(sql);
+				ps.setString(1, id);
+				ps.setString(2, phone);
+				rs=ps.executeQuery();
+				rs.next();
+				result=rs.getString(1);
+				rs.close();
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally
+		{
+			db.disConnection(conn, ps);
+		}
+		return result;
+	}
 	
 	// 비밀번호 변경
 	
