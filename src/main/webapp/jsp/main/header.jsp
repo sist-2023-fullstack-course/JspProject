@@ -103,10 +103,9 @@ $(function(){
 							<li><a href="../board/board_list.do?cat=공지사항">공지사항</a>
 								<ul class="sub-menu">
 									<li><a href="../board/board_list.do?cat=공지사항">공지사항_1</a></li>
-									<li><a href="#">이벤트_구상</a></li>
 								</ul>
 							</li>
-							<li><a href="../board/board_list.do?cat=QNA">문의하기</a>
+							<li><a href="../question/list.do">문의하기</a>
 								
 							</li>
 							<c:if test="${sessionScope.id!=null }">
