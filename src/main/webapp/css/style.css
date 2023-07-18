@@ -225,7 +225,7 @@ img {
 }
 /*----- 3.2 Top Menu -----*/
 #top-menu{
-	margin-top: 90px;
+	margin-top: 100px;
 }
 #top-menu > ul {
   list-style: outside none none;
@@ -292,7 +292,7 @@ img {
 }
 #top-menu .fa{
 	font-size: 40px;
-	color: #77D6C9;
+	color: #0584C5;
 }
 /*----- 3.3 Header Area -----*/
 .header-area {
@@ -1254,7 +1254,7 @@ img {
   font-size: 14px;
 }
 .meta a:hover {
-  color: #e09e25;
+  color: rgb(0, 0, 0);
 }
 .meta i {
   margin-right: 5px;
