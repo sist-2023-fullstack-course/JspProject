@@ -26,25 +26,30 @@ public class BoardDAO {
 
 	// 기능
 	// 리스트
-	public List<BoardVO> boardListData(int page) {
+	public List<BoardVO> boardListData(int page, String cat) {
 		List<BoardVO> list = new ArrayList<BoardVO>();
 		try {
 			conn = db.getConnection();
-			String sql1="SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title , board_category, USER_ID, regdate, hit "
-					+ "FROM BOARD";
-			
 			String sql = "SELECT BOARD_ID, title, board_category, USER_ID, TO_CHAR(regdate,'yyyy-MM-dd'),hit ,num "
 					   + "FROM (SELECT BOARD_ID, title , board_category, USER_ID, regdate, hit, rownum as num "
 					   + "FROM (SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title, board_category, USER_ID, regdate, hit "
-					   + "FROM BOARD)) " + "WHERE num BETWEEN ? AND ? AND board_category = ?";
+					   + "FROM BOARD WHERE board_category = ?)) " + "WHERE num BETWEEN ? AND ? ";
+			if(cat=="전체")
+			{
+				System.out.println("DAO cat : "+cat);
+				sql = "SELECT BOARD_ID, title, board_category, USER_ID, TO_CHAR(regdate,'yyyy-MM-dd'),hit ,num "
+						   + "FROM (SELECT BOARD_ID, title , board_category, USER_ID, regdate, hit, rownum as num "
+						   + "FROM (SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title, board_category, USER_ID, regdate, hit "
+						   + "FROM BOARD)) " + "WHERE num BETWEEN ? AND ? ";
+			}
 			
 			ps = conn.prepareStatement(sql);
 			int rowSize = 10;
 			int start = (rowSize * page) - (rowSize - 1);
 			int end = rowSize * page;
-			ps.setInt(1, start);
-			ps.setInt(2, end);
-			ps.setString(3, sql);
+			ps.setString(1, cat);
+			ps.setInt(2, start);
+			ps.setInt(3, end);
 
 			// 결과값 읽기
 			ResultSet rs = ps.executeQuery();

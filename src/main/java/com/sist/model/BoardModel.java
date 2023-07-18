@@ -16,14 +16,13 @@ public class BoardModel {
 	public String board_list(HttpServletRequest request, HttpServletResponse response)
 	{
 		String page=request.getParameter("page");
+		String cat=request.getParameter("cat");
 		if(page==null)
 			page="1";
 		int curpage=Integer.parseInt(page);
 		BoardDAO dao=BoardDAO.newInstance();
-		List<BoardVO> list=dao.boardListData(curpage);
+		List<BoardVO> list=dao.boardListData(curpage, cat);
 		int totalpage=dao.freeboardTotalPage();
-		int endpage = (10>totalpage)?totalpage:10;
-		
 		
 		final int BLOCK=10;
 	    int startPage=((curpage-1)/BLOCK*BLOCK)+1; // 1,11,21...
@@ -38,7 +37,8 @@ public class BoardModel {
 		request.setAttribute("startPage", startPage);
 		request.setAttribute("endPage", endPage);
 		request.setAttribute("list", list);
-		request.setAttribute("category", dao);
+		request.setAttribute("category", cat);
+		
 		request.setAttribute("board_jsp", "board_list.jsp");
 		request.setAttribute("main_jsp", "../board/board_main.jsp"); 
 		return "../jsp/main/main.jsp";

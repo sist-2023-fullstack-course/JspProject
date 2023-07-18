@@ -93,7 +93,7 @@ public class CompanyDAO {
 				if(star_cnt==0)
 					vo.setStar(0.0);
 				else
-					vo.setStar(Math.round((double)star_sum/star_cnt*10)/10);
+					vo.setStar(Math.round((double)star_sum/star_cnt*10)/10.0);
 				list.add(vo);
 			}
 			rs.close();
