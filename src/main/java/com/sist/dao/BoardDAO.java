@@ -290,5 +290,42 @@ public class BoardDAO {
 		   }
 		   return res;
 	   }
+	   
+	   public List<BoardVO> getRecentList(String category){
+		   List<BoardVO> list = new ArrayList<>();
+		   
+		   try {
+			   conn = db.getConnection();
+			   String sql = "SELECT /*+ INDEX_DESC(board PK_BOARD) */ "
+			   		      + "BOARD_ID, TITLE, TO_CHAR(REGDATE,'YYYY-MM-DD'), CONTENT, HIT, COMMENT_CNT, USER_ID, rownum "
+			   		      + "FROM board "
+			   		      + "WHERE rownum<=5 AND BOARD_CATEGORY = ?";
+			   ps = conn.prepareStatement(sql);
+			   ps.setString(1, category);
+			   
+			   ResultSet rs = ps.executeQuery();
+			   
+			   while(rs.next()) {
+				   BoardVO vo = new BoardVO();
 
+				   vo.setBoard_id(rs.getInt(1));
+				   vo.setTitle(rs.getString(2));
+				   vo.setDbday(rs.getString(3));
+				   vo.setContent(rs.getString(4));
+				   vo.setHit(rs.getInt(5));
+				   vo.setComment_cnt(rs.getInt(6));
+				   vo.setUser_id(rs.getString(7));
+				   
+				   list.add(vo);
+			   }
+		   }
+		   catch (Exception e) {
+			   e.printStackTrace();
+		   }
+		   finally {
+			   db.disConnection(conn, ps);
+		   }
+		   
+		   return list;
+	   }
 }

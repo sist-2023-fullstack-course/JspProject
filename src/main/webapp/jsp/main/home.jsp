@@ -1,14 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="container">
 	<!-- 카테고리 아이콘 -->
 	<div class="row	">
-		<img src="../img/slider/1.jpg">
+		<img src="../img/slider/1.jpg" style="padding: 0px 15px;">
 	</div>
 	<div class="row">
 		<div id="category-icons">
 			<div class="icon-area">
-				<a href="../company/list.do?cate=애견미용"><img src="../img/icon/hair_icon.png"></a>
+				<a class="btn" href="../company/list.do?cate=애견미용"><img src="../img/icon/hair_icon.png"></a>
 				<span>애견미용</span>
 			</div>
 			<div class="icon-area">
@@ -250,15 +251,17 @@
 			        	<div class="board-box">
 			          		<div class="board-box-title">
 			          			"자유게시판"
-			            		<a href="" class="board-box-more"> 더보기 + </a>
+			            		<a href="../board/board_list.do?cat=자유토크" class="board-box-more"> 더보기 + </a>
 			          		</div>
 					        <div class="board-box-list">
 					        	<ul>
-					            	<li><a href="" class="">ddddddd</a></li>
-					              	<li><a href="" class="">ddddddddd</a></li>
-					              	<li><a href="" class="">dddddddddddddd</a></li>
-					              	<li><a href="" class="">ddddddddd</a></li>
-					              	<li><a href="" class="">ddddddd</a></li>
+					        		<c:forEach var="vo" items="${freeList }">
+					        		<li>
+					        			<span class="user-area">${vo.user_id }</span>
+					        			<a class="title-area" href="../board/board_detail.do?no=${vo.board_id }">${vo.title }</a>
+					        			<span class="regdate-area">${vo.dbday }</span>
+					        		</li>
+					        		</c:forEach>
 					            </ul>
 					       </div>
 			        	</div>
@@ -270,16 +273,18 @@
 			    	<div class="main-board-col">
 			        	<div class="board-box">
 			          		<div class="board-box-title">
-			          			"자유게시판"
-			            		<a href="" class="board-box-more"> 더보기 + </a>
+			          			"자랑게시판"
+			            		<a href="../board/board_list.do?cat=자랑하기" class="board-box-more"> 더보기 + </a>
 			          		</div>
 					        <div class="board-box-list">
 					        	<ul>
-					            	<li><a href="" class="">dddddd</a></li>
-					              	<li><a href="" class="">ddddddddd</a></li>
-					              	<li><a href="" class="">ddddddddd</a></li>
-					              	<li><a href="" class="">ddddddd</a></li>
-					              	<li><a href="" class="">dddddddddddddd</a></li>
+					        		<c:forEach var="vo" items="${boastList }">
+					        		<li>
+					        			<span class="user-area">${vo.user_id }</span>
+					        			<a class="title-area" href="../board/board_detail.do?no=${vo.board_id }">${vo.title }</a>
+					        			<span class="regdate-area">${vo.dbday }</span>
+					        		</li>
+					        		</c:forEach>
 					            </ul>
 					       </div>
 			        	</div>

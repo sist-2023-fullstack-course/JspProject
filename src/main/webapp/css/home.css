@@ -83,7 +83,8 @@
 
 .board-box-list>ul>li {
     position: relative;
-    padding: 6px 0 6px 8px
+    padding: 6px 0 6px 8px;
+    display:block;
 }
 
 .board-box-list>ul>li:before {
@@ -99,11 +100,21 @@
     transform: translateY(-50%)
 }
 
-.board-box-list>ul>li>a,.board-box-list>ul>li>button {
-    display: block;
+.board-box-list>ul>li>a,.board-box-list>ul>li>button, .board-box-list>ul>li>span {
+    display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis
+}
+.board-box-list>ul>li .user-area{
+	width: 17%;
+}
+.board-box-list>ul>li .title-area{
+	width: 58%;
+}
+.board-box-list>ul>li .regdate-area{
+	width: 20%;
+	text-align: right;
 }
 
 .board-box-date,.board-box-tit {

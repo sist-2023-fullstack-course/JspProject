@@ -5,7 +5,7 @@
 <head>
 <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
 <!-- Fav Icon -->
-<link id="favicon" rel="icon" type="image/png" href="../img/favicon.ico" />
+<link id="favicon" rel="icon" type="image/png" href="../img/icon/favicon.png" />
 <!-- Google Font Raleway -->
 <link href='https://fonts.googleapis.com/css?family=Raleway:200,300,500,400,600,700,800' rel='stylesheet' type='text/css'>
 <!-- Google Font Noto Sans KR -->
