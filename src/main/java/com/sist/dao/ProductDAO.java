@@ -3,6 +3,8 @@ package com.sist.dao;
 import java.util.*;
 import java.sql.*;
 import com.sist.common.*;
+import com.sist.vo.CompanyReviewVO;
+import com.sist.vo.ProductReviewVO;
 import com.sist.vo.ProductVO;
 
 public class ProductDAO {
@@ -156,5 +158,105 @@ public class ProductDAO {
 		}
 		
 		return vo;
+	}
+	
+	
+	public int insertProductReview(ProductReviewVO vo) {
+		int cnt = 0;
+		
+		try {
+			conn = db.getConnection();
+			String sql = "INSERT INTO shop_review VALUES("
+					   + "pm_prvi_seq.nextval,?,?,?,SYSDATE)";
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, vo.getContent());
+			ps.setInt(2, vo.getPid());
+			ps.setString(3, vo.getUser_id());
+			
+			cnt = ps.executeUpdate();
+			rs.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			db.disConnection(conn, ps);
+		}
+		
+		return cnt;
+	}
+	
+	public List<ProductReviewVO> getReviewListByProduct(int pid){
+		List<ProductReviewVO> list = new ArrayList<>();
+		
+		try {
+			conn = db.getConnection();
+			String sql = "SELECT /*+ INDEX_DESC(sr PK_SHOP_REVIEW) */ "
+					   + "PRODUCT_REV_ID, PRODUCT_REV_CONTENT, sr.USER_ID, TO_CHAR(sr.REGDATE,'YYYY-MM-DD HH24:mi:ss'), m.USER_name "
+					   + "FROM SHOP_REVIEW sr, MEMBER m "
+					   + "WHERE sr.USER_ID = m.USER_ID AND sr.PRODUCT_ID=?";
+
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, pid);
+			
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				ProductReviewVO vo = new ProductReviewVO();
+				
+				vo.setId(rs.getInt(1));
+				vo.setContent(rs.getString(2));
+				vo.setUser_id(rs.getString(3));
+				vo.setRegdate(rs.getString(4));
+				vo.setUser_name(rs.getString(5));
+				
+				list.add(vo);
+			}
+			rs.close();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			db.disConnection(conn, ps);
+		}
+		
+		return list;
+	}
+	
+	public int delete_review(int id) {
+		int cnt = 0;
+		
+		try {
+			conn = db.getConnection();
+			String sql = "DELETE FROM SHOP_REVIEW WHERE product_rev_id = ?";
+			ps=conn.prepareStatement(sql);
+			ps.setInt(1, id);
+			cnt = ps.executeUpdate();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			db.disConnection(conn, ps);
+		}
+		
+		return cnt;
+	}
+	
+	public int update_review(int id, String comment) {
+		int cnt = 0;
+		
+		try {
+			conn = db.getConnection();
+			String sql = "UPDATE shop_review SET PRODUCT_REV_CONTENT = ? WHERE PRODUCT_REV_ID = ?";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, comment);
+			ps.setInt(2, id);
+			cnt = ps.executeUpdate();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			db.disConnection(conn, ps);
+		}
+		
+		return cnt;
 	}
 }

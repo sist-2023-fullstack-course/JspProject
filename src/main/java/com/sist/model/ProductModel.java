@@ -2,6 +2,7 @@ package com.sist.model;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -11,14 +12,18 @@ import java.util.StringTokenizer;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import com.sist.controller.RequestMapping;
+import com.sist.dao.CompanyDAO;
 import com.sist.dao.ProductDAO;
+import com.sist.vo.CompanyReviewVO;
 import com.sist.vo.CompanyVO;
+import com.sist.vo.ProductReviewVO;
 import com.sist.vo.ProductVO;
 
 public class ProductModel {
@@ -73,6 +78,7 @@ public class ProductModel {
 		
 		ProductDAO dao = ProductDAO.newInstance();
 		ProductVO vo = dao.getProductDetailById(id);
+		List<ProductReviewVO> rlist = dao.getReviewListByProduct(id);
 		
 		JSONObject json = null;
 		try {
@@ -135,6 +141,7 @@ public class ProductModel {
 		
 		request.setAttribute("vo", vo);
 		request.setAttribute("info", json);
+		request.setAttribute("rlist", rlist);
 		request.setAttribute("main_jsp", "/jsp/product/product_detail.jsp");
 		return "/jsp/main/main.jsp";
 	}
@@ -224,6 +231,81 @@ public class ProductModel {
 			cookie.setValue(val);
 			response.addCookie(cookie);
 			out.write("success");
+		}
+	}
+	
+	@RequestMapping("product/write_review.do")
+	public String write_review(HttpServletRequest request, HttpServletResponse response) {
+		HttpSession session = request.getSession();
+		String pid = "";
+		
+		if(session.getAttribute("id")!=null) {
+			try {
+				request.setCharacterEncoding("UTF-8");
+			} catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+			}
+			String user_id = (String)session.getAttribute("id");
+			String content = request.getParameter("comment");
+			pid = request.getParameter("cid");
+			
+			ProductReviewVO vo = new ProductReviewVO();
+			vo.setUser_id(user_id);
+			vo.setContent(content);
+			vo.setPid(Integer.parseInt(pid));
+			
+			ProductDAO dao = ProductDAO.newInstance();
+			dao.insertProductReview(vo);
+		}
+		
+		
+		return "redirect:../product/detail.do?id=" + pid;
+	}
+	
+	@RequestMapping("product/delete_review.do")
+	public void delete_review(HttpServletRequest request, HttpServletResponse response) {
+		PrintWriter out = null;
+		try {
+			response.setCharacterEncoding("UTF-8");
+			out = response.getWriter();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		
+		int rid = Integer.parseInt(request.getParameter("id"));
+		int cnt = ProductDAO.newInstance().delete_review(rid);
+		
+		if(cnt == 1)
+			out.write("success");
+		else
+			out.write("fail");
+	}
+	
+	@RequestMapping("product/update_review.do")
+	public void update_review(HttpServletRequest request, HttpServletResponse response) {
+		PrintWriter out = null;
+		try {
+			response.setCharacterEncoding("UTF-8");
+			out = response.getWriter();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			request.setCharacterEncoding("UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
+		int id = Integer.parseInt(request.getParameter("id"));
+		String comment = request.getParameter("comment");
+		int cnt = ProductDAO.newInstance().update_review(id, comment);
+		
+		if(cnt == 1) {
+			out.write("success");
+		}
+		else {
+			out.write("fail");
 		}
 	}
 }

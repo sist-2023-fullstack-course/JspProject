@@ -109,44 +109,46 @@
 			<div class="col-sm-6">
 				<div id="comments">
 					<div class="comments-list">
-						<h4 class="detail_heading">댓글</h4>
+						<c:if test="${rlist.size() > 0 }">
+						<h4 class="detail_heading">리뷰</h4>
+						</c:if>
+						<c:if test="${rlist.size() == 0 }">
+						<h4 class="detail_heading">아직 등록된 리뷰가 없습니다</h4>
+						</c:if>
 						<ol class="commentlists">
-							<li class="sin-comment">
+							<c:forEach var="vo" items="${rlist }">
+							<li class="sin-comment" data-id="${vo.id }">
 								<div class="the-comment">
 									<div class="comment-box">
 										<div class="comment-author">
-											<p class="com-name"><strong>댓글 작성자</strong></p>3 day ago  
+											<p class="com-name"><strong>${vo.user_name }</strong></p>${vo.regdate } 
 										</div>
 										<div class="comment-text">
-											<p>Lorem ipsum dolor sit amet, consectetur adi ing elit, sed do eiusmo empor incididunt ut labore et dolore magna aliqua magna aliqua Lorem ipsum dolor sit amet, consectetur adi ing elit, sed do eiusmo empor incididunt ut labore et dolore magna aliqua magna aliqua Lorem ipsum dolor sit amet, </p>
+											<p>${vo.content }</p>
 										</div>
 									</div>
 								</div>
-							</li><!-- #comment-## -->
-							<li class="sin-comment">
-								<div class="the-comment">
-									<div class="comment-box">
-										<div class="comment-author">
-											<p class="com-name"><strong>댓글 작성자</strong></p>3 day ago  
-										</div>
-										<div class="comment-text">
-											<p>Lorem ipsum dolor sit amet, consectetur adi ing elit, sed do eiusmo empor incididunt ut labore et dolore magna aliqua magna aliqua Lorem ipsum dolor sit amet, consectetur adi ing elit, sed do eiusmo empor incididunt ut labore et dolore magna aliqua magna aliqua Lorem ipsum dolor sit amet, </p>
-										</div>
-									</div>
-								</div>
-							</li><!-- #comment-## -->
+								<c:if test="${vo.user_id==sessionScope.id }">
+								<span style="right: 50px;" onclick="updateReview(this)">수정</span>
+								</c:if>
+								<c:if test="${vo.user_id==sessionScope.id || sessionScope.id=='admin'}">
+								<span style="right: 0px;" onclick="deleteReview()">삭제</span>
+								</c:if>
+							</li>
+							</c:forEach>
 						</ol>
 					</div>
 					
 					<c:if test="${sessionScope.id!=null }">
 					<div class="commentform">
-						<h4 class="detail_heading">댓글쓰기</h4>
-						<form class="comment-form" id="commentform" method="post" action="#">
+						<h4 class="detail_heading">리뷰쓰기</h4>
+						<form class="comment-form" id="commentform" method="post" action="write_review.do">
 							<div class="form-input">
+								<input type="hidden" name="cid" value="${vo.id }">
 								<textarea aria-required="true" name="comment" id="comment" rows="4"></textarea>
 							</div>
 							<p class="form-submit" style="float: right;">
-								<input type="submit" value="등록" id="submit" name="submit">
+								<span class="review-submit" id="submit" style="cursor: pointer;">등록</span>
 							</p>
 						</form>
 					</div><!-- end commentform -->
