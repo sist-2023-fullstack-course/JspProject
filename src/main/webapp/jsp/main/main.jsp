@@ -36,7 +36,7 @@
 <link rel="stylesheet" type="text/css" href="../css/mypage.css" />
 <!-- join CSS -->
 <link rel="stylesheet" type="text/css" href="../css/join.css" />
-<!-- join CSS -->
+<!-- board CSS -->
 <link rel="stylesheet" type="text/css" href="../css/board.css" />
 <!-- find CSS -->
 <link rel="stylesheet" type="text/css" href="../css/find.css" />
@@ -44,6 +44,8 @@
 <link rel="stylesheet" type="text/css" href="../css/home.css" />
 <!-- flexslider CSS -->
 <link rel="stylesheet" type="text/css" href="../css/custom.flexslider.css" />
+<!-- categorylist CSS -->
+<link rel="stylesheet" type="text/css" href="../css/categorylist.css" />
 <!-- Responsive Stylesheet -->
 <!-- swiper CSS-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
