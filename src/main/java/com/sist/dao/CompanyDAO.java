@@ -303,6 +303,72 @@ public class CompanyDAO {
 		
 		return cnt;
 	}
+	
+	public List<CompanyVO> companyListTop(String cate){
+		List<CompanyVO> list =new ArrayList<>();
+		
+		try {
+			conn=db.getConnection();
+			
+			String sql="SELECT rownum, a.* "
+					+ "FROM ( "
+					+ "	SELECT decode(c.COM_STAR_CNT, 0, 0, c.COM_STAR_SUM/c.COM_STAR_CNT) AS star, c.*, cc.CATEGORY "
+					+ "	FROM COMPANY c, COMPANY_CATEGORY cc "
+					+ "	WHERE c.COM_CATEGORY_ID = cc.COM_CATEGORY_ID AND cc.CATEGORY LIKE '%'||?||'%' "
+					+ "	ORDER BY decode(c.COM_STAR_CNT, 0, 0, c.COM_STAR_SUM/c.COM_STAR_CNT) DESC "
+					+ ") a "
+					+ "WHERE rownum <= 10";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, cate);
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()) {
+				CompanyVO vo=new CompanyVO();
+				vo.setStar(rs.getDouble(2));
+				vo.setId(rs.getInt(3));
+				vo.setCom_name(rs.getString(4));
+				vo.setAddress(rs.getString(5));
+				vo.setPoster(rs.getString(12));
+				vo.setPhone(rs.getString(15));
+				list.add(vo);
+			}
+			rs.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.disConnection(conn, ps);
+		}
+		return list;
+	}
+	// 최상단 댓글
+	public CompanyReviewVO getReviewByComId(int cid) {
+		CompanyReviewVO vo = new CompanyReviewVO();
+		
+		try {
+			conn=db.getConnection();
+			String sql="SELECT rev_content, TO_CHAR(rev_reg_date,'yyyy-MM-dd HH24:mm:ss'), user_name "
+					+ "FROM review r, member m "
+					+ "WHERE r.com_id=? AND rev_id=(select max(rev_id) from review where com_id=?)";
+			ps=conn.prepareStatement(sql);
+			ps.setInt(1, cid);
+			ps.setInt(2, cid);
+			ResultSet rs= ps.executeQuery();
+			if(rs.next()) {
+				vo.setContent(rs.getString(1));
+				vo.setDbday(rs.getString(2));
+				vo.setUser_name(rs.getString(3));
+			}
+			System.out.println(cid + " : " + vo.getContent());
+			rs.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			db.disConnection(conn, ps);
+		}
+		
+		return vo;
+	}
+
 }
 
 

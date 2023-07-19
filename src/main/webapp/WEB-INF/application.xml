@@ -10,4 +10,5 @@
 	<bean id="wishlist" class="com.sist.model.WishListModel"/>
 	<bean id="admin" class="com.sist.model.AdminModel"/>
 	<bean id="question" class="com.sist.model.QuestionModel"/>
+	<bean id="categorylist" class="com.sist.model.CategoryListModel"/>
 </beans>

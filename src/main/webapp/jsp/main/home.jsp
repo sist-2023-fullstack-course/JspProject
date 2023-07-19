@@ -43,49 +43,49 @@
 	    		<ul class="slides" style="width: 1000%; transition-duration: 0.6s; transform: translate3d(-665.333px, 0px, 0px);">
 			        <li style="width: 312.667px; float: left; display: block;">
 			          	<figure>
-			          		<a href="#"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
+			          		<a href="../etc/categorylist.do?cate=미용"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
 			            	<figcaption>
-			            		<a href="#"><i class="fa fa-list-ul"></i>애견미용 탑 10</a>
+			            		<a href="./etc/categorylist.do?cate=미용"><i class="fa fa-list-ul"></i>애견미용 탑 10</a>
 			            	</figcaption>
 			          	</figure>
 			        </li>
 			        <li style="width: 312.667px; float: left; display: block;">
 			          	<figure>
-			          		<a href="#"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
+			          		<a href="../etc/categorylist.do?cate=병원"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
 			            	<figcaption>
-			            		<a href="#"><i class="fa fa-list-ul"></i>동물병원 탑 10</a>
+			            		<a href="../etc/categorylist.do?cate=병원"><i class="fa fa-list-ul"></i>동물병원 탑 10</a>
 			            	</figcaption>
 			          	</figure>
 			        </li>
 			        <li style="width: 312.667px; float: left; display: block;">
 			          	<figure>
-			          		<a href="#"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
+			          		<a href="../etc/categorylist.do?cate=카페"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
 			            	<figcaption>
-			            		<a href="#"><i class="fa fa-list-ul"></i>애견카페 탑 10</a>
+			            		<a href="../etc/categorylist.do?cate=카페"><i class="fa fa-list-ul"></i>애견카페 탑 10</a>
 			            	</figcaption>
 			          	</figure>
 			        </li>
 			        <li style="width: 312.667px; float: left; display: block;">
 			          	<figure>
-			          		<a href="#"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
+			          		<a href="../etc/categorylist.do?cate=숙소"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
 			            	<figcaption>
-			            		<a href="#"><i class="fa fa-list-ul"></i>애견숙소 탑 10</a>
+			            		<a href="../etc/categorylist.do?cate=숙소"><i class="fa fa-list-ul"></i>애견숙소 탑 10</a>
 			            	</figcaption>
 			          	</figure>
 			        </li>
 			        <li style="width: 312.667px; float: left; display: block;">
 			          	<figure>
-			          		<a href="#"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
+			          		<a href="../etc/categorylist.do?cate=용품"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
 			            	<figcaption>
-			            		<a href="#"><i class="fa fa-list-ul"></i>반려동물용품 탑 10</a>
+			            		<a href="../etc/categorylist.do?cate=용품"><i class="fa fa-list-ul"></i>반려동물용품 탑 10</a>
 			            	</figcaption>
 			          	</figure>
 			        </li>
 			        <li style="width: 312.667px; float: left; display: block;">
 			          	<figure>
-			          		<a href="#"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
+			          		<a href="../etc/categorylist.do?cate=장례"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
 			            	<figcaption>
-			            		<a href="#"><i class="fa fa-list-ul"></i>반려동물장례 탑 10</a>
+			            		<a href="../etc/categorylist.do?cate=장례"><i class="fa fa-list-ul"></i>반려동물장례 탑 10</a>
 			            	</figcaption>
 			          	</figure>
 			        </li>
