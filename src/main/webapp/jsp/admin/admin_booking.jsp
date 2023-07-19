@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<div class="page-title">예약 관리</div>
     <div class="col-sm-1 col-md-1" ></div>
     <div class="col-sm-10 col-md-10">
     	<table class="cart-table table" style="margin-top:30px;">

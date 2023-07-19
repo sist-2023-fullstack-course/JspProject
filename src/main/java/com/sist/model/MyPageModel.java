@@ -176,9 +176,38 @@ public class MyPageModel {
 	@RequestMapping("mypage/addpet.do")
 	public String mypage_addpet(HttpServletRequest request,HttpServletResponse response)
 	{
-		
-		
 		request.setAttribute("mypage_jsp", "mypage_addpet.jsp");
+		request.setAttribute("main_jsp", "../mypage/mypage_main.jsp");
+		return "../jsp/main/main.jsp";
+	}
+	
+	// 마이펫 등록하기
+	@RequestMapping("mypage/adding_pet.do")
+	public String mypage_adding_pet(HttpServletRequest request,HttpServletResponse response)
+	{
+		HttpSession session=request.getSession();
+		String uid=(String)session.getAttribute("id");
+		
+		
+		String category=request.getParameter("category");
+		String pname=request.getParameter("pname");
+		String gender=request.getParameter("gender");
+		String neutered=request.getParameter("neutered");
+		String birthyear=request.getParameter("birthyear");
+		String weight=request.getParameter("weight");
+
+		MyPetVO vo=new MyPetVO();
+		vo.setName(pname);
+		vo.setCategory(category);
+		vo.setGender(gender);
+		vo.setBirthyear(Integer.parseInt(birthyear));
+		vo.setWeight(weight);
+		vo.setNeutered(neutered);
+		
+		MyPageDAO dao=MyPageDAO.newInstance();
+		dao.addmypet(vo, uid);
+		
+		request.setAttribute("mypage_jsp", "mypage_mypet.jsp");
 		request.setAttribute("main_jsp", "../mypage/mypage_main.jsp");
 		return "../jsp/main/main.jsp";
 	}
