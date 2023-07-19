@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<div style="padding-top: 40px;"></div>
+<div class="page-title">개인정보 수정하기</div>
     <div class="col-sm-1 col-md-1"></div>
     <div class="col-sm-10 col-md-10">
     	<div class="row">

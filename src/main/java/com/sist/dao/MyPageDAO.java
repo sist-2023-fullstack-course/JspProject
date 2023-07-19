@@ -294,9 +294,57 @@ public class MyPageDAO {
 			}
 			return list;
 		}
-
-	
-	
 	/* --- END OF WISHLIST  ----*/
 	
+	/* --- START OF MYPET ----*/
+	// 마이펫 추가하기
+	
+		
+	// 마이펫 수정하기
+
+	// 마이펫 목록 보기 : 이름, 사진
+	
+		
+/*
+ PET_ID
+PET_CATEGORY
+PET_NAME
+PET_GENDER
+PET_BIRTHYEAR
+PET_WEIGHT
+NEUTERED
+USER_ID
+ */
+	// 마이펫 상세 보기
+	public void addmypet(MyPetVO vo,String uid)
+	{
+		try
+		{
+			conn=db.getConnection();
+			String sql="INSERT INTO pet VALUES("
+					+ "pm_pti_seq.nextval,?,?,?,?,?,?,?)";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, vo.getCategory() );
+			ps.setString(2, vo.getName());
+			ps.setString(3, vo.getGender());
+			ps.setInt(4, vo.getBirthyear());
+			ps.setString(5, vo.getWeight());
+			ps.setString(6, vo.getNeutered());
+			ps.setString(7, uid);
+			ps.executeUpdate();
+			
+		}catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
+		finally
+		{
+			db.disConnection(conn, ps);
+		}
+	}
+		
+    /* --- END OF MYPET ----*/
+		
+		
+		
 }
