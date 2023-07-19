@@ -10,8 +10,8 @@ import lombok.Setter;
 
 // 리뷰 정보
 public class CompanyReviewVO {
-	private int id;
+	private int id, cid;
 	private double star;
-	private String content, writer;
+	private String content, user_id, dbday, user_name;
 	private Date regdate;
 }

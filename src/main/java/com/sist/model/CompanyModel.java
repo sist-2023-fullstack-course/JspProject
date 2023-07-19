@@ -2,6 +2,7 @@ package com.sist.model;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -18,6 +19,7 @@ import org.json.simple.JSONObject;
 import com.sist.controller.RequestMapping;
 import com.sist.dao.CompanyDAO;
 import com.sist.dao.WishListDAO;
+import com.sist.vo.CompanyReviewVO;
 import com.sist.vo.CompanyVO;
 
 public class CompanyModel {
@@ -66,6 +68,7 @@ public class CompanyModel {
 		
 		CompanyDAO dao = CompanyDAO.getInstance();
 		CompanyVO vo = dao.getCompanyVO(com_id);
+		List<CompanyReviewVO> rlist = dao.getReviewListByCompany(com_id);
 		
 		// 좋아요 눌렀는 지 확인
 		HttpSession session = request.getSession();
@@ -127,6 +130,7 @@ public class CompanyModel {
 		}
 		
 		request.setAttribute("vo", vo);
+		request.setAttribute("rlist", rlist);
 		request.setAttribute("main_jsp", "../search/company_details.jsp");
 		return "../jsp/main/main.jsp";
 	}
@@ -217,4 +221,97 @@ public class CompanyModel {
 			out.write("success");
 		}
 	}
+	
+	@RequestMapping("company/write_review.do")
+	public String write_review(HttpServletRequest request, HttpServletResponse response) {
+		HttpSession session = request.getSession();
+		String cid = "";
+		
+		if(session.getAttribute("id")!=null) {
+			try {
+				request.setCharacterEncoding("UTF-8");
+			} catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+			}
+			String user_id = (String)session.getAttribute("id");
+			String content = request.getParameter("comment");
+			cid = request.getParameter("cid");
+			
+			CompanyReviewVO vo = new CompanyReviewVO();
+			vo.setUser_id(user_id);
+			vo.setContent(content);
+			vo.setCid(Integer.parseInt(cid));
+			
+			CompanyDAO dao = CompanyDAO.getInstance();
+			dao.insertCompanyReview(vo);
+		}
+		
+		
+		return "redirect:../company/detail.do?id=" + cid;
+	}
+	
+	@RequestMapping("company/delete_review.do")
+	public void delete_review(HttpServletRequest request, HttpServletResponse response) {
+		PrintWriter out = null;
+		try {
+			response.setCharacterEncoding("UTF-8");
+			out = response.getWriter();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		
+		int rid = Integer.parseInt(request.getParameter("id"));
+		int cnt = CompanyDAO.getInstance().delete_review(rid);
+		
+		if(cnt == 1)
+			out.write("success");
+		else
+			out.write("fail");
+	}
+	
+	@RequestMapping("company/update_review.do")
+	public void update_review(HttpServletRequest request, HttpServletResponse response) {
+		PrintWriter out = null;
+		try {
+			response.setCharacterEncoding("UTF-8");
+			out = response.getWriter();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			request.setCharacterEncoding("UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		
+		int id = Integer.parseInt(request.getParameter("id"));
+		String comment = request.getParameter("comment");
+		int cnt = CompanyDAO.getInstance().update_review(id, comment);
+		
+		if(cnt == 1) {
+			out.write("success");
+		}
+		else {
+			out.write("fail");
+		}
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

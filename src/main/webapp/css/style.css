@@ -2085,6 +2085,7 @@ img {
 -------------------------*/
 #comments {
   margin-top: 20px;
+  margin-left: 40px;
 }
 .comments-list {
   width: 100%;
@@ -2101,10 +2102,26 @@ h4.heading {
   margin: 0;
   list-style: none;
 }
-.commentlists .sin-comment{}
-.commentlists .sin-comment .the-comment {
+.commentlists .sin-comment{
   margin-bottom: 35px;
+  position:relative;
+}
+.commentlists .sin-comment span{
+	background: #77D6C9 none repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position:absolute;
+    top:10px;
+}
+.commentlists .sin-comment .the-comment {
+  width:80%;
   overflow: hidden;
+  display:inline-block;
 }
 .the-comment .avatar {
   display: block;
@@ -2114,12 +2131,14 @@ h4.heading {
 .the-comment .avatar img {}
 .the-comment .comment-box {
   overflow: hidden;
+  display:inline-block;
+  width:100%;
 }
 .the-comment .comment-box .comment-author{}
 .the-comment .comment-box .comment-author p {
   color: #2a2a2a;
   display: inline-block;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 12px;
   margin-bottom: 0;
@@ -2151,7 +2170,7 @@ h4.heading {
 .the-comment .comment-box .comment-text {}
 .the-comment .comment-box .comment-text p {
   color: #363636;
-  font-size: 12px;
+  font-size: 15px;
   margin: 0;
 }
 .children-comment {

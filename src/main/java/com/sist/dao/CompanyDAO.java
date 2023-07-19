@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.sist.common.CreateDataBase;
+import com.sist.vo.CompanyReviewVO;
 import com.sist.vo.CompanyVO;
 
 public class CompanyDAO {
@@ -203,4 +204,126 @@ public class CompanyDAO {
 		
 		return vo;
 	}
+	
+	public int insertCompanyReview(CompanyReviewVO vo) {
+		int cnt = 0;
+		
+		try {
+			conn = db.getConnection();
+			String sql = "INSERT INTO review VALUES("
+					   + "pm_rvi_seq.nextval,?,0,SYSDATE,?,?)";
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, vo.getContent());
+			ps.setString(2, vo.getUser_id());
+			ps.setInt(3, vo.getCid());
+			
+			cnt = ps.executeUpdate();
+			rs.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			db.disConnection(conn, ps);
+		}
+		
+		return cnt;
+	}
+	
+	public List<CompanyReviewVO> getReviewListByCompany(int cid){
+		List<CompanyReviewVO> list = new ArrayList<>();
+		
+		try {
+			conn = db.getConnection();
+			String sql = "SELECT /*+ INDEX_DESC(r PK_REVIEW) */ "
+					   + "REV_ID, REV_CONTENT, TO_CHAR(REV_REG_DATE,'YYYY-MM-DD HH24:mi:ss'), m.USER_ID, m.USER_NAME "
+					   + "FROM REVIEW r, MEMBER m "
+					   + "WHERE com_id=? AND m.user_id = r.user_id";
+
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, cid);
+			
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				CompanyReviewVO vo = new CompanyReviewVO();
+				
+				vo.setId(rs.getInt(1));
+				vo.setContent(rs.getString(2));
+				vo.setDbday(rs.getString(3));
+				vo.setUser_id(rs.getString(4));
+				vo.setUser_name(rs.getString(5));
+				
+				list.add(vo);
+			}
+			rs.close();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			db.disConnection(conn, ps);
+		}
+		
+		return list;
+	}
+	
+	public int delete_review(int id) {
+		int cnt = 0;
+		
+		try {
+			conn = db.getConnection();
+			String sql = "DELETE FROM REVIEW WHERE rev_id = ?";
+			ps=conn.prepareStatement(sql);
+			ps.setInt(1, id);
+			cnt = ps.executeUpdate();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			db.disConnection(conn, ps);
+		}
+		
+		return cnt;
+	}
+	
+	public int update_review(int id, String comment) {
+		int cnt = 0;
+		
+		try {
+			conn = db.getConnection();
+			String sql = "UPDATE review SET REV_CONTENT = ? WHERE REV_ID = ?";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, comment);
+			ps.setInt(2, id);
+			cnt = ps.executeUpdate();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			db.disConnection(conn, ps);
+		}
+		
+		return cnt;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -288,3 +288,15 @@ a.title{
     display:block;
     margin:10px auto;
 }
+
+.comment-text{
+	margin-top:10px;
+}
+
+#update-comment{
+	background: transparent none repeat scroll 0 0;
+    border: 1px solid #cccccc;
+    margin-bottom: 20px;
+    padding: 7px 15px;
+    width: 100%;
+}
