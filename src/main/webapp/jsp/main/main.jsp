@@ -106,6 +106,8 @@
 <script type="text/javascript" src="../js/find.js"></script>
 <!-- slider JS -->
 <script type="text/javascript" src="../js/jquery.flexslider-min.js"></script>
+<!-- calendar JS -->
+<script type="text/javascript" src="../js/calendar.js"></script>
 <script>
 	new WOW().init();
 </script>	

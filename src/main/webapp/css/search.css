@@ -146,13 +146,16 @@
 	margin: 10px;
 	border-radius: 6px;
 }
-.s21_detail_top_btm dl.reserve_button, dl.purchase_button, dl.cart_button{
+
+.s21_detail_top_btm dl.reserve_button, dl.purchase_button, dl.cart_button
+	{
 	cursor: pointer;
 	background-color: #77D6C9;
 }
-.s21_detail_top_btm dl.heart_button{
-	cursor:pointer;
-	width:15%;
+
+.s21_detail_top_btm dl.heart_button {
+	cursor: pointer;
+	width: 15%;
 }
 
 .s21_detail_top_btm dt {
@@ -173,13 +176,13 @@
 	letter-spacing: -0.05em
 }
 
-
 .s21_tour_de_btm {
 	width: 100%;
 	background: #fff;
 	padding: 60px 0;
 	margin: 0px auto
 }
+
 .s21_sns img {
 	width: 25px;
 	padding: 0 5px
@@ -198,105 +201,193 @@
 	cursor: pointer
 }
 
-#map_area{
+#map_area {
 	margin-top: 20px;
 }
 
-.detail_heading{
+.detail_heading {
 	width: 100%;
-    font-size: 25px;
-    color: #3a3a3a;
-    font-weight: 400;
-    text-align: left;
+	font-size: 25px;
+	color: #3a3a3a;
+	font-weight: 400;
+	text-align: left;
 	margin-top: 20px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+	margin-bottom: 20px;
+	text-transform: uppercase;
 }
 
-.row_margin{
+.row_margin {
 	margin-bottom: 50px;
 }
 
-a.title{
-	color:#000000;
+a.title {
+	color: #000000;
 }
 
-.poster{
-	height:420px;
+.poster {
+	height: 420px;
 }
 
-.thumb_gray::before{
+.thumb_gray::before {
 	position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    background-color: rgba(0, 0, 0, .025);
-    border: 1px solid rgba(0, 0, 0, .03);
-    border-radius: 14px;
-    z-index: 1;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	background-color: rgba(0, 0, 0, .025);
+	border: 1px solid rgba(0, 0, 0, .03);
+	border-radius: 14px;
+	z-index: 1;
 }
-.poster_margin{
+
+.poster_margin {
 	margin-bottom: 20px;
 }
 
-.product .meta p{
+.product .meta p {
 	margin: 0px;
 }
 
-.recent_delete_btn{
+.recent_delete_btn {
 	cursor: pointer;
-    border-radius: 1em;
-    color: #fff;
-    background: #0584C5;
-    border: 0;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    font-size: 12px;
-    display: inline-block;
-    width: 50px;
-    text-align: center;
-    top:25%;
-    position:absolute;
-    margin-left:1px;
-}
-.recent_delete_all_btn{
-	cursor: pointer;
-    border-radius: 1em;
-    color: #fff;
-    background: #0584C5;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    font-size: 12px;
-    width: 100px;
-    text-align: center;
-    display:block;
-    margin:0px auto;
+	border-radius: 1em;
+	color: #fff;
+	background: #0584C5;
+	border: 0;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	font-size: 12px;
+	display: inline-block;
+	width: 50px;
+	text-align: center;
+	top: 25%;
+	position: absolute;
+	margin-left: 1px;
 }
 
-#back_to_list{
+.recent_delete_all_btn {
 	cursor: pointer;
-    border-radius: 1em;
-    color: #fff;
-    background: #0584C5;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-size: 12px;
-    width: 100px;
-    text-align: center;
-    display:block;
-    margin:10px auto;
+	border-radius: 1em;
+	color: #fff;
+	background: #0584C5;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	font-size: 12px;
+	width: 100px;
+	text-align: center;
+	display: block;
+	margin: 0px auto;
 }
 
-.comment-text{
-	margin-top:10px;
+#back_to_list {
+	cursor: pointer;
+	border-radius: 1em;
+	color: #fff;
+	background: #0584C5;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-size: 12px;
+	width: 100px;
+	text-align: center;
+	display: block;
+	margin: 10px auto;
 }
 
-#update-comment{
+.comment-text {
+	margin-top: 10px;
+}
+
+#update-comment {
 	background: transparent none repeat scroll 0 0;
-    border: 1px solid #cccccc;
-    margin-bottom: 20px;
-    padding: 7px 15px;
-    width: 100%;
+	border: 1px solid #cccccc;
+	margin-bottom: 20px;
+	padding: 7px 15px;
+	width: 100%;
+}
+
+#reserve-dialog {
+	text-align: center;
+}
+#reserve-dialog h2{
+	color: #77D6C9;
+}
+#reserve-dialog #reserve-info{
+	width:70%;
+	height:130px;
+	padding:15px;
+}
+
+#cal-area{
+	margin:0px auto;
+	width:70%;
+}
+
+.Calendar {
+	text-align: center;
+	width:100%;
+	margin:30px 0px 20px 0px;
+}
+.Calendar td{
+	width:50px;
+	height:50px;
+}
+
+.Calendar>thead>tr:first-child>td {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.Calendar>thead>tr:last-child>td {
+	font-weight: 600;
+}
+
+.Calendar>tbody>tr>td>p {
+	height: 45px;
+	width: 45px;
+	border-radius: 45px;
+	transition-duration: .2s;
+	line-height: 45px;
+	margin: 2.5px;
+	display: block;
+	text-align: center;
+}
+
+.pastDay {
+	color: lightgray;
+}
+
+.today {
+	background-color: gray;
+	color: #fff;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.futureDay {
+	background-color: #FFFFFF;
+	cursor: pointer;
+}
+
+.futureDay:hover {
+	background: #eee;
+}
+
+.futureDay.choiceDay, .today.choiceDay {
+	background: #77D6C9;
+	color: #fff;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+#reserveBtn{
+	cursor:pointer;
+	display:inline-block;
+	background: #77D6C9 none repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 20px;
+    margin-top:15px;
 }
