@@ -2,13 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-<script type="text/javascript">
-$(function(){
-	$('#logoutBtn').click(function(){
-		location.href="../member/logout.do";
-	})
-})	
-</script>
 	<div class="header-area"><!--Start Header Area-->
 	<div class="container">
 		<div class="row">
@@ -46,8 +39,8 @@ $(function(){
 							<p class="text-center"><a href="#" style="text-decoration:none">장바구니</a></p>
 						</li>
 						<li>
-							<p class="text-center"><a href="../member/logout.do"><i class="fa fa-sign-out" style="color:#034D7E"></i></a></p>
-							<p class="text-center"><a href="../member/logout.do" style="text-decoration:none">로그아웃</a></p>
+							<p class="text-center"><a href="javascript:logout()"><i class="fa fa-sign-out" style="color:#034D7E"></i></a></p>
+							<p class="text-center"><a href="javascipt:logout()" style="text-decoration:none">로그아웃</a></p>
 						</li>
 						</c:if>
 					</ul>

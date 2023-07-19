@@ -45,10 +45,15 @@ function idCheckfc(){
 				}
 				else
 				{
-					location.href="../main/main.do"
+					location.href = document.referrer;
 				}
 			}
 		})
 }
-	
+
+function logout(){
+	$.get('/JspProject/member/logout.do', function() {
+        location.reload();
+    });
+}	
 $('#loginBtn').click(idCheckfc);

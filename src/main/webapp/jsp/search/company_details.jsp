@@ -143,5 +143,8 @@
 		<span id="back_to_list" onclick="javascript:history.back();">목록</span>
 	</div>
 </section><!--End Product Details Area-->
+<div id="reserve-dialog" style="display: none">
+	<h1>예약하기</h1>
+</div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1139269c033f918e1755e459b1b17604"></script>
 <script type="text/javascript" src="../js/kakaomap.js"></script>

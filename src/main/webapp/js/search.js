@@ -287,6 +287,16 @@ function updateReview(t) {
 
 }
 
+function reserve(){
+	$('#reserve-dialog').dialog({
+		autoOpen:false,
+		width:700,
+		height:900,
+		modal:true
+	}).dialog('open');
+}
+
+$('.reserve_button').click(reserve);
 $('.review-submit').click(insertReview);
 $('ul.com-category > li > a').click(categoryClick);
 $('.pagination > ul.company > li > a').click(pageClick);
