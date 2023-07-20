@@ -63,7 +63,7 @@
 									</dl>
 									<c:if test="${like }">
 										<dl class="heart_button clicked"
-											onclick="clickHeartBtn('${sessionScope.id}', ${vo.id })">
+											onclick="clickHeartBtn(${vo.id })">
 											<dt>
 												<img src="../img/afterheart.png">
 											<dd>좋아요</dd>
@@ -71,7 +71,7 @@
 									</c:if>
 									<c:if test="${!like }">
 										<dl class="heart_button"
-											onclick="clickHeartBtn('${sessionScope.id}', ${vo.id })">
+											onclick="clickHeartBtn(${vo.id })">
 											<dt>
 												<img src="../img/beforeheart.png">
 											<dd>좋아요</dd>

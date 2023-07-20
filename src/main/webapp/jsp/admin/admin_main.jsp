@@ -11,7 +11,6 @@
 							<li><a href="#">회원 관리</a></li>
 							<li><a href="../admin/booking.do">예약 관리</a></li>
 							<li><a href="#">공지사항 관리</a></li>
-							<li><a href="#">자유게시판 관리</a></li>
 							<li><a href="../admin/question_list.do">묻고 답하기</a></li>
 							<li><a href="#">업체 등록</a></li>
 						</ul>

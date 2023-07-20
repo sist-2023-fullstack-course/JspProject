@@ -52,28 +52,6 @@ public class MyPageModel {
 		return "../jsp/main/main.jsp";
 	}
 	
-	@RequestMapping("mypage/wishlist.ajax.do")
-	public String mypage_wishlist_ajax(HttpServletRequest request, HttpServletResponse response)
-	{
-		
-		HttpSession session=request.getSession();
-		String uid=(String)session.getAttribute("id");
-		
-		MyPageDAO dao=MyPageDAO.newInstance();
-		List<WishListVO> list=dao.company_wish_list(uid);
-		WishListVO vo=new WishListVO();
-		int cid=vo.getCom_category_id();
-		
-		boolean isClicked = WishListDAO.newInstance().isClicked(uid, cid);
-		request.setAttribute("like", isClicked);
-		
-		request.setAttribute("list", list);
-		
-		request.setAttribute("mypage_jsp", "mypage_wishlist.jsp");
-		request.setAttribute("main_jsp", "../mypage/mypage_main.jsp");
-		return "../jsp/main/main.jsp";
-	}
-	
 	@RequestMapping("mypage/wishlist.do")
 	public String mypage_wishlist(HttpServletRequest request, HttpServletResponse response)
 	{

@@ -164,7 +164,7 @@ function pageClick() {
 	}
 }
 
-function clickHeartBtn(uid, cid) {
+function clickHeartBtn(cid) {
 	let isInsert;
 	if ($('.heart_button').attr('class').includes('clicked')) {
 		isInsert = false;
@@ -178,7 +178,6 @@ function clickHeartBtn(uid, cid) {
 		url: '../wishlist/update_ajax.do',
 		data: {
 			'isInsert': isInsert,
-			'uid': uid,
 			'cid': cid
 		},
 		success: function(result) {

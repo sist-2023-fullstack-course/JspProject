@@ -14,7 +14,7 @@ public class WishListModel {
 	@RequestMapping("wishlist/update_ajax.do")
 	public void update_wishlist_by_ajax(HttpServletRequest request, HttpServletResponse response) {
 		boolean isInsert = Boolean.parseBoolean(request.getParameter("isInsert"));
-		String uid = request.getParameter("uid");
+		String uid = (String)request.getSession().getAttribute("id");
 		int cid = Integer.parseInt(request.getParameter("cid"));
 		
 		WishListDAO dao = WishListDAO.newInstance();

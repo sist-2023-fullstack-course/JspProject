@@ -294,11 +294,11 @@ public class MyPageDAO {
 				while(rs.next())
 				{
 					WishListVO vo=new WishListVO();
-					vo.setCom_id(1);
+					vo.setUser_id(uid);
 					vo.setCom_name(rs.getString(2));
 					vo.setPoster(rs.getString(3));
 					vo.setCategory(rs.getString(4));
-					vo.setUser_id(rs.getString(5));
+					vo.setCom_id(rs.getInt(5));
 					list.add(vo);
 				}
 				rs.close();
