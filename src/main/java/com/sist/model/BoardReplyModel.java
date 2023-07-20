@@ -20,6 +20,7 @@ public class BoardReplyModel {
 	  
 	  String bno=request.getParameter("bno");
 	  String msg=request.getParameter("msg");
+	  String user_name=request.getParameter("name");
 	  
 	  HttpSession session=request.getSession();
 	  String id=(String)session.getAttribute("id");
@@ -28,6 +29,7 @@ public class BoardReplyModel {
 	  vo.setBoard_id(Integer.parseInt(bno));
 	  vo.setRep_content(msg);
 	  vo.setUser_id(id);
+	  vo.setUser_name(user_name);
 	  
 	  // DAO로 전송 
 	  BoardReplyDAO dao=BoardReplyDAO.newInstance();

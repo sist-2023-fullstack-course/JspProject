@@ -46,20 +46,21 @@
 		     <c:forEach var="vo" items="${list }">
 		       <tr>
 		         <td width=10% class="text-center">${vo.board_id }</td>
-		         <td width=40% class="text-center">
+		         <td width=40% class="text-center" >
+		         <div class="test" style="text-overflow:ellipsis;">
 		         	<a href="../board/board_detail.do?no=${vo.board_id }">${vo.title }</a>
 		         	<c:if test="${today==vo.dbday }">
 		         		<img src="../img/new-post.gif" style="display:inline-block; width:40px;">
 		         	</c:if>
+		         </div>
 		         </td>
 		         <td width=10% class="text-center">${vo.board_category }</td>
-		         <td width=10% class="text-center">${vo.user_id }</td>
+		         <td width=10% class="text-center">${vo.user_name }</td>
 		         <td width=20% class="text-center">${vo.dbday }</td>
 		         <td width=10% class="text-center">${vo.hit }</td>
 		       </tr>
 		     </c:forEach>
 	   </table>
-	</div>
 	<div class="board-page"> 
 	   <nav class="pagination" >
 		<ul>
@@ -88,6 +89,7 @@
 	         </c:if>
 	        </ul>
 	    </nav>
+	</div>
 	</div>
 </div>
  

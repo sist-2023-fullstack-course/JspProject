@@ -8,7 +8,7 @@
 	<div class="row">
 		<div class="board-insert-main">
 		<div class="board-title"> 
-			자유게시판 
+			게시글 작성
 		</div>
 			<form method=post action="../board/board_insert_ok.do">
 			   <table class="board-table table">
@@ -27,7 +27,8 @@
 			    <tr>
 			      <th width=20%>사용자 ID</th>
 			      <td width=80%>
-			       <input type=text name=name size=45 class="input-sm" value="${sessionScope.id }" readonly style="font-size:18px">
+			       <input type=text name=id size=45 class="input-sm" value="${sessionScope.id }" readonly style="font-size:18px">
+			       <input type=hidden name=name value="${sessionScope.name }">
 			      </td>
 			    </tr>
 			    <tr>

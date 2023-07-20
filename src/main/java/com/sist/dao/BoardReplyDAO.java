@@ -28,7 +28,7 @@ public class BoardReplyDAO {
 	   {
 		   conn=db.getConnection();
 		   String sql="SELECT rep_id, board_id, user_id, rep_content, TO_CHAR(rep_reg_date,'yyyy-MM-dd HH24:MI:SS'),"
-				     +"group_tab "
+				     +"group_tab, user_name "
 				     +"FROM reply "
 				     +"WHERE board_id=? "
 				     +"ORDER BY group_id DESC,group_step ASC";
@@ -44,6 +44,7 @@ public class BoardReplyDAO {
 			   vo.setRep_content(rs.getString(4));
 			   vo.setDbday(rs.getString(5));
 			   vo.setGroup_tab(rs.getInt(6));
+			   vo.setUser_name(rs.getString(7));
 			   list.add(vo);
 		   }
 		   rs.close();
@@ -71,13 +72,14 @@ public class BoardReplyDAO {
 			ps.setInt(1, vo.getBoard_id());
 			ps.executeUpdate();
 		   
-		   sql="INSERT INTO reply(rep_id, board_id, user_id, rep_content, group_id) "
+		   sql="INSERT INTO reply(rep_id, board_id, user_id, rep_content, group_id, user_name) "
 				     +"VALUES(pm_rpi_seq.nextval,?,?,?,"
-				     +"(SELECT NVL(MAX(group_id)+1,1) FROM reply))";
+				     +"(SELECT NVL(MAX(group_id)+1,1) FROM reply),?)";
 		   ps=conn.prepareStatement(sql);
 		   ps.setInt(1, vo.getBoard_id());
 		   ps.setString(2, vo.getUser_id());
 		   ps.setString(3, vo.getRep_content());
+		   ps.setString(4, vo.getUser_name());
 		   ps.executeUpdate();
 	   }catch(Exception ex)
 	   {
@@ -173,7 +175,6 @@ public class BoardReplyDAO {
 				   ps=conn.prepareStatement(sql);
 				   ps.setInt(1,root);
 				   ps.executeUpdate();
-				   System.out.println("부모depth 감소");
 				   
 				   sql="SELECT depth "
 				   		+ "FROM reply "

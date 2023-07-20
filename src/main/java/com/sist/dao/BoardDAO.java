@@ -36,18 +36,18 @@ public class BoardDAO {
 			
 			if(cat.equals("전체"))
 			{
-				String sql = "SELECT BOARD_ID, title, board_category, USER_ID, TO_CHAR(regdate,'yyyy-MM-dd'),hit ,num "
-						   + "FROM (SELECT BOARD_ID, title , board_category, USER_ID, regdate, hit, rownum as num "
-						   + "FROM (SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title, board_category, USER_ID, regdate, hit "
+				String sql = "SELECT BOARD_ID, title, board_category, USER_ID, TO_CHAR(regdate,'yyyy-MM-dd'),hit ,num, user_name "
+						   + "FROM (SELECT BOARD_ID, title , board_category, USER_ID, regdate, hit, rownum as num, user_name "
+						   + "FROM (SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title, board_category, USER_ID, regdate, hit,user_name "
 						   + "FROM BOARD)) " + "WHERE num BETWEEN ? AND ? ";
 				ps = conn.prepareStatement(sql);
 				ps.setInt(1, start);
 				ps.setInt(2, end);
 				
 			}else {
-				String sql = "SELECT BOARD_ID, title, board_category, USER_ID, TO_CHAR(regdate,'yyyy-MM-dd'),hit ,num "
-						   + "FROM (SELECT BOARD_ID, title , board_category, USER_ID, regdate, hit, rownum as num "
-						   + "FROM (SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title, board_category, USER_ID, regdate, hit "
+				String sql = "SELECT BOARD_ID, title, board_category, USER_ID, TO_CHAR(regdate,'yyyy-MM-dd'),hit ,num, user_name "
+						   + "FROM (SELECT BOARD_ID, title , board_category, USER_ID, regdate, hit, rownum as num, user_name "
+						   + "FROM (SELECT /*+ INDEX_DESC(BOARD PK_BOARD)*/ BOARD_ID, title, board_category, USER_ID, regdate, hit, user_name "
 						   + "FROM BOARD WHERE board_category = ?)) " + "WHERE num BETWEEN ? AND ? ";
 				
 				ps = conn.prepareStatement(sql);
@@ -67,6 +67,7 @@ public class BoardDAO {
 				vo.setDbday(rs.getString(5));
 				vo.setHit(rs.getInt(6));
 				vo.setRownum(rs.getInt(7));
+				vo.setUser_name(rs.getString(8));
 				list.add(vo);
 			}
 			rs.close();
@@ -120,7 +121,8 @@ public class BoardDAO {
 			ps.executeUpdate();
 
 			// 실제 데이터 읽기
-			sql = "SELECT board_id, title, content, user_id, TO_CHAR(regdate,'yyyy-MM-dd'),hit " + "FROM board "
+			sql = "SELECT board_id, title, content, user_id, TO_CHAR(regdate,'yyyy-MM-dd'),hit, user_name "
+					+ "FROM board "
 					+ "WHERE board_id=?";
 
 			ps = conn.prepareStatement(sql);
@@ -134,6 +136,7 @@ public class BoardDAO {
 			vo.setUser_id(rs.getString(4));
 			vo.setDbday(rs.getString(5));
 			vo.setHit(rs.getInt(6));
+			vo.setUser_name(rs.getString(7));
 			rs.close();
 
 		} catch (Exception ex) {
@@ -159,12 +162,13 @@ public class BoardDAO {
 	public void boardInsert(BoardVO vo) {
 		try {
 			conn = db.getConnection();
-			String sql = "INSERT INTO board VALUES(" + "pm_bi_seq.nextval,?,SYSDATE,?,0,0,?,?)";
+			String sql = "INSERT INTO board VALUES( pm_bi_seq.nextval,?,SYSDATE,?,0,0,?,?,?)";
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, vo.getTitle());
 			ps.setString(2, vo.getContent());
 			ps.setString(3, vo.getUser_id());
 			ps.setString(4, vo.getBoard_category());
+			ps.setString(5, vo.getUser_name());
 			ps.executeUpdate(); // commit => autocommit
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -183,7 +187,7 @@ public class BoardDAO {
 		BoardVO vo = new BoardVO();
 		try {
 			conn = db.getConnection();
-			String sql = "SELECT BOARD_CATEGORY, TITLE, CONTENT, USER_ID, BOARD_ID "
+			String sql = "SELECT BOARD_CATEGORY, TITLE, CONTENT, USER_ID, BOARD_ID, user_name "
 						+ "FROM Board "
 						+ "WHERE board_id=?";
 
@@ -197,6 +201,7 @@ public class BoardDAO {
 			vo.setContent(rs.getString(3));
 			vo.setUser_id(rs.getString(4));
 			vo.setBoard_id(rs.getInt(5));
+			vo.setUser_name(rs.getString(6));
 
 			rs.close();
 
@@ -226,7 +231,8 @@ public class BoardDAO {
 			ps.setString(3, vo.getBoard_category());
 			ps.setInt(4, vo.getBoard_id());
 			ps.setString(5, pwd);
-
+			
+			//업데이트가 정상적으로 수행되면 1리턴
 			int ret = ps.executeUpdate();
 			if(ret == 0) {
 				return false;

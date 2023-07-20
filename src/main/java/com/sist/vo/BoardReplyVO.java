@@ -5,7 +5,7 @@ import lombok.*;
  
 @Getter
 @Setter
-
+ 
 
 public class BoardReplyVO {
 	// 커뮤니티 게시글에 답글 - 변수 용도 추후 확인

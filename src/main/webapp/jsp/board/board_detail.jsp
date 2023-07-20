@@ -19,7 +19,7 @@
       <th width=15% class="text-center">제목</th>
       <td colspan=3 class="text-center">${vo.title }</td>
       <th width=15% class="text-center">작성자</th>
-      <td width=15% class="text-center">${vo.user_id }</td>
+      <td width=15% class="text-center">${vo.user_name }</td>
      </tr>
     <tr>
        <td colspan="6" class="text-left" valign="top" height="200">
@@ -30,8 +30,8 @@
      <tr>
        <td colspan="6" class="text-right">
      <c:if test="${sessionScope.id==vo.user_id}">
-         <a href="../board/board_update.do?no=${vo.board_id }" class="btn btn-xs btn-success">수정</a>
-         <span class="btn btn-xs btn-danger" id="del">삭제</span>
+         <a href="../board/board_update.do?no=${vo.board_id }" class="btn btn-lg btn-success">수정</a>
+         <span class="btn btn-lg btn-danger" id="del">삭제</span>
      </c:if>
          <a href="../board/board_list.do" class="btn btn-lg btn-primary">목록</a>
        </td>
@@ -63,7 +63,7 @@
 	                 </c:forEach>
 	                 <img src="../img/re_icon.png">
 	               </c:if>
-	               ◑${rvo.user_id }&nbsp;(${rvo.dbday })
+	               <span class="reply-css">${rvo.user_name }</span>&nbsp;(${rvo.dbday })
 	             </td>
 	             
 	            <!--  로그인 여부 -->
@@ -125,6 +125,7 @@
 		      <td>
 		        <form method="post" action="../board/reply_insert.do" class="inline">
 		         <input type=hidden name=bno value="${vo.board_id}">
+		         <input type=hidden name=name value="${sessionScope.name}">
 		         <textarea rows="5" cols="60" name="msg" style="float: left; border-radius: 15px; padding: 0px 10px;" ></textarea>
 	             <input class="ml" type=submit value="댓글쓰기" style="width: 120px;height: 104px;background-color: #77d6c9;color:white;border-radius: 15px; padding: 0px 10px; font-weight: bold">
 		        </form>

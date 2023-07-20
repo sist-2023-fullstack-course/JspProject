@@ -3,7 +3,7 @@
 /* border-top: 3px solid #77D6C9; */
 
 .board-main {
-	padding: 20px;	
+	/* padding: 20px;	 */
 }
 
 .board-title {
@@ -119,4 +119,14 @@ font-family: 'Noto Sans KR', sans-serif;
 .ml{
 	margin-left: 15px;
 }
-
+.reply-css{
+	font-weight:600;
+	display: inline-block;
+    color: #f9f9f9;
+    background-color: #62C4B0;
+    height: 24px;
+    width: 70px;
+    border-radius: 15px;
+    padding: 3px;
+    text-align: center;
+}

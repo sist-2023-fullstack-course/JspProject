@@ -66,8 +66,8 @@ public class BoardModel {
 		}catch(Exception ex) {}
 		
 		BoardVO vo=new BoardVO();
-		vo.setUser_id(request.getParameter("name"));
-		
+		vo.setUser_id(request.getParameter("id"));
+		vo.setUser_name(request.getParameter("name"));
 		vo.setTitle(request.getParameter("subject"));
 		vo.setContent(request.getParameter("content"));
 		vo.setBoard_category(request.getParameter("cat"));
@@ -117,7 +117,8 @@ public class BoardModel {
 			request.setCharacterEncoding("UTF-8");
 		}catch(Exception ex) {}
 		BoardVO vo=new BoardVO();
-		vo.setUser_id(request.getParameter("name"));
+		vo.setUser_id(request.getParameter("id"));
+		vo.setUser_name(request.getParameter("name"));
 		vo.setTitle(request.getParameter("subject"));
 		vo.setContent(request.getParameter("content"));
 		vo.setBoard_category(request.getParameter("category"));
