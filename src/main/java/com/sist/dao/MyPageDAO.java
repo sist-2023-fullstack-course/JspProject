@@ -30,7 +30,7 @@ public class MyPageDAO {
 		try
 		{
 			String sql="SELECT /*+ INDEX_DESC(r PK_RESERVATION) */ "
-					+ "res_id, res_state, TO_CHAR(res_date, 'YYYY-MM-DD HH24:MI:ss'), res_msg, r.com_id, c.COM_NAME, c.POSTER, c.address, c.phone "
+					+ "res_id, res_state, TO_CHAR(res_date, 'YYYY-MM-DD HH24:MI:ss'), res_msg, r.com_id, c.COM_NAME, c.POSTER, c.address, c.phone, r.res_date-sysdate "
 					+ "FROM RESERVATION r, COMPANY c "
 					+ "WHERE r.user_id = ? AND c.COM_ID = r.COM_ID";
 			ps=conn.prepareStatement(sql);
@@ -50,6 +50,8 @@ public class MyPageDAO {
 				vo.setPoster(rs.getString(7));
 				vo.setAddress(rs.getString(8));
 				vo.setPhone(rs.getString(9));
+				double tmp = rs.getDouble(10);
+				vo.setTimeOver(tmp>0?false:true);
 				
 				list.add(vo);
 			}
