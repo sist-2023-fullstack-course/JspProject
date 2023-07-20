@@ -4,6 +4,7 @@
     <div class="col-sm-1 col-md-1"></div>
     <div class="col-sm-10 col-md-10">
     	<div class="row">
+    	 <form method=post action="../mypage/adding_pet.do">
 	      <table class="myinfo table">
 	        <tr>
 	        <%-- INSERT INTO pet VALUES(pm_pti_seq.nextval,'고양이','참깨','남','2016','6','y','jolie'); 
@@ -12,8 +13,8 @@
 	         --%>
 	         <th class="text-center" width=30% style="padding-top: 20px">펫종류</th>
 	         <td width=70% class="inline" style="padding-top: 15px">
-	          <input type=radio name=category id=category >강아지&nbsp;&nbsp;
-	          <input type=radio name=category id=category >고양이
+	          <input type=radio name=dog id=dog >강아지&nbsp;&nbsp;
+	          <input type=radio name=cat id=cat >고양이
 	         </td>
 	        </tr>
 	        
@@ -28,8 +29,8 @@
 	         <th class="text-center" width=30% style="padding-top: 20px;">성별</th>
 	         <td width=70% class="inline" style="padding-top: 15px">
 	         &nbsp;&nbsp;
-	          <input type="radio" name=gender id=gender> 남아 &nbsp;&nbsp;
-	          <input type="radio" name=gender id=gender> 여아
+	          <input type="radio" name=m id=m> 남아 &nbsp;&nbsp;
+	          <input type="radio" name=f id=f> 여아
 	         </td>
 	        </tr>
 
@@ -37,8 +38,8 @@
 	         <th class="text-center" width=30% style="padding-top: 20px;">중성화여부</th>
 	         <td width=70% class="inline" style="padding-top: 15px">
 	         &nbsp;&nbsp;
-	          <input type="radio" name=neutered id=neutered> 네 &nbsp;&nbsp;
-	          <input type="radio" name=neutered id=neutered> 아니요
+	          <input type="radio" name=y id=y> 네 &nbsp;&nbsp;
+	          <input type="radio" name=n id=n> 아니요
 	         </td>
 	        </tr>
 	        
@@ -46,15 +47,14 @@
 	         <th class="text-center" width=30% style="padding-top: 20px; font-size: 13px;" >태어난 년도</th>
 	         <td width=70% class="inline" style="padding-top:15px">
 	          &nbsp;&nbsp;
-	          <input type="date" name=birthyear id=birthyear size=20>
+               <input type="number" id="birthyear" name="birthyear" min="1980" max="2023" placeholder="예: 2010" required> 년
 	         </td>
 	        </tr>
 	       
-	        
 	        <tr>
 	         <th class="text-center" width=30% style="padding-top: 20px; font-size: 13px;">몸무게</th>
 	         <td width=70% class="inline">
-	          <input class="join-id" type="text" name=weight id=weight  style="width: 20%">
+	          <input class="join-id" type="text" name=weight id=weight style="width: 20%"  placeholder="예: 6.5">
 	           &nbsp;kg
 	         </td>
 	        </tr> 
@@ -62,11 +62,12 @@
 	        <tr>
 	          <td colspan=2 style="text-align:center">
 	           <p style="margin: 0px; display: none" id=updateMsg></p>
-	           <a href="../mypage/adding_pet.do" class="join-ok-submit updates" style="text-decoration: none; font-style: bold">등록하기</a>
-	           <!-- <input type=button value="취소" class="btn btn-danger btn-sm" onclick="javascript:history.back()"> -->
+	           <input type=submit value=등록하기 class="login-submit updates" style="text-decoration: none; font-style: bold">
+               <input type=button value="취소" class="login-to-join-submit" onclick="javascript:history.back()">
 	          </td>
 	        </tr>
 	      </table>
+	      </form>
 	    </div>
     </div>
     <div id="dialog" title="중복체크" style="display: none"></div>

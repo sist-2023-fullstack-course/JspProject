@@ -95,8 +95,8 @@
 	        <tr>
 	          <td colspan=2 style="text-align:center">
 	           <p style="margin: 0px; display: none" id=updateMsg></p>
-	           <span class="join-ok-submit updates" style="text-decoration: none; font-style: bold">수정 완료</span>
-	           <!-- <input type=button value="취소" class="btn btn-danger btn-sm" onclick="javascript:history.back()"> -->
+	           <span class="login-submit updates" style="text-decoration: none; font-style: bold">수정하기</span>
+               <input type=button value="취소" class="login-to-join-submit" onclick="javascript:history.back()">
 	          </td>
 	        </tr>
 	      </table>
