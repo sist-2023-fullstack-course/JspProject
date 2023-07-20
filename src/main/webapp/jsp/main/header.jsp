@@ -39,8 +39,8 @@
 							<p class="text-center"><a href="#" style="text-decoration:none">장바구니</a></p>
 						</li>
 						<li>
-							<p class="text-center"><a href="javascript:logout()"><i class="fa fa-sign-out" style="color:#034D7E"></i></a></p>
-							<p class="text-center"><a href="javascipt:logout()" style="text-decoration:none">로그아웃</a></p>
+							<p class="text-center"><a href="/JspProject/member/logout.do"><i class="fa fa-sign-out" style="color:#034D7E"></i></a></p>
+							<p class="text-center"><a href="/JspProject/member/logout.do" style="text-decoration:none">로그아웃</a></p>
 						</li>
 						</c:if>
 					</ul>

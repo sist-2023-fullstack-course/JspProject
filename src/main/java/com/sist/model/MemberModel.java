@@ -189,10 +189,12 @@ public class MemberModel {
 	
 	
 	@RequestMapping("member/logout.do")
-	public void memberLogout(HttpServletRequest request, HttpServletResponse response)
+	public String memberLogout(HttpServletRequest request, HttpServletResponse response)
 	{
 		HttpSession session=request.getSession();
 		session.invalidate();
+		
+		return "redirect:../main/main.do";
 	}
 	
 	@RequestMapping("member/id_find.do")

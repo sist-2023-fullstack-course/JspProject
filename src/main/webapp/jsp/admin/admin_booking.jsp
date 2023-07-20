@@ -24,7 +24,7 @@
 			    </c:if>
 			    <c:if test="${!vo.timeOver }">
 			    <c:if test="${vo.res_state=='w' }">
-			    <td width=15% class="text-center">대기중</td>
+			    <td width=15% class="text-center" style="color: blue">대기중</td>
 			    </c:if>
 			    <c:if test="${vo.res_state=='y' }">
 			    <td width=15% class="text-center" style="color: green">승인</td>
@@ -68,8 +68,10 @@
 				  	</tr>
 				  </table>
 				  <div>
+				  	<c:if test="${!vo.timeOver }">
 				  	<a href="booking_check.do?res_id=${vo.res_id }&state=y"><span class="span-btn">예약확정</span></a>
 				  	<a href="booking_check.do?res_id=${vo.res_id }&state=n"><span class="span-btn">예약거절</span></a>
+				  	</c:if>
 				  </div>
 		     	</td>
 		     </tr>
