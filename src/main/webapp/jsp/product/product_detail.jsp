@@ -48,7 +48,7 @@
 	                            	<dl>
 	                            		<dt>할인가</dt>
 	                            		<dd>
-		                                    <fmt:formatNumber value="${vo.discount_price }" />원
+		                                    <span><fmt:formatNumber value="${vo.discount_price }" /></span>원
 		                                    <span style="color: red; font-size: 22px; margin-left: 10px;">${vo.discount_rate }%</span>
 	                            		</dd>
 	                            	</dl>
@@ -66,7 +66,15 @@
 	                                    <dd style="color: red">${vo.star }</dd>
 	                                </dl>
 	                            </li>
-	
+	                            <li>
+	                            	<dl>
+	                            		<dt>수량</dt>
+	                            		<dd>
+				                            <input type="number" min="1" class="account" name=amount value="1">
+	                            			<span class="totalPrice">${vo.discount_price }</span>원
+	                            		</dd>
+	                            	</dl>
+	                            </li>
 	                        </ul>
 	                        <!-- //우측 정보 e -->
 	                        <!-- 하단 분류 s -->
@@ -75,12 +83,12 @@
 	                            <dl class="purchase_button">
 	                                <dt>
 	                                    <img src="../img/payment.png">
-	                                <dd>구매하기</dd>
+	                                <dd stlye="text-decoration: none;" id="purchase_button">구매하기</dd>
 	                            </dl>
-	                            <dl class="cart_button">
+	                            <dl class="cart_button" id="gotocart" onclick="insertCart(${vo.id})">
 	                                <dt>
 	                                    <img src="../img/cart.png">
-	                                <dd>장바구니</dd>
+	                                <dd stlye="text-decoration: none;">장바구니</dd>
 	                            </dl>
 	                            </c:if>
 	                        </div>

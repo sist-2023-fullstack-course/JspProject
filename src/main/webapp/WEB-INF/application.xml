@@ -11,4 +11,5 @@
 	<bean id="admin" class="com.sist.model.AdminModel"/>
 	<bean id="question" class="com.sist.model.QuestionModel"/>
 	<bean id="categorylist" class="com.sist.model.CategoryListModel"/>
+	<bean id="cart" class="com.sist.model.CartModel"/>
 </beans>

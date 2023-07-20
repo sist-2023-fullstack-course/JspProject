@@ -11,8 +11,8 @@
 							<li><a href="../mypage/editprofile.do">개인정보 수정</a></li>
 							<li><a href="../mypage/mypet.do">마이펫 관리</a></li>
 							<li><a href="../mypage/booking.do">예약 내역</a></li>
-							<li><a href="#">구매 내역</a></li>
-							<li><a href="#">장바구니</a></li>
+							<li><a href="../mypage/mypage_buy.do">구매 내역</a></li>
+							<li><a href="../mypage/mypage_cart.do">장바구니</a></li>
 							<li><a href="../mypage/wishlist.do">위시리스트</a></li>
 						</ul>
 						<ul class="text-center" >
