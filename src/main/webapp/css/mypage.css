@@ -117,3 +117,85 @@
 	bottom: 40px;
 	left:40%;
 }
+
+.delete-title {
+        padding-top: 40px;
+        color: black;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+    }
+
+.delete-to-confirm-submit {
+    cursor: pointer;
+    border-radius: 5em;
+    color: black;
+    background: #fff;
+    border: 1px solid black;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    display: inline-block;
+    margin: 20px;
+    margin: center!important;
+    width: 150px;
+    text-decoration:none!important;
+}  
+
+.delete-cancel {
+        cursor: pointer;
+        border-radius: 5em;
+        color: #fff;
+        background: gray;
+        border: 0;
+        padding:10px 30px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 13px;
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+        display: inline-block;
+        margin: 20px;
+        margin: center;
+        width: 150px;
+        font-weight: bold;     
+    }  
+    
+.delete-before{
+	color: red; 
+	padding:15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    text-align:center;
+	
+}
+
+.delete-password {
+    display: block;
+    width: 50%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 5px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    margin: 0px 150px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.delete-main {
+    background-color: #FFFFFF;
+    width: 600px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}

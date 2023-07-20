@@ -208,4 +208,37 @@ public class MyPageModel {
 		
 		return "redirect:../mypage/mypet.do";
 	}
+	
+	@RequestMapping("mypage/deletemyaccount.do")
+	public String mypage_deletemyaccount(HttpServletRequest request, HttpServletResponse response)
+	{
+		request.setAttribute("main_jsp", "../mypage/mypage_delete.jsp");
+		return "../jsp/main/main.jsp";
+	}
+	
+	
+	@RequestMapping("mypage/deletemyaccount_confirm.do")
+	public String mypage_deletemyaccount_proceed(HttpServletRequest request, HttpServletResponse response)
+	{
+		String pwd=request.getParameter("pwd");
+		HttpSession session=request.getSession();
+		String id=(String)session.getAttribute("id");
+
+		MyPageDAO dao=MyPageDAO.newInstance();
+		String result=dao.memberDeleteOk(id, pwd);
+		if(result.equals("yes"))
+		{
+			session.invalidate();
+		}
+		try
+		{
+			PrintWriter out=response.getWriter();
+			out.println(result);
+		}catch(Exception ex) {}
+		
+		request.setAttribute("main_jsp", "../mypage/mypage_delete.jsp");
+		return "../jsp/main/main.jsp";
+	}
+	
+	
 }

@@ -16,7 +16,7 @@
 							<li><a href="../mypage/wishlist.do">위시리스트</a></li>
 						</ul>
 						<ul class="text-center" >
-						 <li ><a href="#" style="color:#ea0000">회원탈퇴</a></li>
+						 <li ><a href="../mypage/deletemyaccount.do" style="color:#ea0000">회원탈퇴</a></li>
 						</ul>
 					</div>
 				</div>

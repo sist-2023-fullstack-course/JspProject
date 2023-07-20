@@ -319,12 +319,7 @@ public class MyPageDAO {
 	/* --- END OF WISHLIST  ----*/
 	
 	/* --- START OF MYPET ----*/
-	// 마이펫 추가하기
-	
-		
-	// 마이펫 수정하기
-
-		// 마이펫 목록 보기 : 이름, 사진
+	// 마이펫 목록 보기 : 이름
 		
 	public List<MyPetVO> listmypet(String uid)
 	{
@@ -368,6 +363,7 @@ public class MyPageDAO {
 		return list;
 	}
 	
+	// 마이펫 삭제하기
 	public void delete_pet(int pid) {
 		try {
 			conn = db.getConnection();
@@ -383,17 +379,7 @@ public class MyPageDAO {
 		}
 	}
 		
-/*
- PET_ID
-PET_CATEGORY
-PET_NAME
-PET_GENDER
-PET_BIRTHYEAR
-PET_WEIGHT
-NEUTERED
-USER_ID
- */
-	// 마이펫 상세 보기
+	// 마이펫 추가하기
 	public void addmypet(MyPetVO vo,String uid)
 	{
 		try
@@ -423,6 +409,114 @@ USER_ID
 		
     /* --- END OF MYPET ----*/
 		
-		
-		
-}
+	// 회원 탈퇴하기
+		// 연결된 테이블: board, pet, reservation, wish_company, review, reply, shop_review purchase shop_cart 
+
+		 public String memberDeleteOk(String uid,String pwd)
+		   {
+			   String result="no";
+			   try
+			   {
+				   conn=db.getConnection();
+				   conn.setAutoCommit(false);
+				   String sql="SELECT password FROM member "
+						     +"WHERE user_id=?";
+				   ps=conn.prepareStatement(sql);
+				   ps.setString(1, uid);
+				   ResultSet rs=ps.executeQuery();
+				   rs.next();
+				   String db_pwd=rs.getString(1);
+				   rs.close();
+				   if(db_pwd.equals(pwd))
+				   {
+					      
+						   sql="DELETE FROM reply "
+							  +"WHERE user_id=?";
+						   ps=conn.prepareStatement(sql);
+						   ps.setString(1, uid);
+						   ps.executeUpdate();
+						   
+						   sql="DELETE question_answer  "
+								   +"WHERE id=?";
+						   ps=conn.prepareStatement(sql);
+						   ps.setString(1, uid);
+						   ps.executeUpdate();
+						   
+						   sql="DELETE board  "
+							  +"WHERE user_id=?";
+						   ps=conn.prepareStatement(sql);
+						   ps.setString(1, uid);
+						   ps.executeUpdate();
+						   
+						   sql="DELETE FROM reservation "
+								   +"WHERE user_id=?";
+						   ps=conn.prepareStatement(sql);
+						   ps.setString(1, uid);
+						   ps.executeUpdate();
+						   
+						   sql="DELETE FROM pet "
+								   +"WHERE user_id=?";
+						   ps=conn.prepareStatement(sql);
+						   ps.setString(1, uid);
+						   ps.executeUpdate();
+
+						   sql="DELETE FROM review "
+							  +"WHERE user_id=?";
+						   ps=conn.prepareStatement(sql);
+						   ps.setString(1, uid);
+						   ps.executeUpdate();
+						   
+						   sql="DELETE FROM wish_company "
+							  +"WHERE user_id=?";
+						   ps=conn.prepareStatement(sql);
+						   ps.setString(1, uid);
+						   ps.executeUpdate();
+						   
+						   sql="DELETE FROM purchase "
+							  +"WHERE user_id=?";
+						   ps=conn.prepareStatement(sql);
+						   ps.setString(1, uid);
+						   ps.executeUpdate();
+						   
+						   sql="DELETE FROM shop_review "
+							  +"WHERE user_id=?";
+						   ps=conn.prepareStatement(sql);
+						   ps.setString(1, uid);
+						   ps.executeUpdate();
+						   
+						   sql="DELETE FROM shop_cart "
+							  +"WHERE user_id=?";
+						   ps=conn.prepareStatement(sql);
+						   ps.setString(1, uid);
+						   ps.executeUpdate();
+						   
+						   sql="DELETE FROM member "
+								   +"WHERE user_id=?";
+						   ps=conn.prepareStatement(sql);
+						   ps.setString(1, uid);
+						   ps.executeUpdate();
+						   
+						   result="yes";
+						   conn.commit();
+					   
+				   }
+				   
+			   }catch(Exception ex)
+			   {
+				   ex.printStackTrace();
+				   try
+				   {
+					   conn.rollback();
+				   }catch(Exception e) {}
+			   }
+			   finally
+			   {
+				   db.disConnection(conn, ps);
+				   try
+				   {
+					   conn.setAutoCommit(true);
+				   }catch(Exception ex) {}
+			   }
+			   return result;
+		   }
+	}
