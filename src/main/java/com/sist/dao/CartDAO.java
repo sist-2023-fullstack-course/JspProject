@@ -119,7 +119,8 @@ public class CartDAO {
 		List<CartVO> list=new ArrayList<CartVO>();
 		try {
 			conn=db.getConnection();
-			String sql="SELECT s.product_id, user_id, amount, issale, s.PRODUCT_NAME, s.PRODUCT_DISCOUNT_PRICE, product_poster,sc.cart_no "
+			String sql="SELECT /*+ INDEX_DESC(sc PK_SHOP_CART) */ "
+					+ "s.product_id, user_id, amount, issale, s.PRODUCT_NAME, s.PRODUCT_DISCOUNT_PRICE, product_poster,sc.cart_no "
 					+ "FROM SHOP_CART sc, shop s "
 					+ "WHERE sc.PRODUCT_ID = s.PRODUCT_ID AND user_id=? AND issale=0";
 			ps=conn.prepareStatement(sql);

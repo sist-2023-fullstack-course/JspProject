@@ -5,7 +5,9 @@
 function insertCart(id) {
 	let amount = $('.account').val();
 
-	location.href = '../cart/cart_insert.do?amount=' + amount + '&id=' + id;
+	if(confirm('해당 상품 ' + amount +'개를\n장바구니에 추가하시겠습니까?')){
+		location.href = '../cart/cart_insert.do?amount=' + amount + '&id=' + id;
+	}
 }
 
 function changeTotalPrice(){
@@ -37,13 +39,6 @@ function requestPay(t) {
 	// IMP.request_pay(param, callback) 결제창 호출
 	IMP.request_pay({
 		pg: 'html5_inicis', // version 1.1.0부터 지원.
-		/*
-			'kakao':카카오페이,
-			'inicis':이니시스, 'html5_inicis':이니시스(웹표준결제),
-			'nice':나이스,
-			'jtnet':jtnet,
-			'uplus':LG유플러스
-		*/
 		pay_method: 'card', // 'card' : 신용카드 | 'trans' : 실시간계좌이체 | 'vbank' : 가상계좌 | 'phone' : 휴대폰소액결제
 		merchant_uid: 'merchant_' + new Date().getTime(),
 		name: pname,

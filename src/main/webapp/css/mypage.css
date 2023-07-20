@@ -102,3 +102,18 @@
     font-weight: 700;
     padding: 6px 10px;
 }
+
+.radio-btn{
+	display:inline-block;
+	width:20px;
+}
+
+.pet-poster-size{
+	height:250px;	
+}
+
+.petDeleteBtn{
+	position:absolute;
+	bottom: 40px;
+	left:40%;
+}

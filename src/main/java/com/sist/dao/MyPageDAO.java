@@ -331,31 +331,28 @@ public class MyPageDAO {
 		try
 		{
 			conn=db.getConnection();
-			String sql="SELECT COUNT(*),pet_name,pet_birthyear,pet_gender,pet_category "
-					+ "FROM pet WHERE user_id=? "
-					+ "GROUP BY user_id, pet_name, pet_birthyear, pet_gender, pet_category";
+			String sql="SELECT /*+ INDEX(p, PK_PET) */ "
+					+ "pet_name, pet_birthyear, pet_gender, PET_CATEGORY, pet_id "
+					+ "FROM pet p "
+					+ "WHERE USER_ID = ?";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, uid);
 			rs=ps.executeQuery();
 			while(rs.next())
 			{
 				MyPetVO vo=new MyPetVO();
-				vo.setCount(rs.getInt(1));
-				vo.setName(rs.getString(2));
-				int birthyear=Integer.parseInt(rs.getString(3));
-				String gender=rs.getString(4);
-				if(gender.trim().equals("m"))
-					gender="남아";
-				else
-					gender="여아";
-				vo.setGender(gender);
+				vo.setName(rs.getString(1));
+				int birthyear = rs.getInt(2);
+				vo.setBirthyear(birthyear);
+				vo.setGender(rs.getString(3));
 				// 현재 연도를 구하는 방법 (java.util.Calendar 사용)
 				Calendar calendar = Calendar.getInstance();
 				int currentYear = calendar.get(Calendar.YEAR);
 				// 만 나이 계산
 				int age = currentYear-birthyear;
 				vo.setAge(String.valueOf(age));
-				vo.setCategory(rs.getString(5));
+				vo.setCategory(rs.getString(4));
+				vo.setPid(rs.getInt(5));
 				list.add(vo);
 			}
 			rs.close();
@@ -368,6 +365,21 @@ public class MyPageDAO {
 			db.disConnection(conn, ps);
 		}
 		return list;
+	}
+	
+	public void delete_pet(int pid) {
+		try {
+			conn = db.getConnection();
+			String sql = "DELETE FROM pet WHERE pet_id=?";
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, pid);
+			ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			db.disConnection(conn, ps);
+		}
 	}
 		
 /*
@@ -392,7 +404,7 @@ USER_ID
 			ps.setString(1, vo.getCategory() );
 			ps.setString(2, vo.getName());
 			ps.setString(3, vo.getGender());
-			ps.setString(4, vo.getBirthyear());
+			ps.setInt(4, vo.getBirthyear());
 			ps.setString(5, vo.getWeight());
 			ps.setString(6, vo.getNeutered());
 			ps.setString(7, uid);

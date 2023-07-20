@@ -7,14 +7,10 @@
     	 <form method=post action="../mypage/adding_pet.do">
 	      <table class="myinfo table">
 	        <tr>
-	        <%-- INSERT INTO pet VALUES(pm_pti_seq.nextval,'고양이','참깨','남','2016','6','y','jolie'); 
-					private int pid,birthyear;
-					private String,neutered,uid,weight;
-	         --%>
 	         <th class="text-center" width=30% style="padding-top: 20px">펫종류</th>
 	         <td width=70% class="inline" style="padding-top: 15px">
-	          <input type=radio name=dog id=dog >강아지&nbsp;&nbsp;
-	          <input type=radio name=cat id=cat >고양이
+	          <input class="radio-btn" type=radio name=category id=dog value="강아지">강아지
+	          <input class="radio-btn" type=radio name=category id=cat value="고양이">고양이
 	         </td>
 	        </tr>
 	        
@@ -29,8 +25,8 @@
 	         <th class="text-center" width=30% style="padding-top: 20px;">성별</th>
 	         <td width=70% class="inline" style="padding-top: 15px">
 	         &nbsp;&nbsp;
-	          <input type="radio" name=m id=m> 남아 &nbsp;&nbsp;
-	          <input type="radio" name=f id=f> 여아
+	          <input class="radio-btn" type="radio" name=gender id=m value="남아">남아
+	          <input class="radio-btn" type="radio" name=gender id=f value="여아">여아
 	         </td>
 	        </tr>
 
@@ -38,8 +34,8 @@
 	         <th class="text-center" width=30% style="padding-top: 20px;">중성화여부</th>
 	         <td width=70% class="inline" style="padding-top: 15px">
 	         &nbsp;&nbsp;
-	          <input type="radio" name=y id=y> 네 &nbsp;&nbsp;
-	          <input type="radio" name=n id=n> 아니요
+	          <input class="radio-btn" type="radio" name=neutered value=y>네
+	          <input class="radio-btn" type="radio" name=neutered value=n>아니요
 	         </td>
 	        </tr>
 	        

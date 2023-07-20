@@ -17,17 +17,12 @@
 				style="text-align: center; margin-bottom: 20px;">
 				<img alt="" src="${vo.poster}" style="height: 300px; width:100%">
 			</div>
-			<div class="col-sm-8" style="height: 300px;">
+			<div class="col-sm-8" style="height: 300px; padding-left:50px;">
 				<div class="cate-list-title">
 					${vo.com_name } <span style="color: orange"> ${String.format("%.1f", vo.star) }</span>
 				</div>
-				<div class="cate-list-content">
-					<dl>
-						<dt>주소</dt>
-						<dd>${vo.address }</dd>
-					</dl>
-				</div>
-				<div class="cate-list-content">전화번호 ${vo.phone  }</div>
+				<div class="cate-list-content">${vo.address }</div>
+				<div class="cate-list-content">${vo.phone  }</div>
 				<div class="the-comment" style="margin-top:20px">
 					<div class="comment-box">
 					  <c:if test="${rlist.get(i.index).user_name != null}">

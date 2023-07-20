@@ -100,6 +100,14 @@ function clickProductPage(){
 	}
 }
 
+function deletePet(t){
+	let pid = $(t).data('id');
+	
+	if(confirm('정말 삭제하시겠습니까?')){
+		location.href='../mypage/delete_pet.do?pid='+pid;
+	}
+}
+
 $('ul.product-category > li > a').click(clickProductCategory);
 $('#product_sch_btn').click(clickProductSearch);
 $('.pagination > ul.product > li > a').click(clickProductPage);

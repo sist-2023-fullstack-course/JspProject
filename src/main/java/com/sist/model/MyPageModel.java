@@ -179,24 +179,11 @@ public class MyPageModel {
 		String uid=(String)session.getAttribute("id");
 		
 		String pname=request.getParameter("pname");
-		String gender = request.getParameter("m");
-		if (gender == null) {
-		    gender = request.getParameter("f");
-		}
-
-		String category;
-		if ("dog".equals(request.getParameter("dog"))) {
-		    category = "강아지";
-		} else {
-		    category = "고양이";
-		}
-
-		String neutered = request.getParameter("y");
-		if (neutered == null) {
-		    neutered = request.getParameter("n");
-		}
-		String birthyear=request.getParameter("birthyear");
+		String gender = request.getParameter("gender");
+		String category = request.getParameter("category");
+		String neutered = request.getParameter("neutered");
 		String weight=request.getParameter("weight");
+		int birthyear=Integer.parseInt(request.getParameter("birthyear"));
 		
 		MyPetVO vo=new MyPetVO();
 		vo.setName(pname);
@@ -209,9 +196,16 @@ public class MyPageModel {
 		MyPageDAO dao=MyPageDAO.newInstance();
 		dao.addmypet(vo, uid);
 		
-		request.setAttribute("mypage_jsp", "mypage_mypet.jsp");
-		request.setAttribute("main_jsp", "../mypage/mypage_main.jsp");
-		return "../jsp/main/main.jsp";
+		return "redirect:../mypage/mypet.do";
 	}
 	
+	
+	@RequestMapping("mypage/delete_pet.do")
+	public String delete_pet(HttpServletRequest request, HttpServletResponse response) {
+		int pid = Integer.parseInt(request.getParameter("pid"));
+		
+		MyPageDAO.newInstance().delete_pet(pid);
+		
+		return "redirect:../mypage/mypet.do";
+	}
 }

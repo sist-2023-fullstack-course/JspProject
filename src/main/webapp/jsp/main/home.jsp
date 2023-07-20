@@ -75,7 +75,7 @@
 			        </li>
 			        <li style="width: 312.667px; float: left; display: block;">
 			          	<figure>
-			          		<a href="../etc/categorylist.do?cate=반려동풀용품"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
+			          		<a href="../etc/categorylist.do?cate=반려동물용품"><img class="radius-10 btmspace-10" src="../Images/noimage.jpeg" alt="" draggable="false"></a>
 			            	<figcaption>
 			            		<a href="../etc/categorylist.do?cate=반려동물용품"><i class="fa fa-list-ul"></i>반려동물용품 탑 10</a>
 			            	</figcaption>
