@@ -9,6 +9,8 @@ import java.util.List;
 import com.sist.common.CreateDataBase;
 import com.sist.vo.CompanyReviewVO;
 import com.sist.vo.CompanyVO;
+import com.sist.vo.ProductReviewVO;
+import com.sist.vo.ProductVO;
 
 public class CompanyDAO {
 	private Connection conn;
@@ -304,17 +306,17 @@ public class CompanyDAO {
 		return cnt;
 	}
 	
+	//인기순위 
 	public List<CompanyVO> companyListTop(String cate){
 		List<CompanyVO> list =new ArrayList<>();
 		
 		try {
 			conn=db.getConnection();
-			
 			String sql="SELECT rownum, a.* "
 					+ "FROM ( "
 					+ "	SELECT decode(c.COM_STAR_CNT, 0, 0, c.COM_STAR_SUM/c.COM_STAR_CNT) AS star, c.*, cc.CATEGORY "
 					+ "	FROM COMPANY c, COMPANY_CATEGORY cc "
-					+ "	WHERE c.COM_CATEGORY_ID = cc.COM_CATEGORY_ID AND cc.CATEGORY LIKE '%'||?||'%' "
+					+ "	WHERE c.COM_CATEGORY_ID = cc.COM_CATEGORY_ID AND cc.CATEGORY = ? "
 					+ "	ORDER BY decode(c.COM_STAR_CNT, 0, 0, c.COM_STAR_SUM/c.COM_STAR_CNT) DESC "
 					+ ") a "
 					+ "WHERE rownum <= 10";
@@ -340,7 +342,8 @@ public class CompanyDAO {
 		}
 		return list;
 	}
-	// 최상단 댓글
+	
+	// 기업 최상단 댓글
 	public CompanyReviewVO getReviewByComId(int cid) {
 		CompanyReviewVO vo = new CompanyReviewVO();
 		
@@ -358,7 +361,6 @@ public class CompanyDAO {
 				vo.setDbday(rs.getString(2));
 				vo.setUser_name(rs.getString(3));
 			}
-			System.out.println(cid + " : " + vo.getContent());
 			rs.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -368,6 +370,75 @@ public class CompanyDAO {
 		
 		return vo;
 	}
+	
+	//상품 인긴순위
+	public List<ProductVO> productTopListData(String cate){
+		List<ProductVO> list = new ArrayList<ProductVO>();
+		try {
+			conn=db.getConnection();
+			String sql="SELECT s.*,rownum "
+					+ "FROM "
+					+ "( "
+					+ "SELECT decode(s.PRODUCT_STAR_CNT ,0,0, s.PRODUCT_STAR_SUM/s.PRODUCT_STAR_CNT) AS star, s.*, rownum AS num "
+					+ "FROM SHOP s "
+					+ "WHERE PRODUCT_CATEGORY =? "
+					+ "ORDER BY star DESC "
+					+ ")s "
+					+ "WHERE rownum <=10 ";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, cate);
+			ResultSet rs = ps.executeQuery(); 
+			while(rs.next()) {
+				ProductVO vo=new ProductVO();
+				// 별점, 상품아이디, 상품이름, 카테고리, 포스터, 가격, 할인가, 배송정보
+				vo.setStar(rs.getDouble(1));
+				vo.setId(rs.getInt(2));
+				vo.setName(rs.getString(3));
+				vo.setCategory(rs.getString(4));
+				vo.setPrice(rs.getInt(6));
+				vo.setDiscount_price(rs.getInt(7));
+				vo.setDelivery(rs.getString(8));
+				vo.setPoster(rs.getString(11));
+				list.add(vo);
+			}
+			rs.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.disConnection(conn, ps);
+		}
+		return list;
+	}
+	
+	//상품 최신댓글 조회
+	public ProductReviewVO getReviewByShopid(int sid) {
+		ProductReviewVO vo= new ProductReviewVO();
+		try {
+			conn=db.getConnection();
+			String sql="SELECT sr.* "
+					+ "FROM SHOP_REVIEW sr "
+					+ "WHERE sr.PRODUCT_REV_ID = "
+					+ "(SELECT max(PRODUCT_REV_ID) FROM SHOP_REVIEW WHERE PRODUCT_ID =?) "
+					+ "AND PRODUCT_ID = ?";
+			ps=conn.prepareStatement(sql);
+			ps.setInt(1, sid);
+			ps.setInt(2, sid);
+			ResultSet rs= ps.executeQuery();
+			if(rs.next()) {
+				vo.setContent(rs.getString(2));
+				vo.setUser_id(rs.getString(4));
+				vo.setRegdate(rs.getString(5));
+			}
+			rs.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.disConnection(conn, ps);
+		}
+		return vo;
+	}
+	
 
 }
 
