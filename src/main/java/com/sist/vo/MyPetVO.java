@@ -18,6 +18,6 @@ USER_ID
 @Setter
 
 public class MyPetVO {
-	private int pid,birthyear;
-	private String category,name,gender,neutered,uid,weight;
+	private int pid,count;
+	private String category,name,gender,neutered,uid,weight,birthyear,age;
 }

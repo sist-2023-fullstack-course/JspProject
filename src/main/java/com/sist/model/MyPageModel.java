@@ -2,6 +2,7 @@ package com.sist.model;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -46,7 +47,13 @@ public class MyPageModel {
 	@RequestMapping("mypage/mypet.do")
 	public String mypage_mypet(HttpServletRequest request, HttpServletResponse response)
 	{
+		HttpSession session=request.getSession();
+		String uid=(String)session.getAttribute("id");
 		
+		MyPageDAO dao=MyPageDAO.newInstance();
+		List<MyPetVO> list=dao.listmypet(uid);
+		
+		request.setAttribute("list", list);
 		request.setAttribute("mypage_jsp", "mypage_mypet.jsp");
 		request.setAttribute("main_jsp", "../mypage/mypage_main.jsp");
 		return "../jsp/main/main.jsp";
@@ -55,7 +62,6 @@ public class MyPageModel {
 	@RequestMapping("mypage/wishlist.do")
 	public String mypage_wishlist(HttpServletRequest request, HttpServletResponse response)
 	{
-		
 		HttpSession session=request.getSession();
 		String uid=(String)session.getAttribute("id");
 		
@@ -165,22 +171,38 @@ public class MyPageModel {
 	@RequestMapping("mypage/adding_pet.do")
 	public String mypage_adding_pet(HttpServletRequest request,HttpServletResponse response)
 	{
+		try
+		{
+			request.setCharacterEncoding("UTF-8");
+		}catch(Exception ex) {}	
 		HttpSession session=request.getSession();
 		String uid=(String)session.getAttribute("id");
 		
-		
-		String category=request.getParameter("category");
 		String pname=request.getParameter("pname");
-		String gender=request.getParameter("gender");
-		String neutered=request.getParameter("neutered");
+		String gender = request.getParameter("m");
+		if (gender == null) {
+		    gender = request.getParameter("f");
+		}
+
+		String category;
+		if ("dog".equals(request.getParameter("dog"))) {
+		    category = "강아지";
+		} else {
+		    category = "고양이";
+		}
+
+		String neutered = request.getParameter("y");
+		if (neutered == null) {
+		    neutered = request.getParameter("n");
+		}
 		String birthyear=request.getParameter("birthyear");
 		String weight=request.getParameter("weight");
-
+		
 		MyPetVO vo=new MyPetVO();
 		vo.setName(pname);
 		vo.setCategory(category);
 		vo.setGender(gender);
-		vo.setBirthyear(Integer.parseInt(birthyear));
+		vo.setBirthyear(birthyear);
 		vo.setWeight(weight);
 		vo.setNeutered(neutered);
 		
