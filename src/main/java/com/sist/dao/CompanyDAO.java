@@ -349,17 +349,19 @@ public class CompanyDAO {
 		
 		try {
 			conn=db.getConnection();
-			String sql="SELECT rev_content, TO_CHAR(rev_reg_date,'yyyy-MM-dd HH24:mm:ss'), user_name "
-					+ "FROM review r, member m "
-					+ "WHERE r.com_id=? AND rev_id=(select max(rev_id) from review where com_id=?)";
+			String sql="SELECT COM_ID, REV_ID, rev_content,TO_CHAR(rev_reg_date,'yyyy-MM-dd HH24:mm:ss'), m.USER_NAME "
+					+ "FROM review r, MEMBER m "
+					+ "WHERE r.rev_id=(select max(rev_id) from review where com_id=?) "
+					+ "AND r.USER_ID = m.USER_ID";
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, cid);
-			ps.setInt(2, cid);
 			ResultSet rs= ps.executeQuery();
 			if(rs.next()) {
-				vo.setContent(rs.getString(1));
-				vo.setDbday(rs.getString(2));
-				vo.setUser_name(rs.getString(3));
+				vo.setCid(rs.getInt(1));
+				vo.setId(rs.getInt(2));
+				vo.setContent(rs.getString(3));
+				vo.setDbday(rs.getString(4));
+				vo.setUser_name(rs.getString(5));
 			}
 			rs.close();
 		} catch (Exception e) {

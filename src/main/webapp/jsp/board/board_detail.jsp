@@ -4,7 +4,7 @@
 <div class="wrapper row3">
   <main class="container">
   <div class="board-detail-main">
-   <h2 class="sectiontitle">제목 : ${vo.title }</h2>
+   <div style=""> <h2 class="board-detail-title">제목 : ${vo.title }</h2> </div>
    <table class="table detail-table">
      <tr>
       <th width=15% class="text-center">번호</th>
@@ -17,38 +17,39 @@
      
      <tr>
       <th width=15% class="text-center">제목</th>
-      <td colspan=2 class="text-center">${vo.title }</td>
+      <td colspan=3 class="text-center">${vo.title }</td>
       <th width=15% class="text-center">작성자</th>
-      <td colspan=2 class="text-center">${vo.user_id }</td>
+      <td width=15% class="text-center">${vo.user_id }</td>
      </tr>
     <tr>
        <td colspan="6" class="text-left" valign="top" height="200">
-        <pre style="white-space: pre-wrap;border:none;background-color: white">${vo.content }</pre>
+        <pre style="white-space: pre-wrap;border:none;background-color: white; font-size: 18px">
+        ${vo.content }
+        </pre>
        </td>
      </tr>
      <%-- id값 확인 --%>
      <tr>
        <td colspan="6" class="text-right">
      <c:if test="${sessionScope.id==vo.user_id}">
-         <a href="../board/board_update.do?no=${vo.board_id }" class="btn btn-xs btn-info">수정</a>
-         <span class="btn btn-xs btn-success" id="del">삭제</span>
+         <a href="../board/board_update.do?no=${vo.board_id }" class="btn btn-xs btn-success">수정</a>
+         <span class="btn btn-xs btn-danger" id="del">삭제</span>
      </c:if>
          <a href="../board/board_list.do" class="btn btn-xs btn-warning">목록</a>
        </td>
      </tr>
-     
-      </table>
-    <table>
-     <tr style="display:none" id="delTr">
+    </table>
+      
+      <!-- 비밀번호 입력창 -->
+    <table style="margin:12px 10px">
+     <tr style="display:none; " id="delTr">
        <td colspan="6" class="text-right inline">
        비밀번호:<input type=password name=pwd id=pwd1 size=10 class="input-sm">
-       <input type=button value="삭제" data-no="${vo.board_id }" class="btn btn-sm btn-primary" id="delBtn">
+       <input type=button value="삭제" data-no="${vo.board_id }" class="btn btn-sm btn-danger" id="delBtn">
        </td>
      </tr>
-   </table>
-   <div style="height: 20px"></div> 
-   
-   <div class="col-sm-8">
+    </table>
+    
        <table class="table">
 	     <!-- 댓글 출력 위치 -->
 	     <tr>
@@ -72,9 +73,9 @@
 	              <c:if test="${sessionScope.id!=null }">
 	                <c:if test="${sessionScope.id==rvo.user_id }">
 	                 <span class="btn btn-xs btn-success ups" data-no="${rvo.rep_id }">수정</span>
-	                 <span class="btn btn-xs btn-info" onclick="deleteComment(${rvo.rep_id}, ${vo.board_id })">삭제</span>
+	                 <span class="btn btn-xs btn-danger" onclick="deleteComment(${rvo.rep_id}, ${vo.board_id })">삭제</span>
 	                </c:if>
-	                <span class="btn btn-xs btn-warning ins" data-no="${rvo.rep_id }">댓글</span>
+	                <span class="btn btn-xs btn-info ins" data-no="${rvo.rep_id }">댓글</span>
 	               </c:if>
 	             </td>
 	             
@@ -94,8 +95,8 @@
 			        <form method="post" action="../board/reply_reply_insert.do" class="inline">
 			         <input type=hidden name=bno value="${vo.board_id}"><!-- bno는 다시 detail.do로 이동 -->
 			         <input type=hidden name=pno value="${rvo.rep_id }">
-			         <textarea rows="5" cols="55" name="msg" style="float: left"></textarea>
-		             <input type=submit value="댓글쓰기" style="width: 100px;height: 104px;background-color: green;color:white;">
+			         <textarea rows="4" cols="55" name="msg" style="float: left; border-radius: 15px"></textarea>
+		             <input type=submit value="댓글쓰기" style="width: 93px;height: 82px;background-color: #77d6c9;color:white;border-radius: 15px; padding: 0px 10px; font-weight: bold">
 			        </form>
 			      </td>
 			   </tr>
@@ -106,8 +107,8 @@
 			        <form method="post" action="../board/reply_update.do" class="inline">
 			         <input type=hidden name=bno value="${vo.board_id}"> <!-- bno는 다시 detail.do로 이동 -->
 			         <input type=hidden name=no value="${rvo.rep_id }">
-			         <textarea rows="5" cols="55" name="msg" style="float: left">${rvo.rep_content }</textarea>
-		             <input type=submit value="댓글수정" style="width: 100px;height: 104px;background-color: green;color:white;">
+			         <textarea rows="4" cols="55" name="msg" style="float: left; border-radius: 15px" >${rvo.rep_content }</textarea>
+		             <input type=submit value="댓글수정" style="width: 93px;height: 82px;background-color: #77d6c9;color:white; border-radius: 15px; padding: 0px 10px; font-weight: bold">
 			        </form>
 			      </td>
 			    </tr>
@@ -126,14 +127,13 @@
 		      <td>
 		        <form method="post" action="../board/reply_insert.do" class="inline">
 		         <input type=hidden name=bno value="${vo.board_id}">
-		         <textarea rows="5" cols="60" name="msg" style="float: left"></textarea>
-	             <input type=submit value="댓글쓰기" style="width: 120px;height: 104px;background-color: green;color:white;">
+		         <textarea rows="5" cols="60" name="msg" style="float: left; border-radius: 15px; padding: 0px 10px;" ></textarea>
+	             <input type=submit value="댓글쓰기" style="width: 120px;height: 104px;background-color: #77d6c9;color:white;border-radius: 15px; padding: 0px 10px; font-weight: bold">
 		        </form>
 		      </td>
 		     </tr>
 		   </table>
 	   </c:if>
    </div>
-  </div>
   </main>
 </div>
