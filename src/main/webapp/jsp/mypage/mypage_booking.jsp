@@ -43,7 +43,7 @@
 				<tr style="display: none" >
 					<td colspan="5" class="detail-row">
 						<h3>예약 정보</h3>
-						<table class="cart-table table">
+						<table class="cart-table table table-align">
 							<tr>
 								<th width=20% class="text-center">업체명</th>
 								<td width=45% class="text-left">${vo.com_name }</td>
@@ -64,7 +64,7 @@
 							</tr>
 							<tr>
 								<th width=20% class="text-center">반려동물명</th>
-								<td width=45% class="text-left">${vo.pet_id }</td>
+								<td width=45% class="text-left">${vo.pet_name }</td>
 							</tr>
 
 							<tr>

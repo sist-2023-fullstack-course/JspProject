@@ -19,10 +19,12 @@ import org.json.simple.JSONObject;
 
 import com.sist.controller.RequestMapping;
 import com.sist.dao.CompanyDAO;
+import com.sist.dao.MyPageDAO;
 import com.sist.dao.ReserveDAO;
 import com.sist.dao.WishListDAO;
 import com.sist.vo.CompanyReviewVO;
 import com.sist.vo.CompanyVO;
+import com.sist.vo.MyPetVO;
 
 public class CompanyModel {
 	public final int MAX_RECENT_COUNT = 5;
@@ -78,6 +80,9 @@ public class CompanyModel {
 			String user_id = (String)session.getAttribute("id");
 			boolean isClicked = WishListDAO.newInstance().isClicked(user_id, com_id);
 			request.setAttribute("like", isClicked);
+			
+			List<MyPetVO> plist = MyPageDAO.newInstance().listmypet(user_id);
+			request.setAttribute("plist", plist);
 		}
 		
 		// 최근 방문 추가(쿠기)
@@ -308,14 +313,15 @@ public class CompanyModel {
 		String minute = request.getParameter("minute");
 		String msg = request.getParameter("msg");
 		int cid = Integer.parseInt(request.getParameter("cid"));
+		int pid = Integer.parseInt(request.getParameter("pid"));
 		
-		String regdate = year + "-" + month + "-" + day + " " + hour + ":" + month + ":00"; 
+		String regdate = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":00"; 
 		
 		HttpSession session = request.getSession();
 		String user_id = (String)session.getAttribute("id");
 		
 		ReserveDAO dao = ReserveDAO.getInstance();
-		int cnt = dao.insertReservation(cid, user_id, regdate, msg);
+		int cnt = dao.insertReservation(cid, user_id, regdate, msg, pid);
 		
 		PrintWriter out = null;
 		try {

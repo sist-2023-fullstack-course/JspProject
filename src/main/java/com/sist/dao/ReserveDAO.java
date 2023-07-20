@@ -24,18 +24,19 @@ public class ReserveDAO {
 		return dao;
 	}
 	
-	public int insertReservation(int cid, String uid, String regdate, String msg) {
+	public int insertReservation(int cid, String uid, String regdate, String msg, int pid) {
 		int cnt = 0;
 		
 		try {
 			conn = db.getConnection();
 			String sql = "INSERT INTO reservation VALUES("
-					   + "pm_rsi_seq.nextval, 'w', TO_DATE(?, 'YYYY-MM-DD HH24:MI:SS'), ?, '', ?, ?, 0)";
+					   + "pm_rsi_seq.nextval, 'w', TO_DATE(?, 'YYYY-MM-DD HH24:MI:SS'), ?, '', ?, ?, ?)";
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, regdate);
 			ps.setString(2, msg);
 			ps.setString(3, uid);
 			ps.setInt(4, cid);
+			ps.setInt(5, pid);
 			
 			cnt = ps.executeUpdate();
 		} catch (Exception e) {

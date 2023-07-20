@@ -162,7 +162,7 @@
 		<div><img src="${vo.poster }"></div>
 	</div>
 	<div class="col-sm-6"  data-cid="${vo.id }">
-		<h2>날짜/시간 선택</h2>
+		<h2>날짜/시간/펫 선택</h2>
 		<div id="cal-area">
 			<table class="Calendar">
 				<thead>
@@ -220,6 +220,12 @@
 				<option>45분</option>
 				<option>50분</option>
 				<option>55분</option>
+			</select>
+			<select id="pet-select">
+				<option data-pid="0">펫 선택</option>
+				<c:forEach var="pvo" items="${plist }">
+				<option data-pid="${pvo.pid }">${pvo.name }</option>
+				</c:forEach>
 			</select>
 		</div>
 		<h2 style="margin: 20px;">참고 사항</h2>

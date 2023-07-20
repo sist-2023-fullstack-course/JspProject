@@ -304,6 +304,7 @@ function sendReserve(e){
 	let minute = $(parent).find('#reserve-time #minute-select').val();
 	let msg = $(parent).find("#reserve-info").val();
 	let cid = $(parent).data('cid');
+	let pid = $(parent).find('#pet-select option:selected').data('pid');
 	
 	if(day == ''){
 		alert('예약 날짜를 선택해주세요');
@@ -331,7 +332,8 @@ function sendReserve(e){
 			'hour' : hour,
 			'minute' : minute,
 			'msg' : msg,
-			'cid' : cid
+			'cid' : cid,
+			'pid' : pid
 		},
 		success : function(result){
 			location.href = result;
