@@ -20,6 +20,7 @@
 					<td width=30% class="text-center">${vo.com_name }</td>
 					<td width=20% class="text-center">${vo.dbday }</td>
 					<td width=20% class="text-center">
+						<c:if test="${!vo.timeOver }">
 						<c:if test="${vo.res_state=='y' }">
 							<span style="color: green;">승인</span>
 						</c:if> 
@@ -28,6 +29,10 @@
 						</c:if>
 						<c:if test="${vo.res_state=='n' }">
 							<span style="color: red;">거절</span>
+						</c:if>
+						</c:if>
+						<c:if test="${vo.timeOver }">
+							<span>종료</span>
 						</c:if>
 					</td>
 					<td width=15% class="text-center">
