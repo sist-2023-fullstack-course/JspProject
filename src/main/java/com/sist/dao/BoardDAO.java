@@ -65,6 +65,7 @@ public class BoardDAO {
 				vo.setBoard_category(rs.getString(3));
 				vo.setUser_id(rs.getString(4));
 				vo.setDbday(rs.getString(5));
+				System.out.println(vo.getDbday());
 				vo.setHit(rs.getInt(6));
 				vo.setRownum(rs.getInt(7));
 				list.add(vo);

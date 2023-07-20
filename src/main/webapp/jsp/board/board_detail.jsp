@@ -23,9 +23,7 @@
      </tr>
     <tr>
        <td colspan="6" class="text-left" valign="top" height="200">
-        <pre style="white-space: pre-wrap;border:none;background-color: white; font-size: 18px">
-        ${vo.content }
-        </pre>
+        <pre style="white-space: pre-wrap;border:none;background-color: white; font-size: 18px; padding:20px;">${vo.content }</pre>
        </td>
      </tr>
      <%-- id값 확인 --%>
@@ -35,7 +33,7 @@
          <a href="../board/board_update.do?no=${vo.board_id }" class="btn btn-xs btn-success">수정</a>
          <span class="btn btn-xs btn-danger" id="del">삭제</span>
      </c:if>
-         <a href="../board/board_list.do" class="btn btn-xs btn-warning">목록</a>
+         <a href="../board/board_list.do" class="btn btn-lg btn-primary">목록</a>
        </td>
      </tr>
     </table>
@@ -50,7 +48,7 @@
      </tr>
     </table>
     
-       <table class="table">
+       <table class="table table-align">
 	     <!-- 댓글 출력 위치 -->
 	     <tr>
 	      <td>
@@ -63,7 +61,7 @@
 	                 <c:forEach var="i" begin="1" end="${rvo.group_tab }">
 	                  &nbsp;&nbsp;&nbsp;
 	                 </c:forEach>
-	                 <img src="../jsp/board/re_icon.png">
+	                 <img src="../img/re_icon.png">
 	               </c:if>
 	               ◑${rvo.user_id }&nbsp;(${rvo.dbday })
 	             </td>
@@ -72,10 +70,10 @@
 	             <td class="text-right">
 	              <c:if test="${sessionScope.id!=null }">
 	                <c:if test="${sessionScope.id==rvo.user_id }">
-	                 <span class="btn btn-xs btn-success ups" data-no="${rvo.rep_id }">수정</span>
-	                 <span class="btn btn-xs btn-danger" onclick="deleteComment(${rvo.rep_id}, ${vo.board_id })">삭제</span>
+	                 <span class="btn btn-sm btn-success ups" data-no="${rvo.rep_id }">수정</span>
+	                 <span class="btn btn-sm btn-danger" onclick="deleteComment(${rvo.rep_id}, ${vo.board_id })">삭제</span>
 	                </c:if>
-	                <span class="btn btn-xs btn-info ins" data-no="${rvo.rep_id }">댓글</span>
+	                <span class="btn btn-sm btn-info ins" data-no="${rvo.rep_id }">댓글</span>
 	               </c:if>
 	             </td>
 	             
@@ -96,7 +94,7 @@
 			         <input type=hidden name=bno value="${vo.board_id}"><!-- bno는 다시 detail.do로 이동 -->
 			         <input type=hidden name=pno value="${rvo.rep_id }">
 			         <textarea rows="4" cols="55" name="msg" style="float: left; border-radius: 15px"></textarea>
-		             <input type=submit value="댓글쓰기" style="width: 93px;height: 82px;background-color: #77d6c9;color:white;border-radius: 15px; padding: 0px 10px; font-weight: bold">
+		             <input class="ml" type=submit value="댓글쓰기" style="width: 93px;height: 82px;background-color: #77d6c9;color:white;border-radius: 15px; padding: 0px 10px; font-weight: bold">
 			        </form>
 			      </td>
 			   </tr>
@@ -108,7 +106,7 @@
 			         <input type=hidden name=bno value="${vo.board_id}"> <!-- bno는 다시 detail.do로 이동 -->
 			         <input type=hidden name=no value="${rvo.rep_id }">
 			         <textarea rows="4" cols="55" name="msg" style="float: left; border-radius: 15px" >${rvo.rep_content }</textarea>
-		             <input type=submit value="댓글수정" style="width: 93px;height: 82px;background-color: #77d6c9;color:white; border-radius: 15px; padding: 0px 10px; font-weight: bold">
+		             <input class="ml" type=submit value="댓글수정" style="width: 93px;height: 82px;background-color: #77d6c9;color:white; border-radius: 15px; padding: 0px 10px; font-weight: bold">
 			        </form>
 			      </td>
 			    </tr>
@@ -128,7 +126,7 @@
 		        <form method="post" action="../board/reply_insert.do" class="inline">
 		         <input type=hidden name=bno value="${vo.board_id}">
 		         <textarea rows="5" cols="60" name="msg" style="float: left; border-radius: 15px; padding: 0px 10px;" ></textarea>
-	             <input type=submit value="댓글쓰기" style="width: 120px;height: 104px;background-color: #77d6c9;color:white;border-radius: 15px; padding: 0px 10px; font-weight: bold">
+	             <input class="ml" type=submit value="댓글쓰기" style="width: 120px;height: 104px;background-color: #77d6c9;color:white;border-radius: 15px; padding: 0px 10px; font-weight: bold">
 		        </form>
 		      </td>
 		     </tr>

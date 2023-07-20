@@ -77,12 +77,10 @@
 .board-table tr th {
 	
 	text-align:center;
-	vertical-align: middle !important;
 	height: 60px;
 	font-size:18px;
 }
 .board-table tr td{
-	vertical-align: middle !important;
 	font-size:18px;
 }
 /*---- board detail css ¿ä¼Ò  */
@@ -114,5 +112,11 @@ font-family: 'Noto Sans KR', sans-serif;
     font-weight: 600;
 }
 
-	
+.table-align td, .table-align th{
+	vertical-align: middle !important;
+}
+
+.ml{
+	margin-left: 15px;
+}
 

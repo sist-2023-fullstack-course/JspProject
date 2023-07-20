@@ -3,6 +3,7 @@ package com.sist.model;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -35,8 +36,8 @@ public class BoardModel {
 	    if(endPage>totalpage) {
 	    	endPage=totalpage;
 	    }
-		
 		// 출력에 필요한 데이터를 모아서 전송 
+	    request.setAttribute("today", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
 		request.setAttribute("curpage", curpage);
 		request.setAttribute("totalpage", totalpage);
 		request.setAttribute("startPage", startPage);

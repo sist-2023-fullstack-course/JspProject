@@ -21,8 +21,13 @@
 				<div class="cate-list-title">
 					${vo.com_name } <span style="color: orange"> ${String.format("%.1f", vo.star) }</span>
 				</div>
-				<div class="cate-list-content">2. ${vo.address  } / 가격</div>
-				<div class="cate-list-content">3. ${vo.phone  } / 상품설명</div>
+				<div class="cate-list-content">
+					<dl>
+						<dt>주소</dt>
+						<dd>${vo.address }</dd>
+					</dl>
+				</div>
+				<div class="cate-list-content">전화번호 ${vo.phone  }</div>
 				<div class="the-comment" style="margin-top:20px">
 					<div class="comment-box">
 					  <c:if test="${rlist.get(i.index).user_name != null}">

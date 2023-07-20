@@ -26,15 +26,14 @@
 		<div class='board-search-btn'>
 			<button type="button" class="btn  btn-sm btn-secondary board-btn"> 조회 </button>
 		</div>
-		<c:if test="${sessionScope.id!=null }">
+		<c:if test="${(cat=='공지사항' && sessionScope.id=='admin') || (cat!='공지사항' && sessionScope.id!=null) }">
 		<div class="board-search-insert">
 			<button id="newIn" type="button" class="btn btn-sm btn-secondary board-btn"> 새글 </button>
-			<!-- <a href="../board/board_insert.do" class="btn btn-sm board-btn">새글</a>  -->
 		</div>
 		</c:if>
 	</div>
 	<div class="board-table">  
-		<table class="table">
+		<table class="table table-hover table-align">
 		     <tr>
 		      <th width=10% class="text-center">번호</th>
 		      <th width=40% class="text-center">제목</th>
@@ -47,7 +46,12 @@
 		     <c:forEach var="vo" items="${list }">
 		       <tr>
 		         <td width=10% class="text-center">${vo.board_id }</td>
-		         <td width=40% class="text-center"><a href="../board/board_detail.do?no=${vo.board_id }">${vo.title }</a></td>
+		         <td width=40% class="text-center">
+		         	<a href="../board/board_detail.do?no=${vo.board_id }">${vo.title }</a>
+		         	<c:if test="${today==vo.dbday }">
+		         		<img src="../img/new-post.gif" style="display:inline-block; width:40px;">
+		         	</c:if>
+		         </td>
 		         <td width=10% class="text-center">${vo.board_category }</td>
 		         <td width=10% class="text-center">${vo.user_id }</td>
 		         <td width=20% class="text-center">${vo.dbday }</td>
@@ -64,13 +68,18 @@
 	         </c:if>
 	         
 	         <c:if test="${curpage>1 }">
-	         <li> <a href="../board/board_list.do?page=${curpage-1 }&cat=${cat}">&lt;</a> </li>
+	         <li> <a href="../board/board_list.do?page=${curpage-1 }&cat=${cat}"><i class="fa fa-angle-left"></i></a> </li>
 	         </c:if>
 	         <c:forEach var="i" begin="${startPage }" end="${endPage }">
-	            <li ${curpage==i?"class=current":"" }><a href="../board/board_list.do?page=${i }&cat=${cat}">${i }</a></li>
+	         	<c:if test="${curpage==i }">
+		            <li class="active"><span>${i }</span></li>
+	         	</c:if>
+	         	<c:if test="${curpage!=i }">
+	         		<li><a href="../board/board_list.do?page=${i }&cat=${cat}">${i }</a>
+	         	</c:if>
 	         </c:forEach>
 	         <c:if test="${curpage < totalpage }">
-	         <li><a href="../board/board_list.do?page=${curpage+1 }&cat=${cat}">&gt;</a></li>
+	         <li><a href="../board/board_list.do?page=${curpage+1 }&cat=${cat}"><i class="fa fa-angle-right"></i></a></li>
 	         </c:if>
 	         
 	         
