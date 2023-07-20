@@ -6,6 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+.img {
+	width: 20px;
+	height: 20px;
+}
+</style>
 </head>
 <body>
 	<div class="wrapper row3">
@@ -15,11 +21,11 @@
  	      <table class="table">
  	        <tr>
  	          <td>
-				<c:if test="${sessionScope.id!=null }">
-				 <c:if test="${sessionScope.admin=='n' }">
+			   <c:if test="${sessionScope.id!=null }">
+				<c:if test="${sessionScope.admin=='n' }">
  	             <a href="../question/insert.do" class="btn btn-sm btn-danger">문의하기</a>
- 	          </c:if>
- 	          </c:if>
+ 	            </c:if>
+ 	           </c:if>
  	          </td>
  	        </tr>
  	      </table>
@@ -37,7 +43,7 @@
  	          <td width=45%>
  	           <c:if test="${vo.group_tab==1 }">
  	             &nbsp;&nbsp;
- 	             <img src="../question/image/re_icon.png">
+ 	             <img src="../jsp/question/image/reply-all.png" class="img">
  	           </c:if>
  	          <a href="../question/detail.do?no=${vo.no }">${vo.subject }</a></td>
  	          <td width=15% class="text-center">${vo.name }</td>

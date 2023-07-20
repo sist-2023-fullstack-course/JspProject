@@ -104,10 +104,14 @@
 <script type="text/javascript" src="../js/product.js"></script>
 <!-- find JS -->
 <script type="text/javascript" src="../js/find.js"></script>
+<!-- cart JS -->
+<script type="text/javascript" src="../js/cart.js"></script>
 <!-- slider JS -->
 <script type="text/javascript" src="../js/jquery.flexslider-min.js"></script>
 <!-- calendar JS -->
 <script type="text/javascript" src="../js/calendar.js"></script>
+<!-- purchase JS -->
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
 <script>
 	new WOW().init();
 </script>	
