@@ -1,26 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+
  	<h2 class="sectiontitle">1:1 답변하기</h2>
        <form method="post" action="../admin/question_insert_ok.do">
- 	      <table class="table">
+ 	      <table class="table table-align" style="width:60%; margin: 0px auto;">
  	        <tr>
  	          <th width=20% class="text-center">제목</th>
  	          <td width=80%>
- 	            <input type=text name=subject size=50 class="input-sm">
+ 	            <input type=text name=subject size=55 class="input-sm" style="padding:20px;">
  	            <input type=hidden name=qno value=${no }>
  	          </td>
  	        </tr>
  	        <tr>
  	          <th width=20% class="text-center">내용</th>
  	          <td width=80%>
- 	            <textarea rows="10" cols="50" name=content></textarea>
+ 	            <textarea rows="10" cols="50" name="content" style="padding:20px;"></textarea>
  	          </td>
  	        </tr>
  	        <tr>
@@ -31,5 +25,3 @@
  	        </tr>
  	      </table>
       </form>
-</body>
-</html>

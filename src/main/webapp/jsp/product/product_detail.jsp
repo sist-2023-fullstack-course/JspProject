@@ -66,15 +66,17 @@
 	                                    <dd style="color: red">${vo.star }</dd>
 	                                </dl>
 	                            </li>
+	                            <c:if test="${sessionScope.id!=null }">
 	                            <li>
 	                            	<dl>
 	                            		<dt>수량</dt>
 	                            		<dd>
-				                            <input type="number" min="1" id="acc" class="account" name=amount value="1" onclick="changeTotalPrice()">
-	                            			<span class="totalPrice">${vo.discount_price }</span>원
+				                            <input type="number" min="1" id="acc" class="account" name=amount value="1" onchange="changeTotalPrice()">
+	                            			<span style="margin-left: 20px;">총 가격 : </span><span class="totalPrice"><fmt:formatNumber value="${vo.discount_price }" /></span>원
 	                            		</dd>
 	                            	</dl>
 	                            </li>
+	                            </c:if>
 	                        </ul>
 	                        <!-- //우측 정보 e -->
 	                        <!-- 하단 분류 s -->

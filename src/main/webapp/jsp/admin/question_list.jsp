@@ -1,15 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+
   <h2 class="sectiontitle">1:1 문의내역</h2>
-  <table class="table">
+  <table class="table" style="width: 80%; margin: 0px auto;">
     <tr>
       <th width=45% class="text-center">제목</th>
       <th width=15% class="text-center">이름</th>
@@ -28,7 +22,7 @@
           <a href="../admin/question_insert.do?no=${vo.no }" class="btn btn-sm btn-warning">답변대기</a>
         </c:if>
         <c:if test="${vo.isreply==1 }">
-          <span class="btn btn-sm btn-success">답변완료</span>
+          <span>답변완료</span>
         </c:if>
       </td>
     </tr>
@@ -41,5 +35,3 @@
       </td>
     </tr>
   </table>
-</body>
-</html>

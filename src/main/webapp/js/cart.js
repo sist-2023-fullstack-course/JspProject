@@ -11,8 +11,8 @@ function insertCart(id) {
 function changeTotalPrice(){
 	let cnt = $('#acc').val();
 	let price = $('#realPrice').text();
-	price = price.replace(',','');
-	$('.totalPrice').text(cnt*price);
+	price = price.replace(',','') * cnt;
+	$('.totalPrice').text(price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','));
 }
 
 function intocart() {

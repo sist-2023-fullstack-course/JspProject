@@ -26,6 +26,9 @@ public class AdminModel {
 		String user_id = (String)session.getAttribute("id");
 		
 		if(user_id.equals("admin")) {
+			List<ReserveVO> list=dao.admin_booking_list();
+			request.setAttribute("list", list);
+			request.setAttribute("admin_jsp", "../admin/admin_booking.jsp");
 			request.setAttribute("main_jsp", "../admin/admin_main.jsp");
 			return "../jsp/main/main.jsp";
 		}
