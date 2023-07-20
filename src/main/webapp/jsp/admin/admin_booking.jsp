@@ -5,33 +5,34 @@
 <div class="page-title">예약 관리</div>
     <div class="col-sm-1 col-md-1" ></div>
     <div class="col-sm-10 col-md-10">
-    	<table class="cart-table table" style="margin-top:30px;">
+    	<table class="cart-table table" id="book-table" style="margin-top:30px;">
     	  <tr>
+		    <th width=15% class="text-center">예약자id</th>
 		    <th width=15% class="text-center">예약자명</th>
-		    <th width=30% class="text-center">업체명</th>
-		    <th width=15% class="text-center">예약일</th>
+		    <th width=25% class="text-center">업체명</th>
+		    <th width=20% class="text-center">예약일</th>
 		    <th width=15% class="text-center">예약상태</th>
-		    <th width=15% class="text-center"></th>
-		    
 		   </tr>
 		   <c:forEach var="vo" items="${list}">
 		     <tr onclick="myfunction(${vo.res_id})" style="cursor:pointer">
 		        <td width=15% class="text-center">${vo.user_id } </td>
-			    <td width=30% class="text-center">${vo.com_name }</td>
-			    <td width=15% class="text-center">${vo.res_date }</td>
-			    <td width=15% class="text-center">
-			     <c:if test="${vo.res_state=='y' }">
-			        <span>예약확정</span>
-			     </c:if>
-			     <c:if test="${vo.res_state=='n' }">
-			        <span onclick="res_confirm(${vo.res_id})" class="btn btn-sm btn-success confirm">확정하기</span>
-			     </c:if>
-			    </td>
-			    <td width=15% class="text-center">
+		        <td width=15% class="text-center">${vo.user_id } </td>
+			    <td width=25% class="text-center">${vo.com_name }</td>
+			    <td width=20% class="text-center">${vo.dbday }</td>
+			    <c:if test="${vo.timeOver }">
+			    <td width=15% class="text-center">종료</td>
+			    </c:if>
+			    <c:if test="${!vo.timeOver }">
+			    <c:if test="${vo.res_state=='w' }">
+			    <td width=15% class="text-center">대기중</td>
+			    </c:if>
+			    <c:if test="${vo.res_state=='y' }">
+			    <td width=15% class="text-center" style="color: green">승인</td>
+			    </c:if>
 			    <c:if test="${vo.res_state=='n' }">
-			     <a href="#" class="btn btn-sm btn-danger">거절하기</a>
-				</c:if>
-				</td>
+			    <td width=15% class="text-center" style="color: red;">거절</td>
+			    </c:if>
+			    </c:if>
 		     </tr>
 		     <tr class="detail" id="booking_detail${vo.res_id }" style="display:none">
 		     	<td colspan="5">
@@ -39,7 +40,7 @@
 		     	<table class="cart-table table">
 				    <tr>
 				      <th width=15% class="text-center">업체명</th>
-				      <td width=40% class="text-left">${vo.com_id }</td>
+				      <td width=40% class="text-left">${vo.com_name }</td>
 				      <td width=45% rowspan="5">
 				       <img src="${vo.poster }">
 				      </td>
@@ -50,7 +51,7 @@
 				  	</tr>
 				    <tr>
 				      <th width=15% class="text-center">예약일</th>
-				      <td width=40% class="text-left">${vo.res_date }</td>
+				      <td width=40% class="text-left">${vo.dbday }</td>
 				  	</tr>
 				  	
 				    <tr>
@@ -66,6 +67,10 @@
 				  	  <td width=40% class="text-left">${vo.res_msg }</td>
 				  	</tr>
 				  </table>
+				  <div>
+				  	<a href="booking_check.do?res_id=${vo.res_id }&state=y"><span class="span-btn">예약확정</span></a>
+				  	<a href="booking_check.do?res_id=${vo.res_id }&state=n"><span class="span-btn">예약거절</span></a>
+				  </div>
 		     	</td>
 		     </tr>
 		   </c:forEach>

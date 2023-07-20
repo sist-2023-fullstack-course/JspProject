@@ -297,7 +297,71 @@ function reserveOpen(){
 }
 
 function sendReserve(e){
-	console.log('dd');
+	let parent = $(e).parent();
+	let year = $(parent).find('#calYear').text();
+	let month = $(parent).find('#calMonth').text();
+	let day = $(parent).find('.choiceDay').text();
+	let hour = $(parent).find('#reserve-time #hour-select').val();
+	let minute = $(parent).find('#reserve-time #minute-select').val();
+	let msg = $(parent).find("#reserve-info").val();
+	let cid = $(parent).data('cid');
+	
+	if(day == ''){
+		alert('예약 날짜를 선택해주세요');
+		return;
+	}
+	else if(hour=='시간선택' || minute == '분선택'){
+		alert('예약 시간을 선택해주세요');
+		return;
+	}
+	
+	hour = hour.substring(0, hour.indexOf('시'));
+	minute = minute.substring(0, minute.indexOf('분'));
+	
+	if(!confirm(year + '년 ' + month + '월 ' + day + '일 ' + hour + '시 ' + minute + '분으로 예약하시겠습니까?')){
+		return;
+	}
+	
+	$.ajax({
+		type:'post',
+		url:'reserve.do',
+		data:{
+			'year' : year,
+			'month' : month,
+			'day' : day,
+			'hour' : hour,
+			'minute' : minute,
+			'msg' : msg,
+			'cid' : cid
+		},
+		success : function(result){
+			location.href = result;
+		}
+	})
+}
+function reservationListDetailOpen(t){
+	if($(t).text()=='상세보기'){
+		$(t).text('닫기');
+		$(t).parent().parent().next().css('display', 'table-row');
+	}
+	else{
+		$(t).text('상세보기');
+		$(t).parent().parent().next().css('display', 'none');
+	}
+}
+function cancleReservation(t){
+	let res_id = $(t).data('id');
+	
+	$.ajax({
+		type:'post',
+		url : 'delete_booking.do',
+		data : {
+			'res_id' : res_id
+		},
+		success : function(result){
+			location.href = result;
+		}
+	})
 }
 
 $('.reserve_button').click(reserveOpen);

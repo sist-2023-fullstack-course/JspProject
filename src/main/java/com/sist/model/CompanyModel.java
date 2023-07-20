@@ -3,6 +3,7 @@ package com.sist.model;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -18,6 +19,7 @@ import org.json.simple.JSONObject;
 
 import com.sist.controller.RequestMapping;
 import com.sist.dao.CompanyDAO;
+import com.sist.dao.ReserveDAO;
 import com.sist.dao.WishListDAO;
 import com.sist.vo.CompanyReviewVO;
 import com.sist.vo.CompanyVO;
@@ -294,6 +296,34 @@ public class CompanyModel {
 		}
 		else {
 			out.write("fail");
+		}
+	}
+	
+	@RequestMapping("company/reserve.do")
+	public void reserve(HttpServletRequest request, HttpServletResponse response) {
+		String year = request.getParameter("year");
+		String month = request.getParameter("month");
+		String day = request.getParameter("day");
+		String hour = request.getParameter("hour");
+		String minute = request.getParameter("minute");
+		String msg = request.getParameter("msg");
+		int cid = Integer.parseInt(request.getParameter("cid"));
+		
+		String regdate = year + "-" + month + "-" + day + " " + hour + ":" + month + ":00"; 
+		
+		HttpSession session = request.getSession();
+		String user_id = (String)session.getAttribute("id");
+		
+		ReserveDAO dao = ReserveDAO.getInstance();
+		int cnt = dao.insertReservation(cid, user_id, regdate, msg);
+		
+		PrintWriter out = null;
+		try {
+			response.setCharacterEncoding("UTF-8");
+			out = response.getWriter();
+			out.write("/JspProject/mypage/booking.do");
+		} catch(IOException e) {
+			e.printStackTrace();
 		}
 	}
 }

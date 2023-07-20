@@ -27,27 +27,31 @@ public class AdminDAO {
 	public List<ReserveVO> admin_booking_list()
 	{
 		List<ReserveVO> list=new ArrayList<ReserveVO>();
+		conn=db.getConnection();
 		try
 		{
-			conn=db.getConnection();
-			String sql="SELECT res_id,res_state,res_date,res_msg,res_img,user_id,c.com_id,pet_id,c.COM_NAME,c.POSTER "  
-					 + "FROM reservation r, COMPANY c " 
-					 + "WHERE r.COM_ID = c.COM_ID";
+			String sql="SELECT /*+ INDEX_DESC(r PK_RESERVATION) */ "
+					+ "res_id, res_state, TO_CHAR(res_date, 'YYYY-MM-DD HH24:MI:ss'), res_msg, r.com_id, c.COM_NAME, c.POSTER, c.address, c.phone,r.user_id,res_date-sysdate "
+					+ "FROM RESERVATION r, COMPANY c "
+					+ "WHERE c.COM_ID = r.COM_ID";
 			ps=conn.prepareStatement(sql);
 			rs=ps.executeQuery();
 			while(rs.next())
 			{
 				ReserveVO vo=new ReserveVO();
+
 				vo.setRes_id(rs.getInt(1));
 				vo.setRes_state(rs.getString(2));
-				vo.setRes_date(rs.getDate(3));
+				vo.setDbday(rs.getString(3));
 				vo.setRes_msg(rs.getString(4));
-				vo.setRes_img(rs.getString(5));
-				vo.setUser_id(rs.getString(6));
-				vo.setCom_id(rs.getInt(7));
-				vo.setPet_id(rs.getInt(8));
-				vo.setCom_name(rs.getString(9));
-				vo.setPoster(rs.getString(10));
+				vo.setCom_id(rs.getInt(5));
+				vo.setCom_name(rs.getString(6));
+				vo.setPoster(rs.getString(7));
+				vo.setAddress(rs.getString(8));
+				vo.setPhone(rs.getString(9));
+				vo.setUser_id(rs.getString(10));
+				double tmp = rs.getDouble(11);
+				vo.setTimeOver(tmp>0.0?false:true);
 				list.add(vo);
 			}
 			rs.close();
@@ -97,16 +101,15 @@ public class AdminDAO {
 	}
 	
 	// 관리자 예약 상태 변경
-	public void admin_booking_confirm(int cno)
+	public void admin_booking_confirm(int res_id, String state)
 	{
 		try
 		{
 			conn=db.getConnection();
-			String sql="UPDATE reservation SET "
-					+ "res_state='y' "
-					+ "WHERE res_id=?";
+			String sql="UPDATE reservation SET res_state=? WHERE res_id=?";
 			ps=conn.prepareStatement(sql);
-			ps.setInt(1, cno);
+			ps.setString(1, state);
+			ps.setInt(2, res_id);
 			ps.executeUpdate();
 		}catch(Exception ex)
 		{

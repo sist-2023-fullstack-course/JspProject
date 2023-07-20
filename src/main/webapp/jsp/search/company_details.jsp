@@ -161,7 +161,7 @@
 		<h1>${vo.com_name }</h1>
 		<div><img src="${vo.poster }"></div>
 	</div>
-	<div class="col-sm-6">
+	<div class="col-sm-6"  data-cid="${vo.id }">
 		<h2>날짜/시간 선택</h2>
 		<div id="cal-area">
 			<table class="Calendar">
@@ -186,10 +186,10 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="custom-select">
-			<select>
+		<div class="custom-select" id="reserve-time">
+			<select id="hour-select">
 				<option>시간선택</option>
-				<option>09시</option>
+				<option>9시</option>
 				<option>10시</option>
 				<option>11시</option>
 				<option>12시</option>
@@ -205,10 +205,11 @@
 				<option>22시</option>
 				<option>23시</option>
 				<option>24시</option>
-			</select> <select>
+			</select> 
+			<select id="minute-select">
 				<option>분선택</option>
-				<option>00분</option>
-				<option>05분</option>
+				<option>0분</option>
+				<option>5분</option>
 				<option>10분</option>
 				<option>15분</option>
 				<option>20분</option>

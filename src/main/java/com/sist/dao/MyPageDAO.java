@@ -29,24 +29,28 @@ public class MyPageDAO {
 		conn=db.getConnection();
 		try
 		{
-			String sql="SELECT res_id,res_state,res_date,res_msg,res_img,user_id,com_id,pet_id,companyName(com_id) "
-					+ "FROM reservation "
-					+ "WHERE user_id=?";
+			String sql="SELECT /*+ INDEX_DESC(r PK_RESERVATION) */ "
+					+ "res_id, res_state, TO_CHAR(res_date, 'YYYY-MM-DD HH24:MI:ss'), res_msg, r.com_id, c.COM_NAME, c.POSTER, c.address, c.phone "
+					+ "FROM RESERVATION r, COMPANY c "
+					+ "WHERE r.user_id = ? AND c.COM_ID = r.COM_ID";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, uid);
 			rs=ps.executeQuery();
 			while(rs.next())
 			{
 				ReserveVO vo=new ReserveVO();
+
+				vo.setUser_id(uid);
 				vo.setRes_id(rs.getInt(1));
 				vo.setRes_state(rs.getString(2));
-				vo.setRes_date(rs.getDate(3));
+				vo.setDbday(rs.getString(3));
 				vo.setRes_msg(rs.getString(4));
-				vo.setRes_img(rs.getString(5));
-				vo.setUser_id(rs.getString(6));
-				vo.setCom_id(rs.getInt(7));
-				vo.setPet_id(rs.getInt(8));
-				vo.setCom_name(rs.getString(9));
+				vo.setCom_id(rs.getInt(5));
+				vo.setCom_name(rs.getString(6));
+				vo.setPoster(rs.getString(7));
+				vo.setAddress(rs.getString(8));
+				vo.setPhone(rs.getString(9));
+				
 				list.add(vo);
 			}
 			rs.close();
@@ -61,6 +65,21 @@ public class MyPageDAO {
 		return list;
 	}
 	// 일반 사용자 예약 취소
+	public void delete_booking(int res_id) {
+		try {
+			conn = db.getConnection();
+			String sql = "DELETE FROM reservation where res_id=?";
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, res_id);
+			ps.executeUpdate();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			db.disConnection(conn, ps);
+		}
+	}
 	
 	// 일반 사용자 예약 상세보기
 	public ReserveVO booking_detail(int rno)

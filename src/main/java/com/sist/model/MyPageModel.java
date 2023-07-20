@@ -1,5 +1,6 @@
 package com.sist.model;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
@@ -106,20 +107,21 @@ public class MyPageModel {
 		return "../jsp/main/main.jsp";
 	}
 	
-	@RequestMapping("mypage/booking_detail.do")
-	public String mypage_booking_detail(HttpServletRequest request, HttpServletResponse response)
-	{
-		String res_id=request.getParameter("res_id");
-		String com_id=request.getParameter("com_id");
-		MyPageDAO dao=MyPageDAO.newInstance();
-		//dao 예약번호로 예약정보 조회!
-		ReserveVO rvo=dao.booking_detail(Integer.parseInt(res_id));
-		CompanyVO cvo=dao.company_detail(Integer.parseInt(com_id));
+	@RequestMapping("mypage/delete_booking.do")
+	public void delete_booking(HttpServletRequest request, HttpServletResponse response) {
+		int res_id = Integer.parseInt(request.getParameter("res_id"));
 		
-		request.setAttribute("rvo", rvo);
-		request.setAttribute("cvo", cvo);
-		return "../jsp/mypage/mypage_booking_detail.jsp";
+		MyPageDAO.newInstance().delete_booking(res_id);
+		
+		try {
+			response.setCharacterEncoding("UTF-8");
+			PrintWriter out = response.getWriter();
+			out.write("/JspProject/mypage/booking.do");
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
 	}
+	
 	
 	//개인정보 수정
 	@RequestMapping("mypage/updatemyinfo.do")

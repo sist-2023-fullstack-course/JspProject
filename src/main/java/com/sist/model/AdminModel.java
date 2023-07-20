@@ -18,8 +18,19 @@ public class AdminModel {
 	@RequestMapping("admin/main.do")
 	public String admin_main(HttpServletRequest request, HttpServletResponse response)
 	{
-		request.setAttribute("main_jsp", "../admin/admin_main.jsp");
-		return "../jsp/main/main.jsp";
+		HttpSession session = request.getSession();
+		if(session.getAttribute("id")==null) {
+			return "redirect:../main/main.do";
+		}
+
+		String user_id = (String)session.getAttribute("id");
+		
+		if(user_id.equals("admin")) {
+			request.setAttribute("main_jsp", "../admin/admin_main.jsp");
+			return "../jsp/main/main.jsp";
+		}
+
+		return "redirect:../main/main.do";
 	}
 	
 	
@@ -34,12 +45,15 @@ public class AdminModel {
 		return "../jsp/main/main.jsp";
 	}
 	
-	@RequestMapping("admin/booking_confirm.do")
-	public void admin_booking_confirm(HttpServletRequest request, HttpServletResponse response)
+	@RequestMapping("admin/booking_check.do")
+	public String admin_booking_confirm(HttpServletRequest request, HttpServletResponse response)
 	{
-		String res_id=request.getParameter("rid");
-		dao.admin_booking_confirm(Integer.parseInt(res_id));
+		String state = request.getParameter("state");
+		int res_id = Integer.parseInt(request.getParameter("res_id"));
 		
+		AdminDAO.newInstance().admin_booking_confirm(res_id, state);
+		
+		return "redirect:../admin/booking.do";
 	}
 	
 	// Q&A 답변하기
