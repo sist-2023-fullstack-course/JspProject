@@ -34,7 +34,7 @@
 	                                    <dt>판매가</dt>
 	                                    <dd>
 	                                    <c:if test="${vo.discount_rate==0 }">
-		                                    <fmt:formatNumber value="${vo.price }" />원
+		                                    <span id="realPrice"><fmt:formatNumber value="${vo.price }" /></span>원
 	                                    </c:if>
 	                                    <c:if test="${vo.discount_rate!=0 }">
 		                                    <del><fmt:formatNumber value="${vo.price }" />원</del>
@@ -48,7 +48,7 @@
 	                            	<dl>
 	                            		<dt>할인가</dt>
 	                            		<dd>
-		                                    <span><fmt:formatNumber value="${vo.discount_price }" /></span>원
+		                                    <span id="realPrice"><fmt:formatNumber value="${vo.discount_price }" /></span>원
 		                                    <span style="color: red; font-size: 22px; margin-left: 10px;">${vo.discount_rate }%</span>
 	                            		</dd>
 	                            	</dl>
@@ -70,7 +70,7 @@
 	                            	<dl>
 	                            		<dt>수량</dt>
 	                            		<dd>
-				                            <input type="number" min="1" class="account" name=amount value="1">
+				                            <input type="number" min="1" id="acc" class="account" name=amount value="1" onclick="changeTotalPrice()">
 	                            			<span class="totalPrice">${vo.discount_price }</span>원
 	                            		</dd>
 	                            	</dl>

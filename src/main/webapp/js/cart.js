@@ -8,6 +8,13 @@ function insertCart(id) {
 	location.href = '../cart/cart_insert.do?amount=' + amount + '&id=' + id;
 }
 
+function changeTotalPrice(){
+	let cnt = $('#acc').val();
+	let price = $('#realPrice').text();
+	price = price.replace(',','');
+	$('.totalPrice').text(cnt*price);
+}
+
 function intocart() {
 	$('#gotocart').change(function() {
 		let amount = $(this).val()
