@@ -8,7 +8,7 @@ import java.util.*;
 
 // 예약 정보
 public class ReserveVO {
-	private String res_state,res_msg,res_img,user_id,poster, dbday, address, phone, com_name, pet_name;
+	private String res_state,res_msg,res_img,user_id,poster, dbday, address, phone, com_name, pet_name,user_name;
 	private int res_id,com_id,pet_id;
 	private Date res_date;
 	private boolean timeOver;

@@ -31,9 +31,9 @@ public class AdminDAO {
 		try
 		{
 			String sql="SELECT /*+ INDEX_DESC(r PK_RESERVATION) */ "
-					+ "res_id, res_state, TO_CHAR(res_date, 'YYYY-MM-DD HH24:MI:ss'), res_msg, r.com_id, c.COM_NAME, c.POSTER, c.address, c.phone,r.user_id,res_date-sysdate "
-					+ "FROM RESERVATION r, COMPANY c "
-					+ "WHERE c.COM_ID = r.COM_ID";
+					+ "res_id, res_state, TO_CHAR(res_date, 'YYYY-MM-DD HH24:MI:ss'), res_msg, r.com_id, c.COM_NAME, c.POSTER, c.address, c.phone,r.user_id,res_date-sysdate,m.user_name "
+					+ "FROM RESERVATION r, COMPANY c, MEMBER m "
+					+ "WHERE c.COM_ID = r.COM_ID AND r.user_id=m.user_id";
 			ps=conn.prepareStatement(sql);
 			rs=ps.executeQuery();
 			while(rs.next())
@@ -52,6 +52,7 @@ public class AdminDAO {
 				vo.setUser_id(rs.getString(10));
 				double tmp = rs.getDouble(11);
 				vo.setTimeOver(tmp>0.0?false:true);
+				vo.setUser_name(rs.getString(12));
 				list.add(vo);
 			}
 			rs.close();

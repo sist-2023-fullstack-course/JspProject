@@ -37,7 +37,7 @@
 	
 	<!-- 업체 실시간 인기 -->
 	<div class="row row_margin">
-		<h2 class="sectiontitle">최다 별점 PetMily 장소</h2>
+		<h2 class="sectiontitle">베스트 PETMILY 장소</h2>
 		<div class="flexslider carousel basiccarousel">
 	    	<div class="flex-viewport" style="overflow: hidden; position: relative;">
 	    		<ul class="slides" style="width: 1000%; transition-duration: 0.6s; transform: translate3d(-665.333px, 0px, 0px);">
@@ -75,7 +75,7 @@
 			        </li>
 			        <li style="width: 312.667px; float: left; display: block;">
 			          	<figure>
-			          		<a href="../etc/categorylist.do?cate=반려동풀용품"><img class="home_img radius-10 btmspace-10" src="../Images/toy.jpeg" alt="" draggable="false"></a>
+			          		<a href="../etc/categorylist.do?cate=반려동물용품"><img class="home_img radius-10 btmspace-10" src="../Images/toy.jpeg" alt="" draggable="false"></a>
 			            	<figcaption>
 			            		<a href="../etc/categorylist.do?cate=반려동물용품"><i class="fa fa-list-ul"></i>반려동물용품 탑 10</a>
 			            	</figcaption>
@@ -146,7 +146,7 @@
 	
 	<!-- 쇼핑 실시간 인기 -->
 	<div class="row" style="margin-bottom:100px;">
-		<h2 class="sectiontitle">최다 별점 PetMily 상품</h2>
+		<h2 class="sectiontitle">베스트 PETMILY 상품</h2>
 		<div class="flexslider carousel basiccarousel">
 	    	<div class="flex-viewport" style="overflow: hidden; position: relative;">
 	    		<ul class="slides" style="width: 1000%; transition-duration: 0.6s; transform: translate3d(-665.333px, 0px, 0px);">

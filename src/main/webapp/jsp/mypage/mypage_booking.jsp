@@ -47,7 +47,7 @@
 							<tr>
 								<th width=20% class="text-center">업체명</th>
 								<td width=45% class="text-left">${vo.com_name }</td>
-								<td width=35% rowspan="5"><img src="${vo.poster }">
+								<td width=35% rowspan="5"><img src="${vo.poster }" style="height:200px;">
 								</td>
 							</tr>
 							<tr>

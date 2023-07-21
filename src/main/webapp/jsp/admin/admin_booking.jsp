@@ -5,7 +5,7 @@
 <div class="page-title">예약 관리</div>
     <div class="col-sm-1 col-md-1" ></div>
     <div class="col-sm-10 col-md-10">
-    	<table class="cart-table table" id="book-table" style="margin-top:30px;">
+    	<table class="cart-table table table-hover" id="book-table" style="margin-top:30px;">
     	  <tr>
 		    <th width=15% class="text-center">예약자id</th>
 		    <th width=15% class="text-center">예약자명</th>
@@ -16,7 +16,7 @@
 		   <c:forEach var="vo" items="${list}">
 		     <tr onclick="myfunction(${vo.res_id})" style="cursor:pointer">
 		        <td width=15% class="text-center">${vo.user_id } </td>
-		        <td width=15% class="text-center">${vo.user_id } </td>
+		        <td width=15% class="text-center">${vo.user_name } </td>
 			    <td width=25% class="text-center">${vo.com_name }</td>
 			    <td width=20% class="text-center">${vo.dbday }</td>
 			    <c:if test="${vo.timeOver }">
@@ -40,31 +40,31 @@
 		     	<table class="cart-table table">
 				    <tr>
 				      <th width=15% class="text-center">업체명</th>
-				      <td width=40% class="text-left">${vo.com_name }</td>
-				      <td width=45% rowspan="5">
-				       <img src="${vo.poster }">
+				      <td class="text-left">${vo.com_name }</td>
+				      <td rowspan="5">
+				       <img src="${vo.poster }" style="height: 200px;">
 				      </td>
 				  	</tr>
 				    <tr>
 				      <th width=15% class="text-center">예약번호</th>
-				      <td width=40% class="text-left">${vo.res_id }</td>
+				      <td class="text-left">${vo.res_id }</td>
 				  	</tr>
 				    <tr>
 				      <th width=15% class="text-center">예약일</th>
-				      <td width=40% class="text-left">${vo.dbday }</td>
+				      <td class="text-left">${vo.dbday }</td>
 				  	</tr>
 				  	
 				    <tr>
 				      <th width=15% class="text-center">예약자명</th>
-				      <td width=40% class="text-left">${vo.user_id}</td>
+				      <td class="text-left">${vo.user_name}</td>
 				  	</tr>
 				    <tr>
 				      <th width=15% class="text-center">반려동물명</th>
-				      <td width=40% class="text-left">${vo.pet_id }</td>
+				      <td class="text-left">${vo.pet_id }</td>
 				  	</tr>
 				  	<tr>
 				  	  <th width=15% class="text-center">예약 메시지</th>
-				  	  <td width=40% class="text-left">${vo.res_msg }</td>
+				  	  <td class="text-left">${vo.res_msg }</td>
 				  	</tr>
 				  </table>
 				  <div>
