@@ -35,8 +35,8 @@
 							<p class="text-center"><a href="../mypage/wishlist.do" style="text-decoration:none">위시리스트</a></p>
 						</li>
 						<li>
-							<p class="text-center"><a href="#"><i class="fa fa-shopping-cart" style="color:#034D7E"></i></a></p>
-							<p class="text-center"><a href="#" style="text-decoration:none">장바구니</a></p>
+							<p class="text-center"><a href="../mypage/mypage_cart.do"><i class="fa fa-shopping-cart" style="color:#034D7E"></i></a></p>
+							<p class="text-center"><a href="../mypage/mypage_cart.do" style="text-decoration:none">장바구니</a></p>
 						</li>
 						<li>
 							<p class="text-center"><a href="/JspProject/member/logout.do"><i class="fa fa-sign-out" style="color:#034D7E"></i></a></p>
@@ -94,11 +94,8 @@
 								</div>
 							</li>
 							<li><a href="../board/board_list.do?cat=공지사항">공지사항</a>
-								<ul class="sub-menu">
-									<li><a href="../board/board_list.do?cat=공지사항">공지사항_1</a></li>
-								</ul>
 							</li>
-							<li><a href="../question/list.do">문의하기</a>
+							<li><a href="../question/list.do">1:1 문의</a>
 								
 							</li>
 							<c:if test="${sessionScope.id!=null }">

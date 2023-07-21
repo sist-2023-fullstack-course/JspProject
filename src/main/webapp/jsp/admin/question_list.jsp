@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-  <h2 class="sectiontitle">1:1 문의내역</h2>
+  <div class="page-title">1:1 문의내역</div>
   <table class="table" style="width: 80%; margin: 0px auto;">
     <tr>
       <th width=45% class="text-center">제목</th>
