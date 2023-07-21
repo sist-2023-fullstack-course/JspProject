@@ -290,7 +290,7 @@ public class BoardReplyDAO {
 				*/
 		    
 		   sql="INSERT INTO reply VALUES("
-			  +"pm_rpi_seq.nextval,?,?,?,SYSDATE,?,?,?,?,0)";
+			  +"pm_rpi_seq.nextval,?,?,?,SYSDATE,?,?,?,?,0,?)";
 		   ps=conn.prepareStatement(sql);
 		   ps.setInt(1, vo.getBoard_id());
 		   ps.setString(2, vo.getUser_id());
@@ -300,6 +300,7 @@ public class BoardReplyDAO {
 		   ps.setInt(5, gs+1);
 		   ps.setInt(6, gt+1);
 		   ps.setInt(7, pno);
+		   ps.setString(8,vo.getUser_name() );
 		   ps.executeUpdate();
 		   // depth => update
 		   
