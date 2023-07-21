@@ -1636,6 +1636,12 @@ img {
   color: #e09e25;
 }
 .trendy-item h5 {}
+
+.home_img {
+	opacity: 0.5;
+	width: 420px;
+	height: 315px;
+}
 /*-----------------
 	5. Shop Page
 -------------------*/
