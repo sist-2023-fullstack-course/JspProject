@@ -47,11 +47,11 @@
 						<li><a href="#">Team Leader</a></li>
 						<li><a href="#">윤연상</a></li>
 						<li><a href="#">Team Member</a></li>
-						<li><a href="#">이동준</a></li>	
+						<li><a href="#">나도원</a></li>	
 						<li><a href="#">Team Member</a></li>
 						<li><a href="#">윤지수</a></li>
 						<li><a href="#">Team Member</a></li>
-						<li><a href="#">나도원</a></li>
+						<li><a href="#">이동준</a></li>
 					</ul>
 				</div>
 			</div>
