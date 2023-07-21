@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<div class="page-title">${sessionScope.name }님의예약내역</div>
+<div class="page-title">${sessionScope.name }님의 예약내역</div>
 <div class="col-sm-1 col-md-1"></div>
 <div class="col-sm-10 col-md-10" id="book-table">
 	<div class="row">

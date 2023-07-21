@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <div style="padding-top: 40px;"></div>
+  <div class="page-title">구매내역</div>
     <div class="col-sm-1 col-md-1" ></div>
     <div class="col-sm-10 col-md-10">
       <div class="row">

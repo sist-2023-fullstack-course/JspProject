@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="col-sm-8 col-md-12">
-	<div class="page-title">${sessionScope.name }님의 마이펫</div>
+	<div class="page-title">${sessionScope.name }님의 마이 펫</div>
 	<div class="row" style="padding:0px 30px;">
 		<div style="height: 40px"></div>
 		<c:forEach var="vo" items="${list }">
