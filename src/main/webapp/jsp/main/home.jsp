@@ -257,7 +257,7 @@
 					        	<ul>
 					        		<c:forEach var="vo" items="${freeList }">
 					        		<li>
-					        			<span class="user-area">${vo.user_id }</span>
+					        			<span class="user-area reply-css">${vo.user_name }</span>
 					        			<a class="title-area" href="../board/board_detail.do?no=${vo.board_id }">${vo.title }</a>
 					        			<span class="regdate-area">${vo.dbday }</span>
 					        		</li>
@@ -280,7 +280,7 @@
 					        	<ul>
 					        		<c:forEach var="vo" items="${boastList }">
 					        		<li>
-					        			<span class="user-area">${vo.user_id }</span>
+					        			<span class="user-area reply-css">${vo.user_name }</span>
 					        			<a class="title-area" href="../board/board_detail.do?no=${vo.board_id }">${vo.title }</a>
 					        			<span class="regdate-area">${vo.dbday }</span>
 					        		</li>

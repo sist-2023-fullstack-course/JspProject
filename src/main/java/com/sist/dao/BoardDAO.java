@@ -303,7 +303,7 @@ public class BoardDAO {
 		   try {
 			   conn = db.getConnection();
 			   String sql = "SELECT /*+ INDEX_DESC(board PK_BOARD) */ "
-			   		      + "BOARD_ID, TITLE, TO_CHAR(REGDATE,'YYYY-MM-DD'), CONTENT, HIT, COMMENT_CNT, USER_ID, rownum "
+			   		      + "BOARD_ID, TITLE, TO_CHAR(REGDATE,'YYYY-MM-DD'), CONTENT, HIT, COMMENT_CNT, USER_name, rownum "
 			   		      + "FROM board "
 			   		      + "WHERE rownum<=5 AND BOARD_CATEGORY = ?";
 			   ps = conn.prepareStatement(sql);
@@ -320,7 +320,7 @@ public class BoardDAO {
 				   vo.setContent(rs.getString(4));
 				   vo.setHit(rs.getInt(5));
 				   vo.setComment_cnt(rs.getInt(6));
-				   vo.setUser_id(rs.getString(7));
+				   vo.setUser_name(rs.getString(7));
 				   
 				   list.add(vo);
 			   }
