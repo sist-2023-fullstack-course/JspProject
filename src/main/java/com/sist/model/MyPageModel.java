@@ -218,7 +218,7 @@ public class MyPageModel {
 	
 	
 	@RequestMapping("mypage/deletemyaccount_confirm.do")
-	public String mypage_deletemyaccount_proceed(HttpServletRequest request, HttpServletResponse response)
+	public void mypage_deletemyaccount_proceed(HttpServletRequest request, HttpServletResponse response)
 	{
 		String pwd=request.getParameter("pwd");
 		HttpSession session=request.getSession();
@@ -233,12 +233,7 @@ public class MyPageModel {
 		try
 		{
 			PrintWriter out=response.getWriter();
-			out.println(result);
+			out.print(result);
 		}catch(Exception ex) {}
-		
-		request.setAttribute("main_jsp", "../mypage/mypage_delete.jsp");
-		return "../jsp/main/main.jsp";
 	}
-	
-	
 }

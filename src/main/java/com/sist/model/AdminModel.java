@@ -86,7 +86,9 @@ public class AdminModel {
 	{
 		String no=request.getParameter("no");
 		request.setAttribute("no", no);
+		QuestionVO vo = QuestionDAO.newInstance().questionDetailData(Integer.parseInt(no));
 		
+		request.setAttribute("vo", vo);
 		request.setAttribute("admin_jsp", "../admin/question_insert.jsp");
 		request.setAttribute("main_jsp", "../admin/admin_main.jsp");
 		return "../jsp/main/main.jsp";

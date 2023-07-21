@@ -1,12 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
 <div class="footer-top-area fix"><!--Start Footer top area-->
-	<div class="container">
+		<div class="container">
 		<div class="row">
 			<div class="col-sm-6 col-md-3">
 				<div class="footer-about">
@@ -85,40 +80,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="footer-newslater fix">
-					<div class="wrap fix">
-						<h3>NEWS LETTER ! </h3>
-						<form action="#">
-							<input type="email" placeholder="Your E-mail...">
-							<button class="submit">SUBSCRIBE</button>
-						</form>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
-</div><!--Start Footer top area-->
-<div class="footer-area fix"><!--Start Footer Area-->
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-6">
-				<div class="copy-right">
-					<p>Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a></p>
-				</div>
-			</div>
-			<div class="col-sm-6">
-				<div class="payment">
-					<ul>
-						<li><a href="#"><img src="../img/footer/paypal.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="../img/footer/visa.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="../img/footer/master.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="../img/footer/cards.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="../img/footer/discover.jpg" alt="" /></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</div><!--End Footer Area-->
-</body>
-</html>
+</div>

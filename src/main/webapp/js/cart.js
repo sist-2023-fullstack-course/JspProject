@@ -32,8 +32,9 @@ function intocart() {
 
 function requestPay(t) {
 	let cart_id = $(t).data('no');
-	let price = $('#totalprice').text();
-	
+	let price = $('#totalprice').text().replace('원','');
+	price = price.replace(',','');
+	let pname = $('#pname').text();
 	var IMP = window.IMP; // 생략 가능
 	IMP.init("imp01661305"); // 예: imp00000000
 	// IMP.request_pay(param, callback) 결제창 호출
@@ -43,11 +44,11 @@ function requestPay(t) {
 		merchant_uid: 'merchant_' + new Date().getTime(),
 		name: pname,
 		amount: Number(price),
-		buyer_email: 'iamport@siot.do',
-		buyer_name: '구매자이름',
+		buyer_email: '1004dustkd@gmail.com',
+		buyer_name: '윤연상',
 		buyer_tel: '010-1234-5678',
-		buyer_addr: '서울특별시 강남구 삼성동',
-		buyer_postcode: '123-456',
+		buyer_addr: '서울특별시 마포구 서교동',
+		buyer_postcode: '121-210',
 		app_scheme: 'iamporttest' //in app browser결제에서만 사용 
 	}, function(rsp) {
 		if (rsp.success) {

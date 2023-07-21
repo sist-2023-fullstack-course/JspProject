@@ -3,8 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="container">
 	<!-- 카테고리 아이콘 -->
-	<div class="row	">
-		<img src="../img/slider/1.jpg" style="padding: 0px 15px;">
+	<div class="row">
+		<img src="../img/pet-main.png" style="padding: 0px 15px; display: block; margin: 0px auto;">
 	</div>
 	<div class="row">
 		<div id="category-icons">
