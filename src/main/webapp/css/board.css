@@ -114,6 +114,14 @@ font-family: 'Noto Sans KR', sans-serif;
 
 .table-align td, .table-align th{
 	vertical-align: middle !important;
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.table-align td a, .table-align th a{
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .ml{

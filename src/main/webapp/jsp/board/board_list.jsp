@@ -35,8 +35,8 @@
 	<div class="board-table">  
 		<table class="table table-hover table-align">
 		     <tr>
-		      <th width=10% class="text-center">번호</th>
-		      <th width=40% class="text-center">제목</th>
+		      <th width=15% class="text-center">번호</th>
+		      <th width=35% class="text-center">제목</th>
 		      <th width=10% class="text-center">카테고리</th>
 		      <th width=10% class="text-center">이름</th>
 		      <th width=20% class="text-center">작성일</th>
@@ -45,14 +45,12 @@
 	     
 		     <c:forEach var="vo" items="${list }">
 		       <tr>
-		         <td width=10% class="text-center">${vo.board_id }</td>
-		         <td width=40% class="text-center" >
-		         <div class="test" style="text-overflow:ellipsis;">
+		         <td width=15% class="text-center">${vo.board_id }</td>
+		         <td width=35% class="text-left" >
 		         	<a href="../board/board_detail.do?no=${vo.board_id }">${vo.title }</a>
 		         	<c:if test="${today==vo.dbday }">
 		         		<img src="../img/new-post.gif" style="display:inline-block; width:40px;">
 		         	</c:if>
-		         </div>
 		         </td>
 		         <td width=10% class="text-center">${vo.board_category }</td>
 		         <td width=10% class="text-center">${vo.user_name }</td>
