@@ -93,7 +93,7 @@
 			        <form method="post" action="../board/reply_reply_insert.do" class="inline">
 			         <input type=hidden name=bno value="${vo.board_id}"><!-- bno는 다시 detail.do로 이동 -->
 			         <input type=hidden name=pno value="${rvo.rep_id }">
-			         <textarea rows="4" cols="55" name="msg" style="float: left; border-radius: 15px"></textarea>
+			         <textarea rows="4" cols="55" name="msg" style="float: left; border-radius: 15px; padding: 0px 10px; "></textarea>
 		             <input class="ml" type=submit value="댓글쓰기" style="width: 93px;height: 82px;background-color: #77d6c9;color:white;border-radius: 15px; padding: 0px 10px; font-weight: bold">
 			        </form>
 			      </td>
@@ -105,7 +105,7 @@
 			        <form method="post" action="../board/reply_update.do" class="inline">
 			         <input type=hidden name=bno value="${vo.board_id}"> <!-- bno는 다시 detail.do로 이동 -->
 			         <input type=hidden name=no value="${rvo.rep_id }">
-			         <textarea rows="4" cols="55" name="msg" style="float: left; border-radius: 15px" >${rvo.rep_content }</textarea>
+			         <textarea rows="4" cols="55" name="msg" style="float: left; border-radius: 15px; padding: 0px 10px;" >${rvo.rep_content }</textarea>
 		             <input class="ml" type=submit value="댓글수정" style="width: 93px;height: 82px;background-color: #77d6c9;color:white; border-radius: 15px; padding: 0px 10px; font-weight: bold">
 			        </form>
 			      </td>

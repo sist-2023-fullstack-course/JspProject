@@ -11,13 +11,15 @@
 			게시글 작성
 		</div>
 			<form method=post action="../board/board_insert_ok.do">
-			   <table class="board-table table">
+			   <table class="board-table table table-align detail-table ">
 			   <tr>
 			      <th width=20% style="padding-top:20px">게시글 종류</th>
 			      <td width=80%>
 					  <select name="cat" >
 					    <option value="none" >=== 선택 ===</option>
+					    <c:if test="${sessionScope.admin=='y' }">
 					    <option value="공지사항">공지사항</option>
+					    </c:if>
 					    <option value="자유토크" selected>자유토크</option>
 					    <option value="자랑하기">자랑하기</option>
 					    <option value="QNA">Q&amp;A</option>
@@ -32,13 +34,13 @@
 			      </td>
 			    </tr>
 			    <tr>
-			      <th width=20%>title</th>
+			      <th width=20%>글 제목</th>
 			      <td width=80%>
 			       <input type=text name=subject size=45 class="input-sm" style="font-size:18px">
 			      </td>
 			    </tr>
 			    <tr>
-			      <th width=20%>내용 content</th>
+			      <th width=20%>내용</th>
 			      <td width=80%>
 			       <textarea rows="10" cols="50" name="content"></textarea>
 			      </td>

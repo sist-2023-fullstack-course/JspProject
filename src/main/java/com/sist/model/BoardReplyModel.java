@@ -70,13 +70,14 @@ public class BoardReplyModel {
 	  
 	  HttpSession session=request.getSession();
 	  String id=(String)session.getAttribute("id");
-//	  String name=(String)session.getAttribute("name");
+	  String name=(String)session.getAttribute("name");
 	  
 	  BoardReplyVO vo=new BoardReplyVO();
 	  vo.setBoard_id(Integer.parseInt(bno));
 	  vo.setRoot(Integer.parseInt(pno));
 	  vo.setRep_content(msg);
 	  vo.setUser_id(id);
+	  vo.setUser_name(name);
 	  
 	  BoardReplyDAO dao=BoardReplyDAO.newInstance();
 	  dao.replyReplyInsert(Integer.parseInt(pno), vo);
