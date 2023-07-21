@@ -37,6 +37,10 @@ $(function(){
 					alert("회원 탈퇴 완료되었습니다.");
 					location.href="../main/main.do";
 				}
+				else if(res=='fail'){
+					alert('회원 탈퇴에 실패했습니다');
+					location.href="../main/main.do";
+				}
 			}
 			
 		})

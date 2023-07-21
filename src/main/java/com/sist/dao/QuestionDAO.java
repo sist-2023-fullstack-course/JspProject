@@ -86,7 +86,7 @@ public class QuestionDAO {
 	{
   		try {
 			conn=db.getConnection();
-			String sql="INSERT INTO question_answer(no,id,name,subject,content,group_id) "
+			String sql="INSERT INTO question_answer(no,user_id,name,subject,content,group_id) "
 					+ "VALUES(qa_no_seq.nextval,?,?,?,?,"
 					+ "(SELECT NVL(MAX(group_id)+1,1) FROM question_answer))";
 			ps=conn.prepareStatement(sql);
@@ -158,7 +158,7 @@ public class QuestionDAO {
 			ps.setInt(1, no);
 			ps.executeUpdate();
 			
-			sql="SELECT no,name,id,subject,content,TO_CHAR(regdate,'YYYY-MM-DD'),hit "
+			sql="SELECT no,name,user_id,subject,content,TO_CHAR(regdate,'YYYY-MM-DD'),hit "
 					+ "FROM question_answer "
 					+ "WHERE no=?";
 			ps=conn.prepareStatement(sql);
@@ -189,7 +189,7 @@ public class QuestionDAO {
 		QuestionVO vo=new QuestionVO();
   		try {
 			conn=db.getConnection();
-			String sql="SELECT no,name,id,subject,content,TO_CHAR(regdate,'YYYY-MM-DD'),hit "
+			String sql="SELECT no,name,user_id,subject,content,TO_CHAR(regdate,'YYYY-MM-DD'),hit "
 					+ "FROM question_answer "
 					+ "WHERE no=?";
 			ps=conn.prepareStatement(sql);
@@ -319,7 +319,7 @@ public class QuestionDAO {
 			int gi=rs.getInt(1);
 			rs.close();
 			
-			sql="INSERT INTO question_answer(no,id,name,subject,content,group_id,group_step,group_tab) "
+			sql="INSERT INTO question_answer(no,user_id,name,subject,content,group_id,group_step,group_tab) "
 				+ "VALUES(qa_no_seq.nextval,?,?,?,?,?,1,1)";
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, vo.getId());

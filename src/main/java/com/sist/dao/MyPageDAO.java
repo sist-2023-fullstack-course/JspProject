@@ -414,7 +414,7 @@ public class MyPageDAO {
 
 		 public String memberDeleteOk(String uid,String pwd)
 		   {
-			   String result="no";
+			   String result="fail";
 			   try
 			   {
 				   conn=db.getConnection();
@@ -436,14 +436,14 @@ public class MyPageDAO {
 						   ps.setString(1, uid);
 						   ps.executeUpdate();
 						   
-						   sql="DELETE question_answer  "
-								   +"WHERE id=?";
+						   sql="DELETE FROM question_answer  "
+								   +"WHERE user_id=?";
 						   ps=conn.prepareStatement(sql);
 						   ps.setString(1, uid);
 						   ps.executeUpdate();
 						   
-						   sql="DELETE board  "
-							  +"WHERE user_id=?";
+						   sql="DELETE FROM board  "
+								   +"WHERE user_id=?";
 						   ps=conn.prepareStatement(sql);
 						   ps.setString(1, uid);
 						   ps.executeUpdate();
@@ -499,6 +499,9 @@ public class MyPageDAO {
 						   result="yes";
 						   conn.commit();
 					   
+				   }
+				   else {
+					   result="no";
 				   }
 				   
 			   }catch(Exception ex)
