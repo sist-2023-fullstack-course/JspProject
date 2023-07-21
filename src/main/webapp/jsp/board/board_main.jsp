@@ -6,6 +6,7 @@
 				<div class="col-md-3">
 					<div class="single-sidebar">
 						<ul class="text-center">
+							<li><a href="../board/board_list.do?cat=전체">전체</a></li>
 							<li><a href="../board/board_list.do?cat=공지사항">공지사항</a></li>
 							<li><a href="../board/board_list.do?cat=자유토크">자유토크</a></li>
 							<li><a href="../board/board_list.do?cat=자랑하기">마이펫 자랑하기</a></li>
